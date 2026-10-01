@@ -1,0 +1,348 @@
+{
+  "title": "Spesa, pasti e uso dell’AI nella vita quotidiana",
+  "description": "Ricerca didattica per il corso di Fondamenti di Human-Computer Interaction del Politecnico di Milano. Vogliamo capire come le persone gestiscono spesa, alimenti e pasti e quale ruolo hanno gli strumenti di intelligenza artificiale (AI).\nIl sondaggio è rivolto a persone maggiorenni e richiede circa 3–5 minuti. La partecipazione è facoltativa: puoi interrompere la compilazione prima dell’invio. Non chiediamo nomi, email o recapiti. Le risposte saranno utilizzate per il progetto del corso e presentate in forma aggregata.\nPer AI intendiamo strumenti come ChatGPT, Gemini o Copilot con cui puoi conversare o generare contenuti.",
+  "sections": [
+    {
+      "id": "profilo",
+      "title": "1. Il tuo profilo",
+      "questions": [
+        {
+          "id": "Q01",
+          "type": "single",
+          "title": "Partecipazione",
+          "options": [
+            "Ho almeno 18 anni, ho letto la descrizione e scelgo di partecipare."
+          ],
+          "required": true
+        },
+        {
+          "id": "Q02",
+          "type": "single",
+          "title": "Qual è la tua fascia d’età?",
+          "options": [
+            "18–20 anni",
+            "21–24 anni",
+            "25–30 anni",
+            "31–40 anni",
+            "41 anni o più"
+          ],
+          "required": true
+        },
+        {
+          "id": "Q03",
+          "type": "single",
+          "title": "Qual è la tua situazione abitativa attuale?",
+          "options": [
+            "Vivo da solo/a",
+            "Vivo con coinquilini, senza partner o familiari",
+            "Vivo con il/la partner e/o figli",
+            "Vivo con la mia famiglia di origine",
+            "Un’altra situazione abitativa"
+          ],
+          "required": true
+        },
+        {
+          "id": "Q04",
+          "type": "single",
+          "title": "Qual è la tua situazione principale?",
+          "options": [
+            "Studio e non lavoro",
+            "Lavoro e non studio",
+            "Studio e lavoro",
+            "Sono attualmente in cerca di lavoro",
+            "Un’altra situazione"
+          ],
+          "required": true
+        },
+        {
+          "id": "Q05",
+          "type": "single",
+          "title": "Chi si occupa della spesa alimentare per i tuoi pasti?",
+          "options": [
+            "Principalmente io",
+            "Io e altre persone in modo condiviso",
+            "Principalmente altre persone; io contribuisco occasionalmente",
+            "Altre persone; io non me ne occupo"
+          ],
+          "required": true
+        },
+        {
+          "id": "Q06",
+          "type": "single",
+          "title": "Chi decide cosa mangerai nei pasti a casa?",
+          "options": [
+            "Principalmente io",
+            "Decido insieme ad altre persone",
+            "Principalmente altre persone",
+            "Non consumo abitualmente pasti a casa"
+          ],
+          "required": true
+        }
+      ]
+    },
+    {
+      "id": "abitudini",
+      "title": "2. Spesa, alimenti e pasti",
+      "questions": [
+        {
+          "id": "Q07",
+          "type": "single",
+          "title": "Negli ultimi 14 giorni, quante volte hai fatto personalmente la spesa alimentare, anche online?",
+          "options": [
+            "Nessuna",
+            "1 volta",
+            "2–3 volte",
+            "4 volte o più",
+            "Non ricordo"
+          ],
+          "required": true
+        },
+        {
+          "id": "Q08",
+          "type": "single",
+          "title": "Negli ultimi 7 giorni, per quanti giorni avevi deciso almeno un pasto già dal giorno precedente?",
+          "options": [
+            "Nessuno",
+            "1–2 giorni",
+            "3–4 giorni",
+            "5–7 giorni",
+            "Non ricordo / non applicabile"
+          ],
+          "required": true
+        },
+        {
+          "id": "Q09",
+          "type": "single",
+          "title": "Qual è il tuo metodo principale per sapere quali alimenti hai in casa?",
+          "options": [
+            "Guardo direttamente in frigorifero o dispensa",
+            "Mi baso soprattutto sulla memoria",
+            "Consulto una lista, nota o app",
+            "Chiedo alle persone con cui vivo",
+            "Non controllo abitualmente",
+            "Non mi occupo degli alimenti in casa"
+          ],
+          "required": true
+        },
+        {
+          "id": "Q10",
+          "type": "single",
+          "title": "Negli ultimi 30 giorni, in quante occasioni hai buttato alimenti rimasti inutilizzati?",
+          "options": [
+            "Nessuna",
+            "1 occasione",
+            "2–3 occasioni",
+            "4 occasioni o più",
+            "Non ricordo / non me ne occupo"
+          ],
+          "required": true
+        },
+        {
+          "id": "Q11",
+          "type": "single",
+          "title": "Quale aspetto trovi più impegnativo nella gestione quotidiana di spesa e pasti?",
+          "options": [
+            "Decidere cosa mangiare",
+            "Sapere cosa ho già in casa",
+            "Utilizzare gli alimenti prima che si deteriorino",
+            "Decidere cosa e quanto comprare",
+            "Coordinarmi con le altre persone",
+            "Valutare informazioni sull’alimentazione",
+            "Un altro aspetto",
+            "Nessuno in particolare / non me ne occupo"
+          ],
+          "required": true
+        },
+        {
+          "id": "Q12",
+          "type": "multi",
+          "title": "Negli ultimi 30 giorni, quali informazioni sul cibo hai cercato?",
+          "description": "Puoi scegliere più risposte. Se non hai cercato informazioni, seleziona soltanto l’ultima opzione.",
+          "options": [
+            "Ricette o modi di utilizzare ingredienti",
+            "Conservazione e durata degli alimenti",
+            "Valori nutrizionali o composizione dei prodotti",
+            "Come organizzare pasti o spesa",
+            "Rapporto tra alimentazione e attività sportiva",
+            "Altre informazioni sul cibo",
+            "Non ho cercato informazioni sul cibo"
+          ],
+          "required": true
+        },
+        {
+          "id": "Q13",
+          "type": "single",
+          "title": "Nelle ultime 2 settimane, in quanti giorni alla settimana hai praticato attività sportiva, in media?",
+          "options": [
+            "Nessuno",
+            "1 giorno",
+            "2–3 giorni",
+            "4 giorni o più",
+            "Non ricordo"
+          ],
+          "required": true
+        },
+        {
+          "id": "Q14",
+          "type": "multi",
+          "title": "Quali strumenti hai utilizzato negli ultimi 30 giorni per organizzare spesa, alimenti o pasti?",
+          "description": "Puoi scegliere più risposte. Se non hai usato strumenti, seleziona soltanto l’ultima opzione.",
+          "options": [
+            "Liste o calendari su carta",
+            "Note, liste o calendari digitali",
+            "Chat o messaggi con altre persone",
+            "App per spesa, ricette o alimentazione",
+            "Strumenti di AI come ChatGPT o Gemini",
+            "Altri strumenti",
+            "Nessuno di questi"
+          ],
+          "required": true
+        },
+        {
+          "id": "Q15",
+          "type": "single",
+          "title": "Negli ultimi 30 giorni, con quale frequenza hai utilizzato strumenti di AI, per qualsiasi attività?",
+          "options": [
+            "Non li ho utilizzati",
+            "Meno di una volta alla settimana",
+            "1–2 giorni alla settimana",
+            "3–5 giorni alla settimana",
+            "Tutti o quasi tutti i giorni"
+          ],
+          "required": true,
+          "route": {
+            "Non li ho utilizzati": "non_uso",
+            "default": "uso_ai"
+          }
+        }
+      ]
+    },
+    {
+      "id": "uso_ai",
+      "title": "3. La tua esperienza con l’AI",
+      "questions": [
+        {
+          "id": "Q16",
+          "type": "multi",
+          "title": "Per quali attività hai utilizzato l’AI negli ultimi 30 giorni?",
+          "description": "Puoi scegliere più risposte.",
+          "options": [
+            "Studio o apprendimento",
+            "Lavoro",
+            "Scrittura, immagini o altri contenuti",
+            "Organizzazione di attività quotidiane",
+            "Ricette, spesa o alimentazione",
+            "Sport o allenamento",
+            "Curiosità o intrattenimento",
+            "Altre attività",
+            "Non ricordo"
+          ],
+          "required": true
+        },
+        {
+          "id": "Q17",
+          "type": "single",
+          "title": "Negli ultimi 30 giorni, quante volte hai utilizzato l’AI per ricette, spesa o alimentazione?",
+          "options": [
+            "Nessuna",
+            "1 volta",
+            "2–3 volte",
+            "4 volte o più",
+            "Non ricordo"
+          ],
+          "required": true
+        },
+        {
+          "id": "Q18",
+          "type": "single",
+          "title": "L’ultima volta che hai usato l’AI, come hai gestito la risposta prima di utilizzarla?",
+          "options": [
+            "L’ho confrontata con fonti esterne",
+            "L’ho valutata soprattutto con le mie conoscenze",
+            "Ho chiesto chiarimenti all’AI, senza controllare fonti esterne",
+            "L’ho utilizzata senza ulteriori verifiche",
+            "Non l’ho utilizzata",
+            "Non ricordo"
+          ],
+          "required": true
+        },
+        {
+          "id": "Q19",
+          "type": "single",
+          "title": "Quale difficoltà hai incontrato più spesso usando l’AI negli ultimi 30 giorni?",
+          "options": [
+            "Risposte inesatte o poco affidabili",
+            "Risposte troppo generiche per la mia situazione",
+            "Difficoltà a formulare la richiesta",
+            "Troppo lavoro per verificare o adattare le risposte",
+            "Dubbi sui dati da condividere",
+            "Un’altra difficoltà",
+            "Nessuna difficoltà in particolare",
+            "Non ricordo"
+          ],
+          "required": true
+        }
+      ],
+      "after": "fine"
+    },
+    {
+      "id": "non_uso",
+      "title": "3. Il mancato uso dell’AI",
+      "questions": [
+        {
+          "id": "Q20",
+          "type": "single",
+          "title": "Qual è il motivo principale per cui non hai utilizzato AI negli ultimi 30 giorni?",
+          "options": [
+            "Non ne ho avuto bisogno o occasione",
+            "Non conosco bene questi strumenti",
+            "Non so come utilizzarli",
+            "Preferisco altre persone o strumenti",
+            "Non mi fido abbastanza delle risposte",
+            "Preferisco non condividere dati con questi strumenti",
+            "Non ho accesso a strumenti adatti",
+            "Un altro motivo"
+          ],
+          "required": true
+        }
+      ],
+      "after": "fine"
+    },
+    {
+      "id": "fine",
+      "title": "Grazie per la partecipazione",
+      "description": "Le tue risposte ci aiuteranno a descrivere il campione e a preparare le interviste del progetto. Premi Invia per completare il sondaggio.",
+      "questions": [],
+      "after": "submit"
+    }
+  ],
+  "settings": {
+    "collectEmail": false,
+    "limitOneResponse": false,
+    "quiz": false,
+    "showProgressBar": true,
+    "shuffleQuestions": false,
+    "showResponseSummary": false,
+    "showAnotherResponseLink": false
+  },
+  "notes": [
+    "19 domande per chi ha usato AI; 16 per chi non l’ha usata negli ultimi 30 giorni.",
+    "Durata prevista 3–5 minuti, da misurare con una prova su smartphone prima della diffusione.",
+    "Target di partenza: maggiorenni 18–30 anni con responsabilità personali su spesa e pasti. Le altre fasce e chi non gestisce la spesa restano distinguibili per confronto.",
+    "Tutte le opzioni «altro» sono categorie chiuse; non aggiungere l’opzione nativa «Altro» con campo libero.",
+    "Q18 misura il comportamento dichiarato nell’ultimo episodio e non una capacità di verifica dimostrata.",
+    "La frequenza d’uso, il numero di acquisti e lo spreco sono autovalutazioni; non trattarli come misure osservate.",
+    "Non selezionare caselle o fornire firme per conto dei partecipanti.",
+    "L’adesione al sondaggio non sostituisce i moduli firmati richiesti per le interviste."
+  ],
+  "googleForm": {
+    "editUrl": "https://docs.google.com/forms/d/1-yv2UKYlIc0uu8Q8NEx9M4Mv-jeT824Ztj13vuJ5G8I/edit",
+    "respondentUrl": "https://docs.google.com/forms/d/e/1FAIpQLSdxl45kwwqPPMXFss-tC7_y4Nj2saM6CiHqb8Ia6_F0Xd0SJw/viewform?usp=publish-editor",
+    "published": true,
+    "verifiedPaths": [
+      "profilo → abitudini → mancato uso AI → conclusione",
+      "profilo → abitudini → esperienza AI → conclusione"
+    ],
+    "testResponsesSubmitted": 0
+  }
+}

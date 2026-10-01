@@ -10,6 +10,7 @@
 - [Report delle interviste](interviste/README.md): istruzioni per raccogliere i resoconti da condividere.
 - [Analisi e bisogni](analisi-bisogni.md): struttura vuota da completare con le evidenze.
 - [Scaletta della presentazione](presentazione/scaletta.md): contenuti da sviluppare per il PDF finale.
+- [Sondaggio preliminare](sondaggio/domande.md): Google Form da 3–5 minuti, domande chiuse e indicazioni per analizzare il campione. Integra le interviste senza sostituirle.
 
 ## Stato iniziale
 
