@@ -1,7 +1,8 @@
 # C1 — Kit operativo di needfinding
 
 **Tema:** Consapevolezza alimentare e riduzione dello spreco domestico
-**Progetto di lavoro:** FrigorX
+**Progetto:** CIBY
+**Denominazione aggiornata:** 7 ottobre 2026
 **Versione:** 1 ottobre 2026
 **Consegna:** 12 ottobre 2026, presentazione PDF nella directory `C1` del repository GitHub di gruppo.
 
@@ -65,7 +66,7 @@ Aggiornare la mappa dopo le interviste. Aggiungere evidenze, modificare gli obie
 - Il modulo per minorenni prevede il genitore/tutore; usarlo solo se il gruppo decide di coinvolgere un minorenne come prospettiva aggiuntiva, motivandone il ruolo rispetto al target.
 - Spiegare attività, durata e materiali raccolti. Ottenere il consenso firmato su carta prima di iniziare, come richiesto dal compito.
 - I moduli distinguono adesione, diffusione delle interviste prive di identificativi e uso/pubblicazione delle immagini. Rispettare le scelte effettivamente espresse; non trattare un'unica firma come autorizzazione indiscriminata.
-- Presentare il dominio di ricerca senza mostrare il concept di FrigorX prima di raccogliere le esperienze.
+- Presentare il dominio di ricerca senza mostrare il concept di CIBY prima di raccogliere le esperienze.
 - Prevedere 2 membri del gruppo per sessione, massimo 3; assegnare conduzione e appunti.
 - Prediligere una sessione di persona nel contesto domestico. Se non fattibile, usare una call e annotarne la motivazione e i limiti nell'osservazione.
 - Preparare appunti, registratore e fotocamera. Documentare ciò che è pertinente secondo le autorizzazioni espresse.
@@ -110,7 +111,7 @@ Porre una domanda per volta. Le frasi di approfondimento sono facoltative: non l
 14. **Raccontami una situazione in cui il tuo modo di organizzarti ha incontrato un limite.** Se non emerge un episodio, esplorare cosa funziona bene senza forzare un problema.
 15. **Quando cerchi informazioni per scegliere cosa mangiare, come procedi?** Se non le cerca, esplorare come decide senza informazioni aggiuntive.
 16. **Come valuti se un'informazione o un suggerimento alimentare fa al caso tuo?** Per chi pratica sport, approfondire un episodio in cui l'attività ha influito sulle scelte, senza assumere che ciò avvenga.
-17. **Hai utilizzato strumenti di AI per questioni legate a cibo, ricette o alimentazione?** Se sì: ricostruire un episodio, la richiesta, il risultato, eventuali verifiche e l'azione successiva. Se no, non chiedere di immaginare l'utilità di FrigorX.
+17. **Hai utilizzato strumenti di AI per questioni legate a cibo, ricette o alimentazione?** Se sì: ricostruire un episodio, la richiesta, il risultato, eventuali verifiche e l'azione successiva. Se no, non chiedere di immaginare l'utilità di CIBY.
 18. **C'è qualcosa di importante della tua esperienza che non abbiamo affrontato?** Lasciare spazio alla chiusura.
 
 ### Adattamento per utente esperto/guida
@@ -179,3 +180,4 @@ Il numero di slide non è fissato dal compito. Non caricare automaticamente nel 
 - 3 Metodi di needfinding.pdf: initial mapping, tipi di utenti, interviste semi-strutturate e analisi tematica.
 - ConsensoInformato - Adulti.pdf e ConsensoInformato-Minori.pdf: campi e autorizzazioni del modello ufficiale.
 - Descrizione del progetto discussa nella chat “Valutazione descrizione progetto”: target di partenza, da confermare con il gruppo.
+
