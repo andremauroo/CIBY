@@ -17,6 +17,7 @@
 - [x] Requisiti del Compito 1 verificati.
 - [x] Protocollo iniziale e modello di raccolta preparati.
 - [x] Prima sessione documentata: [P01](interviste/P01.md), con report rivisto, PDF e artefatto.
+- [x] Seconda sessione documentata: [P02](interviste/P02.md), con report rivisto, PDF ed estratti di quattro scontrini.
 - [x] Contatti potenziali: studenti fuorisede soli e in coabitazione.
 - [ ] Disponibilità, responsabilità e profili dei partecipanti confermati.
 - [ ] Utente esperto/guida individuato.
@@ -27,11 +28,15 @@
 - [ ] Mappa utenti–obiettivi aggiornata e bisogni significativi motivati.
 - [ ] Presentazione PDF completata e caricata.
 
-## Prima intervista documentata
+## Interviste documentate
 
 **Progetto: CIBY.** [P01](interviste/P01.md) è stata svolta il 4 ottobre 2026; il report comprende episodi, evidenze codificate, prima analisi e [lista della spesa](interviste/artefatti/P01-A01-lista-spesa.jpeg). È disponibile anche il [PDF del report](interviste/P01.pdf).
 
 La sessione è stata condotta da Marco Macherelli da solo, per ragioni logistiche, senza registrazione audio. Queste deviazioni dai requisiti sono dichiarate nel report; il conteggio della sessione ai fini del minimo C1 resta da chiarire con i docenti. Il ruolo di utente esperto non è accertato. I bisogni ricavati da P01 sono candidati della singola intervista, non una sintesi consolidata del campione.
+
+[P02](interviste/P02.md) è stata svolta il 7 ottobre 2026 con uno studente fuori sede del Politecnico di Milano, reclutato tramite telefono. Andrea Mauro ha condotto l'intervista e Gabriele Martignoni ha preso appunti, in università per ragioni logistiche. Sono disponibili il [PDF del report](interviste/P02.pdf) e gli [estratti degli scontrini](interviste/artefatti/P02-scontrini.md), anche in [PDF](interviste/artefatti/P02-scontrini.pdf).
+
+La registrazione dura 19 minuti e 11 secondi, circa 20 minuti secondo gli appunti, sotto la fascia 30–60 minuti indicata dalla C1. Il report mantiene questa durata e distingue episodi, pratiche raccontate, citazioni ed analisi. La fedeltà della trascrizione all'audio è confermata dall'intervistatore. P02 è pertinente al target; il ruolo esperto/guida non è accertato. Consenso, audio, appunti e scontrini originali sono conservati separatamente. Anche i bisogni di P02 restano candidati da confrontare con le altre interviste.
 
 ## Prima di intervistare
 
