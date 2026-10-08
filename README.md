@@ -13,9 +13,8 @@ Progetto per il corso di Fondamenti di Human-Computer Interaction.
 
 ## Ricerca documentata
 
-La prima intervista è documentata nel [report P01](C1/interviste/P01.md), disponibile anche in [PDF](C1/interviste/P01.pdf), con [lista della spesa P01-A01](C1/interviste/artefatti/P01-A01-lista-spesa.jpeg). Il report distingue dati, citazioni attribuite, interpretazioni e limiti della sessione.
+La raccolta comprende quattro sessioni: [P01](C1/interviste/P01.md), [P02](C1/interviste/P02.md), [P03](C1/interviste/P03.md) e [P04](C1/interviste/P04.md). Le schede sono uniformate al modello comune e disponibili in Markdown e PDF, con artefatti pertinenti, evidenze codificate e limiti documentati.
 
-La seconda intervista è documentata nel [report P02](C1/interviste/P02.md), disponibile anche in [PDF](C1/interviste/P02.pdf), con [estratti degli scontrini](C1/interviste/artefatti/P02-scontrini.md) e relativo [PDF](C1/interviste/artefatti/P02-scontrini.pdf). Include episodi, citazioni con fedeltà all'audio confermata dall'intervistatore, evidenze e bisogni candidati.
+Il [registro delle interviste](C1/interviste/README.md) raccoglie profili, sessioni, materiali e criteri per aggiungere nuove interviste. Le [verifiche aperte](C1/interviste/verifiche-aperte.md) indicano i riscontri da completare.
 
-Lo stato delle sessioni è nel [registro delle interviste](C1/interviste/README.md). La sintesi complessiva dei bisogni e la presentazione finale C1 saranno completate dopo la raccolta e il confronto delle interviste. I report sono materiali di ricerca, non la presentazione finale richiesta dalla consegna.
-
+La raccolta resta aperta. Le prime interpretazioni riguardano le singole sessioni; la sintesi trasversale dei bisogni e la presentazione finale C1 saranno preparate dopo la raccolta e il confronto delle interviste. L’archivio delle interviste è materiale di ricerca e non costituisce la presentazione finale richiesta.

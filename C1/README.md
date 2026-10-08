@@ -18,12 +18,17 @@
 - [x] Protocollo iniziale e modello di raccolta preparati.
 - [x] Prima sessione documentata: [P01](interviste/P01.md), con report rivisto, PDF e artefatto.
 - [x] Seconda sessione documentata: [P02](interviste/P02.md), con report rivisto, PDF ed estratti di quattro scontrini.
+- [x] Terza sessione documentata: [P03](interviste/P03.md), con scheda, PDF e foto del pranzo.
+- [x] Quarta sessione documentata: [P04](interviste/P04.md), con scheda e PDF.
+- [x] Schede P01–P04 uniformate e registro aggiornato per ulteriori sessioni.
 - [x] Contatti potenziali: studenti fuorisede soli e in coabitazione.
 - [ ] Disponibilità, responsabilità e profili dei partecipanti confermati.
 - [ ] Utente esperto/guida individuato.
-- [ ] Ruoli del gruppo e sessioni assegnati.
-- [ ] Moduli ufficiali preparati e consenso firmato per ogni sessione.
-- [ ] Traccia provata e interviste svolte.
+- [x] Ruoli e contesti documentati per le quattro sessioni raccolte.
+- [x] Consenso documentato per P01–P04; per P03 e P04 tramite conferma dell’intervistatore.
+- [ ] Scansioni dei consensi P03/P04 ricevute e riscontrate nell’archivio riservato.
+- [x] Quattro sessioni svolte e documentate; limiti procedurali dichiarati.
+- [ ] Raccolta conclusa e ulteriori interviste valutate dal gruppo.
 - [ ] Evidenze codificate e temi analizzati.
 - [ ] Mappa utenti–obiettivi aggiornata e bisogni significativi motivati.
 - [ ] Presentazione PDF completata e caricata.
@@ -37,6 +42,12 @@ La sessione è stata condotta da Marco Macherelli da solo, per ragioni logistich
 [P02](interviste/P02.md) è stata svolta il 7 ottobre 2026 con uno studente fuori sede del Politecnico di Milano, reclutato tramite telefono. Andrea Mauro ha condotto l'intervista e Gabriele Martignoni ha preso appunti, in università per ragioni logistiche. Sono disponibili il [PDF del report](interviste/P02.pdf) e gli [estratti degli scontrini](interviste/artefatti/P02-scontrini.md), anche in [PDF](interviste/artefatti/P02-scontrini.pdf).
 
 La registrazione dura 19 minuti e 11 secondi, circa 20 minuti secondo gli appunti, sotto la fascia 30–60 minuti indicata dalla C1. Il report mantiene questa durata e distingue episodi, pratiche raccontate, citazioni ed analisi. La fedeltà della trascrizione all'audio è confermata dall'intervistatore. P02 è pertinente al target; il ruolo esperto/guida non è accertato. Consenso, audio, appunti e scontrini originali sono conservati separatamente. Anche i bisogni di P02 restano candidati da confrontare con le altre interviste.
+
+[P03](interviste/P03.md) e [P04](interviste/P04.md) sono state svolte l’8 ottobre al Politecnico, con Andrea Mauro alla conduzione e Marco Macherelli agli appunti. P03 vive attualmente da solo e gestisce spesa e pasti; P04 vive in famiglia e gestisce più autonomamente i pasti fuori casa. Sono disponibili i PDF [P03](interviste/P03.pdf) e [P04](interviste/P04.pdf), con [foto del pranzo P03-A01](interviste/artefatti/P03-A01-pranzo.md).
+
+Le registrazioni durano rispettivamente 19 minuti e 15 secondi e circa 16 minuti. Le schede distinguono durata audio e orari annotati, preservano le discrepanze e usano parafrasi confrontate con le trascrizioni automatiche. Andrea Mauro conferma firma preventiva e tre scelte favorevoli per entrambe; scansioni attese nell’archivio riservato.
+
+Il [registro](interviste/README.md) presenta tutte le sessioni nello stesso formato; le [verifiche aperte](interviste/verifiche-aperte.md) consentono correzioni successive. La raccolta resta aperta a nuove interviste. Le interpretazioni delle singole schede sono provvisorie: la sintesi del campione e la presentazione finale non sono ancora compilate.
 
 ## Prima di intervistare
 
