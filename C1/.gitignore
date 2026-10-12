@@ -1,5 +1,9 @@
-# Materiali identificativi e originali: conservarli separatamente.
-riservato/
-
-# File temporanei del sistema.
+# Materiali privati e file temporanei
+consensi/
+registrazioni/
+*.m4a
+*.mp3
+*.wav
+*.mp4
+~$*
 .DS_Store
