@@ -48,7 +48,7 @@ Queste direzioni derivano dalla C1 e servono a stimolare il confronto. Non costi
 | C - Recuperare un'intenzione dopo un imprevisto | Ripensare l'uso di ingredienti già comprati quando il programma o la preparazione cambia | B03/S03 | Cosa distingue un adattamento riuscito da uno fallito? |
 | D - Collegare quantità e occasioni di consumo | Valutare se gli ingredienti acquistati avranno un uso nelle occasioni realistiche | C04, se selezionato | È un bisogno distinto e sufficientemente documentato? |
 
-Non è ancora stata verificata la novità di queste direzioni rispetto ai servizi esistenti. Dopo aver raccolto le alternative effettive, confrontare le più promettenti con fonti aggiornate, riportando attività già supportate e differenza proposta; non usare «non esiste» senza riscontri.
+Il [confronto preliminare con soluzioni esistenti](confronto-soluzioni-esistenti.md), svolto il 23 ottobre su fonti ufficiali, documenta sovrapposizioni con ricerca dagli ingredienti, priorità di consumo e sostituzioni. Non dimostra ancora la novità di una direzione CIBY. Dopo aver raccolto le alternative individuali, usare il confronto per precisare le proposte e provare gli stessi compiti nei prodotti pertinenti, distinguendo funzioni dichiarate ed esperienza osservata.
 
 ## 5. Selezionare e documentare
 

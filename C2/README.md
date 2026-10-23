@@ -19,6 +19,7 @@ Andrea ha confermato il 23 ottobre che non sono ancora state svolte nuove attivi
 | [Personas e scenari](preparazione/personas-e-scenari.md) | Revisione ragionata di Gianfranco e Charles LeFrigo e tre scenari concettuali iniziali |
 | [Nuove attività con utenti](preparazione/nuove-attivita-utenti.md) | Traccia pronta, domande, modalità di raccolta e scheda per documentare i risultati |
 | [Brainstorming e scelta](preparazione/brainstorming-e-scelta.md) | Procedura per il gruppo, registri da compilare e spunti preliminari da discutere |
+| [Confronto con soluzioni esistenti](preparazione/confronto-soluzioni-esistenti.md) | Capacità già documentate, sovrapposizioni e tre ipotesi da verificare |
 
 ## Cosa manca per la consegna
 
