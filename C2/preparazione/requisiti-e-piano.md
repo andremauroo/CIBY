@@ -19,7 +19,7 @@ Andrea riferisce che il gruppo ha votato per la **gestione flessibile dei pasti*
 | Integrare i nuovi dati nell'analisi tematica | p. 1, punto 2 | Estratti, codici, temi e differenze rispetto alla C1 | Base C1 disponibile; nuovi dati mancanti |
 | Fare brainstorming sull'elenco dei bisogni e documentarlo | p. 1, punto 2; p. 2, sezione 3a | Immagini di tutti i bisogni discussi e motivi della selezione | Selezione confermata da Andrea; immagini e tracce del confronto del gruppo da raccogliere |
 | Scegliere 3-4 bisogni consistenti, collegati a interviste e risposte specifiche | p. 1, punto 3; p. 2, sezione 3b | Bisogni come attività, evidenze e motivazioni | B01-B04 confermati da Andrea; formulazioni, evidenze, confini ed esiti consolidati |
-| Specificare personas e uno scenario per ogni bisogno selezionato | p. 1, punto 4 | Archetipi motivati e scenari che mostrino contesto e utilità del supporto | Tre bozze da consolidare; scenario dedicato B04 da elaborare |
+| Specificare personas e uno scenario per ogni bisogno selezionato | p. 1, punto 4 | Archetipi motivati e scenari che mostrino contesto e utilità del supporto | Tre personas e quattro scenari consolidati; Luca primaria, nuovo scenario A/B04 sulla spesa |
 | Raccogliere idee individuali da ciascun membro, poi discuterle insieme | p. 1, punto 5 | Idee originali, autore e raggruppamenti successivi | Da svolgere |
 | Esprimere le soluzioni come attività da supportare, prima dei dettagli tecnici | p. 1, punto 5; p. 2, sezione 4 | Proposte concettuali e soluzione scelta in 1-3 frasi | Spunti preliminari disponibili |
 | Selezionare una soluzione puntando alla novità e documentando il percorso | pp. 1-2, punto 6 | Voti su tre idee diverse per persona, oppure metodo delle quattro categorie | Da svolgere; novità da verificare |
@@ -68,7 +68,7 @@ Il piano iniziale prevedeva nuove attività il 24 ottobre; non sono state svolte
 | 1 | Definire il focus | Completato: gestione flessibile dei pasti, con spesa inclusa nei bisogni e sport da approfondire |
 | 2 | Consolidare i bisogni | Completato: B01-B04 confermati da Andrea, con evidenze, confini, motivazioni ed esiti desiderati |
 | 3 | Preparare l'approfondimento sportivo simulato | Completato: [caso S-Sport](approfondimento-sportivo-simulato.md), con fonti C1, assunzioni, scenario e ipotesi aperte; nessuna nuova attività con utenti |
-| 4 | Consolidare personas e scenari | Consolidare G/L/M ed elaborare lo scenario B04: quattro scenari principali, con evidenze e ipotesi riconoscibili |
+| 4 | Consolidare personas e scenari | Completato: Luca primaria, Gianfranco e Marta complementari; quattro scenari G/L/M/A, sintesi Figma separata e post-it invariati |
 | 5 | Generare e selezionare alternative | Idee individuali, confronto e processo effettivo documentato |
 | 6 | Definire soluzione, nome e value proposition | Supporto concettuale specifico, motivazione del nome e beneficio in una riga |
 | 7 | Preparare e pubblicare la consegna | Slide PDF, ordine causale, leggibilità e collegamenti verificati |
@@ -81,8 +81,8 @@ La votazione sulla direzione, riferita da Andrea, non viene utilizzata come docu
 - [ ] Le evidenze nuove sono distinguibili dalle C1.
 - [x] I quattro bisogni sono formulati come attività, motivati e collegati a risposte specifiche.
 - [ ] La documentazione effettiva del confronto del gruppo sui bisogni è disponibile, incluse le immagini richieste.
-- [ ] Ogni bisogno ha risposte specifiche di origine e almeno uno scenario.
-- [ ] Le personas descrivono pattern rilevanti e obiettivi distinti.
+- [x] Ogni bisogno ha risposte specifiche di origine e almeno uno scenario.
+- [x] Le personas descrivono pattern rilevanti e obiettivi distinti, con una priorità motivata.
 - [ ] Esistono tracce delle idee individuali, del confronto e della selezione.
 - [ ] La proposta finale è concettuale e descritta in 1-3 frasi.
 - [ ] La motivazione del nome è quella del gruppo e la value proposition è specifica.

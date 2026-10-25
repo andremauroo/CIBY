@@ -2,7 +2,7 @@
 
 **Progetto CIBY | Gruppo MAGGICAL | Scadenza: 26 ottobre 2026**
 
-Stato al 25 ottobre: Andrea riferisce che il gruppo ha votato per il focus **gestione flessibile dei pasti**. Andrea ha poi confermato i quattro bisogni B01-B04, includendo le quantità della spesa. L'organizzazione intorno agli allenamenti è stata sviluppata in un caso progettuale simulato, con evidenze e ipotesi separate; la revisione delle tre personas e dei tre scenari esistenti è disponibile come proposta e va completata con lo scenario B04. Questa cartella contiene i materiali di lavoro per costruire la consegna; il PDF finale non è ancora disponibile.
+Stato al 25 ottobre: Andrea riferisce che il gruppo ha votato per il focus **gestione flessibile dei pasti**. Andrea ha poi confermato i quattro bisogni B01-B04, includendo le quantità della spesa. L'organizzazione intorno agli allenamenti è stata sviluppata in un caso progettuale simulato, con evidenze e ipotesi separate; sono state consolidate tre personas e quattro scenari principali, incluso B04. La sintesi è affiancata alla pagina di lavoro Figma, con tutti i post-it conservati. Questa cartella contiene i materiali di lavoro per costruire la consegna; il PDF finale non è ancora disponibile.
 
 ## Da dove partiamo
 
@@ -17,19 +17,20 @@ Andrea ha confermato il 23 ottobre che non sono ancora state svolte nuove attivi
 | [Focus e decisioni](preparazione/focus-e-decisioni.md) | Direzione scelta dal gruppo, priorità, estensioni e idee per la futura realizzazione |
 | [Requisiti e piano](preparazione/requisiti-e-piano.md) | Richieste del compito, stato del lavoro, ordine della presentazione e passi fino alla scadenza |
 | [Evidenze e bisogni](preparazione/evidenze-e-bisogni.md) | Quattro bisogni confermati, evidenze C1, confini ed esiti desiderati |
-| [Personas e scenari](preparazione/personas-e-scenari.md) | Revisione di Gianfranco, Luca e Marta e riscritture proposte dei tre scenari |
+| [Personas e scenari](preparazione/personas-e-scenari.md) | Tre personas consolidate, Luca primaria e quattro scenari principali B01-B04 |
 | [Nuove attività con utenti](preparazione/nuove-attivita-utenti.md) | Traccia iniziale non attuata, conservata come riferimento per eventuali ricerche future |
 | [Brainstorming e scelta](preparazione/brainstorming-e-scelta.md) | Procedura per il gruppo, registri da compilare e spunti preliminari da discutere |
 | [Confronto con soluzioni esistenti](preparazione/confronto-soluzioni-esistenti.md) | Capacità già documentate, sovrapposizioni e tre ipotesi da verificare |
 | [Filone sportivo](preparazione/valutazione-filone-sportivo.md) | Evidenze disponibili, valutazione del focus e collegamento al caso simulato |
 | [Approfondimento sportivo simulato](preparazione/approfondimento-sportivo-simulato.md) | Caso concreto, assunzioni, alternative, collegamenti ai bisogni e testo breve per le slide |
-| [Revisione Figma del 25 ottobre](preparazione/revisione-figma-2026-10-25.md) | Esito della revisione e collegamenti agli otto post-it di Andrea |
+| [Revisione Figma del 25 ottobre](preparazione/revisione-figma-2026-10-25.md) | Traccia della prima revisione e degli otto post-it di Andrea |
+| [Consolidamento Figma](preparazione/consolidamento-figma-2026-10-25.md) | Sintesi finale di lavoro, commenti considerati e verifica dei 53 post-it preservati |
 
 ## Cosa manca per la consegna
 
 - Nuove attività di needfinding, almeno una con un possibile utilizzatore finale.
 - Documentazione effettiva del confronto sui bisogni: B01-B04 sono stati confermati da Andrea; restano da raccogliere le immagini e le tracce della discussione del gruppo.
-- Consolidamento delle personas e dei quattro scenari principali, incluso quello da elaborare per B04 sulla spesa.
+- Documentazione degli esiti consolidati di personas e quattro scenari nelle slide, mostrando prima evidenze e percorso.
 - Brainstorming individuale e collettivo, con immagini di tutte le idee e selezione documentata.
 - Scelta della soluzione, motivazione del nome CIBY e value proposition.
 - Slide in PDF, ordinate secondo i legami tra evidenze e decisioni.

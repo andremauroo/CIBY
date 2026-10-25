@@ -23,7 +23,9 @@ La C2 richiede 3-4 bisogni: la selezione comprende quattro attività distinguibi
 
 Prima di proporre soluzioni, verificare che ogni bisogno scelto abbia uno scenario concettuale, con contesto, motivazione, ostacolo e risultato desiderato. Collegare ciascuno a una persona fondata su pattern della ricerca.
 
-La [revisione di Gianfranco, Luca e Marta con gli scenari G/L/M](personas-e-scenari.md), aggiornata il 25 ottobre, serve come punto di partenza. Le riscritture restano proposte da discutere e consolidare. Dopo la conferma di B04 serve anche uno scenario dedicato al momento dell'acquisto, che può usare una delle tre personas pertinenti. Il [filone sportivo](valutazione-filone-sportivo.md) è un'ulteriore ipotesi di contesto. Il [caso simulato S-Sport](approfondimento-sportivo-simulato.md) è pronto per il confronto, con fonti, assunzioni e possibili riscontri contrari. È distinto dalle interviste e non sostituisce lo scenario dedicato B04.
+Il [consolidamento di Gianfranco, Luca e Marta con gli scenari G/L/M/A](personas-e-scenari.md) è disponibile nella repo e nella nuova area Figma. Luca è la persona primaria di lavoro e compare negli scenari L/B03 e A/B04; Gianfranco e Marta approfondiscono B02 e B01. Tutti i post-it originali sono rimasti invariati. Il [filone sportivo](valutazione-filone-sportivo.md) è un'ulteriore ipotesi di contesto. Il [caso simulato S-Sport](approfondimento-sportivo-simulato.md) è pronto per il confronto, con fonti, assunzioni e possibili riscontri contrari. È distinto dalle interviste e affianca i quattro scenari principali.
+
+Gli screenshot dei post-it attuali documentano il confronto su personas e scenari. Per i bisogni e le soluzioni conservare anche le tracce specifiche delle discussioni e delle scelte effettive: vedi [Consolidamento Figma](consolidamento-figma-2026-10-25.md).
 
 ## 3. Raccogliere le idee individuali
 
@@ -51,7 +53,7 @@ Queste direzioni derivano dalla C1 e servono a stimolare il confronto. Non costi
 | A - Dare una destinazione agli alimenti meno visibili | Riconoscere ciò che rischia di rimanere fuori dalle decisioni e associarlo a un'occasione di uso | B01/scenario M | In quale momento il supporto sarebbe utile e sostenibile? |
 | B - Passare da ingredienti a una preparazione praticabile | Valutare alternative coerenti con ingredienti, tempo e disponibilità a cucinare | B02/scenario G | Quale attrito resta rispetto a ricette e routine già efficaci? |
 | C - Recuperare un'intenzione dopo un imprevisto | Ripensare l'uso di ingredienti già comprati quando il programma o la preparazione cambia | B03/scenario L | Cosa distingue un adattamento riuscito da uno fallito? |
-| D - Collegare quantità e occasioni di consumo | Valutare prima dell'acquisto quanto si riuscirà effettivamente a utilizzare | B04/scenario da elaborare | Come confrontare confezioni disponibili e occasioni realistiche di consumo? |
+| D - Collegare quantità e occasioni di consumo | Valutare prima dell'acquisto quanto si riuscirà effettivamente a utilizzare | B04/scenario A | Come confrontare confezioni disponibili e occasioni realistiche di consumo? |
 
 Il [confronto preliminare con soluzioni esistenti](confronto-soluzioni-esistenti.md), svolto il 23 ottobre su fonti ufficiali, documenta sovrapposizioni con ricerca dagli ingredienti, priorità di consumo e sostituzioni. Non dimostra ancora la novità di una direzione CIBY. Dopo aver raccolto le alternative individuali, usare il confronto per precisare le proposte e provare gli stessi compiti nei prodotti pertinenti, distinguendo funzioni dichiarate ed esperienza osservata.
 

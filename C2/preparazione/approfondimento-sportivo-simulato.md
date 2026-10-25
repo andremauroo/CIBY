@@ -64,7 +64,7 @@ Lo scenario descrive una decisione organizzativa. Le combinazioni alimentari non
 | Riorganizzare | Dare una destinazione concreta a quanto non viene utilizzato nella cena modificata | B03 |
 | Rivalutare la spesa successiva | Considerare quanti pasti saranno effettivamente preparati a casa, anche nei giorni di allenamento | B04, domanda da approfondire |
 
-Il collegamento con B04 riguarda il momento dell'acquisto e non è sviluppato come suo scenario principale. Rimane da elaborare lo scenario dedicato alla spesa nella revisione di personas e scenari.
+Il collegamento con B04 riguarda il momento dell'acquisto e non è sviluppato come suo scenario principale. Lo scenario principale A/B04 è stato sviluppato nel [consolidamento di personas e scenari](personas-e-scenari.md).
 
 ## Ipotesi aperte e possibili riscontri contrari
 
@@ -98,7 +98,7 @@ Queste conclusioni sono una lettura progettuale del caso, non testimonianze o va
 
 Nella presentazione, mostrare prima i riscontri reali e i loro limiti, poi il caso e le domande che apre. Il materiale può sostenere scenari e brainstorming; la sezione sulle nuove attività con utenti dovrà riportare che non ne sono state svolte. Non attribuire al caso codici di partecipante, citazioni, consensi o risultati di un'intervista.
 
-Il caso è un approfondimento aggiuntivo. I quattro scenari principali B01-B04 rimangono da consolidare; lo scenario sportivo non sostituisce quello dedicato a B04.
+Il caso è un approfondimento aggiuntivo. I quattro scenari principali B01-B04 sono disponibili nel [consolidamento di personas e scenari](personas-e-scenari.md); S-Sport li affianca come variante esplorativa.
 
 ## Fonti e collegamenti
 

@@ -119,15 +119,17 @@ L'organizzazione dei pasti intorno agli allenamenti resta un contesto esplorativ
 
 Mascotte, personalizzazione e suggerimenti nutrizionali con possibile AI sono idee proposte da Andrea, registrate in [Focus e decisioni](focus-e-decisioni.md). Verranno confrontate rispetto alle attività da sostenere.
 
-## Collegamento agli scenari e prossimi passaggi
+## Collegamento agli scenari consolidati
 
-| Bisogno | Copertura di lavoro | Passaggio successivo |
-|---|---|---|
-| B01 | Scenario M, Marta | Consolidare il riconoscimento e la priorità degli alimenti fuori routine |
-| B02 | Scenario G, Gianfranco | Consolidare la decisione su una preparazione fattibile |
-| B03 | Scenario L, Luca | Consolidare l'adattamento dopo un'interruzione del programma |
-| B04 | Scenario dedicato ancora da elaborare | Rappresentare una decisione prima dell'acquisto; abbinare una delle personas pertinenti |
+| Bisogno | Scenario principale | Persona | Copertura |
+|---|---|---|---|
+| B01 | M - Cena e pranzo del giorno dopo | Marta | Riconoscimento e priorità di un prodotto fuori routine |
+| B02 | G - La cena dopo le lezioni | Gianfranco | Confronto e scelta di una preparazione fattibile |
+| B03 | L - Manca un ingrediente | Luca | Adattamento dopo un'interruzione del programma |
+| B04 | A - La confezione e i pasti previsti | Luca | Valutazione di quantità, scorte e occasioni prima dell'acquisto |
 
-Gli scenari G/L/M sono proposte disponibili in [Personas e scenari](personas-e-scenari.md). Quattro bisogni richiedono quattro scenari principali; non richiedono automaticamente quattro personas. La variante sportiva rimane un approfondimento dichiaratamente simulato.
+Testi, fonti e natura narrativa sono in [Personas e scenari](personas-e-scenari.md). Luca è la persona primaria di lavoro per il collegamento tra adattamento B03 e acquisti B04; Gianfranco e Marta approfondiscono contesti complementari. La variante sportiva rimane un approfondimento dichiaratamente simulato di B02/B03.
+
+La [sintesi Figma](https://www.figma.com/board/Aa9cVd9wI6ifqZyzO30I9m/Compito-2?node-id=91-228) affianca l'area originale: tutti i 53 post-it e i contenuti preesistenti sono stati preservati. Le decisioni editoriali sono nel [registro del consolidamento](consolidamento-figma-2026-10-25.md).
 
 Non sono disponibili nuovi estratti da integrare nell'analisi tematica. Il lavoro attuale è una rilettura della C1 e una selezione progettuale, non una nuova attività con utenti.

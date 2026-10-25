@@ -20,7 +20,7 @@ Questa è la formulazione di lavoro del focus. La soluzione concettuale e la val
 | B04 - Quantità e occasioni di consumo | Valutare quantità da acquistare compatibili con le occasioni realistiche di consumo | Selezionato su conferma di Andrea; già candidato C04 |
 | Contesto sportivo | Organizzare preparazioni e pasti intorno agli allenamenti | Approfondimento esplorativo di B02/B03, con eventuale integrazione |
 
-Andrea ha confermato la proposta dei quattro bisogni e i loro confini. C04 viene rinominato B04; le sue evidenze provengono da P02 e P03. Le [schede consolidate](evidenze-e-bisogni.md) riportano per ciascun bisogno situazione, ostacolo, fonti, motivazione ed esito desiderato. Occorre ora completare la copertura degli scenari e la documentazione effettiva della discussione del gruppo.
+Andrea ha confermato la proposta dei quattro bisogni e i loro confini. C04 viene rinominato B04; le sue evidenze provengono da P02 e P03. Le [schede consolidate](evidenze-e-bisogni.md) riportano per ciascun bisogno situazione, ostacolo, fonti, motivazione ed esito desiderato. La copertura è stata completata con tre personas e quattro scenari principali nella [sintesi consolidata](personas-e-scenari.md). Restano da documentare nelle slide le tracce effettive del confronto del gruppo e la successiva selezione delle soluzioni.
 
 Per B04, la domanda riguarda il momento dell'acquisto: valutare quantità e occasioni realistiche di consumo prima di comprare. B03 riguarda invece cosa fare con ingredienti già acquistati quando il piano cambia. Questa distinzione motiva l'inclusione del quarto bisogno.
 
@@ -56,7 +56,8 @@ L'attività a cui potrebbero contribuire è comprendere le caratteristiche degli
 | Idee aggiunte da Andrea | Mascotte, eventuale personalizzazione, informazioni nutrizionali, possibile AI |
 | Dettagli non forniti | Data della riunione, presenti, alternative votate, metodo e conteggi |
 | Approfondimento preparato | Caso S-Sport simulato: organizzazione dei pasti dopo un cambiamento dell'orario di allenamento |
-| Passaggi successivi | Consolidamento di personas e quattro scenari, valutazione del caso sportivo nelle alternative, raccolta e confronto delle soluzioni |
+| Consolidamento preparato | Luca primaria, Gianfranco e Marta complementari; scenari M/B01, G/B02, L/B03 e A/B04. Area Figma originale e 53 post-it preservati |
+| Passaggi successivi | Valutazione dei quattro scenari e del caso sportivo nelle alternative, raccolta delle idee individuali e confronto delle soluzioni |
 
 La votazione riferita riguarda la direzione di progetto. La successiva conferma dei quattro bisogni proviene da Andrea; non vengono ricostruiti voti del gruppo sui singoli bisogni. Nessuno dei due passaggi viene registrato come se fosse già il processo di selezione della soluzione richiesto al punto 6 del compito.
 
