@@ -1,24 +1,77 @@
-# Evidenze e bisogni da approfondire
+# Evidenze e bisogni consolidati
 
-Base: C1 pubblicata il 12 ottobre 2026. Aggiornamento: 25 ottobre 2026. Andrea conferma il focus di gestione flessibile dei pasti scelto dal gruppo. Non sono disponibili dati di nuove attività con utenti.
+**CIBY / MAGGICAL - Aggiornamento del 25 ottobre 2026**
+
+Base di ricerca: C1 pubblicata il 12 ottobre 2026. Andrea ha confermato la proposta di lavorare sui quattro bisogni B01-B04 nel focus di **gestione flessibile dei pasti**. Non sono stati raccolti nuovi dati con utenti. La conferma riguarda la selezione e la formulazione dei bisogni; non dimostra l'efficacia di una soluzione.
 
 ## Perimetro di lavoro
 
-Giovani adulti che gestiscono effettivamente acquisti e pasti, anche vivendo con altre persone. La responsabilità concreta distingue meglio i casi rispetto alla sola etichetta di studente o fuori sede.
+Giovani adulti che gestiscono concretamente acquisti e preparazione dei propri pasti, anche vivendo con altre persone. Il tratto comune è la responsabilità sui pasti; comprende studenti, persone che studiano e lavorano e chi pratica sport.
 
 P01, P02, P03 e P05 hanno responsabilità su spesa e pasti. P04 serve da confronto con la gestione prevalentemente familiare. Il campione è esplorativo: i cinque casi e le 45 risposte al sondaggio restano fonti distinte.
 
-## Tre bisogni di partenza
+## I quattro bisogni selezionati
 
-Gli identificativi e la formulazione di B01-B03 proseguono la sintesi C1. B01-B03 costituiscono la base del focus confermato. La selezione definitiva C2, fra tre bisogni e l'eventuale aggiunta di C04, va consolidata sulla base dei dati disponibili e della discussione del gruppo. Vedi il [registro delle decisioni](focus-e-decisioni.md).
+B01-B03 mantengono gli identificativi C1. **B04 è il candidato precedentemente indicato come C04**, ora incluso su conferma di Andrea. Il [registro delle decisioni](focus-e-decisioni.md) distingue questa conferma dalla votazione sul focus riferita per il gruppo.
 
-| Bisogno candidato | Risposte specifiche e contenuto | Conseguenza o tensione | Approfondimento C2 |
+| ID | Formulazione del bisogno | Situazione principale | Esito desiderato |
 |---|---|---|---|
-| **B01 - Accorgersi degli alimenti presenti e riconoscere quali usare prima** | P01-E05, yogurt non visto, ricomprato e poi buttato; P05-E03/E04/E11, verdure dimenticate, alimenti vecchi spostati davanti e melanzane ritrovate marce; P03-E06/E07, scadenze considerate ma freschi non sempre consumati | I controlli già presenti non rendono sempre visibili tutti gli alimenti fino al momento del consumo | Osservare un controllo reale: cosa viene visto, come si decide una priorità e cosa sfugge |
-| **B02 - Comporre un pasto praticabile con ingredienti, tempo, voglia e vincoli personali** | P01-E01/E09, fatica di scelta e preparazione anticipata; P02-E03/E10/E12, voglia di cucinare, verifica delle fonti e metodo soddisfacente; P03-E12/E13, tentativi sulle ricette e tensione tra varietà e semplicità; P05-E06, piatti semplici con poco tempo | Avere ingredienti o un'idea non equivale sempre a trasformarli in una preparazione praticabile; esistono però routine efficaci | Ricostruire una scelta concreta, quali alternative vengono scartate e quale informazione manca |
-| **B03 - Riorganizzare l'uso degli ingredienti quando cambiano i programmi o manca un ingrediente della preparazione prevista** | P02-E07/E08 e C01, confezioni avanzate e piani cambiati; P03-E04, pollo riprogrammato con successo; P03-E08, panna inutilizzata perché non è stata comprata la pancetta | Un cambiamento può lasciare ingredienti senza destinazione, oppure essere gestito bene | Confrontare un adattamento riuscito e uno fallito, ricostruendo tempi, alternative e conseguenze |
+| **B01** | **Riconoscere gli alimenti disponibili e quali utilizzare prima** | Controllare ciò che si ha in casa | Individuare anche gli alimenti dimenticati e stabilire una priorità di utilizzo |
+| **B02** | **Scegliere un pasto praticabile rispetto a ingredienti, tempo, impegno e preferenze** | Decidere cosa preparare | Arrivare a una scelta compatibile con la situazione concreta |
+| **B03** | **Riorganizzare l'utilizzo degli ingredienti quando cambia il programma previsto** | Affrontare un invito, un cambio di orario o un ingrediente mancante | Adattare la preparazione oppure assegnare agli ingredienti un'altra occasione di consumo |
+| **B04** | **Valutare quantità da acquistare compatibili con le occasioni realistiche di consumo** | Preparare o fare la spesa | Scegliere quantità e confezioni considerando quanto si potrà effettivamente utilizzare |
 
-B01 riguarda riconoscimento e priorità; B02 la decisione sul pasto attuale; B03 l'adattamento dopo una rottura del piano. Tre bisogni sono già compatibili con il numero richiesto dal compito. Un quarto va aggiunto soltanto se emerge come obiettivo distinto e sostenuto dai dati.
+Gli esiti sono criteri qualitativi per costruire e successivamente valutare scenari e soluzioni. Non sono risultati osservati con CIBY né benefici già misurati.
+
+## B01 - Disponibilità e priorità
+
+**Ostacolo:** un alimento può rimanere fuori dalle decisioni anche quando la persona controlla le scorte o possiede una routine.
+
+**Evidenze:** P01-E05, yogurt non visto, ricomprato e poi buttato; P05-E03/E04/E11, verdure dimenticate, alimenti vecchi spostati davanti e melanzane ritrovate marce; P03-E06/E07, scadenze considerate ma freschi non sempre consumati.
+
+**Perché selezionarlo:** collega un problema di riconoscimento a conseguenze concrete e compare in più casi con strategie diverse.
+
+**Confine:** capire cosa è presente e cosa merita attenzione. La scelta della preparazione è il centro di B02; la stima delle quantità da comprare è il centro di B04.
+
+**Criterio da rappresentare nello scenario:** la persona riconosce un alimento che rischiava di trascurare e sa motivare la sua priorità. Non si assume una garanzia automatica di consumo.
+
+## B02 - Scelta di un pasto praticabile
+
+**Ostacolo:** avere ingredienti o un'idea non basta sempre a capire quale preparazione sia compatibile con la situazione.
+
+**Evidenze:** P01-E01/E09, fatica di scelta e preparazione anticipata; P02-E03/E10/E12, voglia di cucinare, verifica delle fonti e metodo soddisfacente; P03-E12/E13, tentativi sulle ricette e tensione tra varietà e semplicità; P05-E06, preparazioni semplici con poco tempo.
+
+**Perché selezionarlo:** è l'attività quotidiana che collega disponibilità del cibo, capacità, impegno e preferenze. La presenza di metodi già efficaci serve a capire dove un nuovo supporto aggiungerebbe valore.
+
+**Confine:** decidere un pasto nel contesto attuale. B03 riguarda invece un'intenzione precedente che non è più praticabile; B01 il riconoscimento e la priorità degli alimenti.
+
+**Criterio da rappresentare nello scenario:** la persona confronta alternative e sceglie una preparazione spiegando perché è fattibile rispetto ai suoi vincoli.
+
+## B03 - Adattamento a un cambiamento
+
+**Ostacolo:** un cambiamento di programma o una preparazione incompleta può lasciare ingredienti senza una destinazione concreta.
+
+**Evidenze:** P02-E07/E08 e C01, confezioni avanzate e piani cambiati; P03-E04, pollo riprogrammato con successo; P03-E08, panna inutilizzata perché non è stata comprata la pancetta.
+
+**Perché selezionarlo:** affronta una difficoltà distinta dalla scelta ordinaria. Il caso riuscito di P03 aiuta a descrivere quale capacità di adattamento sostenere.
+
+**Confine:** ingredienti già acquistati e un programma da rivedere. B04 riguarda la valutazione delle quantità prima di acquistare.
+
+**Criterio da rappresentare nello scenario:** la persona trova un'alternativa praticabile o assegna agli ingredienti rinviati una nuova occasione realistica di utilizzo. La panna di P03 non viene descritta come sicuramente buttata.
+
+## B04 - Quantità e occasioni di consumo
+
+**Ostacolo:** la quantità acquistabile, soprattutto nelle confezioni di freschi, può superare ciò che la persona riuscirà a utilizzare nei pasti effettivi.
+
+**Evidenze:** P02-E06/E07, ricerca di quantità minime e freschi avanzati da confezioni troppo grandi; P03-E05/E07, orizzonti di acquisto diversi per tipologia di alimento, confezioni da tre mozzarelle e pomodorini non sempre consumati o deteriorati.
+
+**Perché selezionarlo:** aggiunge il momento dell'acquisto e una decisione distinta alla gestione flessibile dei pasti. Ha riscontri in due interviste; non nasce dall'ipotesi sportiva.
+
+**Confine:** valutare cosa e quanto comprare rispetto alle occasioni realistiche di consumo. Non prescrive una pianificazione settimanale rigida né assume che il servizio possa modificare le confezioni disponibili.
+
+**Criterio da rappresentare nello scenario:** la persona confronta la quantità da acquistare con le occasioni di utilizzo e motiva la scelta. La riduzione effettiva degli sprechi dovrà essere verificata successivamente.
+
+**Limite:** i report descrivono soprattutto pratiche e difficoltà generali, non un episodio di acquisto completo osservato. Il futuro scenario sarà una costruzione progettuale fondata su questi elementi.
 
 ## Come ritrovare le fonti
 
@@ -33,22 +86,22 @@ B01 riguarda riconoscimento e priorità; B02 la decisione sul pasto attuale; B03
 
 Q indica una domanda della traccia; T un segmento tematico, non un minuto audio. Le evidenze E possono essere parafrasi, citazioni o osservazioni di artefatti: mantenere il tipo indicato nel report.
 
-## Lista più ampia per il brainstorming sui bisogni
+## Candidati considerati e loro collocazione
 
-Questa lista prepara il confronto; non documenta una sessione già svolta.
+Questa tabella conserva l'elenco preparatorio e la sua collocazione nella selezione accettata da Andrea. Non documenta una sessione collettiva con post-it o votazioni sui singoli bisogni.
 
-| Candidato | Evidenze C1 | Posizione iniziale nella discussione |
+| Candidato | Evidenze C1 | Collocazione attuale |
 |---|---|---|
-| B01 - Riconoscere disponibilità e priorità di consumo | P01-E05; P03-E06/E07; P05-E03/E04/E11 | Candidato principale |
-| B02 - Comporre un pasto praticabile | P01-E01/E09; P02-E03/E10/E12; P03-E12/E13; P05-E06 | Candidato principale |
-| B03 - Adattare uso degli ingredienti a imprevisti o preparazioni incomplete | P02-E07/E08; P03-E04/E08 | Candidato principale |
-| C04 - Adeguare quantità acquistate alle occasioni reali di consumo | P02-E06/E07; P03-E05/E07 | Andrea conferma di mantenerlo tra le priorità da approfondire come possibile quarto bisogno, distinguendolo da B03 |
-| C05 - Valutare e adattare una ricetta attraverso fonti e capacità personali | P02-E10/E12; P03-E10/E11/E12 | Possibile componente di B02; i metodi attuali sono spesso utili |
-| C06 - Ottenere un supporto pertinente con uno sforzo sostenibile di contestualizzazione | P01-E04/E07 | Barriera riferita in un caso; da approfondire |
-| C07 - Disporre del pasto previsto fuori casa o trovare un'alternativa praticabile | P01-E03/E09; P04-E02/E04 | Problema distinto, con strategie già adottate |
-| C08 - Coordinare menu differenti nella coppia | P01-E02 | Preoccupazione futura, non difficoltà attuale accertata |
+| B01 - Riconoscere disponibilità e priorità di consumo | P01-E05; P03-E06/E07; P05-E03/E04/E11 | Selezionato |
+| B02 - Scegliere un pasto praticabile | P01-E01/E09; P02-E03/E10/E12; P03-E12/E13; P05-E06 | Selezionato |
+| B03 - Adattare l'uso degli ingredienti | P02-E07/E08; P03-E04/E08 | Selezionato |
+| C04 - Quantità e occasioni di consumo | P02-E06/E07; P03-E05/E07 | Selezionato come B04 |
+| C05 - Valutare e adattare una ricetta attraverso fonti e capacità personali | P02-E10/E12; P03-E10/E11/E12 | Approfondimento di B02, senza bisogno autonomo aggiuntivo |
+| C06 - Ottenere supporto pertinente con uno sforzo sostenibile di contestualizzazione | P01-E04/E07 | Vincolo da considerare nella progettazione del supporto; riferito in un caso |
+| C07 - Disporre del pasto previsto fuori casa o trovare un'alternativa praticabile | P01-E03/E09; P04-E02/E04 | Contesto da considerare in B02/B03, con strategie già adottate |
+| C08 - Coordinare menu differenti nella coppia | P01-E02 | Rinviato: preoccupazione futura, non difficoltà attuale accertata |
 
-Per ogni candidato, discutere: episodio che lo sostiene, importanza per l'utente, conseguenza concreta, ampiezza come attività, differenza dagli altri bisogni e presenza di strategie già efficaci. Le decisioni devono seguire questa discussione ed essere registrate.
+La scelta mantiene quattro attività distinguibili: riconoscere, scegliere, adattare, valutare gli acquisti. Le immagini e le tracce effettive della discussione del gruppo restano da raccogliere per documentare il processo richiesto dalla consegna.
 
 ## Riscontri da mantenere anche se complicano la proposta
 
@@ -60,22 +113,21 @@ Per ogni candidato, discutere: episodio che lo sostiene, importanza per l'utente
 - La pianificazione settimanale rigida non è emersa come obiettivo comune.
 - Gli scontrini documentano acquisti; non dimostrano consumo, spreco o utilità di una soluzione.
 
-## Integrazione della nuova analisi
+## Sport, nutrizione e idee di realizzazione
 
-Per ogni estratto nuovo compilare una riga. Finché le attività non sono svolte, non ci sono nuove evidenze da inserire.
+L'organizzazione dei pasti intorno agli allenamenti resta un contesto esplorativo per B02/B03. I riscontri P03/P04 e i loro limiti sono nella [valutazione dedicata](valutazione-filone-sportivo.md). Non viene introdotto un quinto bisogno.
 
-| ID sessione/evidenza | Estratto o azione osservata | Tipo di dato | Codice | Tema C1 collegato o nuovo | Bisogno | Conferma, modifica o contraddice? |
-|---|---|---|---|---|---|---|
-| Da compilare dopo la sessione | | | | | | |
+Mascotte, personalizzazione e suggerimenti nutrizionali con possibile AI sono idee proposte da Andrea, registrate in [Focus e decisioni](focus-e-decisioni.md). Verranno confrontate rispetto alle attività da sostenere.
 
-Gli esiti possono confermare un bisogno, restringerlo, cambiarne la formulazione o farlo scendere di priorità. Documentare anche una mancata conferma rende comprensibile la scelta finale.
+## Collegamento agli scenari e prossimi passaggi
 
-## Focus confermato e approfondimenti
+| Bisogno | Copertura di lavoro | Passaggio successivo |
+|---|---|---|
+| B01 | Scenario M, Marta | Consolidare il riconoscimento e la priorità degli alimenti fuori routine |
+| B02 | Scenario G, Gianfranco | Consolidare la decisione su una preparazione fattibile |
+| B03 | Scenario L, Luca | Consolidare l'adattamento dopo un'interruzione del programma |
+| B04 | Scenario dedicato ancora da elaborare | Rappresentare una decisione prima dell'acquisto; abbinare una delle personas pertinenti |
 
-**Gestione flessibile dei pasti: aiutare giovani adulti che gestiscono autonomamente i propri pasti a utilizzare gli ingredienti disponibili e trovare una preparazione praticabile, anche quando cambiano i programmi.**
+Gli scenari G/L/M sono proposte disponibili in [Personas e scenari](personas-e-scenari.md). Quattro bisogni richiedono quattro scenari principali; non richiedono automaticamente quattro personas. La variante sportiva rimane un approfondimento dichiaratamente simulato.
 
-Andrea riferisce che il gruppo ha votato per questa direzione e conferma di procedere. È una decisione sull'ambito di progetto; la soluzione concettuale e il beneficio specifico rimangono da definire e verificare.
-
-C04 rimane candidato al quarto bisogno. Per distinguerlo da B03, approfondire la valutazione delle quantità prima dell'acquisto rispetto alla riorganizzazione di alimenti già comprati dopo un imprevisto.
-
-L'organizzazione dei pasti intorno agli allenamenti resta un contesto da esplorare per B02/B03. La mascotte, la personalizzazione e i suggerimenti nutrizionali con possibile AI sono idee di realizzazione proposte da Andrea, registrate in [Focus e decisioni](focus-e-decisioni.md); non aggiungono nuove evidenze ai report.
+Non sono disponibili nuovi estratti da integrare nell'analisi tematica. Il lavoro attuale è una rilettura della C1 e una selezione progettuale, non una nuova attività con utenti.

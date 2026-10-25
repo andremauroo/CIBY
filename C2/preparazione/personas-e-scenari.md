@@ -6,6 +6,8 @@ La board attuale è [Compito 2 - Dai report a personas e scenari](https://www.fi
 
 Il 25 ottobre sono stati letti testi, scenari, fonti e commenti. Sono state aggiunte otto note verdi con firma Andrea: due per ciascuna coppia persona/scenario e due sul filone sportivo. I contenuti preesistenti e i commenti dei colleghi sono stati preservati. Le riscritture sotto sono proposte concrete; non sono state sostituite ai testi della board.
 
+**Aggiornamento sui bisogni:** Andrea ha confermato B01-B04. I tre scenari G/L/M sotto coprono principalmente B02/B03/B01; va elaborato anche uno scenario dedicato a B04 sulla valutazione delle quantità prima dell'acquisto. Il quarto scenario può usare una delle personas pertinenti; non è necessaria automaticamente una quarta persona.
+
 ## Valutazione complessiva
 
 Le tre personas possono essere utili alla C2 se vengono distinte per obiettivi e contesto, anziché condividere lo stesso insieme di ricette, lista e pianificazione.
@@ -16,7 +18,7 @@ Le tre personas possono essere utili alla C2 se vengono distinte per obiettivi e
 | Luca | Riassegnare gli ingredienti quando una preparazione non può essere completata | B03 - Adattare l'uso degli ingredienti | Pertinente come archetipo esplorativo. Ridurre sovrapposizione con Gianfranco e non usare perfezionismo/delivery come pattern accertati |
 | Marta | Preparare pasti per due e il proprio pranzo da portare, mantenendo visibili gli alimenti fuori routine | B01 - Riconoscere gli alimenti presenti e le priorità | Contesto distintivo utile. Cambiare il sottotitolo duplicato e fondare lo scenario sulla preparazione anticipata |
 
-La corrispondenza non è esclusiva: uno scenario può coinvolgere più bisogni. Dare a ciascuno un bisogno principale aiuta a mostrare che B01-B03 ricevono una copertura effettiva.
+La corrispondenza non è esclusiva: uno scenario può coinvolgere più bisogni. Dare a ciascuno un bisogno principale aiuta a verificare la copertura. Dopo la selezione di B04, la copertura dei quattro bisogni sarà completa soltanto con il suo scenario dedicato.
 
 ## Criteri applicati
 
@@ -170,11 +172,14 @@ Marta rientra dopo una giornata di studio e lavoro e deve preparare la cena per 
 
 ## Copertura, priorità e limiti
 
-| Bisogno C1 | Scenario principale proposto | Contesto | Evidenze principali |
+| Bisogno selezionato C2 | Scenario principale proposto | Contesto | Evidenze principali |
 |---|---|---|---|
 | B01 - Riconoscere disponibilità e priorità | M | Routine di preparazione anticipata e alimenti fuori abitudine | P01-E05/E08/E09 |
 | B02 - Comporre un pasto praticabile | G | Scelta serale con tempo ed energie limitati | P01-E01/E09; P02-E03/E12; P03-E12/E13; P05-E06 |
 | B03 - Adattare l'uso degli ingredienti | L | Preparazione interrotta o pasto cambiato | P02-E07/E08; P03-E04/E08 |
+| B04 - Valutare quantità e occasioni di consumo | Da elaborare | Decisione prima dell'acquisto; persona da abbinare | P02-E06/E07; P03-E05/E07 |
+
+Per B04 va costruito un episodio di acquisto che mostri quantità disponibili, occasioni di consumo e decisione motivata. Non sono documentati nuovi episodi osservati: i dettagli narrativi saranno riconoscibili come costruzione progettuale.
 
 **Proposta di priorità:** mantenere Gianfranco come candidato primario se il focus resta la decisione quotidiana; Luca copre l'eccezione e Marta il contesto con preparazione anticipata. La scelta della persona primaria rimane una decisione del gruppo, da motivare.
 

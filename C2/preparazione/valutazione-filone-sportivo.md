@@ -37,7 +37,7 @@ Questa tabella è una valutazione progettuale, non una graduatoria votata dal gr
 
 **Comporre e riorganizzare i propri pasti tenendo conto degli impegni sportivi e degli ingredienti disponibili.**
 
-Il candidato si sovrappone in parte a B02 e B03. Per diventare un quarto bisogno autonomo deve mostrare una difficoltà distinta; altrimenti è più chiaro trattarlo come un contesto aggiuntivo degli stessi bisogni.
+Il candidato si sovrappone in parte a B02 e B03 e viene mantenuto come loro contesto esplorativo. Andrea ha confermato i quattro bisogni B01-B04: il quarto riguarda quantità della spesa e occasioni realistiche di consumo. Lo sport non aggiunge un bisogno autonomo a questa selezione.
 
 Domande discriminanti: il problema è il momento in cui si può cucinare, l'assenza del pasto previsto, la disponibilità degli ingredienti, l'interpretazione di indicazioni alimentari oppure un obiettivo quantitativo? Questi aspetti richiedono supporti diversi.
 

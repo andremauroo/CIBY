@@ -2,7 +2,7 @@
 
 **Progetto CIBY | Gruppo MAGGICAL | Scadenza: 26 ottobre 2026**
 
-Stato al 25 ottobre: Andrea riferisce che il gruppo ha votato per il focus **gestione flessibile dei pasti**. Quantità della spesa e organizzazione intorno agli allenamenti restano da approfondire; la revisione delle tre personas e degli scenari è disponibile come proposta. Questa cartella contiene i materiali di lavoro per costruire la consegna; il PDF finale non è ancora disponibile.
+Stato al 25 ottobre: Andrea riferisce che il gruppo ha votato per il focus **gestione flessibile dei pasti**. Andrea ha poi confermato i quattro bisogni B01-B04, includendo le quantità della spesa. L'organizzazione intorno agli allenamenti resta da approfondire; la revisione delle tre personas e dei tre scenari esistenti è disponibile come proposta e va completata con lo scenario B04. Questa cartella contiene i materiali di lavoro per costruire la consegna; il PDF finale non è ancora disponibile.
 
 ## Da dove partiamo
 
@@ -16,7 +16,7 @@ Andrea ha confermato il 23 ottobre che non sono ancora state svolte nuove attivi
 |---|---|
 | [Focus e decisioni](preparazione/focus-e-decisioni.md) | Direzione scelta dal gruppo, priorità, estensioni e idee per la futura realizzazione |
 | [Requisiti e piano](preparazione/requisiti-e-piano.md) | Richieste del compito, stato del lavoro, ordine della presentazione e passi fino alla scadenza |
-| [Evidenze e bisogni](preparazione/evidenze-e-bisogni.md) | Collegamenti tra risposte C1, bisogni candidati e approfondimenti necessari |
+| [Evidenze e bisogni](preparazione/evidenze-e-bisogni.md) | Quattro bisogni confermati, evidenze C1, confini ed esiti desiderati |
 | [Personas e scenari](preparazione/personas-e-scenari.md) | Revisione di Gianfranco, Luca e Marta e riscritture proposte dei tre scenari |
 | [Nuove attività con utenti](preparazione/nuove-attivita-utenti.md) | Traccia pronta, domande, modalità di raccolta e scheda per documentare i risultati |
 | [Brainstorming e scelta](preparazione/brainstorming-e-scelta.md) | Procedura per il gruppo, registri da compilare e spunti preliminari da discutere |
@@ -27,21 +27,21 @@ Andrea ha confermato il 23 ottobre che non sono ancora state svolte nuove attivi
 ## Cosa manca per la consegna
 
 - Nuove attività di needfinding, almeno una con un possibile utilizzatore finale.
-- Consolidamento dell'analisi disponibile e selezione condivisa di 3-4 bisogni, approfondendo C04 sulle quantità della spesa; eventuali dati nuovi vanno integrati solo se raccolti.
-- Consolidamento delle personas e di uno scenario per ogni bisogno scelto.
+- Documentazione effettiva del confronto sui bisogni: B01-B04 sono stati confermati da Andrea; restano da raccogliere le immagini e le tracce della discussione del gruppo.
+- Consolidamento delle personas e dei quattro scenari principali, incluso quello da elaborare per B04 sulla spesa.
 - Brainstorming individuale e collettivo, con immagini di tutte le idee e selezione documentata.
 - Scelta della soluzione, motivazione del nome CIBY e value proposition.
 - Slide in PDF, ordinate secondo i legami tra evidenze e decisioni.
 
-Tre bisogni sono già sostenuti dalla C1: B01 riconoscere gli alimenti presenti e quali usare prima; B02 comporre un pasto praticabile; B03 riorganizzare l'uso degli ingredienti dopo un imprevisto. Sono la base del focus confermato. C04, adeguare le quantità acquistate alle occasioni reali di consumo, rimane candidato al quarto bisogno. Lo sport viene esplorato come contesto organizzativo di B02/B03. La selezione formale dei bisogni e della soluzione resta da documentare.
+I quattro bisogni confermati sono B01 riconoscere gli alimenti disponibili e quali utilizzare prima; B02 scegliere un pasto praticabile; B03 riorganizzare l'utilizzo degli ingredienti dopo un cambiamento; B04 valutare quantità da acquistare compatibili con le occasioni realistiche di consumo. B04 corrisponde al candidato C04 discusso in precedenza. Lo sport viene esplorato come contesto organizzativo di B02/B03. La selezione della soluzione resta da svolgere.
 
 ## Fonti e convenzioni
 
 Riferimento principale: **Compito2-focus.pdf**, pp. 1-2, fornito da Andrea il 23 ottobre. Il file richiede la cartella C2 e slide in PDF. Le dispense **3 Requisiti-Personas-Scenari.pdf** sono il riferimento teorico; in caso di differenze operative prevale il testo specifico del compito.
 
-B01-B03 mantengono gli identificativi della C1. Le persone reali rimangono P01-P05; Gianfranco, Luca e Marta sono personas, con nomi di fantasia. Luca sostituisce il nome precedente Charles LeFrigo. Le nuove sessioni con partecipanti già intervistati useranno codici come P03-C2-01; un nuovo partecipante riceverà il primo codice libero, a partire da P06.
+B01-B03 mantengono gli identificativi della C1; B04 viene selezionato in C2 dal candidato C04. Le persone reali rimangono P01-P05; Gianfranco, Luca e Marta sono personas, con nomi di fantasia. Luca sostituisce il nome precedente Charles LeFrigo. Le nuove sessioni con partecipanti già intervistati useranno codici come P03-C2-01; un nuovo partecipante riceverà il primo codice libero, a partire da P06.
 
-Le fonti C1 sono state verificate rispetto ai file pubblicati nel commit [48a326d](https://github.com/andremauroo/CIBY/commit/48a326d385f9900b06cc3e254e4acab520dc8090). Le proposte di questa cartella non costituiscono nuove osservazioni. Le decisioni effettive vengono distinte dalle proposte: il [registro del focus](preparazione/focus-e-decisioni.md) riporta la votazione sulla direzione comunicata da Andrea, senza ricostruire conteggi o un processo non documentato.
+Le fonti C1 sono state verificate rispetto ai file pubblicati nel commit [48a326d](https://github.com/andremauroo/CIBY/commit/48a326d385f9900b06cc3e254e4acab520dc8090). Le proposte di questa cartella non costituiscono nuove osservazioni. Le decisioni effettive vengono distinte dalle proposte: il [registro del focus](preparazione/focus-e-decisioni.md) riporta la votazione sulla direzione comunicata da Andrea e la sua successiva conferma dei quattro bisogni, senza ricostruire conteggi o un processo non documentato.
 
 ## Gruppo
 

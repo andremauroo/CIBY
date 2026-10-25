@@ -1,26 +1,29 @@
 # Brainstorming e scelta della soluzione
 
-Preparazione del 23 ottobre, aggiornata il 25 ottobre 2026. Andrea riferisce che il gruppo ha votato per il focus **gestione flessibile dei pasti**, mantenendo da approfondire spesa e organizzazione intorno agli allenamenti: vedi [Focus e decisioni](focus-e-decisioni.md).
+Preparazione del 23 ottobre, aggiornata il 25 ottobre 2026. Andrea riferisce che il gruppo ha votato per il focus **gestione flessibile dei pasti**, e ha successivamente confermato la proposta dei quattro bisogni B01-B04, inclusa la spesa; l'organizzazione intorno agli allenamenti resta da approfondire: vedi [Focus e decisioni](focus-e-decisioni.md).
 
 Questo documento prepara il brainstorming delle soluzioni; non documenta una sessione già avvenuta. Gli spunti A-D sono proposte iniziali, non idee attribuite ai singoli membri, e non hanno ricevuto voti documentati. La scelta della direzione non equivale alla selezione finale della soluzione.
 
-## 1. Discutere e selezionare i bisogni
+## 1. Selezione dei bisogni confermata
 
-Portare nella discussione tutti i candidati della [lista dei bisogni](evidenze-e-bisogni.md). Ogni elemento deve mantenere i riferimenti alle risposte che lo sostengono. B01-B03 costituiscono la base del focus confermato; C04 rimane il candidato al quarto bisogno. Integrare eventuali dati nuovi solo se raccolti effettivamente.
+Andrea ha accettato la proposta dei quattro bisogni con i rispettivi confini. Le [schede dei bisogni](evidenze-e-bisogni.md) riportano tutti i candidati considerati, le fonti specifiche, la motivazione e gli esiti desiderati.
 
-Discutere ampiezza del bisogno, conseguenze, rilevanza per l'utente, differenze rispetto agli altri candidati e strategie già funzionanti. Conservare l'immagine della lista completa prima di restringerla. Registrare anche bisogni accorpati, esclusi o rinviati e il motivo.
-
-| Bisogno | Evidenze discusse | Decisione effettiva | Motivazione | Immagine del processo |
+| Bisogno | Evidenze principali | Decisione registrata | Motivazione | Traccia del processo |
 |---|---|---|---|---|
-| Da compilare nella sessione | | | | |
+| B01 - Riconoscere disponibilità e priorità | P01-E05; P03-E06/E07; P05-E03/E04/E11 | Confermato da Andrea | Attività di riconoscimento distinta dalla scelta della preparazione | Conferma in conversazione; immagini del confronto del gruppo da raccogliere |
+| B02 - Scegliere un pasto praticabile | P01-E01/E09; P02-E03/E10/E12; P03-E12/E13; P05-E06 | Confermato da Andrea | Decisione quotidiana che integra ingredienti, tempo, impegno e preferenze | Come sopra |
+| B03 - Riorganizzare l'uso degli ingredienti | P02-E07/E08; P03-E04/E08 | Confermato da Andrea | Adattamento di un'intenzione precedente dopo un cambiamento | Come sopra |
+| B04 - Valutare quantità e occasioni di consumo | P02-E06/E07; P03-E05/E07 | C04 selezionato come B04 su conferma di Andrea | Decisione prima dell'acquisto, distinta dall'adattamento di alimenti già comprati | Come sopra |
 
-La selezione deve arrivare a 3-4 bisogni. Non serve scegliere quattro elementi se tre sono più distinti e sostenuti dai dati.
+Questa è la registrazione della proposta accettata da Andrea; non ricostruisce una sessione collettiva con post-it né voti sui singoli bisogni. Conservare le immagini effettive della lista completa, dei raggruppamenti e della discussione del gruppo per la presentazione. Non attribuire retroattivamente ai membri le proposte della preparazione.
+
+La C2 richiede 3-4 bisogni: la selezione comprende quattro attività distinguibili. C05 viene ricondotto a B02, C06 rimane un vincolo di progettazione, C07 un contesto di B02/B03; C08 non viene scelto come autonomo perché riguarda una preoccupazione futura. Le rispettive evidenze e i limiti restano nella lista completa.
 
 ## 2. Consolidare personas e scenari
 
 Prima di proporre soluzioni, verificare che ogni bisogno scelto abbia uno scenario concettuale, con contesto, motivazione, ostacolo e risultato desiderato. Collegare ciascuno a una persona fondata su pattern della ricerca.
 
-La [revisione di Gianfranco, Luca e Marta con gli scenari G/L/M](personas-e-scenari.md), aggiornata il 25 ottobre, serve come punto di partenza. Le riscritture restano proposte da discutere. Il [filone sportivo](valutazione-filone-sportivo.md) è un'ulteriore ipotesi di contesto, con uno scenario simulato esplicitamente distinto dalle interviste.
+La [revisione di Gianfranco, Luca e Marta con gli scenari G/L/M](personas-e-scenari.md), aggiornata il 25 ottobre, serve come punto di partenza. Le riscritture restano proposte da discutere e consolidare. Dopo la conferma di B04 serve anche uno scenario dedicato al momento dell'acquisto, che può usare una delle tre personas pertinenti. Il [filone sportivo](valutazione-filone-sportivo.md) è un'ulteriore ipotesi di contesto, con uno scenario simulato esplicitamente distinto dalle interviste.
 
 ## 3. Raccogliere le idee individuali
 
@@ -48,7 +51,7 @@ Queste direzioni derivano dalla C1 e servono a stimolare il confronto. Non costi
 | A - Dare una destinazione agli alimenti meno visibili | Riconoscere ciò che rischia di rimanere fuori dalle decisioni e associarlo a un'occasione di uso | B01/scenario M | In quale momento il supporto sarebbe utile e sostenibile? |
 | B - Passare da ingredienti a una preparazione praticabile | Valutare alternative coerenti con ingredienti, tempo e disponibilità a cucinare | B02/scenario G | Quale attrito resta rispetto a ricette e routine già efficaci? |
 | C - Recuperare un'intenzione dopo un imprevisto | Ripensare l'uso di ingredienti già comprati quando il programma o la preparazione cambia | B03/scenario L | Cosa distingue un adattamento riuscito da uno fallito? |
-| D - Collegare quantità e occasioni di consumo | Valutare se gli ingredienti acquistati avranno un uso nelle occasioni realistiche | C04, se selezionato | È un bisogno distinto e sufficientemente documentato? |
+| D - Collegare quantità e occasioni di consumo | Valutare prima dell'acquisto quanto si riuscirà effettivamente a utilizzare | B04/scenario da elaborare | Come confrontare confezioni disponibili e occasioni realistiche di consumo? |
 
 Il [confronto preliminare con soluzioni esistenti](confronto-soluzioni-esistenti.md), svolto il 23 ottobre su fonti ufficiali, documenta sovrapposizioni con ricerca dagli ingredienti, priorità di consumo e sostituzioni. Non dimostra ancora la novità di una direzione CIBY. Dopo aver raccolto le alternative individuali, usare il confronto per precisare le proposte e provare gli stessi compiti nei prodotti pertinenti, distinguendo funzioni dichiarate ed esperienza osservata.
 
@@ -89,11 +92,11 @@ In entrambi i casi: fotografare la situazione iniziale, tutte le idee, gli accor
 
 Il nome ufficiale del progetto è **CIBY**, confermato da Andrea; il gruppo si chiama **MAGGICAL**. Per la presentazione serve la motivazione effettiva del gruppo sulla scelta del nome: non è documentata nei materiali letti e non va ricostruita come un fatto.
 
-Il focus comune a B01-B03, confermato da Andrea come direzione votata dal gruppo, può essere descritto così:
+Il focus di gestione flessibile dei pasti, comunicato da Andrea come direzione votata dal gruppo e articolato nei quattro bisogni confermati, può essere descritto così:
 
-> CIBY sostiene chi gestisce i propri pasti nel trasformare gli ingredienti già presenti in una preparazione praticabile, anche quando cambiano i programmi. Il supporto riguarda riconoscimento delle priorità, scelta e adattamento, mantenendo il controllo della persona.
+> CIBY sostiene chi gestisce i propri pasti nello scegliere acquisti compatibili con le occasioni di consumo e trasformare gli ingredienti disponibili in una preparazione praticabile, anche quando cambiano i programmi. Il supporto riguarda riconoscimento delle priorità, scelta, adattamento e valutazione delle quantità, mantenendo il controllo della persona.
 
-Queste due frasi descrivono l'ambito confermato e non la soluzione già selezionata. Dopo la selezione dovranno essere rese coerenti con il supporto specifico scelto, considerando l'eventuale integrazione di C04 e del contesto sportivo.
+Queste due frasi descrivono l'ambito confermato e non la soluzione già selezionata. Dopo la selezione dovranno essere rese coerenti con il supporto specifico scelto, considerando B04 sulle quantità della spesa e l'eventuale integrazione del contesto sportivo.
 
 Una possibile frase di beneficio da rivedere in quel momento:
 
