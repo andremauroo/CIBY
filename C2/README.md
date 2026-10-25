@@ -2,7 +2,7 @@
 
 **Progetto CIBY | Gruppo MAGGICAL | Scadenza: 26 ottobre 2026**
 
-Stato al 25 ottobre: Andrea riferisce che il gruppo ha votato per il focus **gestione flessibile dei pasti**. Andrea ha poi confermato i quattro bisogni B01-B04, includendo le quantità della spesa. L'organizzazione intorno agli allenamenti resta da approfondire; la revisione delle tre personas e dei tre scenari esistenti è disponibile come proposta e va completata con lo scenario B04. Questa cartella contiene i materiali di lavoro per costruire la consegna; il PDF finale non è ancora disponibile.
+Stato al 25 ottobre: Andrea riferisce che il gruppo ha votato per il focus **gestione flessibile dei pasti**. Andrea ha poi confermato i quattro bisogni B01-B04, includendo le quantità della spesa. L'organizzazione intorno agli allenamenti è stata sviluppata in un caso progettuale simulato, con evidenze e ipotesi separate; la revisione delle tre personas e dei tre scenari esistenti è disponibile come proposta e va completata con lo scenario B04. Questa cartella contiene i materiali di lavoro per costruire la consegna; il PDF finale non è ancora disponibile.
 
 ## Da dove partiamo
 
@@ -18,10 +18,11 @@ Andrea ha confermato il 23 ottobre che non sono ancora state svolte nuove attivi
 | [Requisiti e piano](preparazione/requisiti-e-piano.md) | Richieste del compito, stato del lavoro, ordine della presentazione e passi fino alla scadenza |
 | [Evidenze e bisogni](preparazione/evidenze-e-bisogni.md) | Quattro bisogni confermati, evidenze C1, confini ed esiti desiderati |
 | [Personas e scenari](preparazione/personas-e-scenari.md) | Revisione di Gianfranco, Luca e Marta e riscritture proposte dei tre scenari |
-| [Nuove attività con utenti](preparazione/nuove-attivita-utenti.md) | Traccia pronta, domande, modalità di raccolta e scheda per documentare i risultati |
+| [Nuove attività con utenti](preparazione/nuove-attivita-utenti.md) | Traccia iniziale non attuata, conservata come riferimento per eventuali ricerche future |
 | [Brainstorming e scelta](preparazione/brainstorming-e-scelta.md) | Procedura per il gruppo, registri da compilare e spunti preliminari da discutere |
 | [Confronto con soluzioni esistenti](preparazione/confronto-soluzioni-esistenti.md) | Capacità già documentate, sovrapposizioni e tre ipotesi da verificare |
-| [Filone sportivo](preparazione/valutazione-filone-sportivo.md) | Evidenze disponibili, valutazione del focus e scenario simulato esplicito |
+| [Filone sportivo](preparazione/valutazione-filone-sportivo.md) | Evidenze disponibili, valutazione del focus e collegamento al caso simulato |
+| [Approfondimento sportivo simulato](preparazione/approfondimento-sportivo-simulato.md) | Caso concreto, assunzioni, alternative, collegamenti ai bisogni e testo breve per le slide |
 | [Revisione Figma del 25 ottobre](preparazione/revisione-figma-2026-10-25.md) | Esito della revisione e collegamenti agli otto post-it di Andrea |
 
 ## Cosa manca per la consegna

@@ -67,7 +67,7 @@ Il piano iniziale prevedeva nuove attività il 24 ottobre; non sono state svolte
 |---|---|---|
 | 1 | Definire il focus | Completato: gestione flessibile dei pasti, con spesa inclusa nei bisogni e sport da approfondire |
 | 2 | Consolidare i bisogni | Completato: B01-B04 confermati da Andrea, con evidenze, confini, motivazioni ed esiti desiderati |
-| 3 | Preparare l'approfondimento sportivo simulato | Caso esplorativo distinto da interviste e osservazioni |
+| 3 | Preparare l'approfondimento sportivo simulato | Completato: [caso S-Sport](approfondimento-sportivo-simulato.md), con fonti C1, assunzioni, scenario e ipotesi aperte; nessuna nuova attività con utenti |
 | 4 | Consolidare personas e scenari | Consolidare G/L/M ed elaborare lo scenario B04: quattro scenari principali, con evidenze e ipotesi riconoscibili |
 | 5 | Generare e selezionare alternative | Idee individuali, confronto e processo effettivo documentato |
 | 6 | Definire soluzione, nome e value proposition | Supporto concettuale specifico, motivazione del nome e beneficio in una riga |

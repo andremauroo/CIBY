@@ -30,7 +30,7 @@ Andrea conferma l'interesse per l'organizzazione dei pasti per gli allenamenti, 
 
 Il contesto da esplorare riguarda disponibilità a cucinare, tempi, preparazione anticipata, ingredienti e riorganizzazione in caso di cambiamenti di orario. Non costituisce automaticamente un bisogno aggiuntivo o una nuova persona.
 
-Le evidenze sportive disponibili restano quelle di P03 e P04, con i limiti descritti nella [valutazione dedicata](valutazione-filone-sportivo.md). Gli approfondimenti costruiti dal gruppo saranno dichiarati simulazioni progettuali, distinti dai dati delle interviste reali.
+Le evidenze sportive disponibili restano quelle di P03 e P04, con i limiti descritti nella [valutazione dedicata](valutazione-filone-sportivo.md). È stato preparato il [caso S-Sport](approfondimento-sportivo-simulato.md), con fonti C1, assunzioni, scenario e ipotesi aperte. È una simulazione progettuale distinta dai dati delle interviste reali; rimane da valutare la sua integrazione negli scenari e nelle alternative.
 
 ## Idee per la futura realizzazione
 
@@ -55,7 +55,8 @@ L'attività a cui potrebbero contribuire è comprendere le caratteristiche degli
 | Estensione da approfondire | Organizzazione dei pasti intorno agli allenamenti |
 | Idee aggiunte da Andrea | Mascotte, eventuale personalizzazione, informazioni nutrizionali, possibile AI |
 | Dettagli non forniti | Data della riunione, presenti, alternative votate, metodo e conteggi |
-| Passaggi successivi | Approfondimento sportivo simulato, consolidamento di personas e quattro scenari, raccolta e confronto delle soluzioni |
+| Approfondimento preparato | Caso S-Sport simulato: organizzazione dei pasti dopo un cambiamento dell'orario di allenamento |
+| Passaggi successivi | Consolidamento di personas e quattro scenari, valutazione del caso sportivo nelle alternative, raccolta e confronto delle soluzioni |
 
 La votazione riferita riguarda la direzione di progetto. La successiva conferma dei quattro bisogni proviene da Andrea; non vengono ricostruiti voti del gruppo sui singoli bisogni. Nessuno dei due passaggi viene registrato come se fosse già il processo di selezione della soluzione richiesto al punto 6 del compito.
 

@@ -23,7 +23,7 @@ La C2 richiede 3-4 bisogni: la selezione comprende quattro attività distinguibi
 
 Prima di proporre soluzioni, verificare che ogni bisogno scelto abbia uno scenario concettuale, con contesto, motivazione, ostacolo e risultato desiderato. Collegare ciascuno a una persona fondata su pattern della ricerca.
 
-La [revisione di Gianfranco, Luca e Marta con gli scenari G/L/M](personas-e-scenari.md), aggiornata il 25 ottobre, serve come punto di partenza. Le riscritture restano proposte da discutere e consolidare. Dopo la conferma di B04 serve anche uno scenario dedicato al momento dell'acquisto, che può usare una delle tre personas pertinenti. Il [filone sportivo](valutazione-filone-sportivo.md) è un'ulteriore ipotesi di contesto, con uno scenario simulato esplicitamente distinto dalle interviste.
+La [revisione di Gianfranco, Luca e Marta con gli scenari G/L/M](personas-e-scenari.md), aggiornata il 25 ottobre, serve come punto di partenza. Le riscritture restano proposte da discutere e consolidare. Dopo la conferma di B04 serve anche uno scenario dedicato al momento dell'acquisto, che può usare una delle tre personas pertinenti. Il [filone sportivo](valutazione-filone-sportivo.md) è un'ulteriore ipotesi di contesto. Il [caso simulato S-Sport](approfondimento-sportivo-simulato.md) è pronto per il confronto, con fonti, assunzioni e possibili riscontri contrari. È distinto dalle interviste e non sostituisce lo scenario dedicato B04.
 
 ## 3. Raccogliere le idee individuali
 
@@ -54,6 +54,12 @@ Queste direzioni derivano dalla C1 e servono a stimolare il confronto. Non costi
 | D - Collegare quantità e occasioni di consumo | Valutare prima dell'acquisto quanto si riuscirà effettivamente a utilizzare | B04/scenario da elaborare | Come confrontare confezioni disponibili e occasioni realistiche di consumo? |
 
 Il [confronto preliminare con soluzioni esistenti](confronto-soluzioni-esistenti.md), svolto il 23 ottobre su fonti ufficiali, documenta sovrapposizioni con ricerca dagli ingredienti, priorità di consumo e sostituzioni. Non dimostra ancora la novità di una direzione CIBY. Dopo aver raccolto le alternative individuali, usare il confronto per precisare le proposte e provare gli stessi compiti nei prodotti pertinenti, distinguendo funzioni dichiarate ed esperienza osservata.
+
+### Variante esplorativa sportiva
+
+Usare [S-Sport](approfondimento-sportivo-simulato.md) per confrontare gli spunti B e C quando cambia l'orario dell'allenamento. Considerare quale supporto aggiungerebbe valore rispetto a una routine già efficace e come mantenere una destinazione per gli ingredienti rinviati. Lo spunto D apre invece la domanda sulle quantità nella spesa successiva.
+
+Il caso non ha ricevuto voti documentati e non dimostra una domanda di monitoraggio nutrizionale. Conservare la didascalia di simulazione quando lo si porta nel brainstorming o nelle slide.
 
 ### Idee di realizzazione segnalate da Andrea
 

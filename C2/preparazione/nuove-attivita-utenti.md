@@ -1,6 +1,8 @@
 # Traccia per i nuovi approfondimenti
 
-Preparata il 23 ottobre 2026. **Attività ancora da svolgere.** Le durate e il numero di sessioni sotto sono proposte organizzative, non requisiti aggiunti al compito.
+Preparata il 23 ottobre 2026. **Aggiornamento del 25 ottobre: la traccia non è stata attuata; Andrea ha confermato che non sarà possibile organizzare nuove attività per la C2.** Le proposte sotto sono conservate come riferimento per eventuali ricerche future. Durate e numero di sessioni erano ipotesi organizzative, non requisiti aggiunti al compito.
+
+Per l'approfondimento attuale è stato preparato il [caso sportivo simulato S-Sport](approfondimento-sportivo-simulato.md), con assunzioni ed esiti ipotetici dichiarati. Non sono state compilate schede di sessione né aggiunte testimonianze; il requisito delle nuove attività rimane non coperto.
 
 ## Cosa vogliamo capire
 
@@ -81,4 +83,4 @@ Per le evidenze usare identificativi come P03-C2-01-E01. Non attribuire timestam
 4. Aggiornare la [matrice di evidenze e bisogni](evidenze-e-bisogni.md).
 5. Registrare quale formulazione di bisogno o attributo delle personas cambia grazie al nuovo materiale.
 
-Per rispondere alla richiesta dei docenti, la presentazione mostrerà prima questi risultati, poi i cambiamenti nei bisogni e nelle scelte.
+Se in futuro la traccia verrà utilizzata, presentare prima i risultati effettivi, poi i cambiamenti nei bisogni e nelle scelte. Per la C2 attuale, distinguere il riesame C1 e la simulazione progettuale dalle nuove attività con utenti, che non sono state svolte.

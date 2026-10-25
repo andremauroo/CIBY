@@ -43,13 +43,15 @@ Domande discriminanti: il problema è il momento in cui si può cucinare, l'asse
 
 ## Scenario esplorativo S-Sport - L'allenamento cambia la serata
 
-**Caso di progetto simulato. Non è un'intervista né un episodio osservato.**
+**Caso di progetto simulato, ora sviluppato nel [documento dedicato](approfondimento-sportivo-simulato.md). Non è un'intervista né un episodio osservato.**
 
-Uno studente che gestisce i propri pasti aveva previsto di cucinare al rientro dall'università. L'orario dell'allenamento cambia e riduce il tempo disponibile per la preparazione. In casa ci sono ingredienti acquistati per quella cena e per i pasti successivi. Lo studente vuole mantenere un pasto coerente con le proprie abitudini alimentari e dare una destinazione a ciò che ha già comprato. Deve poter confrontare una preparazione più semplice con la possibilità di riorganizzare i pasti successivi. Un supporto utile gli rende comprensibili queste alternative e ciò che ciascuna comporta per l'uso degli ingredienti. Sceglie come organizzare la serata e assegna un uso anche agli ingredienti rinviati.
+Un allenamento anticipato riduce il tempo previsto per preparare la cena. Il caso mette a confronto una preparazione più semplice e la riorganizzazione dei pasti successivi, considerando gli ingredienti già acquistati.
 
-**Esito desiderato:** gestire un cambiamento di orario mantenendo un pasto praticabile e una destinazione per gli alimenti. Non vengono introdotti quantità prescritte, promesse di prestazione o equivalenze nutrizionali.
+**Esito desiderato:** gestire un cambiamento di orario mantenendo un pasto praticabile e una destinazione per gli alimenti rinviati.
 
-Lo scenario può servire al brainstorming e a una futura ricerca. Non va associato a P06, a una data di intervista, a citazioni di un partecipante o a risultati inventati.
+Il documento distingue dati C1, assunzioni narrative, scenario, collegamenti B01-B04 e ipotesi aperte con possibili riscontri contrari. Conserva anche un testo breve per le slide con la didascalia di simulazione.
+
+Il caso rimane un approfondimento di B02/B03, con una domanda sulla spesa B04. Non introduce nuove testimonianze, una quarta persona o un quinto bisogno, e non sostituisce lo scenario principale dedicato alla spesa.
 
 ## Confronto con prodotti esistenti
 
@@ -67,7 +69,7 @@ Il confronto riguarda capacità dichiarate; non sono state provate le app. La gu
 ## Come inserirlo nel lavoro attuale
 
 1. Conservare i tre archetipi di lavoro Gianfranco, Luca e Marta, distinguendone gli obiettivi.
-2. Portare S-Sport nel confronto delle alternative come variante esplorativa, senza trasformare uno dei tre in sportivo solo attraverso una scala del template.
+2. Portare il [caso S-Sport sviluppato](approfondimento-sportivo-simulato.md) nel confronto delle alternative come variante esplorativa, senza trasformare uno dei tre in sportivo solo attraverso una scala del template.
 3. Nell'approfondimento organizzativo confermato da Andrea, dichiarare quali parti derivano dalla C1 e quali sono ipotesi nuove; l'integrazione effettiva rimane da decidere.
 4. Nella presentazione, mostrare le evidenze disponibili prima dell'eventuale estensione e della motivazione della scelta.
 
