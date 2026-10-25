@@ -97,17 +97,17 @@ Questo è un ragionamento progettuale, non un punteggio di usabilità né l'esit
 | L / B03 - Ingrediente mancante | Recupero guidato da ciò che resta da usare | Recupero guidato dall'impegno sostenibile | Punto di partenza centrale: confrontare adattamento e rinvio |
 | A / B04 - Quantità prima della spesa | Considerare le scorte prima di aggiungere acquisti | Valutare quanto si riuscirà a preparare | Confrontare acquisti rispetto a occasioni confermate e incerte |
 
-## Raccomandazione preparatoria: D3
+## Direzione scelta da Andrea: D3
 
-D3 è la direzione proposta per il confronto perché collega i due bisogni principali della persona primaria Luca: adattamento B03 e quantità B04. B01 e B02 permettono di riconoscere le priorità e confrontare la fattibilità delle alternative.
+Andrea ha scelto D3 il 25 ottobre 2026. La motivazione progettuale della proposta è il collegamento con i due bisogni principali della persona primaria Luca: adattamento B03 e quantità B04. B01 e B02 permettono di riconoscere le priorità e confrontare la fattibilità delle alternative.
 
 La differenza da esplorare è rendere comprensibili le conseguenze di una modifica: cosa si riesce ancora a preparare, quali ingredienti restano senza destinazione e cosa cambia nei successivi acquisti. Non serve assumere un piano rigido per l'intera settimana.
 
-**Bozza di soluzione concettuale in due frasi, da scegliere e rifinire:**
+**Soluzione concettuale in due frasi:**
 
-> Sostenere chi gestisce i propri pasti nel rivedere l'uso degli ingredienti quando cambia una preparazione o un'occasione di consumo. Il supporto permette di confrontare alternative praticabili e comprenderne le conseguenze sugli ingredienti rimasti, sui pasti successivi e sulle quantità ancora da acquistare.
+> CIBY sostiene chi gestisce i propri pasti nel rivedere l'uso degli ingredienti quando cambia una preparazione o un'occasione di consumo. Aiuta a confrontare alternative praticabili e comprenderne le conseguenze sugli ingredienti rimasti, sui pasti successivi e sulle quantità ancora da acquistare.
 
-Questa è una proposta concreta da discutere. La scelta del gruppo, le assegnazioni per categoria e le motivazioni effettive non sono ancora registrate.
+La [scheda della soluzione](soluzione-concettuale.md) registra la scelta di Andrea e ne chiarisce i collegamenti ai quattro bisogni. Idee individuali, metodo e assegnazioni effettive del confronto del gruppo restano da documentare; la conferma di Andrea non viene trasformata in una votazione collettiva.
 
 ## Che cosa è già documentato nei prodotti esistenti
 
@@ -126,7 +126,7 @@ Perciò ricette, priorità e sostituzioni da sole non bastano a motivare la novi
 - **Informazioni nutrizionali:** interesse emerso nella discussione di progetto, da trattare come possibile supporto alla comprensione degli alimenti. P04 non chiede maggiore precisione; non si presume una domanda generale di monitoraggio.
 - **AI:** possibile mezzo di realizzazione da valutare successivamente, distinguendo il supporto desiderato dalla tecnologia scelta.
 
-## Come chiudere il confronto
+## Come completare la documentazione del confronto
 
 Raccogliere prima le idee effettive dei componenti, anche ricostruendo quanto discusso a voce e facendone confermare la sintesi dagli autori. Gli spunti PRE possono ampliare la discussione, mantenendo la loro natura preparatoria.
 
@@ -134,10 +134,10 @@ Per confrontare tre direzioni integrate, il **metodo delle quattro categorie** �
 
 In alternativa, i tre voti a testa vanno assegnati a tre idee diverse nell'insieme più ampio degli spunti e delle idee raccolte. Applicarli a sole tre alternative obbligherebbe ogni persona a votarle tutte.
 
-Registrare presenti, metodo, alternative, assegnazioni effettive, ragioni della decisione, immagini e soluzione finale in 1-3 frasi. Il [documento di processo](brainstorming-e-scelta.md) contiene le schede.
+La descrizione in due frasi è disponibile; completare presenti, metodo, alternative, assegnazioni effettive, ragioni della decisione e immagini. Il [documento di processo](brainstorming-e-scelta.md) contiene le schede.
 
 ## Stato dello spazio Figma
 
 Sei aree individuali da compilare, otto spunti preparatori e tre direzioni integrative. Non sono stati inseriti voti né attribuite ai colleghi proposte non documentate.
 
-Verifica dopo la creazione: tutti i 354 elementi precedenti, inclusi i 53 post-it, sono invariati. I nuovi contenuti sono nell'area di confronto, sotto la sintesi di personas e scenari.
+Verifica alla creazione dell'area: tutti i 354 elementi precedenti, inclusi i 53 post-it, sono rimasti invariati. La successiva registrazione di D3 ha aggiornato soltanto la sintesi del confronto e aggiunto le due frasi della soluzione. Anche in questo aggiornamento i 53 post-it sono stati verificati invariati. I nuovi contenuti sono nell'area di confronto, sotto la sintesi di personas e scenari.

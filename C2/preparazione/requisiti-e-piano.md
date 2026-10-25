@@ -21,9 +21,9 @@ Andrea riferisce che il gruppo ha votato per la **gestione flessibile dei pasti*
 | Scegliere 3-4 bisogni consistenti, collegati a interviste e risposte specifiche | p. 1, punto 3; p. 2, sezione 3b | Bisogni come attività, evidenze e motivazioni | B01-B04 confermati da Andrea; formulazioni, evidenze, confini ed esiti consolidati |
 | Specificare personas e uno scenario per ogni bisogno selezionato | p. 1, punto 4 | Archetipi motivati e scenari che mostrino contesto e utilità del supporto | Tre personas e quattro scenari consolidati; Luca primaria, nuovo scenario A/B04 sulla spesa |
 | Raccogliere idee individuali da ciascun membro, poi discuterle insieme | p. 1, punto 5 | Idee originali, autore e raggruppamenti successivi | Decisioni comunicate da Andrea e post-it Figma disponibili; sei aree da compilare e otto spunti preparatori pronti |
-| Esprimere le soluzioni come attività da supportare, prima dei dettagli tecnici | p. 1, punto 5; p. 2, sezione 4 | Proposte concettuali e soluzione scelta in 1-3 frasi | Spunti preliminari disponibili |
-| Selezionare una soluzione puntando alla novità e documentando il percorso | pp. 1-2, punto 6 | Voti su tre idee diverse per persona, oppure metodo delle quattro categorie | Tre direzioni da confrontare; quattro categorie proposte, scelta e novità da verificare |
-| Motivare un nome di 1-2 parole e una value proposition in una riga | p. 2, punto 7 | Nome, motivazione effettiva del gruppo, beneficio specifico | CIBY confermato; motivazione e frase finale aperte |
+| Esprimere le soluzioni come attività da supportare, prima dei dettagli tecnici | p. 1, punto 5; p. 2, sezione 4 | Proposte concettuali e soluzione scelta in 1-3 frasi | D3 scelta da Andrea e descritta in due frasi, con collegamenti ai quattro bisogni |
+| Selezionare una soluzione puntando alla novità e documentando il percorso | pp. 1-2, punto 6 | Voti su tre idee diverse per persona, oppure metodo delle quattro categorie | D3 scelta da Andrea; metodo ed esito del confronto del gruppo da documentare, novità da verificare |
+| Motivare un nome di 1-2 parole e una value proposition in una riga | p. 2, punto 7 | Nome, motivazione effettiva del gruppo, beneficio specifico | CIBY confermato; Andrea comunicherà la motivazione dopo il confronto con i colleghi, frase finale aperta |
 | Pubblicare slide in PDF nello spazio C2 della repo | p. 2, Cosa consegnare | Presentazione con le cinque sezioni richieste | Cartella avviata; PDF da realizzare |
 
 Il compito richiede 3-4 bisogni e uno scenario per ciascuno; non prescrive un numero identico di personas né un numero di slide. Almeno un'attività deve coinvolgere un utente immediato; non viene fissato un numero complessivo di nuove interviste. La traccia iniziale proponeva due approfondimenti; Andrea ha poi confermato che non sarà possibile organizzare nuove attività. Il riesame C1 e i casi simulati restano distinti da interazioni effettive con utenti e non coprono quel requisito.
@@ -69,8 +69,8 @@ Il piano iniziale prevedeva nuove attività il 24 ottobre; non sono state svolte
 | 2 | Consolidare i bisogni | Completato: B01-B04 confermati da Andrea, con evidenze, confini, motivazioni ed esiti desiderati |
 | 3 | Preparare l'approfondimento sportivo simulato | Completato: [caso S-Sport](approfondimento-sportivo-simulato.md), con fonti C1, assunzioni, scenario e ipotesi aperte; nessuna nuova attività con utenti |
 | 4 | Consolidare personas e scenari | Completato: Luca primaria, Gianfranco e Marta complementari; quattro scenari G/L/M/A, sintesi Figma separata e post-it invariati |
-| 5 | Generare e selezionare alternative | In corso: decisioni comunicate da Andrea e post-it disponibili, otto spunti e tre direzioni pronti; idee individuali e scelta effettiva da completare |
-| 6 | Definire soluzione, nome e value proposition | Supporto concettuale specifico, motivazione del nome e beneficio in una riga |
+| 5 | Generare e selezionare alternative | In corso: D3 scelta da Andrea fra tre direzioni; restano idee individuali e documentazione del confronto del gruppo |
+| 6 | Definire soluzione, nome e value proposition | [Descrizione concettuale D3](soluzione-concettuale.md) pronta in due frasi; motivazione del nome rinviata da Andrea, value proposition finale aperta |
 | 7 | Preparare e pubblicare la consegna | Slide PDF, ordine causale, leggibilità e collegamenti verificati |
 
 La votazione sulla direzione, riferita da Andrea, non viene utilizzata come documentazione sostitutiva della selezione della soluzione.
@@ -84,7 +84,7 @@ La votazione sulla direzione, riferita da Andrea, non viene utilizzata come docu
 - [x] Ogni bisogno ha risposte specifiche di origine e almeno uno scenario.
 - [x] Le personas descrivono pattern rilevanti e obiettivi distinti, con una priorità motivata.
 - [ ] Esistono tracce delle idee individuali, del confronto e della selezione.
-- [ ] La proposta finale è concettuale e descritta in 1-3 frasi.
+- [x] La soluzione D3 scelta da Andrea è concettuale e descritta in due frasi.
 - [ ] La motivazione del nome è quella del gruppo e la value proposition è specifica.
 - [ ] Ogni decisione segue le proprie evidenze nella presentazione.
 - [ ] Il PDF finale è leggibile e raggiungibile dalla pagina C2.

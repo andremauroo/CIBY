@@ -2,7 +2,7 @@
 
 **Progetto CIBY | Gruppo MAGGICAL | Scadenza: 26 ottobre 2026**
 
-Stato al 25 ottobre: Andrea riferisce che il gruppo ha votato per il focus **gestione flessibile dei pasti**. Andrea ha poi confermato i quattro bisogni B01-B04, includendo le quantità della spesa. L'organizzazione intorno agli allenamenti è stata sviluppata in un caso progettuale simulato, con evidenze e ipotesi separate; sono state consolidate tre personas e quattro scenari principali, incluso B04. La sintesi è affiancata alla pagina di lavoro Figma, con tutti i post-it conservati. Questa cartella contiene i materiali di lavoro per costruire la consegna; il PDF finale non è ancora disponibile.
+Stato al 25 ottobre: Andrea riferisce che il gruppo ha votato per il focus **gestione flessibile dei pasti**. Andrea ha poi confermato i quattro bisogni B01-B04, includendo le quantità della spesa. L'organizzazione intorno agli allenamenti è stata sviluppata in un caso progettuale simulato, con evidenze e ipotesi separate; sono state consolidate tre personas e quattro scenari principali, incluso B04. La sintesi è affiancata alla pagina di lavoro Figma, con tutti i post-it conservati. Andrea ha scelto D3: riorganizzare pasti e acquisti dopo un cambiamento; la descrizione concettuale in due frasi è pronta. Questa cartella contiene i materiali di lavoro per costruire la consegna; il PDF finale non è ancora disponibile.
 
 ## Da dove partiamo
 
@@ -20,7 +20,8 @@ Andrea ha confermato il 23 ottobre che non sono ancora state svolte nuove attivi
 | [Personas e scenari](preparazione/personas-e-scenari.md) | Tre personas consolidate, Luca primaria e quattro scenari principali B01-B04 |
 | [Nuove attività con utenti](preparazione/nuove-attivita-utenti.md) | Traccia iniziale non attuata, conservata come riferimento per eventuali ricerche future |
 | [Brainstorming e scelta](preparazione/brainstorming-e-scelta.md) | Procedura, spazio Figma e registri della raccolta e della scelta |
-| [Alternative concettuali](preparazione/alternative-soluzione.md) | Otto spunti e tre direzioni da confrontare; D3 raccomandata come proposta preparatoria |
+| [Alternative concettuali](preparazione/alternative-soluzione.md) | Otto spunti, tre direzioni e ragioni progettuali della scelta di D3 |
+| [Soluzione concettuale](preparazione/soluzione-concettuale.md) | D3 scelta da Andrea, descrizione in due frasi, collegamenti ai quattro bisogni e confini |
 | [Confronto con soluzioni esistenti](preparazione/confronto-soluzioni-esistenti.md) | Capacità già documentate, sovrapposizioni e tre ipotesi da verificare |
 | [Filone sportivo](preparazione/valutazione-filone-sportivo.md) | Evidenze disponibili, valutazione del focus e collegamento al caso simulato |
 | [Approfondimento sportivo simulato](preparazione/approfondimento-sportivo-simulato.md) | Caso concreto, assunzioni, alternative, collegamenti ai bisogni e testo breve per le slide |
@@ -33,10 +34,10 @@ Andrea ha confermato il 23 ottobre che non sono ancora state svolte nuove attivi
 - Documentazione effettiva del confronto sui bisogni: B01-B04 sono stati confermati da Andrea; restano da raccogliere le immagini e le tracce della discussione del gruppo.
 - Documentazione degli esiti consolidati di personas e quattro scenari nelle slide, mostrando prima evidenze e percorso.
 - Raccolta o ricostruzione confermata delle idee individuali e confronto delle soluzioni, con immagini e selezione documentata. Lo spazio Figma e le alternative preparatorie sono pronti.
-- Scelta della soluzione, motivazione del nome CIBY e value proposition.
+- Documentazione del confronto del gruppo sulla soluzione D3 scelta da Andrea; motivazione del nome CIBY, che Andrea comunicherà dopo il confronto con i colleghi, e value proposition finale.
 - Slide in PDF, ordinate secondo i legami tra evidenze e decisioni.
 
-I quattro bisogni confermati sono B01 riconoscere gli alimenti disponibili e quali utilizzare prima; B02 scegliere un pasto praticabile; B03 riorganizzare l'utilizzo degli ingredienti dopo un cambiamento; B04 valutare quantità da acquistare compatibili con le occasioni realistiche di consumo. B04 corrisponde al candidato C04 discusso in precedenza. Lo sport viene esplorato come contesto organizzativo di B02/B03. La selezione della soluzione resta da svolgere.
+I quattro bisogni confermati sono B01 riconoscere gli alimenti disponibili e quali utilizzare prima; B02 scegliere un pasto praticabile; B03 riorganizzare l'utilizzo degli ingredienti dopo un cambiamento; B04 valutare quantità da acquistare compatibili con le occasioni realistiche di consumo. B04 corrisponde al candidato C04 discusso in precedenza. Lo sport viene esplorato come contesto organizzativo di B02/B03. D3 è stata scelta da Andrea; restano da documentare le idee individuali e il metodo effettivo del confronto del gruppo.
 
 ## Fonti e convenzioni
 

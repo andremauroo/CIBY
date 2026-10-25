@@ -8,7 +8,7 @@ Andrea riferisce che il gruppo ha discusso e votato per la **gestione flessibile
 
 > Aiutare giovani adulti che gestiscono autonomamente i propri pasti a utilizzare gli ingredienti disponibili e trovare una preparazione praticabile, anche quando cambiano i programmi.
 
-Questa è la formulazione di lavoro del focus. La soluzione concettuale e la value proposition finale saranno definite dopo il confronto delle alternative.
+Questa è la formulazione di lavoro del focus. Andrea ha poi scelto D3: riorganizzare pasti e acquisti dopo un cambiamento. La [descrizione concettuale in due frasi](soluzione-concettuale.md) è pronta; documentazione del confronto del gruppo e value proposition finale restano aperte.
 
 ## Ambito e priorità
 
@@ -20,7 +20,7 @@ Questa è la formulazione di lavoro del focus. La soluzione concettuale e la val
 | B04 - Quantità e occasioni di consumo | Valutare quantità da acquistare compatibili con le occasioni realistiche di consumo | Selezionato su conferma di Andrea; già candidato C04 |
 | Contesto sportivo | Organizzare preparazioni e pasti intorno agli allenamenti | Approfondimento esplorativo di B02/B03, con eventuale integrazione |
 
-Andrea ha confermato la proposta dei quattro bisogni e i loro confini. C04 viene rinominato B04; le sue evidenze provengono da P02 e P03. Le [schede consolidate](evidenze-e-bisogni.md) riportano per ciascun bisogno situazione, ostacolo, fonti, motivazione ed esito desiderato. La copertura è stata completata con tre personas e quattro scenari principali nella [sintesi consolidata](personas-e-scenari.md). Restano da documentare nelle slide le tracce effettive del confronto del gruppo e la successiva selezione delle soluzioni.
+Andrea ha confermato la proposta dei quattro bisogni e i loro confini. C04 viene rinominato B04; le sue evidenze provengono da P02 e P03. Le [schede consolidate](evidenze-e-bisogni.md) riportano per ciascun bisogno situazione, ostacolo, fonti, motivazione ed esito desiderato. La copertura è stata completata con tre personas e quattro scenari principali nella [sintesi consolidata](personas-e-scenari.md). Restano da documentare nelle slide le tracce effettive del confronto del gruppo sui bisogni e sulle soluzioni.
 
 Per B04, la domanda riguarda il momento dell'acquisto: valutare quantità e occasioni realistiche di consumo prima di comprare. B03 riguarda invece cosa fare con ingredienti già acquistati quando il piano cambia. Questa distinzione motiva l'inclusione del quarto bisogno.
 
@@ -57,20 +57,22 @@ L'attività a cui potrebbero contribuire è comprendere le caratteristiche degli
 | Dettagli non forniti | Data della riunione, presenti, alternative votate, metodo e conteggi |
 | Approfondimento preparato | Caso S-Sport simulato: organizzazione dei pasti dopo un cambiamento dell'orario di allenamento |
 | Consolidamento preparato | Luca primaria, Gianfranco e Marta complementari; scenari M/B01, G/B02, L/B03 e A/B04. Area Figma originale e 53 post-it preservati |
-| Preparazione delle alternative | Otto spunti e tre direzioni D1-D3; D3 raccomandata come proposta preparatoria, non ancora scelta |
+| Preparazione delle alternative | Otto spunti e tre direzioni D1-D3 conservati per il confronto |
+| Scelta della soluzione | Andrea ha scelto D3 il 25 ottobre 2026; descrizione concettuale in due frasi pronta |
+| Nome CIBY | Confermato; motivazione rinviata da Andrea dopo il confronto con i colleghi |
 | Tracce disponibili | Focus e proposte di mascotte/nutrizione comunicati direttamente da Andrea; confronto sulle personas nei post-it |
-| Passaggi successivi | Raccolta o ricostruzione confermata delle idee individuali, confronto e selezione documentata della soluzione |
+| Passaggi successivi | Raccolta o ricostruzione confermata delle idee individuali e documentazione del confronto del gruppo; motivazione del nome e value proposition |
 
-La votazione riferita riguarda la direzione di progetto. La successiva conferma dei quattro bisogni proviene da Andrea; non vengono ricostruiti voti del gruppo sui singoli bisogni. Nessuno dei due passaggi viene registrato come se fosse già il processo di selezione della soluzione richiesto al punto 6 del compito.
+La votazione riferita riguarda la direzione di progetto. La successiva conferma dei quattro bisogni proviene da Andrea; non vengono ricostruiti voti del gruppo sui singoli bisogni. La successiva scelta di D3 è stata espressa da Andrea; non vengono ricostruiti voti o assegnazioni degli altri membri per il processo richiesto al punto 6 del compito.
 
 ## Collegamenti
 
 - [Evidenze e bisogni](evidenze-e-bisogni.md): risposte specifiche e candidati.
-- [Personas e scenari](personas-e-scenari.md): proposte da allineare alla selezione dei bisogni.
+- [Personas e scenari](personas-e-scenari.md): tre personas e quattro scenari consolidati.
 - [Brainstorming e scelta](brainstorming-e-scelta.md): processo di generazione e selezione delle soluzioni.
 
-## Materiale per scegliere la soluzione
+## Soluzione scelta e documentazione da completare
 
-Lo [spazio Figma](https://www.figma.com/board/Aa9cVd9wI6ifqZyzO30I9m/Compito-2?node-id=101-228) e le [alternative concettuali](alternative-soluzione.md) sono pronti. D3 approfondisce la riorganizzazione di ingredienti, pasti e acquisti dopo un cambiamento; è la raccomandazione preparatoria per coerenza con Luca e B03/B04.
+Lo [spazio Figma](https://www.figma.com/board/Aa9cVd9wI6ifqZyzO30I9m/Compito-2?node-id=101-228) e le [alternative concettuali](alternative-soluzione.md) sono pronti. Andrea ha scelto D3: la riorganizzazione di ingredienti, pasti e acquisti dopo un cambiamento. La motivazione progettuale collega Luca e B03/B04, con B01/B02 per priorità e fattibilità; la [scheda della soluzione](soluzione-concettuale.md) ne definisce il supporto e i confini.
 
-Le decisioni comunicate direttamente da Andrea confermano il focus già scelto e alcune possibilità di interazione; i post-it documentano la revisione. Questi elementi non vengono utilizzati come voti sulle tre nuove direzioni. La scelta finale e la value proposition rimangono aperte.
+Le decisioni comunicate direttamente da Andrea confermano il focus già scelto e alcune possibilità di interazione; i post-it documentano la revisione. Questi elementi non vengono utilizzati come voti sulle tre nuove direzioni. La direzione di soluzione è confermata da Andrea; la documentazione del confronto del gruppo e la value proposition finale rimangono aperte.
