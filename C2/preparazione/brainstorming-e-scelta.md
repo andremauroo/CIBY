@@ -2,7 +2,9 @@
 
 Preparazione del 23 ottobre, aggiornata il 25 ottobre 2026. Andrea riferisce che il gruppo ha votato per il focus **gestione flessibile dei pasti**, e ha successivamente confermato la proposta dei quattro bisogni B01-B04, inclusa la spesa; l'organizzazione intorno agli allenamenti resta da approfondire: vedi [Focus e decisioni](focus-e-decisioni.md).
 
-Questo documento prepara il brainstorming delle soluzioni; non documenta una sessione già avvenuta. Gli spunti A-D sono proposte iniziali, non idee attribuite ai singoli membri, e non hanno ricevuto voti documentati. La scelta della direzione non equivale alla selezione finale della soluzione.
+Andrea riferisce che la discussione è avvenuta soprattutto a voce, con scambi in chat e post-it Figma. Le decisioni comunicate direttamente da Andrea sono in [Focus e decisioni](focus-e-decisioni.md); i post-it sulla revisione delle personas restano nel [registro del consolidamento](consolidamento-figma-2026-10-25.md). Le [otto proposte PRE e tre direzioni D1-D3](alternative-soluzione.md) sono una preparazione per il confronto, non idee attribuite ai singoli membri né soluzioni già votate. La scelta del focus non equivale alla selezione finale della soluzione.
+
+[Apri lo spazio di confronto in Figma](https://www.figma.com/board/Aa9cVd9wI6ifqZyzO30I9m/Compito-2?node-id=101-228). I 53 post-it e tutti gli elementi precedenti sono rimasti invariati.
 
 ## 1. Selezione dei bisogni confermata
 
@@ -29,7 +31,7 @@ Gli screenshot dei post-it attuali documentano il confronto su personas e scenar
 
 ## 3. Raccogliere le idee individuali
 
-Ciascun componente prepara le proprie idee prima della discussione. Una sessione possibile prevede 10-15 minuti individuali, poi lettura e confronto collettivo; è una proposta di conduzione.
+Raccogliere le idee effettive di ciascun componente prima dei raggruppamenti. Quanto discusso a voce può essere ricostruito come tale, con conferma degli autori. Per ampliare le alternative si può aggiungere una fase individuale di 10-15 minuti, poi lettura e confronto collettivo; è una proposta di conduzione, non una sessione dichiarata svolta.
 
 Ogni idea deve indicare scenario, attività da sostenere e beneficio atteso. Il compito chiede di non partire da funzionalità tecniche specifiche: formulare il supporto che la persona riceve nel suo contesto.
 
@@ -44,34 +46,25 @@ Ogni idea deve indicare scenario, attività da sostenere e beneficio atteso. Il 
 
 Aggiungere una riga per ogni idea effettiva. Conservare le versioni individuali prima dei raggruppamenti; una tabella ricostruita dopo non sostituisce le immagini del processo richieste dalla consegna.
 
-## 4. Spunti preliminari da confrontare
+## 4. Alternative preparatorie disponibili
 
-Queste direzioni derivano dalla C1 e servono a stimolare il confronto. Non costituiscono il brainstorming individuale dei sei membri.
+Gli spunti iniziali A-D sono stati sviluppati in [otto proposte PRE-01-PRE-08](alternative-soluzione.md), due per ciascuno scenario principale. Ogni proposta indica attività, beneficio atteso e fonti C1.
 
-| Spunto | Attività che propone di sostenere | Bisogni/scenari | Questione da approfondire |
-|---|---|---|---|
-| A - Dare una destinazione agli alimenti meno visibili | Riconoscere ciò che rischia di rimanere fuori dalle decisioni e associarlo a un'occasione di uso | B01/scenario M | In quale momento il supporto sarebbe utile e sostenibile? |
-| B - Passare da ingredienti a una preparazione praticabile | Valutare alternative coerenti con ingredienti, tempo e disponibilità a cucinare | B02/scenario G | Quale attrito resta rispetto a ricette e routine già efficaci? |
-| C - Recuperare un'intenzione dopo un imprevisto | Ripensare l'uso di ingredienti già comprati quando il programma o la preparazione cambia | B03/scenario L | Cosa distingue un adattamento riuscito da uno fallito? |
-| D - Collegare quantità e occasioni di consumo | Valutare prima dell'acquisto quanto si riuscirà effettivamente a utilizzare | B04/scenario A | Come confrontare confezioni disponibili e occasioni realistiche di consumo? |
+Le tre direzioni integrative da confrontare sono:
 
-Il [confronto preliminare con soluzioni esistenti](confronto-soluzioni-esistenti.md), svolto il 23 ottobre su fonti ufficiali, documenta sovrapposizioni con ricerca dagli ingredienti, priorità di consumo e sostituzioni. Non dimostra ancora la novità di una direzione CIBY. Dopo aver raccolto le alternative individuali, usare il confronto per precisare le proposte e provare gli stessi compiti nei prodotti pertinenti, distinguendo funzioni dichiarate ed esperienza osservata.
+| Direzione | Punto di partenza | Supporto principale |
+|---|---|---|
+| D1 - Dall'alimento al prossimo utilizzo | Un alimento rischia di restare fuori dalle decisioni | Collegare priorità, preparazione e occasione di consumo |
+| D2 - Dal tempo al pasto fattibile | Occorre decidere cosa preparare adesso | Confrontare impegno, familiarità e ingredienti |
+| D3 - Dal cambio alla nuova organizzazione | Un'intenzione non è più praticabile o diventa incerta | Rivedere ingredienti, pasti e quantità da acquistare |
 
-### Variante esplorativa sportiva
+D3 è la raccomandazione preparatoria per coerenza con Luca e B03/B04; non è ancora la soluzione scelta. La bozza concettuale in due frasi e le questioni aperte sono nel documento delle alternative.
 
-Usare [S-Sport](approfondimento-sportivo-simulato.md) per confrontare gli spunti B e C quando cambia l'orario dell'allenamento. Considerare quale supporto aggiungerebbe valore rispetto a una routine già efficace e come mantenere una destinazione per gli ingredienti rinviati. Lo spunto D apre invece la domanda sulle quantità nella spesa successiva.
-
-Il caso non ha ricevuto voti documentati e non dimostra una domanda di monitoraggio nutrizionale. Conservare la didascalia di simulazione quando lo si porta nel brainstorming o nelle slide.
-
-### Idee di realizzazione segnalate da Andrea
-
-Andrea propone una mascotte eventualmente personalizzabile, che possa offrire suggerimenti e spiegazioni sui valori nutrizionali degli alimenti, con possibile supporto AI. L'organizzazione dei pasti per gli allenamenti resta un contesto da approfondire.
-
-Questi elementi sono registrati come proposte, senza voti e senza assumerli come soluzione scelta. Nel brainstorming concettuale discutere prima l'attività e il beneficio che sostengono; la loro forma di interazione e la tecnologia saranno valutate successivamente.
+Il caso sportivo può mettere alla prova le direzioni; mascotte, informazioni nutrizionali e AI rimangono proposte da valutare rispetto al supporto scelto. La ricerca documentale riesaminata il 25 ottobre mostra sovrapposizioni con prodotti esistenti, senza dimostrare la novità di una direzione.
 
 ## 5. Selezionare e documentare
 
-Il compito offre due metodi. Il gruppo ne sceglie uno e registra il processo effettivo.
+Il compito offre due metodi. Il gruppo ne sceglie uno e registra il processo effettivo. Per confrontare le tre direzioni D1-D3, è pratico il metodo delle quattro categorie. I tre voti possono invece essere assegnati all'insieme più ampio delle idee: se le alternative fossero solo tre, ogni membro dovrebbe votarle tutte e il risultato non le distinguerebbe.
 
 **Votazione con post-it:** ogni membro assegna tre voti a tre idee diverse. Con tutti e sei i componenti presenti, la sessione prevede 18 voti complessivi. Registrare presenze reali ed eventuali assenze; non distribuire voti per conto di altri.
 

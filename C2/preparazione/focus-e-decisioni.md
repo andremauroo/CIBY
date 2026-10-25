@@ -57,7 +57,9 @@ L'attività a cui potrebbero contribuire è comprendere le caratteristiche degli
 | Dettagli non forniti | Data della riunione, presenti, alternative votate, metodo e conteggi |
 | Approfondimento preparato | Caso S-Sport simulato: organizzazione dei pasti dopo un cambiamento dell'orario di allenamento |
 | Consolidamento preparato | Luca primaria, Gianfranco e Marta complementari; scenari M/B01, G/B02, L/B03 e A/B04. Area Figma originale e 53 post-it preservati |
-| Passaggi successivi | Valutazione dei quattro scenari e del caso sportivo nelle alternative, raccolta delle idee individuali e confronto delle soluzioni |
+| Preparazione delle alternative | Otto spunti e tre direzioni D1-D3; D3 raccomandata come proposta preparatoria, non ancora scelta |
+| Tracce disponibili | Focus e proposte di mascotte/nutrizione comunicati direttamente da Andrea; confronto sulle personas nei post-it |
+| Passaggi successivi | Raccolta o ricostruzione confermata delle idee individuali, confronto e selezione documentata della soluzione |
 
 La votazione riferita riguarda la direzione di progetto. La successiva conferma dei quattro bisogni proviene da Andrea; non vengono ricostruiti voti del gruppo sui singoli bisogni. Nessuno dei due passaggi viene registrato come se fosse già il processo di selezione della soluzione richiesto al punto 6 del compito.
 
@@ -66,3 +68,9 @@ La votazione riferita riguarda la direzione di progetto. La successiva conferma 
 - [Evidenze e bisogni](evidenze-e-bisogni.md): risposte specifiche e candidati.
 - [Personas e scenari](personas-e-scenari.md): proposte da allineare alla selezione dei bisogni.
 - [Brainstorming e scelta](brainstorming-e-scelta.md): processo di generazione e selezione delle soluzioni.
+
+## Materiale per scegliere la soluzione
+
+Lo [spazio Figma](https://www.figma.com/board/Aa9cVd9wI6ifqZyzO30I9m/Compito-2?node-id=101-228) e le [alternative concettuali](alternative-soluzione.md) sono pronti. D3 approfondisce la riorganizzazione di ingredienti, pasti e acquisti dopo un cambiamento; è la raccomandazione preparatoria per coerenza con Luca e B03/B04.
+
+Le decisioni comunicate direttamente da Andrea confermano il focus già scelto e alcune possibilità di interazione; i post-it documentano la revisione. Questi elementi non vengono utilizzati come voti sulle tre nuove direzioni. La scelta finale e la value proposition rimangono aperte.

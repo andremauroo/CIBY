@@ -20,9 +20,9 @@ Andrea riferisce che il gruppo ha votato per la **gestione flessibile dei pasti*
 | Fare brainstorming sull'elenco dei bisogni e documentarlo | p. 1, punto 2; p. 2, sezione 3a | Immagini di tutti i bisogni discussi e motivi della selezione | Selezione confermata da Andrea; immagini e tracce del confronto del gruppo da raccogliere |
 | Scegliere 3-4 bisogni consistenti, collegati a interviste e risposte specifiche | p. 1, punto 3; p. 2, sezione 3b | Bisogni come attività, evidenze e motivazioni | B01-B04 confermati da Andrea; formulazioni, evidenze, confini ed esiti consolidati |
 | Specificare personas e uno scenario per ogni bisogno selezionato | p. 1, punto 4 | Archetipi motivati e scenari che mostrino contesto e utilità del supporto | Tre personas e quattro scenari consolidati; Luca primaria, nuovo scenario A/B04 sulla spesa |
-| Raccogliere idee individuali da ciascun membro, poi discuterle insieme | p. 1, punto 5 | Idee originali, autore e raggruppamenti successivi | Da svolgere |
+| Raccogliere idee individuali da ciascun membro, poi discuterle insieme | p. 1, punto 5 | Idee originali, autore e raggruppamenti successivi | Decisioni comunicate da Andrea e post-it Figma disponibili; sei aree da compilare e otto spunti preparatori pronti |
 | Esprimere le soluzioni come attività da supportare, prima dei dettagli tecnici | p. 1, punto 5; p. 2, sezione 4 | Proposte concettuali e soluzione scelta in 1-3 frasi | Spunti preliminari disponibili |
-| Selezionare una soluzione puntando alla novità e documentando il percorso | pp. 1-2, punto 6 | Voti su tre idee diverse per persona, oppure metodo delle quattro categorie | Da svolgere; novità da verificare |
+| Selezionare una soluzione puntando alla novità e documentando il percorso | pp. 1-2, punto 6 | Voti su tre idee diverse per persona, oppure metodo delle quattro categorie | Tre direzioni da confrontare; quattro categorie proposte, scelta e novità da verificare |
 | Motivare un nome di 1-2 parole e una value proposition in una riga | p. 2, punto 7 | Nome, motivazione effettiva del gruppo, beneficio specifico | CIBY confermato; motivazione e frase finale aperte |
 | Pubblicare slide in PDF nello spazio C2 della repo | p. 2, Cosa consegnare | Presentazione con le cinque sezioni richieste | Cartella avviata; PDF da realizzare |
 
@@ -69,7 +69,7 @@ Il piano iniziale prevedeva nuove attività il 24 ottobre; non sono state svolte
 | 2 | Consolidare i bisogni | Completato: B01-B04 confermati da Andrea, con evidenze, confini, motivazioni ed esiti desiderati |
 | 3 | Preparare l'approfondimento sportivo simulato | Completato: [caso S-Sport](approfondimento-sportivo-simulato.md), con fonti C1, assunzioni, scenario e ipotesi aperte; nessuna nuova attività con utenti |
 | 4 | Consolidare personas e scenari | Completato: Luca primaria, Gianfranco e Marta complementari; quattro scenari G/L/M/A, sintesi Figma separata e post-it invariati |
-| 5 | Generare e selezionare alternative | Idee individuali, confronto e processo effettivo documentato |
+| 5 | Generare e selezionare alternative | In corso: decisioni comunicate da Andrea e post-it disponibili, otto spunti e tre direzioni pronti; idee individuali e scelta effettiva da completare |
 | 6 | Definire soluzione, nome e value proposition | Supporto concettuale specifico, motivazione del nome e beneficio in una riga |
 | 7 | Preparare e pubblicare la consegna | Slide PDF, ordine causale, leggibilità e collegamenti verificati |
 

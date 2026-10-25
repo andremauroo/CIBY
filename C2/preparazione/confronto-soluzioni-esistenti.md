@@ -1,6 +1,6 @@
 # Confronto preliminare con soluzioni esistenti
 
-Ricerca documentale del 23 ottobre 2026, per la C2 di CIBY / MAGGICAL.
+Ricerca documentale del 23 ottobre 2026, con riesame mirato del 25 ottobre, per la C2 di CIBY / MAGGICAL.
 
 ## Risultato utile alla progettazione
 
@@ -48,7 +48,7 @@ Le ipotesi restano espresse come attività da sostenere. Non ne viene dichiarata
 
 **H3 - Mantenere il contesto utile con uno sforzo sostenibile.** Aiutare la persona a ottenere supporto pertinente anche quando non ha una ricostruzione completa e aggiornata delle scorte. Collegamento C1: P01-E04/E07, un solo caso principale. Da capire: quale informazione serve davvero alla scelta e quale impegno la persona accetta? Non assumere come già dimostrato il rifiuto di un inventario.
 
-H1 e H2 proseguono direttamente gli scenari iniziali; H3 è più esplorativa. La priorità tra loro dipenderà dagli episodi nuovi e dalla discussione del gruppo.
+H1 e H2 proseguono direttamente gli scenari iniziali; H3 è più esplorativa. Non sono stati raccolti nuovi episodi. Nel riesame del 25 ottobre, D3 delle [alternative concettuali](alternative-soluzione.md) sviluppa soprattutto H1, mantenendo H2 e lo sforzo di contestualizzazione come aspetti collegati. È una raccomandazione preparatoria, non una soluzione selezionata.
 
 ## Domande per leggere i nuovi episodi
 
@@ -75,3 +75,11 @@ Registrare informazioni richieste, decisioni lasciate all'utente, aggiornamenti 
 ## Uso nella presentazione
 
 Il confronto va prima della scelta finale che contribuisce a motivare, dopo aver mostrato le evidenze degli utenti, i bisogni e gli scenari. Presentare poche sovrapposizioni documentate, poi la differenza concreta che il gruppo intende esplorare. Espressioni come “nessuna app lo fa” richiederebbero riscontri più estesi di questa ricerca.
+
+## Riesame mirato del 25 ottobre
+
+Sono state rilette la descrizione dello sviluppatore di SuperCook sull'App Store, la pagina Food+ e la guida Sously alle sostituzioni, già collegate sopra. Le sovrapposizioni considerate nel confronto D1-D3 restano: ricerca dagli ingredienti, priorità di consumo, personalizzazione dei pasti e adattamento di una ricetta.
+
+La direzione D3 propone di approfondire le conseguenze di un cambiamento sull'uso degli ingredienti e sugli acquisti successivi. Non si deduce che i prodotti confrontati non supportino questo percorso: il suo trattamento completo e il vantaggio per gli utenti restano da verificare. Le capacità descritte nelle altre fonti del documento mantengono la data della consultazione iniziale.
+
+Non sono state svolte nuove prove delle app.

@@ -19,7 +19,8 @@ Andrea ha confermato il 23 ottobre che non sono ancora state svolte nuove attivi
 | [Evidenze e bisogni](preparazione/evidenze-e-bisogni.md) | Quattro bisogni confermati, evidenze C1, confini ed esiti desiderati |
 | [Personas e scenari](preparazione/personas-e-scenari.md) | Tre personas consolidate, Luca primaria e quattro scenari principali B01-B04 |
 | [Nuove attività con utenti](preparazione/nuove-attivita-utenti.md) | Traccia iniziale non attuata, conservata come riferimento per eventuali ricerche future |
-| [Brainstorming e scelta](preparazione/brainstorming-e-scelta.md) | Procedura per il gruppo, registri da compilare e spunti preliminari da discutere |
+| [Brainstorming e scelta](preparazione/brainstorming-e-scelta.md) | Procedura, spazio Figma e registri della raccolta e della scelta |
+| [Alternative concettuali](preparazione/alternative-soluzione.md) | Otto spunti e tre direzioni da confrontare; D3 raccomandata come proposta preparatoria |
 | [Confronto con soluzioni esistenti](preparazione/confronto-soluzioni-esistenti.md) | Capacità già documentate, sovrapposizioni e tre ipotesi da verificare |
 | [Filone sportivo](preparazione/valutazione-filone-sportivo.md) | Evidenze disponibili, valutazione del focus e collegamento al caso simulato |
 | [Approfondimento sportivo simulato](preparazione/approfondimento-sportivo-simulato.md) | Caso concreto, assunzioni, alternative, collegamenti ai bisogni e testo breve per le slide |
@@ -31,7 +32,7 @@ Andrea ha confermato il 23 ottobre che non sono ancora state svolte nuove attivi
 - Nuove attività di needfinding, almeno una con un possibile utilizzatore finale.
 - Documentazione effettiva del confronto sui bisogni: B01-B04 sono stati confermati da Andrea; restano da raccogliere le immagini e le tracce della discussione del gruppo.
 - Documentazione degli esiti consolidati di personas e quattro scenari nelle slide, mostrando prima evidenze e percorso.
-- Brainstorming individuale e collettivo, con immagini di tutte le idee e selezione documentata.
+- Raccolta o ricostruzione confermata delle idee individuali e confronto delle soluzioni, con immagini e selezione documentata. Lo spazio Figma e le alternative preparatorie sono pronti.
 - Scelta della soluzione, motivazione del nome CIBY e value proposition.
 - Slide in PDF, ordinate secondo i legami tra evidenze e decisioni.
 
