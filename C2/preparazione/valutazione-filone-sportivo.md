@@ -1,0 +1,78 @@
+# Valutazione del filone sportivo
+
+**CIBY / MAGGICAL - 25 ottobre 2026. Ipotesi progettuale da esplorare.**
+
+Andrea ha proposto di considerare l'alimentazione per chi pratica sport, pur osservando che non è una priorità emersa chiaramente dalle interviste.
+
+## Valutazione
+
+Il filone è coerente con CIBY se aiuta a organizzare pasti, ingredienti e tempi quando interviene l'allenamento. In questo modo approfondisce i bisogni di composizione del pasto e adattamento agli imprevisti, conservando il collegamento alla gestione del cibo.
+
+Un focus autonomo su fabbisogni, obiettivi quantitativi e ottimizzazione della prestazione cambierebbe la domanda di progetto e richiederebbe evidenze diverse. La presenza di persone sportive nel campione, da sola, non dimostra la necessità di quel tipo di soluzione.
+
+## Cosa dicono davvero i materiali C1
+
+| Fonte | Dato disponibile | Cosa consente di sostenere | Cosa rimane aperto |
+|---|---|---|---|
+| [Report P03](../../C1/report%20interviste/P03.pdf), profilo p. 1 e Q16/T16 p. 3 | Corre e riferisce di evitare pasti abbondanti appena prima dell'attività; non descrive una pianificazione alimentare dettagliata | Lo sport può entrare nei vincoli personali di una scelta | Non sono ricostruiti pasti problematici o richieste di supporto intorno agli allenamenti |
+| [Report P04](../../C1/report%20interviste/P04.pdf), E09/E10 e N11/N12 | Palestra tre volte a settimana; uso raro di Gemini per stime approssimative, soprattutto di proteine | Esiste una curiosità occasionale su informazioni nutrizionali | Non dimostra adozione di un diario o necessità di maggiore precisione |
+| Stesso P04, E10 | Dice di non sentire il bisogno di controllare più precisamente l'alimentazione | È un riscontro contrario a una domanda generalizzata di monitoraggio | Non descrive tutti i possibili utenti sportivi |
+| Proposta di Andrea del 25 ottobre | Interesse ad ampliare CIBY verso questo contesto | È una direzione di esplorazione del gruppo | Non è un risultato di una nuova intervista |
+
+Il nesso tra proteine e palestra è stato proposto anche dall'intervistatore: non va trasformato retroattivamente in una priorità spontanea del partecipante.
+
+## Tre possibili ampiezze
+
+| Direzione | Attività da sostenere | Coerenza con CIBY | Valutazione iniziale |
+|---|---|---|---|
+| Organizzazione intorno agli allenamenti | Decidere quando e cosa preparare in funzione di ingredienti e tempo effettivo | Diretta con B02/B03 | La più coerente da esplorare adesso |
+| Adattamento a indicazioni già seguite dall'utente | Trovare una preparazione compatibile con vincoli che la persona già conosce | Possibile, ma aggiunge requisiti da chiarire | Tenere come ipotesi, senza promettere equivalenze nutrizionali non verificate |
+| Nuovo sistema di obiettivi e ottimizzazione nutrizionale | Definire e monitorare obiettivi quantitativi o prestazione | Sposta il centro del progetto | Evidenze attuali insufficienti per farne il focus principale della C2 |
+
+Questa tabella è una valutazione progettuale, non una graduatoria votata dal gruppo.
+
+## Bisogno candidato H-Sport
+
+**Comporre e riorganizzare i propri pasti tenendo conto degli impegni sportivi e degli ingredienti disponibili.**
+
+Il candidato si sovrappone in parte a B02 e B03. Per diventare un quarto bisogno autonomo deve mostrare una difficoltà distinta; altrimenti è più chiaro trattarlo come un contesto aggiuntivo degli stessi bisogni.
+
+Domande discriminanti: il problema è il momento in cui si può cucinare, l'assenza del pasto previsto, la disponibilità degli ingredienti, l'interpretazione di indicazioni alimentari oppure un obiettivo quantitativo? Questi aspetti richiedono supporti diversi.
+
+## Scenario esplorativo S-Sport - L'allenamento cambia la serata
+
+**Caso di progetto simulato. Non è un'intervista né un episodio osservato.**
+
+Uno studente che gestisce i propri pasti aveva previsto di cucinare al rientro dall'università. L'orario dell'allenamento cambia e riduce il tempo disponibile per la preparazione. In casa ci sono ingredienti acquistati per quella cena e per i pasti successivi. Lo studente vuole mantenere un pasto coerente con le proprie abitudini alimentari e dare una destinazione a ciò che ha già comprato. Deve poter confrontare una preparazione più semplice con la possibilità di riorganizzare i pasti successivi. Un supporto utile gli rende comprensibili queste alternative e ciò che ciascuna comporta per l'uso degli ingredienti. Sceglie come organizzare la serata e assegna un uso anche agli ingredienti rinviati.
+
+**Esito desiderato:** gestire un cambiamento di orario mantenendo un pasto praticabile e una destinazione per gli alimenti. Non vengono introdotti quantità prescritte, promesse di prestazione o equivalenze nutrizionali.
+
+Lo scenario può servire al brainstorming e a una futura ricerca. Non va associato a P06, a una data di intervista, a citazioni di un partecipante o a risultati inventati.
+
+## Confronto con prodotti esistenti
+
+Samsung Food+ documenta piani personalizzati, ricerca dagli ingredienti e tracciamento nutrizionale. MyFitnessPal documenta pianificazione dei pasti in relazione agli obiettivi, sostituzione delle ricette e registrazione di calorie e macro. Quindi l'abbinamento generico tra alimentazione, piani e dati nutrizionali non basta a dimostrare la novità di CIBY.
+
+Fonti ufficiali consultate il 25 ottobre:
+
+- [Samsung Food+, descrizione delle capacità](https://samsungfood.com/foodplus-promo/uk/).
+- [MyFitnessPal, guida al Meal Planner](https://support.myfitnesspal.com/hc/en-us/articles/34603055097869-How-to-use-the-Meal-Planner).
+
+Il confronto riguarda capacità dichiarate; non sono state provate le app. La guida MyFitnessPal indica inoltre limiti di paesi, lingua e abbonamento per il Meal Planner: non ne viene assunta la disponibilità per un utente italiano.
+
+**Inferenza progettuale:** un'eventuale differenza va cercata in un passaggio specifico tra imprevisto, ingredienti e nuova organizzazione. La ricerca documentale non dimostra che questo passaggio sia assente in tutti i prodotti esistenti.
+
+## Come inserirlo nel lavoro attuale
+
+1. Conservare i tre archetipi di lavoro Gianfranco, Luca e Marta, distinguendone gli obiettivi.
+2. Portare S-Sport nel confronto delle alternative come variante esplorativa, senza trasformare uno dei tre in sportivo solo attraverso una scala del template.
+3. Se il gruppo lo sceglie, dichiarare quali parti derivano dalla C1 e quali sono ipotesi nuove.
+4. Nella presentazione, mostrare le evidenze disponibili prima dell'eventuale estensione e della motivazione della scelta.
+
+## Il requisito delle nuove attività
+
+Al 25 ottobre non sono documentate nuove attività con utenti; Andrea ha segnalato che probabilmente il gruppo non riuscirà a svolgerle.
+
+Compito2-focus.pdf, p. 1, punto 1, richiede nuove attività e almeno una con un utente immediato; a p. 2 richiede di documentarne format, persone, luogo e informazioni raccolte. La revisione dei materiali C1, il confronto dei prodotti e uno scenario simulato non sostituiscono quel requisito.
+
+Se non vengono svolte nuove attività, descrivere il lavoro effettivo come riesame dei cinque report C1 e approfondimento progettuale, mantenendo esplicita la parte non coperta. Il presente documento non contiene nuove testimonianze.

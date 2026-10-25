@@ -18,7 +18,7 @@ La selezione deve arrivare a 3-4 bisogni. Non serve scegliere quattro elementi s
 
 Prima di proporre soluzioni, verificare che ogni bisogno scelto abbia uno scenario concettuale, con contesto, motivazione, ostacolo e risultato desiderato. Collegare ciascuno a una persona fondata su pattern della ricerca.
 
-Le [bozze Gianfranco/Charles e S01-S03](personas-e-scenari.md) servono come punto di partenza; eventuali modifiche devono seguire i nuovi dati e le decisioni sui bisogni.
+La [revisione di Gianfranco, Luca e Marta con gli scenari G/L/M](personas-e-scenari.md), aggiornata il 25 ottobre, serve come punto di partenza. Le riscritture restano proposte da discutere. Il [filone sportivo](valutazione-filone-sportivo.md) è un'ulteriore ipotesi di contesto, con uno scenario simulato esplicitamente distinto dalle interviste.
 
 ## 3. Raccogliere le idee individuali
 
@@ -43,9 +43,9 @@ Queste direzioni derivano dalla C1 e servono a stimolare il confronto. Non costi
 
 | Spunto | Attività che propone di sostenere | Bisogni/scenari | Questione da approfondire |
 |---|---|---|---|
-| A - Dare una destinazione agli alimenti meno visibili | Riconoscere ciò che rischia di rimanere fuori dalle decisioni e associarlo a un'occasione di uso | B01/S01 | In quale momento il supporto sarebbe utile e sostenibile? |
-| B - Passare da ingredienti a una preparazione praticabile | Valutare alternative coerenti con ingredienti, tempo e disponibilità a cucinare | B02/S02 | Quale attrito resta rispetto a ricette e routine già efficaci? |
-| C - Recuperare un'intenzione dopo un imprevisto | Ripensare l'uso di ingredienti già comprati quando il programma o la preparazione cambia | B03/S03 | Cosa distingue un adattamento riuscito da uno fallito? |
+| A - Dare una destinazione agli alimenti meno visibili | Riconoscere ciò che rischia di rimanere fuori dalle decisioni e associarlo a un'occasione di uso | B01/scenario M | In quale momento il supporto sarebbe utile e sostenibile? |
+| B - Passare da ingredienti a una preparazione praticabile | Valutare alternative coerenti con ingredienti, tempo e disponibilità a cucinare | B02/scenario G | Quale attrito resta rispetto a ricette e routine già efficaci? |
+| C - Recuperare un'intenzione dopo un imprevisto | Ripensare l'uso di ingredienti già comprati quando il programma o la preparazione cambia | B03/scenario L | Cosa distingue un adattamento riuscito da uno fallito? |
 | D - Collegare quantità e occasioni di consumo | Valutare se gli ingredienti acquistati avranno un uso nelle occasioni realistiche | C04, se selezionato | È un bisogno distinto e sufficientemente documentato? |
 
 Il [confronto preliminare con soluzioni esistenti](confronto-soluzioni-esistenti.md), svolto il 23 ottobre su fonti ufficiali, documenta sovrapposizioni con ricerca dagli ingredienti, priorità di consumo e sostituzioni. Non dimostra ancora la novità di una direzione CIBY. Dopo aver raccolto le alternative individuali, usare il confronto per precisare le proposte e provare gli stessi compiti nei prodotti pertinenti, distinguendo funzioni dichiarate ed esperienza osservata.
