@@ -1,20 +1,24 @@
 # Requisiti e piano della C2
 
-Aggiornamento: 23 ottobre 2026. Fonte principale: Compito2-focus.pdf, pp. 1-2. Scadenza: lunedì 26 ottobre 2026; nel documento non è indicato un orario.
+Aggiornamento: 25 ottobre 2026. Fonte principale: Compito2-focus.pdf, pp. 1-2. Scadenza: lunedì 26 ottobre 2026; nel documento non è indicato un orario.
 
 ## Obiettivo della consegna
 
 Restringere il dominio della ricerca, approfondire i bisogni e arrivare a una formulazione del problema e a una soluzione concettuale con una value proposition specifica. Le personas servono a rappresentare pattern emersi dalla ricerca; gli scenari chiariscono contesto, motivazioni e conseguenze.
 
+## Decisione di ambito
+
+Andrea riferisce che il gruppo ha votato per la **gestione flessibile dei pasti**. B01-B03 ne costituiscono la base; C04 sulle quantità della spesa rimane candidato al quarto bisogno. L'organizzazione dei pasti intorno agli allenamenti è un approfondimento per un'eventuale integrazione. Mascotte e suggerimenti nutrizionali con possibile AI sono idee per la successiva realizzazione. Vedi [Focus e decisioni](focus-e-decisioni.md).
+
 ## Requisiti da coprire
 
 | Richiesta del compito | Fonte | Materiale da mostrare | Stato attuale |
 |---|---|---|---|
-| Svolgere nuove attività con utenti, considerando anche il feedback C1 | p. 1, punto 1 | Format, partecipanti, luogo, aspetti approfonditi e risultati | Da svolgere, come confermato da Andrea |
-| Includere almeno un'attività con un utente immediato del dominio | p. 1, punto 1 | Motivazione della pertinenza del partecipante | Da organizzare |
+| Svolgere nuove attività con utenti, considerando anche il feedback C1 | p. 1, punto 1 | Format, partecipanti, luogo, aspetti approfonditi e risultati | Non svolte; Andrea conferma che non sarà possibile organizzarne |
+| Includere almeno un'attività con un utente immediato del dominio | p. 1, punto 1 | Motivazione della pertinenza del partecipante | Requisito non coperto |
 | Integrare i nuovi dati nell'analisi tematica | p. 1, punto 2 | Estratti, codici, temi e differenze rispetto alla C1 | Base C1 disponibile; nuovi dati mancanti |
 | Fare brainstorming sull'elenco dei bisogni e documentarlo | p. 1, punto 2; p. 2, sezione 3a | Immagini di tutti i bisogni discussi e motivi della selezione | Preparazione disponibile; sessione da svolgere |
-| Scegliere 3-4 bisogni consistenti, collegati a interviste e risposte specifiche | p. 1, punto 3; p. 2, sezione 3b | Bisogni come attività, evidenze e motivazioni | B01-B03 C1 candidati; scelta C2 aperta |
+| Scegliere 3-4 bisogni consistenti, collegati a interviste e risposte specifiche | p. 1, punto 3; p. 2, sezione 3b | Bisogni come attività, evidenze e motivazioni | Focus confermato su B01-B03; C04 da approfondire, selezione finale 3-4 aperta |
 | Specificare personas e uno scenario per ogni bisogno selezionato | p. 1, punto 4 | Archetipi motivati e scenari che mostrino contesto e utilità del supporto | Bozze da consolidare |
 | Raccogliere idee individuali da ciascun membro, poi discuterle insieme | p. 1, punto 5 | Idee originali, autore e raggruppamenti successivi | Da svolgere |
 | Esprimere le soluzioni come attività da supportare, prima dei dettagli tecnici | p. 1, punto 5; p. 2, sezione 4 | Proposte concettuali e soluzione scelta in 1-3 frasi | Spunti preliminari disponibili |
@@ -22,7 +26,7 @@ Restringere il dominio della ricerca, approfondire i bisogni e arrivare a una fo
 | Motivare un nome di 1-2 parole e una value proposition in una riga | p. 2, punto 7 | Nome, motivazione effettiva del gruppo, beneficio specifico | CIBY confermato; motivazione e frase finale aperte |
 | Pubblicare slide in PDF nello spazio C2 della repo | p. 2, Cosa consegnare | Presentazione con le cinque sezioni richieste | Cartella avviata; PDF da realizzare |
 
-Il compito richiede 3-4 bisogni e uno scenario per ciascuno; non prescrive un numero identico di personas né un numero di slide. Almeno un'attività deve coinvolgere un utente immediato; non viene fissato un numero complessivo di nuove interviste. Proponiamo due approfondimenti per confrontare casi diversi, come scelta di lavoro.
+Il compito richiede 3-4 bisogni e uno scenario per ciascuno; non prescrive un numero identico di personas né un numero di slide. Almeno un'attività deve coinvolgere un utente immediato; non viene fissato un numero complessivo di nuove interviste. La traccia iniziale proponeva due approfondimenti; Andrea ha poi confermato che non sarà possibile organizzare nuove attività. Il riesame C1 e i casi simulati restano distinti da interazioni effettive con utenti e non coprono quel requisito.
 
 ## Il feedback C1 diventa una regola per le slide
 
@@ -55,16 +59,21 @@ Questa è una proposta di contenuto, non un numero di slide imposto dai docenti.
 
 Per ogni slide di scelta, inserire nelle note o nella slide i riferimenti alle evidenze e alle slide precedenti che la sostengono. Non attribuire alla nuova ricerca risultati già emersi nella C1.
 
-## Piano proposto fino al 26 ottobre
+## Piano aggiornato fino al 26 ottobre
 
-| Giorno | Lavoro | Risultato necessario |
+Il piano iniziale prevedeva nuove attività il 24 ottobre; non sono state svolte e Andrea ha confermato che non sarà possibile organizzarle. Il lavoro prosegue con il riesame della C1 e gli approfondimenti progettuali dichiarati come tali.
+
+| Ordine | Lavoro | Stato o risultato necessario |
 |---|---|---|
-| Venerdì 23 | Concordare partecipanti e ruoli; rifinire la traccia; preparare la raccolta | Attività organizzate e domande coerenti con i tre bisogni |
-| Sabato 24 | Svolgere gli approfondimenti e scrivere i report subito dopo | Nuovi episodi documentati, almeno un utente immediato |
-| Domenica 25 | Integrare l'analisi; discutere i bisogni; consolidare personas/scenari; generare e scegliere alternative | Decisioni ed evidenze del processo |
-| Lunedì 26 | Completare la presentazione, verificare ordine e leggibilità, caricare e riaprire il PDF da GitHub | PDF finale nello spazio C2 |
+| 1 | Definire il focus | Completato: gestione flessibile dei pasti, con spesa e sport da approfondire |
+| 2 | Consolidare i bisogni | B01-B03 come base; decidere se selezionare anche C04 e motivare il confine |
+| 3 | Preparare l'approfondimento sportivo simulato | Caso esplorativo distinto da interviste e osservazioni |
+| 4 | Consolidare personas e scenari | Uno scenario per ciascun bisogno selezionato, con evidenze e ipotesi riconoscibili |
+| 5 | Generare e selezionare alternative | Idee individuali, confronto e processo effettivo documentato |
+| 6 | Definire soluzione, nome e value proposition | Supporto concettuale specifico, motivazione del nome e beneficio in una riga |
+| 7 | Preparare e pubblicare la consegna | Slide PDF, ordine causale, leggibilità e collegamenti verificati |
 
-Le date intermedie sono una proposta organizzativa. Nessuna attività è dichiarata prenotata o svolta.
+La votazione sulla direzione, riferita da Andrea, non viene utilizzata come documentazione sostitutiva della selezione della soluzione.
 
 ## Verifica prima di chiamarla consegna finale
 

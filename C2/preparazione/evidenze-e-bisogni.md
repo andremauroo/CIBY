@@ -1,6 +1,6 @@
 # Evidenze e bisogni da approfondire
 
-Base: C1 pubblicata il 12 ottobre 2026. Aggiornamento di preparazione: 23 ottobre. Non sono ancora disponibili dati di nuove attività con utenti.
+Base: C1 pubblicata il 12 ottobre 2026. Aggiornamento: 25 ottobre 2026. Andrea conferma il focus di gestione flessibile dei pasti scelto dal gruppo. Non sono disponibili dati di nuove attività con utenti.
 
 ## Perimetro di lavoro
 
@@ -10,7 +10,7 @@ P01, P02, P03 e P05 hanno responsabilità su spesa e pasti. P04 serve da confron
 
 ## Tre bisogni di partenza
 
-Gli identificativi e la formulazione di B01-B03 proseguono la sintesi C1. La selezione definitiva C2 avverrà dopo i nuovi dati e la discussione del gruppo.
+Gli identificativi e la formulazione di B01-B03 proseguono la sintesi C1. B01-B03 costituiscono la base del focus confermato. La selezione definitiva C2, fra tre bisogni e l'eventuale aggiunta di C04, va consolidata sulla base dei dati disponibili e della discussione del gruppo. Vedi il [registro delle decisioni](focus-e-decisioni.md).
 
 | Bisogno candidato | Risposte specifiche e contenuto | Conseguenza o tensione | Approfondimento C2 |
 |---|---|---|---|
@@ -42,7 +42,7 @@ Questa lista prepara il confronto; non documenta una sessione già svolta.
 | B01 - Riconoscere disponibilità e priorità di consumo | P01-E05; P03-E06/E07; P05-E03/E04/E11 | Candidato principale |
 | B02 - Comporre un pasto praticabile | P01-E01/E09; P02-E03/E10/E12; P03-E12/E13; P05-E06 | Candidato principale |
 | B03 - Adattare uso degli ingredienti a imprevisti o preparazioni incomplete | P02-E07/E08; P03-E04/E08 | Candidato principale |
-| C04 - Adeguare quantità acquistate alle occasioni reali di consumo | P02-E06/E07; P03-E05/E07 | Possibile quarto bisogno, da distinguere da B03 |
+| C04 - Adeguare quantità acquistate alle occasioni reali di consumo | P02-E06/E07; P03-E05/E07 | Andrea conferma di mantenerlo tra le priorità da approfondire come possibile quarto bisogno, distinguendolo da B03 |
 | C05 - Valutare e adattare una ricetta attraverso fonti e capacità personali | P02-E10/E12; P03-E10/E11/E12 | Possibile componente di B02; i metodi attuali sono spesso utili |
 | C06 - Ottenere un supporto pertinente con uno sforzo sostenibile di contestualizzazione | P01-E04/E07 | Barriera riferita in un caso; da approfondire |
 | C07 - Disporre del pasto previsto fuori casa o trovare un'alternativa praticabile | P01-E03/E09; P04-E02/E04 | Problema distinto, con strategie già adottate |
@@ -70,8 +70,12 @@ Per ogni estratto nuovo compilare una riga. Finché le attività non sono svolte
 
 Gli esiti possono confermare un bisogno, restringerlo, cambiarne la formulazione o farlo scendere di priorità. Documentare anche una mancata conferma rende comprensibile la scelta finale.
 
-## Ipotesi di focus da verificare
+## Focus confermato e approfondimenti
 
-**Sostenere il passaggio dagli ingredienti già presenti a un pasto praticabile, anche quando cambiano i programmi.**
+**Gestione flessibile dei pasti: aiutare giovani adulti che gestiscono autonomamente i propri pasti a utilizzare gli ingredienti disponibili e trovare una preparazione praticabile, anche quando cambiano i programmi.**
 
-È una sintesi progettuale proposta a partire da B01-B03. Non è ancora la soluzione selezionata dal gruppo né un beneficio dimostrato. La ricerca successiva deve chiarire dove questo passaggio si interrompe e quale supporto aggiungerebbe valore rispetto alle abitudini già esistenti.
+Andrea riferisce che il gruppo ha votato per questa direzione e conferma di procedere. È una decisione sull'ambito di progetto; la soluzione concettuale e il beneficio specifico rimangono da definire e verificare.
+
+C04 rimane candidato al quarto bisogno. Per distinguerlo da B03, approfondire la valutazione delle quantità prima dell'acquisto rispetto alla riorganizzazione di alimenti già comprati dopo un imprevisto.
+
+L'organizzazione dei pasti intorno agli allenamenti resta un contesto da esplorare per B02/B03. La mascotte, la personalizzazione e i suggerimenti nutrizionali con possibile AI sono idee di realizzazione proposte da Andrea, registrate in [Focus e decisioni](focus-e-decisioni.md); non aggiungono nuove evidenze ai report.

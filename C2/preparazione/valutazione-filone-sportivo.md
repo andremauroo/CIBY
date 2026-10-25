@@ -4,6 +4,8 @@
 
 Andrea ha proposto di considerare l'alimentazione per chi pratica sport, pur osservando che non è una priorità emersa chiaramente dalle interviste.
 
+**Decisione aggiornata:** Andrea riferisce che il gruppo ha votato per la gestione flessibile dei pasti. Conferma di approfondire l'organizzazione dei pasti intorno agli allenamenti per un'eventuale integrazione, mantenendo il focus sulla gestione quotidiana. L'ottimizzazione nutrizionale o della prestazione non è il centro scelto. Vedi [Focus e decisioni](focus-e-decisioni.md).
+
 ## Valutazione
 
 Il filone è coerente con CIBY se aiuta a organizzare pasti, ingredienti e tempi quando interviene l'allenamento. In questo modo approfondisce i bisogni di composizione del pasto e adattamento agli imprevisti, conservando il collegamento alla gestione del cibo.
@@ -29,7 +31,7 @@ Il nesso tra proteine e palestra è stato proposto anche dall'intervistatore: no
 | Adattamento a indicazioni già seguite dall'utente | Trovare una preparazione compatibile con vincoli che la persona già conosce | Possibile, ma aggiunge requisiti da chiarire | Tenere come ipotesi, senza promettere equivalenze nutrizionali non verificate |
 | Nuovo sistema di obiettivi e ottimizzazione nutrizionale | Definire e monitorare obiettivi quantitativi o prestazione | Sposta il centro del progetto | Evidenze attuali insufficienti per farne il focus principale della C2 |
 
-Questa tabella è una valutazione progettuale, non una graduatoria votata dal gruppo.
+Questa tabella è una valutazione progettuale, non una graduatoria votata dal gruppo. La conferma successiva di Andrea orienta l'approfondimento verso la prima riga.
 
 ## Bisogno candidato H-Sport
 
@@ -66,12 +68,12 @@ Il confronto riguarda capacità dichiarate; non sono state provate le app. La gu
 
 1. Conservare i tre archetipi di lavoro Gianfranco, Luca e Marta, distinguendone gli obiettivi.
 2. Portare S-Sport nel confronto delle alternative come variante esplorativa, senza trasformare uno dei tre in sportivo solo attraverso una scala del template.
-3. Se il gruppo lo sceglie, dichiarare quali parti derivano dalla C1 e quali sono ipotesi nuove.
+3. Nell'approfondimento organizzativo confermato da Andrea, dichiarare quali parti derivano dalla C1 e quali sono ipotesi nuove; l'integrazione effettiva rimane da decidere.
 4. Nella presentazione, mostrare le evidenze disponibili prima dell'eventuale estensione e della motivazione della scelta.
 
 ## Il requisito delle nuove attività
 
-Al 25 ottobre non sono documentate nuove attività con utenti; Andrea ha segnalato che probabilmente il gruppo non riuscirà a svolgerle.
+Al 25 ottobre non sono documentate nuove attività con utenti; Andrea ha confermato che il gruppo non ha modo di organizzarne.
 
 Compito2-focus.pdf, p. 1, punto 1, richiede nuove attività e almeno una con un utente immediato; a p. 2 richiede di documentarne format, persone, luogo e informazioni raccolte. La revisione dei materiali C1, il confronto dei prodotti e uno scenario simulato non sostituiscono quel requisito.
 

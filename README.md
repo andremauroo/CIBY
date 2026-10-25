@@ -4,6 +4,8 @@ Progetto per il corso di Fondamenti di Human-Computer Interaction del Politecnic
 
 **Tema:** consapevolezza alimentare e riduzione dello spreco domestico.
 
+**Focus C2:** gestione flessibile dei pasti, con quantità della spesa e organizzazione intorno agli allenamenti da approfondire.
+
 ## Gruppo
 
 **MAGGICAL**
@@ -19,4 +21,4 @@ Andrea Mauro, Marco Macherelli, Gabriele Martignoni, Rime Chamkar, Emanuele Marc
 
 La cartella C1 raccoglie la presentazione generale, i cinque report delle interviste P01–P05, il sondaggio con i risultati aggregati e la traccia comune delle domande.
 
-La cartella C2 raccoglie requisiti, evidenze di partenza, bozze di personas e scenari e tracce per le nuove attività. Il PDF finale della C2 non è ancora disponibile.
+La cartella C2 raccoglie il focus scelto dal gruppo, requisiti, evidenze di partenza, bozze di personas e scenari e materiali per gli approfondimenti. Il PDF finale della C2 non è ancora disponibile.

@@ -1,10 +1,12 @@
 # Brainstorming e scelta della soluzione
 
-Preparazione del 23 ottobre 2026. **Non documenta una sessione già avvenuta.** Gli spunti sono proposte iniziali di supporto alla discussione; non sono attribuiti ai membri del gruppo e non hanno ricevuto voti.
+Preparazione del 23 ottobre, aggiornata il 25 ottobre 2026. Andrea riferisce che il gruppo ha votato per il focus **gestione flessibile dei pasti**, mantenendo da approfondire spesa e organizzazione intorno agli allenamenti: vedi [Focus e decisioni](focus-e-decisioni.md).
+
+Questo documento prepara il brainstorming delle soluzioni; non documenta una sessione già avvenuta. Gli spunti A-D sono proposte iniziali, non idee attribuite ai singoli membri, e non hanno ricevuto voti documentati. La scelta della direzione non equivale alla selezione finale della soluzione.
 
 ## 1. Discutere e selezionare i bisogni
 
-Dopo aver integrato i nuovi dati, portare nella discussione tutti i candidati della [lista dei bisogni](evidenze-e-bisogni.md). Ogni elemento deve mantenere i riferimenti alle risposte che lo sostengono.
+Portare nella discussione tutti i candidati della [lista dei bisogni](evidenze-e-bisogni.md). Ogni elemento deve mantenere i riferimenti alle risposte che lo sostengono. B01-B03 costituiscono la base del focus confermato; C04 rimane il candidato al quarto bisogno. Integrare eventuali dati nuovi solo se raccolti effettivamente.
 
 Discutere ampiezza del bisogno, conseguenze, rilevanza per l'utente, differenze rispetto agli altri candidati e strategie già funzionanti. Conservare l'immagine della lista completa prima di restringerla. Registrare anche bisogni accorpati, esclusi o rinviati e il motivo.
 
@@ -50,6 +52,12 @@ Queste direzioni derivano dalla C1 e servono a stimolare il confronto. Non costi
 
 Il [confronto preliminare con soluzioni esistenti](confronto-soluzioni-esistenti.md), svolto il 23 ottobre su fonti ufficiali, documenta sovrapposizioni con ricerca dagli ingredienti, priorità di consumo e sostituzioni. Non dimostra ancora la novità di una direzione CIBY. Dopo aver raccolto le alternative individuali, usare il confronto per precisare le proposte e provare gli stessi compiti nei prodotti pertinenti, distinguendo funzioni dichiarate ed esperienza osservata.
 
+### Idee di realizzazione segnalate da Andrea
+
+Andrea propone una mascotte eventualmente personalizzabile, che possa offrire suggerimenti e spiegazioni sui valori nutrizionali degli alimenti, con possibile supporto AI. L'organizzazione dei pasti per gli allenamenti resta un contesto da approfondire.
+
+Questi elementi sono registrati come proposte, senza voti e senza assumerli come soluzione scelta. Nel brainstorming concettuale discutere prima l'attività e il beneficio che sostengono; la loro forma di interazione e la tecnologia saranno valutate successivamente.
+
 ## 5. Selezionare e documentare
 
 Il compito offre due metodi. Il gruppo ne sceglie uno e registra il processo effettivo.
@@ -81,11 +89,11 @@ In entrambi i casi: fotografare la situazione iniziale, tutte le idee, gli accor
 
 Il nome ufficiale del progetto è **CIBY**, confermato da Andrea; il gruppo si chiama **MAGGICAL**. Per la presentazione serve la motivazione effettiva del gruppo sulla scelta del nome: non è documentata nei materiali letti e non va ricostruita come un fatto.
 
-Come ipotesi da discutere, il focus comune a B01-B03 può essere descritto così:
+Il focus comune a B01-B03, confermato da Andrea come direzione votata dal gruppo, può essere descritto così:
 
 > CIBY sostiene chi gestisce i propri pasti nel trasformare gli ingredienti già presenti in una preparazione praticabile, anche quando cambiano i programmi. Il supporto riguarda riconoscimento delle priorità, scelta e adattamento, mantenendo il controllo della persona.
 
-Queste due frasi sono una proposta preparatoria, non la soluzione già selezionata. Dopo la selezione dovranno essere rese coerenti con il suo ambito effettivo.
+Queste due frasi descrivono l'ambito confermato e non la soluzione già selezionata. Dopo la selezione dovranno essere rese coerenti con il supporto specifico scelto, considerando l'eventuale integrazione di C04 e del contesto sportivo.
 
 Una possibile frase di beneficio da rivedere in quel momento:
 
