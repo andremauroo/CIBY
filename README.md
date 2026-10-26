@@ -4,7 +4,6 @@ Progetto per il corso di Fondamenti di Human-Computer Interaction del Politecnic
 
 **Tema:** consapevolezza alimentare e riduzione dello spreco domestico.
 
-**Focus C2:** gestione flessibile dei pasti, dagli alimenti disponibili al prossimo utilizzo, con adattamento agli imprevisti e valutazione degli acquisti. L'organizzazione intorno agli allenamenti è un contesto da approfondire.
 
 ## Gruppo
 
