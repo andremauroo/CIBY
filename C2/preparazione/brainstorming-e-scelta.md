@@ -103,10 +103,8 @@ In entrambi i casi: fotografare la situazione iniziale, tutte le idee, gli accor
 
 Il nome ufficiale del progetto è **CIBY**, confermato da Andrea; il gruppo si chiama **MAGGICAL**. Andrea comunicherà la motivazione effettiva del nome dopo essersi confrontato con i colleghi. Il punto resta aperto e non blocca la definizione della soluzione.
 
-La descrizione concettuale di D3 è consolidata nella [scheda della soluzione](soluzione-concettuale.md). La value proposition finale dovrà esprimere in una riga il beneficio specifico di riorganizzare ingredienti, pasti e acquisti quando cambiano le occasioni di consumo.
+La descrizione concettuale di D3 è consolidata nella [scheda della soluzione](soluzione-concettuale.md). Andrea ha approvato il 26 ottobre questa value proposition come versione di lavoro:
 
-Una bozza da rifinire rispetto a D3:
+> CIBY ti aiuta a scegliere cosa preparare con gli alimenti che hai, adattando pasti e acquisti quando cambiano i programmi.
 
-> Dai una destinazione al cibo che hai già, anche quando cambiano i piani.
-
-La frase è una proposta di lavoro e non un beneficio misurato. Per la versione finale va valutato se rendere più esplicito il collegamento agli acquisti.
+Il [registro della value proposition](value-proposition.md) ne spiega il collegamento ai quattro bisogni. La frase potrà essere rivista con il diario P02 e gli esiti del confronto del gruppo; non costituisce un beneficio misurato né una prova di novità. La motivazione effettiva del nome resta da raccogliere.

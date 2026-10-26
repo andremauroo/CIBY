@@ -10,6 +10,12 @@
 
 La formulazione contiene due frasi e descrive l'attività da sostenere. Il punto di partenza è un'intenzione che cambia o diventa incerta: una preparazione non più fattibile, un pasto rinviato, una diversa disponibilità a cucinare. La persona confronta alternative e decide come usare gli ingredienti e cosa acquistare.
 
+## Value proposition
+
+> CIBY ti aiuta a scegliere cosa preparare con gli alimenti che hai, adattando pasti e acquisti quando cambiano i programmi.
+
+Versione di lavoro approvata da Andrea il 26 ottobre. Il [registro dedicato](value-proposition.md) ne riporta significato e stato; l'integrazione del diario P02 e il confronto del gruppo potranno precisarla.
+
 ## Perché D3
 
 La direzione collega i due bisogni principali della persona primaria Luca: riorganizzare ingredienti già acquistati (B03) e valutare le quantità dei nuovi acquisti rispetto alle occasioni realistiche di consumo (B04). Disponibilità e priorità (B01), insieme alla fattibilità della preparazione (B02), servono a rendere praticabile la nuova organizzazione.
@@ -49,7 +55,7 @@ Nello scenario L manca un ingrediente della preparazione prevista. Luca può con
 - Descrizione concettuale pronta in due frasi; direzione D3 confermata da Andrea.
 - Idee individuali, partecipanti, metodo, esito e immagini del confronto del gruppo da documentare nel [registro del processo](brainstorming-e-scelta.md).
 - Nome **CIBY** confermato; Andrea comunicherà la motivazione dopo il confronto con i colleghi. Nessuna spiegazione viene anticipata.
-- Value proposition finale in una riga da rifinire rispetto al beneficio specifico.
-- Nuove attività con utenti non svolte; i casi simulati non coprono il requisito della consegna. Slide e PDF finale ancora da preparare.
+- Value proposition di lavoro approvata da Andrea il 26 ottobre, da riesaminare con i nuovi dati e il confronto del gruppo.
+- Diario P02 proposto ma non ancora disponibile; i casi simulati non coprono il requisito delle attività reali. [Scaletta della presentazione](scaletta-presentazione.md) predisposta; slide e PDF finale ancora da realizzare.
 
 La registrazione di D3 in Figma ha aggiornato la sintesi del confronto e aggiunto la descrizione concettuale. Tutti i 53 post-it sono rimasti invariati.
