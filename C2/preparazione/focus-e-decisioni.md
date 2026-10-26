@@ -37,7 +37,7 @@ Il progetto si chiama **CIBY** e il gruppo **MAGGICAL**. Abbiamo scelto CIBY per
 
 > CIBY ti aiuta a scegliere cosa preparare con gli alimenti che hai, adattando pasti e acquisti quando cambiano i programmi.
 
-Questa è la nostra [value proposition di lavoro](value-proposition.md). Il diario e il confronto potranno precisarla.
+Questa è la nostra [value proposition di lavoro](value-proposition.md). Il diario è integrato nell'[analisi C1–C2](../report/analisi-tematica.md): il rinvio riuscito orienta verso occasioni vicine e flessibili, senza nuove prove sulle quantità. Il confronto conclusivo potrà precisare la frase.
 
 ## Materiali di riferimento
 

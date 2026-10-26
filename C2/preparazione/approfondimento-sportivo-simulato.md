@@ -86,7 +86,7 @@ Non emerge un nuovo bisogno di tracciare calorie o macro. La mascotte e l'eventu
 - B04 resta distinto: valutare gli acquisti prima della spesa rispetto a riorganizzare alimenti già comprati.
 - L'utilità ipotizzata è confrontare alternative praticabili e dare una destinazione agli ingredienti.
 - Il caso va confrontato con le routine già efficaci, non usato per dare per scontata la necessità di un nuovo servizio.
-- Non sono stati raccolti nuovi dati; frequenza del problema, preferenze e benefici rimangono da verificare.
+- Nel caso sportivo non sono stati raccolti nuovi dati: frequenza, preferenze e benefici restano da verificare. Il [diario reale P02](../report/P02-diario.md), integrato successivamente, non contiene informazioni sugli allenamenti.
 
 Queste conclusioni sono una lettura progettuale del caso, non testimonianze o validazione del filone sportivo.
 
@@ -96,7 +96,7 @@ Queste conclusioni sono una lettura progettuale del caso, non testimonianze o va
 
 **Sintesi utilizzabile nelle slide:** Un allenamento anticipato riduce il tempo previsto per preparare la cena. Il caso esplora come confrontare una preparazione più semplice con la riorganizzazione dei pasti successivi, tenendo conto degli ingredienti già acquistati. L'esito desiderato è una scelta praticabile e una destinazione per ciò che viene rinviato.
 
-Nella presentazione, mostrare prima i riscontri reali e i loro limiti, poi il caso e le domande che apre. Il materiale può sostenere scenari e brainstorming; la sezione sulle nuove attività con utenti dovrà riportare che non ne sono state svolte. Non attribuire al caso codici di partecipante, citazioni, consensi o risultati di un'intervista.
+Nella presentazione, mostrare prima i riscontri reali e i loro limiti, poi il caso e le domande che apre. Il materiale può sostenere scenari e brainstorming; la sezione sulle nuove attività con utenti documenta il diario P02 del 21–26 ottobre, distinto da questo caso simulato. Non attribuire al caso codici di partecipante, citazioni, consensi o risultati di un'intervista.
 
 Il caso è un approfondimento aggiuntivo. I quattro scenari principali B01-B04 sono disponibili nel [consolidamento di personas e scenari](personas-e-scenari.md); S-Sport li affianca come variante esplorativa.
 

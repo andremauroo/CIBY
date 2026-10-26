@@ -2,11 +2,13 @@
 
 Preparata il 23 ottobre 2026. **Traccia iniziale non attuata**, conservata come riferimento per ricerche future. Durate e numero di sessioni erano ipotesi organizzative, non requisiti aggiunti al compito.
 
-Per l'approfondimento attuale è stato preparato il [caso sportivo simulato S-Sport](approfondimento-sportivo-simulato.md), con assunzioni ed esiti ipotetici dichiarati. Non sono state compilate schede di sessione né aggiunte testimonianze; il requisito delle nuove attività rimane non coperto.
+Per l'approfondimento attuale è stato preparato il [caso sportivo simulato S-Sport](approfondimento-sportivo-simulato.md), con assunzioni ed esiti ipotetici dichiarati. Il caso non è una nuova attività con utenti. La nuova raccolta effettiva è il diario P02 documentato sotto.
 
 ## Aggiornamento del 26 ottobre
 
-È in preparazione la raccolta di un diario P02 di circa 3-4 giorni su spesa e preparazioni, seguendo il suggerimento ricevuto dopo la C1. Il materiale non è ancora disponibile; la possibilità non viene registrata come attività già svolta. Quando sarà acquisito, documentare periodo, contesto e modalità effettiva, distinguendo diario quotidiano e ricostruzione retrospettiva. La [scheda del diario](../report/P02-diario.md) e lo [schema di analisi](../report/analisi-tematica.md) sono pronti per ricevere i materiali effettivi.
+Abbiamo ricevuto e analizzato il diario P02 del 21–26 ottobre: sei giorni di appunti compilati quotidianamente sul telefono. La [scheda dell'attività](../report/P02-diario.md) documenta partecipante, metodo, contesti, evidenze e limiti; l'[analisi integrata](../report/analisi-tematica.md) confronta i dati con C1. La bowl prevista venerdì e consumata sabato è un rinvio riuscito. La spesa è descritta come quotidiana, senza quantità o registro per prodotto.
+
+Le proposte seguenti rimangono la traccia iniziale non attuata; non vengono presentate come interviste svolte per la C2.
 
 ## Cosa vogliamo capire
 
@@ -87,4 +89,4 @@ Per le evidenze usare identificativi come P03-C2-01-E01. Non attribuire timestam
 4. Aggiornare la [matrice di evidenze e bisogni](evidenze-e-bisogni.md).
 5. Registrare quale formulazione di bisogno o attributo delle personas cambia grazie al nuovo materiale.
 
-Se in futuro la traccia verrà utilizzata, presentare prima i risultati effettivi, poi i cambiamenti nei bisogni e nelle scelte. Per la C2 attuale, distinguere il riesame C1 e la simulazione progettuale dalle nuove attività con utenti, che non sono state svolte.
+Se in futuro la traccia verrà utilizzata, presentare prima i risultati effettivi, poi i cambiamenti nei bisogni e nelle scelte. Per la C2 attuale, mantenere distinti riesame C1, caso sportivo simulato e nuovo diario reale P02.

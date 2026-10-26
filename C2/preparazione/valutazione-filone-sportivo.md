@@ -75,7 +75,7 @@ Il confronto riguarda capacità dichiarate; non sono state provate le app. La gu
 
 ## Il requisito delle nuove attività
 
-Al 25 ottobre non erano documentate nuove attività. Il 26 ottobre abbiamo ripreso il suggerimento di un diario P02, ancora da acquisire; le [schede](../report/README.md) ne preparano raccolta e analisi.
+Al 25 ottobre non erano documentate nuove attività. Il 26 ottobre è stato ricevuto e analizzato il [diario reale P02 del 21–26 ottobre](../report/P02-diario.md). Descrive pasti e un rinvio riuscito; non contiene allenamenti o richieste di ottimizzazione nutrizionale.
 
 Compito2-focus.pdf, p. 1, punto 1, richiede nuove attività e almeno una con un utente immediato; a p. 2 richiede di documentarne format, persone, luogo e informazioni raccolte. La revisione dei materiali C1, il confronto dei prodotti e uno scenario simulato non sostituiscono quel requisito.
 

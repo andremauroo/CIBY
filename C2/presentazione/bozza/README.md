@@ -11,14 +11,13 @@ La bozza contiene 26 slide, incluse le schede complete delle personas e i riferi
 
 ## Contenuti predisposti
 
-Introduzione e gruppo, bisogni B01-B04 con risposte specifiche C1, immagini attuali del processo, tre personas, quattro scenari concettuali, alternative D1-D3, confronto documentale, descrizione della soluzione in due frasi, motivazione del nome e value proposition.
+Introduzione e gruppo, diario P02 del 21–26 ottobre e analisi integrata, bisogni B01-B04 con risposte specifiche C1, immagini attuali del processo, tre personas, quattro scenari concettuali, alternative D1-D3, confronto documentale, descrizione della soluzione in due frasi, motivazione del nome e value proposition.
 
 Le immagini provengono dalla board al 26 ottobre e mostrano anche proposte ancora in bozza. I post-it originali sono conservati. Le fonti puntuali sono nelle note della versione modificabile; i riferimenti principali sono visibili anche nel PDF.
 
 ## Parti ancora aperte
 
-- Slide 4-6: diario P02, modalità e periodo, episodi, analisi e impatto sul progetto.
-- Slide 7 e 16: aggiornamento delle immagini dopo i contributi mancanti e il confronto conclusivo.
+- Slide 7 e 16: aggiornamento delle immagini con tutti i contributi e il confronto conclusivo.
 - Slide 19: metodo effettivo ed esito motivato della selezione.
 - Eventuali revisioni delle priorità, della persona primaria e della soluzione alla luce dei nuovi materiali.
 

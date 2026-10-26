@@ -39,6 +39,6 @@ Seguiamo le cinque sezioni richieste dal compito e il feedback C1: dati e ragion
 
 ## Integrazioni
 
-Le slide 4-6 attendono il diario e la sua analisi. Le immagini attuali mostrano il processo in corso; saranno integrate dopo i contributi mancanti e la selezione. Il confronto potrà modificare priorità, persona primaria e descrizione della soluzione. La motivazione del nome è già inclusa nella slide 21.
+Le slide 4–6 documentano il diario P02, il rinvio della bowl e l'integrazione tematica. Le immagini attuali mostrano il processo in corso; saranno integrate con tutti i contributi e la selezione conclusiva. Il confronto potrà modificare priorità, persona primaria e descrizione della soluzione. La motivazione del nome è già inclusa nella slide 21.
 
 La lista operativa è in [Da completare](../da-completare.md); le schede per integrare i materiali sono in [report](../report/README.md). La [bozza PDF e modificabile](../presentazione/bozza/README.md) rimane distinta dalla consegna finale.

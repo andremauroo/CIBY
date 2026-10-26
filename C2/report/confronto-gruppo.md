@@ -9,6 +9,7 @@
 - [Contributi individuali](../preparazione/brainstorming-e-scelta.md#idee-individuali).
 - [Spunti e direzioni D1-D3](../preparazione/alternative-soluzione.md).
 - [Prodotti esistenti](../preparazione/confronto-soluzioni-esistenti.md).
+- [Analisi del diario P02](analisi-tematica.md): rinvio riuscito e occasioni vicine; nessuna nuova prova sulle quantità.
 
 Si può completare il confronto nella board anche in modo asincrono. Registriamo modalità e ragioni delle scelte, senza ricostruire una riunione formale se non c'è stata.
 
@@ -20,7 +21,7 @@ Si può completare il confronto nella board anche in modo asincrono. Registriamo
 | Marco Macherelli | Spunti già presenti | Da precisare nel confronto | | |
 | Gabriele Martignoni | Autonomia nelle scelte; partenza per una vacanza | Comprendere le scelte e distribuire il consumo prima della partenza | Maggiore consapevolezza e meno alimenti inutilizzati, da verificare | [IG-01–IG-03](../preparazione/brainstorming-e-scelta.md#idee-individuali) |
 | Rime Chamkar | G, L, A | Adattare la preparazione e distribuire ingredienti fra pasti, considerando il tempo | Alternative praticabili e varietà, da verificare | [IR-01–IR-03](../preparazione/brainstorming-e-scelta.md#idee-individuali) |
-| Emanuele Marcantonio | Da aggiungere | | | |
+| Emanuele Marcantonio | Ingredienti disponibili, L e M | Partire da poche informazioni; confrontare cambio e rinvio; collegare cena e pranzo da portare | Scelta sostenibile e uso degli ingredienti, da verificare | [EM-01–EM-03](../preparazione/brainstorming-e-scelta.md#idee-individuali) |
 | Edoardo Ughi | M, L; alimenti già presenti | Evitare duplicati e scambiare due pasti dopo un imprevisto | Migliore uso degli alimenti e meno spreco, da verificare | [IE-01–IE-03](../preparazione/brainstorming-e-scelta.md#idee-individuali) |
 
 Controlliamo che il confronto comprenda idee per ciascuno dei quattro scenari. I suggerimenti preparatori restano distinti dalle proposte individuali.

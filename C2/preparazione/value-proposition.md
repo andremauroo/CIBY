@@ -27,5 +27,5 @@ La frase parte dagli alimenti disponibili, rende esplicita la scelta di una prep
 
 ## Stato e limiti
 
-Usiamo questa formulazione come versione di lavoro. La rivedremo con il diario P02 e gli esiti del confronto. Non contiene benefici misurati e non dimostra la novità della soluzione: il [confronto documentale](confronto-soluzioni-esistenti.md) precisa le sovrapposizioni e il compito specifico da approfondire.
+Usiamo questa formulazione come versione di lavoro. Il [diario P02](../report/analisi-tematica.md) ne mantiene pertinente il riferimento ai programmi che cambiano, senza dimostrare l'utilità di CIBY. Il confronto conclusivo potrà precisarla. Non contiene benefici misurati e non dimostra la novità della soluzione: il [confronto documentale](confronto-soluzioni-esistenti.md) precisa le sovrapposizioni e il compito specifico da approfondire.
 

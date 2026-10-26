@@ -14,7 +14,7 @@ La formulazione contiene due frasi e descrive l'attività da sostenere. Il punto
 
 > CIBY ti aiuta a scegliere cosa preparare con gli alimenti che hai, adattando pasti e acquisti quando cambiano i programmi.
 
-Versione di lavoro del 26 ottobre. Il [registro dedicato](value-proposition.md) ne riporta significato e stato; l'integrazione del diario P02 e il confronto del gruppo potranno precisarla.
+Versione di lavoro del 26 ottobre. Il [registro dedicato](value-proposition.md) ne riporta significato e stato; l'[analisi del diario P02](../report/analisi-tematica.md) la mantiene coerente con la direzione di lavoro; il confronto del gruppo potrà precisarla.
 
 ## Perché D3
 
@@ -55,7 +55,7 @@ Nello scenario L manca un ingrediente della preparazione prevista. Luca può con
 - Descrizione concettuale pronta in due frasi; D3 come direzione di lavoro.
 - Idee individuali, partecipanti, metodo, esito e immagini del confronto del gruppo da documentare nel [registro del processo](brainstorming-e-scelta.md).
 - Nome **CIBY**: richiamo al cibo e suono amichevole, collegato all'idea di una futura mascotte o di un elemento caratteristico con questo nome. [Motivazione completa](value-proposition.md#perché-ciby).
-- Value proposition di lavoro pronta, da riesaminare con i nuovi dati e il confronto.
-- Diario P02 proposto ma non ancora disponibile; i casi simulati non coprono il requisito delle attività reali. [Bozza delle slide](../presentazione/bozza/README.md) disponibile; integrazioni e PDF definitivo ancora da completare.
+- Value proposition di lavoro riesaminata con il diario; scelta conclusiva ancora da documentare.
+- [Diario P02](../report/P02-diario.md) ricevuto e analizzato: il rinvio della bowl è riuscito e non documenta una difficoltà irrisolta. CIBY deve aggiungere valore alle strategie già presenti. [Bozza delle slide](../presentazione/bozza/README.md) aggiornata; confronto conclusivo e PDF definitivo ancora da completare.
 
 La registrazione di D3 in Figma ha aggiornato la sintesi del confronto e aggiunto la descrizione concettuale. Tutti i 53 post-it sono rimasti invariati.

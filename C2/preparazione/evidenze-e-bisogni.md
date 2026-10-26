@@ -2,7 +2,7 @@
 
 **CIBY / MAGGICAL - Aggiornamento del 26 ottobre 2026**
 
-Partiamo dalla C1 pubblicata il 12 ottobre 2026 e lavoriamo su B01-B04 nel focus di **gestione flessibile dei pasti**. Il diario P02 su circa 3-4 giorni di spesa e preparazioni non è ancora disponibile. Le attività descritte sotto derivano dalle risposte C1; i risultati nuovi saranno integrati dopo la raccolta.
+Partiamo dalla C1 pubblicata il 12 ottobre 2026 e integriamo il [diario quotidiano P02 del 21–26 ottobre](../report/P02-diario.md). Lavoriamo su B01–B04 nel focus di **gestione flessibile dei pasti**. La nuova raccolta approfondisce un rinvio riuscito e le occasioni di consumo; non aggiunge prove dirette su dimenticanze o quantità eccessive.
 
 ## Perimetro di lavoro
 
@@ -73,6 +73,19 @@ Gli esiti sono criteri qualitativi per costruire e successivamente valutare scen
 
 **Limite:** i report descrivono soprattutto pratiche e difficoltà generali, non un episodio di acquisto completo osservato. Lo [scenario A consolidato](personas-e-scenari.md#scenario-a---la-confezione-e-i-pasti-previsti) è una costruzione progettuale fondata su questi elementi.
 
+## Integrazione del diario P02
+
+Il diario comprende sei giorni di appunti sul telefono. Il chiarimento C01 distingue la bowl prevista venerdì da quella consumata sabato: il rinvio ha una nuova destinazione, mentre la causa e la cena effettiva di venerdì non sono specificate.
+
+| Bisogno | Nuove evidenze | Apporto e limite |
+|---|---|---|
+| B01 | Nessuna prova diretta aggiuntiva | Gli alimenti ricorrenti non costituiscono un inventario né dimostrano una dimenticanza. Manteniamo le evidenze C1 |
+| B02 | P02-D01-E03/E04/E10 | Preparazioni con ingredienti ricorrenti, schiscetta e mensa precisano i contesti; mancano tempi, alternative scartate e fatica |
+| B03 | P02-D01-E05/E07 e C01 | Episodio datato di rinvio riuscito. Approfondisce l'attività di adattamento senza dimostrare una difficoltà irrisolta |
+| B04 | P02-D01-M02 | Spesa giorno per giorno; quantità e confezioni non annotate. La nuova raccolta non conferma acquisti eccessivi |
+
+La [matrice tematica](../report/analisi-tematica.md) collega estratti, codici e temi C1. Per il progetto questo orienta verso i prossimi pasti e le occasioni realistiche, conservando le strategie già efficaci. Le formulazioni dei quattro bisogni restano stabili; il loro peso conclusivo è da chiudere nel confronto del gruppo.
+
 ## Come ritrovare le fonti
 
 | File C1 | Riferimenti utili |
@@ -101,12 +114,12 @@ Conserviamo tutti i candidati e le ragioni della loro collocazione. Il confronto
 | C07 - Disporre del pasto previsto fuori casa o trovare un'alternativa praticabile | P01-E03/E09; P04-E02/E04 | Contesto da considerare in B02/B03, con strategie già adottate |
 | C08 - Coordinare menu differenti nella coppia | P01-E02 | Rinviato: preoccupazione futura, non difficoltà attuale accertata |
 
-La scelta mantiene quattro attività distinguibili: riconoscere, scegliere, adattare, valutare gli acquisti. Tutti gli otto candidati e i raggruppamenti sono ora visibili nello [spazio Figma dei bisogni](https://www.figma.com/board/Aa9cVd9wI6ifqZyzO30I9m/Compito-2?node-id=121-228). Il [registro del brainstorming sui bisogni](brainstorming-bisogni.md) distingue la sintesi preparatoria, i primi commenti effettivi di Andrea e Marco e le bozze da rivedere. Le [immagini attuali](../altro/immagini-processo/README.md) sono archiviate; esito e immagini del confronto conclusivo restano da integrare.
+La scelta mantiene quattro attività distinguibili: riconoscere, scegliere, adattare, valutare gli acquisti. Tutti gli otto candidati e i raggruppamenti sono ora visibili nello [spazio Figma dei bisogni](https://www.figma.com/board/Aa9cVd9wI6ifqZyzO30I9m/Compito-2?node-id=121-228). Il [registro del brainstorming sui bisogni](brainstorming-bisogni.md) distingue la sintesi preparatoria, i commenti effettivi del gruppo e le bozze da rivedere. Le [immagini attuali](../altro/immagini-processo/README.md) sono archiviate; esito e immagini del confronto conclusivo restano da integrare.
 
 ## Riscontri da mantenere anche se complicano la proposta
 
 - P02 giudica soddisfacente il percorso da idee AI a fonti conosciute. L'uso dell'AI non è presentato come un fallimento generale.
-- P03 riprogramma con successo il pollo al pranzo successivo. Cambiare programma non è sempre un problema.
+- P03 riprogramma con successo il pollo al pranzo successivo. Nel diario C2 anche P02 rinvia e consuma la bowl il giorno dopo (P02-D01-E05/E07, C01). Cambiare programma non è sempre un problema.
 - La panna di P03 è rimasta inutilizzata; l'eliminazione non è confermata.
 - P05 riferisce duplicati rari pur senza lista e prepara piatti semplici anche con poco tempo. Il passaggio automatico da poco tempo a delivery non è sostenuto da questo caso.
 - P04 descrive perdite rare e non cerca più precisione nutrizionale.
@@ -132,4 +145,4 @@ Testi, fonti e natura narrativa sono in [Personas e scenari](personas-e-scenari.
 
 La [sintesi Figma](https://www.figma.com/board/Aa9cVd9wI6ifqZyzO30I9m/Compito-2?node-id=91-228) affianca l'area originale: tutti i 53 post-it e i contenuti preesistenti sono stati preservati. Le decisioni editoriali sono nel [registro del consolidamento](consolidamento-figma-2026-10-25.md).
 
-Il diario P02 non è ancora disponibile. Lo [spazio predisposto per l'integrazione](https://www.figma.com/board/Aa9cVd9wI6ifqZyzO30I9m/Compito-2?node-id=121-374) permetterà di collegare nuovi estratti, codici, temi e bisogni, includendo riscontri contrari e possibili modifiche. Fino all'acquisizione dei dati, il lavoro attuale rimane una rilettura della C1 e una selezione progettuale.
+L'[integrazione in Figma](https://www.figma.com/board/Aa9cVd9wI6ifqZyzO30I9m/Compito-2?node-id=121-374) affianca le evidenze C1 con i nuovi riferimenti P02-D01. Il diario è un'attività reale con P02; la scelta di D3 e i suoi benefici restano ipotesi progettuali da confrontare.

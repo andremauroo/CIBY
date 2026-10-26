@@ -1,6 +1,6 @@
 # Personas e scenari consolidati
 
-**CIBY / MAGGICAL - 25 ottobre 2026**
+**CIBY / MAGGICAL - Consolidamento del 25 ottobre, integrazione del diario il 26 ottobre 2026**
 
 [Apri la sintesi consolidata in Figma](https://www.figma.com/board/Aa9cVd9wI6ifqZyzO30I9m/Compito-2?node-id=91-228)
 
@@ -207,9 +207,23 @@ Il [caso sportivo S-Sport](approfondimento-sportivo-simulato.md) rimane un appro
 
 Per le slide, mostrare prima le evidenze e le immagini del confronto, poi le scelte e la sintesi. I post-it originali documentano la revisione di personas e scenari; la C2 richiede anche tracce dei bisogni discussi e del brainstorming/selezione delle soluzioni. Il [registro del consolidamento](consolidamento-figma-2026-10-25.md) precisa questa distinzione.
 
+## Riesame dopo il diario P02
+
+Il diario del 21–26 ottobre aggiunge un rinvio riuscito e contesti concreti, senza introdurre un nuovo archetipo. Manteniamo profili e quattro scenari, precisando il grado di sostegno.
+
+| Persona o scenario | Che cosa aggiunge il diario | Conseguenza |
+|---|---|---|
+| Luca e scenario L/B03 | Bowl prevista venerdì e consumata sabato (P02-D01-E05/E07, C01) | Il rinvio è una capacità già presente. Il diario non documenta un ingrediente mancante: quel dettaglio dello scenario resta fondato sulla C1 |
+| Gianfranco e scenario G/B02 | Preparazioni diverse con ingredienti ricorrenti (E03/E04), mensa (E10) | Contesto più concreto; nessuna nuova prova di difficoltà nella scelta o poco tempo |
+| Marta e scenario M/B01 | Schiscetta il 23 (E04) | Rafforza il contesto del pasto da portare. Non attesta dimenticanze, preparazione la sera prima o uso della stessa confezione |
+| Scenario A/B04 | Spesa giorno per giorno (M02) | Conserviamo la base C1 sulle quantità: formati e quantità non sono annotati nel diario |
+
+La nuova raccolta orienta il supporto verso i prossimi pasti e le occasioni effettive. La priorità di Luca rimane una scelta progettuale di lavoro, da chiudere nel confronto. Il [diario](../report/P02-diario.md) e l'[analisi integrata](../report/analisi-tematica.md) tengono distinti i dati dagli esiti desiderati degli scenari.
+
 ## Fonti
 
 - [Evidenze e bisogni consolidati](evidenze-e-bisogni.md).
+- [Diario P02 del 21–26 ottobre](../report/P02-diario.md), E03/E04/E05/E07/E10, M02 e C01.
 - [Report P01](../../C1/report%20interviste/P01.pdf), profilo, episodi ed evidenze E01/E03/E05/E08/E09.
 - [Report P02](../../C1/report%20interviste/P02.pdf), E03/E06-E08/E10/E12 e C01.
 - [Report P03](../../C1/report%20interviste/P03.pdf), E04/E05/E07/E08/E12/E13.

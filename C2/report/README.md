@@ -1,11 +1,12 @@
-# Report e integrazioni C2
+# Report e analisi C2
 
-Abbiamo predisposto queste schede per collegare i materiali nuovi al lavoro C1. Le sezioni da compilare non descrivono attività già concluse.
+**CIBY · MAGGICAL · 26 ottobre 2026.**
 
-| Scheda | Stato |
+| Materiale | Stato |
 |---|---|
-| [Diario P02](P02-diario.md) | In attesa del materiale e dei dati effettivi dell'attività |
-| [Analisi tematica](analisi-tematica.md) | Schema pronto; estratti e risultati nuovi da inserire |
-| [Confronto del gruppo](confronto-gruppo.md) | Traccia pronta; proposte mancanti ed esito da registrare |
+| [Appunti del diario P02](P02-diario-originale.md) | Trascrizione del 21–26 ottobre, con informazioni di contesto e chiarimento separati |
+| [Attività P02-C2-D01](P02-diario.md) | Metodo, partecipante, contesti, evidenze e limiti documentati |
+| [Analisi tematica integrata](analisi-tematica.md) | Diario confrontato con C1; impatto su bisogni e scelte esplicitato |
+| [Confronto conclusivo](confronto-gruppo.md) | Materiali disponibili; metodo ed esito ancora da registrare |
 
-La sintesi C1 e le interpretazioni progettuali restano nei [materiali preparatori](../preparazione/requisiti-e-piano.md). Le integrazioni aperte sono raccolte in [Da completare](../da-completare.md).
+La lista operativa è in [Da completare](../da-completare.md). I report C1 restano nella loro cartella; i nuovi codici P02-D01 identificano il materiale del diario.

@@ -19,7 +19,7 @@ Il PDF definitivo sarà collegato qui dopo le integrazioni e il controllo finale
 | Cartella | Contenuto |
 |---|---|
 | [presentazione](presentazione/README.md) | Slide PDF e versione modificabile |
-| [report](report/README.md) | Schede per il diario, l'analisi tematica e il confronto conclusivo |
+| [report](report/README.md) | Diario P02, analisi integrata C1–C2 e traccia del confronto conclusivo |
 | [altro](altro/README.md) | Immagini del processo e relativi riferimenti |
 | [preparazione](preparazione/requisiti-e-piano.md) | Evidenze, bisogni, personas, scenari e alternative |
 
@@ -36,7 +36,7 @@ Il PDF definitivo sarà collegato qui dopo le integrazioni e il controllo finale
 | [Alternative](preparazione/alternative-soluzione.md) | Otto spunti e tre direzioni D1-D3 |
 | [Prodotti esistenti](preparazione/confronto-soluzioni-esistenti.md) | Confronto documentale con SuperCook, Samsung Food e Sously |
 | [Soluzione](preparazione/soluzione-concettuale.md) | Descrizione di D3 in due frasi e legame con i bisogni |
-| [Value proposition](preparazione/value-proposition.md) | Beneficio che vogliamo comunicare |
+| [Nome e value proposition](preparazione/value-proposition.md) | Motivazione del nome e beneficio che vogliamo comunicare |
 | [Scaletta](preparazione/scaletta-presentazione.md) | Ordine dei contenuti |
 | [Caso sportivo simulato](preparazione/approfondimento-sportivo-simulato.md) | Esplorazione progettuale distinta dalla ricerca con utenti |
 
@@ -44,7 +44,7 @@ Il PDF definitivo sarà collegato qui dopo le integrazioni e il controllo finale
 
 ## Fonti e continuità con la C1
 
-Partiamo dai cinque [report C1](../C1/README.md), dai loro estratti e dagli artefatti raccolti. Il diario P02 costituirà un nuovo materiale dopo la sua acquisizione e analisi. Personas e scenari sono sintesi progettuali, non nuove interviste; il caso sportivo è simulato.
+Partiamo dai cinque [report C1](../C1/README.md), dai loro estratti e dagli artefatti raccolti. Il [diario P02 del 21–26 ottobre](report/P02-diario.md) è la nuova attività: sei giorni di annotazioni sul telefono, integrati nell'[analisi tematica](report/analisi-tematica.md). Personas e scenari sono sintesi progettuali, non nuove interviste; il caso sportivo è simulato.
 
 Il riferimento operativo è **Compito2-focus.pdf**, pp. 1-2. Per personas e scenari usiamo **3 Requisiti-Personas-Scenari.pdf**. Nella presentazione manteniamo l'impostazione C1 e il feedback ricevuto: prima le informazioni che motivano una scelta, poi la scelta.
 

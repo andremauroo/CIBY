@@ -12,7 +12,10 @@
 | [Sintesi della soluzione](sintesi-soluzione-2026-10-26.png) | D3, descrizione concettuale e value proposition | [102:354](https://www.figma.com/board/Aa9cVd9wI6ifqZyzO30I9m/Compito-2?node-id=102-354) |
 | [Sintesi con la motivazione del nome](nome-e-soluzione-2026-10-26.png) | Aggiornamento della sintesi con richiamo al cibo e possibile futura mascotte | [102:354](https://www.figma.com/board/Aa9cVd9wI6ifqZyzO30I9m/Compito-2?node-id=102-354) |
 
-## Didascalie per la presentazione
+## Didascalie della fase precedente
+
+Le didascalie seguenti descrivono le immagini già archiviate. Nel frattempo sono arrivati anche i contributi di Emanuele e il diario P02 è stato analizzato; per la consegna acquisiremo le immagini conclusive.
+
 
 **Bisogni:** «Otto candidati ricavati dalla rilettura C1, con risposte specifiche e motivazioni della collocazione. Il confronto conclusivo e l'integrazione del diario sono ancora in corso.»
 
@@ -23,3 +26,7 @@
 Gli screenshot conservano anche ipotesi che il confronto potrà ridimensionare. La necessità dell'AI e i benefici su spreco o tempo restano proposte, non conclusioni della ricerca.
 
 Dopo i contributi mancanti conserveremo nuove immagini con nomi distinti, mantenendo riconoscibili le diverse fasi.
+
+## Integrazione del diario
+
+[Diario P02 e analisi C1–C2](diario-p02-analisi-2026-10-26.png): area 121:374 aggiornata con metodo, rinvio della bowl, codici e impatto sui bisogni. Il 26 ottobre i 107 post-it presenti sono rimasti invariati durante l'aggiornamento delle sole sintesi. La [scheda dell'attività](../../report/P02-diario.md) e l'[analisi](../../report/analisi-tematica.md) conservano i riferimenti completi.

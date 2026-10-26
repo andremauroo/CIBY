@@ -36,14 +36,16 @@ Le [schede dei bisogni](evidenze-e-bisogni.md) conservano risposte specifiche e 
 | Rime, spunto proprio | IR-01 | B03, Luca/L | Distinguere ingredienti essenziali e sostituibili per adattare una preparazione senza rivedere tutto il programma | [Post-it](https://www.figma.com/board/Aa9cVd9wI6ifqZyzO30I9m/Compito-2?node-id=158-298) |
 | Rime, spunto proprio | IR-02 | B03/B04, Luca/L-A | Distribuire le quantità degli ingredienti fra più pasti, mantenendo varietà | [Post-it](https://www.figma.com/board/Aa9cVd9wI6ifqZyzO30I9m/Compito-2?node-id=164-317) |
 | Rime, criterio di fattibilità | IR-03 | B02/B03, Gianfranco/G | Valutare il tempo richiesto dalle alternative oltre alla disponibilità degli ingredienti | [Post-it](https://www.figma.com/board/Aa9cVd9wI6ifqZyzO30I9m/Compito-2?node-id=164-324) |
-| Emanuele Marcantonio | Da acquisire | | Proposta individuale di soluzione non ancora registrata in questa fase | |
+| Emanuele, spunto proprio | EM-01 | B01/B02 | Partire da un alimento da consumare e da poche idee semplici, contenendo le informazioni da inserire | [Post-it](https://www.figma.com/board/Aa9cVd9wI6ifqZyzO30I9m/Compito-2?node-id=188-389) |
+| Emanuele, spunto proprio | EM-02 | B03, Luca/L | Dopo un rinvio, confrontare cambio di preparazione e nuova occasione, rivedendo la parte coinvolta del programma | [Post-it](https://www.figma.com/board/Aa9cVd9wI6ifqZyzO30I9m/Compito-2?node-id=188-393) |
+| Emanuele, spunto proprio | EM-03 | B02/C07, Marta/M | Scegliere una preparazione adatta a cena e pranzo da portare, distribuendo gli ingredienti | [Post-it](https://www.figma.com/board/Aa9cVd9wI6ifqZyzO30I9m/Compito-2?node-id=188-397) |
 | Edoardo, spunto proprio | IE-01 | B01 | Riconoscere ciò che è già in casa per evitare acquisti duplicati | [Post-it](https://www.figma.com/board/Aa9cVd9wI6ifqZyzO30I9m/Compito-2?node-id=175-365) |
 | Edoardo, spunto proprio | IE-02 | B03, Luca/L | Scambiare due pasti previsti quando manca un ingrediente, rinviando la preparazione interessata | [Post-it](https://www.figma.com/board/Aa9cVd9wI6ifqZyzO30I9m/Compito-2?node-id=175-381) |
 | Edoardo, beneficio atteso | IE-03 | B01/B02, Marta/M | Sostenere l'uso degli alimenti con preparazioni rapide; la riduzione dello spreco rimane un beneficio da verificare | [Post-it](https://www.figma.com/board/Aa9cVd9wI6ifqZyzO30I9m/Compito-2?node-id=175-386) |
 
 Gli spunti sono parafrasati e collegati agli originali. Le tre proposte IA restano bozze da discutere; non vengono conteggiate come contributi individuali già adottati.
 
-I contributi di Gabriele, Rime ed Edoardo sono presenti nella board alla rilettura del 26 ottobre. Nell'area di Emanuele non risultano ancora post-it. Le nuove proposte ampliano il confronto, senza costituire da sole un esito della selezione. Informazioni nutrizionali e consumo prima di una vacanza sono spunti progettuali, non risultati di nuove interviste.
+Alla rilettura del 26 ottobre sono presenti contributi nelle aree di tutti i sei componenti, incluse le tre idee EM-01–EM-03 di Emanuele. Le nuove proposte ampliano il confronto, senza costituire da sole un esito della selezione. Informazioni nutrizionali e consumo prima di una vacanza sono spunti progettuali, non risultati di nuove interviste.
 
 Il compito richiede idee per ogni scenario e un'elaborazione individuale di ciascun componente. Completando il confronto controlliamo entrambe le coperture. Traduciamo eventuali proposte tecniche nell'attività che intendono sostenere, conservando l'idea originale.
 
@@ -77,4 +79,4 @@ La [soluzione concettuale](soluzione-concettuale.md) descrive D3 in due frasi. I
 
 > CIBY ti aiuta a scegliere cosa preparare con gli alimenti che hai, adattando pasti e acquisti quando cambiano i programmi.
 
-La [value proposition](value-proposition.md) potrà essere precisata con il diario e il confronto. Le integrazioni aperte sono in [Da completare](../da-completare.md).
+La [value proposition](value-proposition.md) rimane coerente con la lettura del diario; il confronto conclusivo potrà precisarla. Le integrazioni aperte sono in [Da completare](../da-completare.md).

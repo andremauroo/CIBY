@@ -10,13 +10,13 @@ Restringere il dominio del needfinding, approfondire i bisogni e definire una so
 
 | Richiesta | Fonte nel compito | Materiale disponibile | Integrazione necessaria |
 |---|---|---|---|
-| Nuove attività con utenti, considerando il feedback C1 | p. 1, punto 1 | [Scheda diario P02](../report/P02-diario.md) predisposta | Materiale reale, periodo, format, contesto o luogo, persone coinvolte e aspetti approfonditi |
-| Almeno un'attività con un utente immediato | p. 1, punto 1 | P02 gestisce acquisti e pasti propri; pertinenza motivata nella scheda | Documentare l'attività effettiva |
-| Integrare la nuova raccolta nell'analisi tematica | p. 1, punto 2 | [Schema di analisi](../report/analisi-tematica.md) e base C1 | Estratti, codici, temi e impatto sul progetto |
+| Nuove attività con utenti, considerando il feedback C1 | p. 1, punto 1 | [Diario P02 del 21–26 ottobre](../report/P02-diario.md), metodo e contesti documentati | Raccolta e analisi completate; limiti degli appunti esplicitati |
+| Almeno un'attività con un utente immediato | p. 1, punto 1 | Nuovo diario dello stesso P02, che gestisce acquisti e pasti propri | Attività documentata, senza aggiungere un nuovo partecipante |
+| Integrare la nuova raccolta nell'analisi tematica | p. 1, punto 2 | [Analisi C1–C2](../report/analisi-tematica.md): estratti, codici, temi e impatto | Integrazione completata; recepire l'esito del confronto conclusivo |
 | Brainstorming su tutti i bisogni, documentato con immagini | p. 1, punto 2; p. 2, sezione 3a | [Otto candidati e raggruppamenti](brainstorming-bisogni.md), commenti e [immagini attuali](../altro/immagini-processo/README.md) | Esito conclusivo e aggiornamento delle immagini dopo i nuovi contributi |
-| Selezionare 3-4 bisogni consistenti, collegati a risposte specifiche | p. 1, punto 3; p. 2, sezione 3b | [B01-B04 con evidenze e confini](evidenze-e-bisogni.md) | Riesame con diario e confronto |
-| Specificare personas e uno scenario per ogni bisogno | p. 1, punto 4 | [Tre personas e quattro scenari](personas-e-scenari.md) | Eventuali revisioni motivate dai nuovi materiali |
-| Idee individuali di ciascun membro e confronto successivo | p. 1, punto 5 | [Contributi di cinque componenti](brainstorming-e-scelta.md#idee-individuali), spunti preparatori e immagini | Idee di Emanuele e ragioni del confronto |
+| Selezionare 3-4 bisogni consistenti, collegati a risposte specifiche | p. 1, punto 3; p. 2, sezione 3b | [B01-B04 con evidenze e confini](evidenze-e-bisogni.md) | Riesame con diario completato; esito conclusivo da registrare |
+| Specificare personas e uno scenario per ogni bisogno | p. 1, punto 4 | [Tre personas e quattro scenari](personas-e-scenari.md) | Riesame con diario documentato; eventuali revisioni dopo il confronto |
+| Idee individuali di ciascun membro e confronto successivo | p. 1, punto 5 | [Contributi di tutti i sei componenti](brainstorming-e-scelta.md#idee-individuali), spunti preparatori e immagini | Ragioni ed esito del confronto, immagini conclusive |
 | Soluzioni come attività da sostenere, senza dettagli tecnologici | p. 1, punto 5 | [Otto spunti e tre direzioni](alternative-soluzione.md) | Conservare questa distinzione nella selezione |
 | Selezionare una soluzione promettente puntando alla novità | pp. 1-2, punto 6 | D3 come direzione di lavoro, [confronto documentale](confronto-soluzioni-esistenti.md) e [scheda della selezione](../report/confronto-gruppo.md) | Metodo ed esito effettivi; differenziazione da motivare senza dichiararla dimostrata |
 | Descrivere la soluzione in 1-3 frasi | p. 2, sezione 4c | [Descrizione concettuale in due frasi](soluzione-concettuale.md) | Riesame dopo il confronto |
