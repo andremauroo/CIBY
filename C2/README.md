@@ -5,7 +5,6 @@ Materiali del progetto CIBY per la consegna del 26 ottobre 2026. Il focus è la 
 ## Presentazione
 
 - [Presentazione CIBY — C2](presentazione/CIBY-C2.pdf)
-- [Versione modificabile](presentazione/CIBY-C2.pptx)
 - [Board FigJam del gruppo](https://www.figma.com/board/Aa9cVd9wI6ifqZyzO30I9m/Compito-2): bisogni, personas, scenari, idee individuali e confronto delle soluzioni.
 
 ## Report

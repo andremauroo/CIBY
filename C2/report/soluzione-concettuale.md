@@ -52,4 +52,4 @@ Nello scenario L manca un ingrediente della preparazione prevista. Luca può con
 
 Il [confronto del gruppo](confronto-gruppo.md) è documentato con contributi di tutti i componenti, preferenze, motivazioni e immagini. Nome, ragione della scelta e value proposition sono definiti. Il diario reale P02 e l'analisi sono integrati; la simulazione sportiva resta separata.
 
-La [presentazione](../presentazione/README.md) segue l'ordine delle evidenze prima delle scelte. La verifica conclusiva riguarda leggibilità, corrispondenza delle fonti e collegamenti della repo.
+La [presentazione](../presentazione/CIBY-C2.pdf) segue l'ordine delle evidenze prima delle scelte. La verifica conclusiva riguarda leggibilità, corrispondenza delle fonti e collegamenti della repo.
