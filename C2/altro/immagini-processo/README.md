@@ -1,6 +1,6 @@
 # Immagini del processo C2
 
-Screenshot della [board FigJam](https://www.figma.com/board/Aa9cVd9wI6ifqZyzO30I9m/Compito-2) a supporto dei report e della presentazione.
+Screenshot della [board FigJam](https://www.figma.com/board/Aa9cVd9wI6ifqZyzO30I9m/Compito-2) a supporto della presentazione.
 
 ## Immagini conclusive
 
@@ -19,4 +19,4 @@ Screenshot della [board FigJam](https://www.figma.com/board/Aa9cVd9wI6ifqZyzO30I
 
 Le catture sono del 26 ottobre, salvo l'area di Andrea aggiornata il 27 ottobre dopo la rimozione delle bozze gialle. I post-it documentano proposte e benefici attesi, non risultati di una valutazione con utenti. Gli spunti su sport e AI rimangono ipotesi progettuali.
 
-Il [report del confronto](../../report/confronto-gruppo.md) spiega il metodo e la scelta di D1. Nome e formulazione conclusiva sono nel documento [value proposition](../../report/value-proposition.md).
+La [presentazione](../../presentazione/CIBY-C2.pdf) illustra il metodo di confronto, la scelta di D1, il nome e la value proposition conclusiva.

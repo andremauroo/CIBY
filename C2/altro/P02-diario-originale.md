@@ -42,4 +42,4 @@ Trascrizione degli appunti sul telefono ricevuti il 26 ottobre. Il testo dei pas
 
 Metodo, spesa e chiarimento sono informazioni raccolte insieme agli appunti, distinte dalle parole del diario. Non sono nuove citazioni testuali attribuite a P02.
 
-[Scheda ed evidenze](P02-diario.md) · [Analisi integrata con la C1](analisi-tematica.md).
+[Analisi e risultati nella presentazione C2](../presentazione/CIBY-C2.pdf).

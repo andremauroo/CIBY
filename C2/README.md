@@ -7,22 +7,11 @@ Materiali del progetto CIBY per la consegna del 26 ottobre 2026. Il focus è la 
 - [Presentazione CIBY — C2](presentazione/CIBY-C2.pdf)
 - [Board FigJam del gruppo](https://www.figma.com/board/Aa9cVd9wI6ifqZyzO30I9m/Compito-2): bisogni, personas, scenari, idee individuali e confronto delle soluzioni.
 
-## Report
-
-| Materiale | Contenuto |
-|---|---|
-| [Diario P02](report/P02-diario.md) e [appunti originali](report/P02-diario-originale.md) | Nuova attività del 21–26 ottobre, metodo, evidenze e limiti |
-| [Analisi tematica C1–C2](report/analisi-tematica.md) | Integrazione del diario con le cinque interviste C1 |
-| [Evidenze e bisogni](report/evidenze-e-bisogni.md) | Quattro bisogni selezionati e risposte specifiche |
-| [Brainstorming sui bisogni](report/brainstorming-bisogni.md) | Otto candidati, commenti e ragioni della selezione |
-| [Personas e scenari](report/personas-e-scenari.md) | Tre personas e quattro scenari concettuali |
-| [Idee individuali](report/brainstorming-e-scelta.md) e [alternative](report/alternative-soluzione.md) | Contributi dei sei componenti e direzioni D1–D3 |
-| [Confronto del gruppo](report/confronto-gruppo.md) | Preferenze motivate e scelta di D1 |
-| [Prodotti esistenti](report/confronto-soluzioni-esistenti.md) | Confronto documentale e limiti |
-| [Soluzione concettuale](report/soluzione-concettuale.md) | Attività da sostenere e collegamenti ai bisogni |
-| [Nome e value proposition](report/value-proposition.md) | Motivazione del nome e beneficio proposto |
+La presentazione raccoglie la nuova attività con P02, l'analisi tematica C1–C2, i bisogni selezionati, personas e scenari, il confronto delle idee e la soluzione scelta, con nome e value proposition.
 
 ## Altro
+
+- [Diario originale P02](altro/P02-diario-originale.md): appunti del 21–26 ottobre, informazioni sul metodo e chiarimento sul rinvio della bowl.
 
 - [Immagini del processo](altro/immagini-processo/README.md): bisogni discussi, diario, personas, idee individuali e preferenze.
 
