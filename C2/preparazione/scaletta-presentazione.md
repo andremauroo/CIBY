@@ -55,3 +55,7 @@ Il feedback C1 guida l'ordine: prima dati e ragioni, poi le decisioni che ne der
 ## Prima della pubblicazione
 
 Consolidare contenuti e fonti, acquisire gli screenshot definitivi, impaginare e verificare il PDF. L'output richiesto è la presentazione PDF nella cartella C2 della repo, collegata dalla sua pagina iniziale. Nessuna voce in attesa dovrà apparire come risultato acquisito.
+
+## Bozza impaginata del 26 ottobre
+
+È disponibile una [prima bozza di 20 slide](../presentazione/bozza/README.md), in PDF e formato modificabile. Il numero è provvisorio. La bozza compila i contenuti disponibili e segnala ciò che attende diario, confronto e immagini del processo, motivazione del nome. Non costituisce il PDF finale da consegnare. Le schede complete delle personas rimangono nel documento collegato sopra e nella board; la loro eventuale appendice sarà valutata nell'impaginazione finale.
