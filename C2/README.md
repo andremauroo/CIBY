@@ -2,13 +2,13 @@
 
 **Progetto CIBY | Gruppo MAGGICAL | Scadenza: 26 ottobre 2026**
 
-Stato al 25 ottobre: Andrea riferisce che il gruppo ha votato per il focus **gestione flessibile dei pasti**. Andrea ha poi confermato i quattro bisogni B01-B04, includendo le quantità della spesa. L'organizzazione intorno agli allenamenti è stata sviluppata in un caso progettuale simulato, con evidenze e ipotesi separate; sono state consolidate tre personas e quattro scenari principali, incluso B04. La sintesi è affiancata alla pagina di lavoro Figma, con tutti i post-it conservati. Andrea ha scelto D3: riorganizzare pasti e acquisti dopo un cambiamento; la descrizione concettuale in due frasi è pronta. Questa cartella contiene i materiali di lavoro per costruire la consegna; il PDF finale non è ancora disponibile.
+Stato al 26 ottobre: Andrea riferisce che il gruppo ha votato per il focus **gestione flessibile dei pasti**. Andrea ha poi confermato i quattro bisogni B01-B04, includendo le quantità della spesa. L'organizzazione intorno agli allenamenti è stata sviluppata in un caso progettuale simulato, con evidenze e ipotesi separate; sono state consolidate tre personas e quattro scenari principali, incluso B04. La sintesi è affiancata alla pagina di lavoro Figma, con tutti i post-it conservati. È disponibile anche uno spazio dedicato agli otto bisogni candidati, ai raggruppamenti, al confronto del gruppo e alla futura integrazione del diario P02. Andrea ha scelto D3: riorganizzare pasti e acquisti dopo un cambiamento; la descrizione concettuale in due frasi è pronta. Questa cartella contiene i materiali di lavoro per costruire la consegna; il PDF finale non è ancora disponibile.
 
 ## Da dove partiamo
 
 La [C1](../C1/README.md) contiene cinque report di interviste, il sondaggio di supporto e la presentazione del 12 ottobre. La base di ricerca riguarda giovani adulti con responsabilità effettive su spesa e pasti.
 
-Andrea ha confermato il 23 ottobre che non sono ancora state svolte nuove attività con utenti; il 25 ottobre ha confermato che non sarà possibile organizzarne. Il requisito rimane non coperto finché non vengono documentate attività effettive. Il feedback dei docenti sulla C1 è stato complessivamente positivo; l'indicazione ricevuta è di presentare prima le cause e poi le scelte che ne derivano.
+Il 25 ottobre Andrea aveva escluso nuove attività con utenti. Il 26 ottobre ha indicato la possibilità di recuperare da P02 un diario di circa 3-4 giorni su spesa e preparazioni, suggerito dai docenti dopo la C1. Il materiale non è ancora disponibile: acquisizione, modalità effettiva e risultati restano da documentare. Il feedback dei docenti sulla C1 è stato complessivamente positivo; l'indicazione ricevuta è di presentare prima le cause e poi le scelte che ne derivano.
 
 ## Materiali di lavoro
 
@@ -17,6 +17,7 @@ Andrea ha confermato il 23 ottobre che non sono ancora state svolte nuove attivi
 | [Focus e decisioni](preparazione/focus-e-decisioni.md) | Direzione scelta dal gruppo, priorità, estensioni e idee per la futura realizzazione |
 | [Requisiti e piano](preparazione/requisiti-e-piano.md) | Richieste del compito, stato del lavoro, ordine della presentazione e passi fino alla scadenza |
 | [Evidenze e bisogni](preparazione/evidenze-e-bisogni.md) | Quattro bisogni confermati, evidenze C1, confini ed esiti desiderati |
+| [Brainstorming sui bisogni](preparazione/brainstorming-bisogni.md) | Otto candidati in Figma, raggruppamenti, registro del confronto e integrazione futura del diario P02 |
 | [Personas e scenari](preparazione/personas-e-scenari.md) | Tre personas consolidate, Luca primaria e quattro scenari principali B01-B04 |
 | [Nuove attività con utenti](preparazione/nuove-attivita-utenti.md) | Traccia iniziale non attuata, conservata come riferimento per eventuali ricerche future |
 | [Brainstorming e scelta](preparazione/brainstorming-e-scelta.md) | Procedura, spazio Figma e registri della raccolta e della scelta |
@@ -30,8 +31,8 @@ Andrea ha confermato il 23 ottobre che non sono ancora state svolte nuove attivi
 
 ## Cosa manca per la consegna
 
-- Nuove attività di needfinding, almeno una con un possibile utilizzatore finale.
-- Documentazione effettiva del confronto sui bisogni: B01-B04 sono stati confermati da Andrea; restano da raccogliere le immagini e le tracce della discussione del gruppo.
+- Acquisire e analizzare il possibile diario P02, documentando l'attività effettiva con l'utente e ciò che aggiunge alla C1.
+- Documentazione effettiva del confronto sui bisogni: gli otto candidati e i raggruppamenti sono predisposti in Figma; B01-B04 confermati da Andrea. Restano osservazioni del gruppo, esito e screenshot aggiornati.
 - Documentazione degli esiti consolidati di personas e quattro scenari nelle slide, mostrando prima evidenze e percorso.
 - Raccolta o ricostruzione confermata delle idee individuali e confronto delle soluzioni, con immagini e selezione documentata. Lo spazio Figma e le alternative preparatorie sono pronti.
 - Documentazione del confronto del gruppo sulla soluzione D3 scelta da Andrea; motivazione del nome CIBY, che Andrea comunicherà dopo il confronto con i colleghi, e value proposition finale.

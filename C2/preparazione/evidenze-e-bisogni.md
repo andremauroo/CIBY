@@ -1,8 +1,8 @@
 # Evidenze e bisogni consolidati
 
-**CIBY / MAGGICAL - Aggiornamento del 25 ottobre 2026**
+**CIBY / MAGGICAL - Aggiornamento del 26 ottobre 2026**
 
-Base di ricerca: C1 pubblicata il 12 ottobre 2026. Andrea ha confermato la proposta di lavorare sui quattro bisogni B01-B04 nel focus di **gestione flessibile dei pasti**. Non sono stati raccolti nuovi dati con utenti. La conferma riguarda la selezione e la formulazione dei bisogni; non dimostra l'efficacia di una soluzione.
+Base di ricerca: C1 pubblicata il 12 ottobre 2026. Andrea ha confermato la proposta di lavorare sui quattro bisogni B01-B04 nel focus di **gestione flessibile dei pasti**. Non sono ancora disponibili nuovi dati con utenti. Andrea ha indicato la possibilità di recuperare un diario di P02 su circa 3-4 giorni di spesa e preparazioni; acquisizione e analisi restano da svolgere. La conferma riguarda la selezione e la formulazione dei bisogni; non dimostra l'efficacia di una soluzione.
 
 ## Perimetro di lavoro
 
@@ -101,7 +101,7 @@ Questa tabella conserva l'elenco preparatorio e la sua collocazione nella selezi
 | C07 - Disporre del pasto previsto fuori casa o trovare un'alternativa praticabile | P01-E03/E09; P04-E02/E04 | Contesto da considerare in B02/B03, con strategie già adottate |
 | C08 - Coordinare menu differenti nella coppia | P01-E02 | Rinviato: preoccupazione futura, non difficoltà attuale accertata |
 
-La scelta mantiene quattro attività distinguibili: riconoscere, scegliere, adattare, valutare gli acquisti. Le immagini e le tracce effettive della discussione del gruppo restano da raccogliere per documentare il processo richiesto dalla consegna.
+La scelta mantiene quattro attività distinguibili: riconoscere, scegliere, adattare, valutare gli acquisti. Tutti gli otto candidati e i raggruppamenti sono ora visibili nello [spazio Figma dei bisogni](https://www.figma.com/board/Aa9cVd9wI6ifqZyzO30I9m/Compito-2?node-id=121-228). Il [registro del brainstorming sui bisogni](brainstorming-bisogni.md) distingue la sintesi preparatoria dalle tracce effettive della discussione del gruppo, ancora da aggiungere.
 
 ## Riscontri da mantenere anche se complicano la proposta
 
@@ -132,4 +132,4 @@ Testi, fonti e natura narrativa sono in [Personas e scenari](personas-e-scenari.
 
 La [sintesi Figma](https://www.figma.com/board/Aa9cVd9wI6ifqZyzO30I9m/Compito-2?node-id=91-228) affianca l'area originale: tutti i 53 post-it e i contenuti preesistenti sono stati preservati. Le decisioni editoriali sono nel [registro del consolidamento](consolidamento-figma-2026-10-25.md).
 
-Non sono disponibili nuovi estratti da integrare nell'analisi tematica. Il lavoro attuale è una rilettura della C1 e una selezione progettuale, non una nuova attività con utenti.
+Il diario P02 non è ancora disponibile. Lo [spazio predisposto per l'integrazione](https://www.figma.com/board/Aa9cVd9wI6ifqZyzO30I9m/Compito-2?node-id=121-374) permetterà di collegare nuovi estratti, codici, temi e bisogni, includendo riscontri contrari e possibili modifiche. Fino all'acquisizione dei dati, il lavoro attuale rimane una rilettura della C1 e una selezione progettuale.

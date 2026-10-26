@@ -4,6 +4,10 @@ Preparata il 23 ottobre 2026. **Aggiornamento del 25 ottobre: la traccia non è 
 
 Per l'approfondimento attuale è stato preparato il [caso sportivo simulato S-Sport](approfondimento-sportivo-simulato.md), con assunzioni ed esiti ipotetici dichiarati. Non sono state compilate schede di sessione né aggiunte testimonianze; il requisito delle nuove attività rimane non coperto.
 
+## Aggiornamento del 26 ottobre
+
+Andrea ha indicato la possibilità di recuperare un diario di P02 di circa 3-4 giorni su spesa e preparazioni, suggerito dai docenti dopo la C1. Il materiale non è ancora disponibile; la possibilità non viene registrata come attività già svolta. Quando sarà acquisito, documentare periodo, contesto e modalità effettiva, distinguendo diario quotidiano e ricostruzione retrospettiva. Il [registro dei bisogni](brainstorming-bisogni.md#integrare-il-diario-di-p02) descrive l'integrazione da estratti a codici, temi e possibili modifiche.
+
 ## Cosa vogliamo capire
 
 La C1 ha individuato dimenticanze, scelte del pasto e adattamento agli imprevisti, ma molte pratiche sono raccontate in generale. Per la C2 servono episodi specifici e, dove possibile, osservazioni di attività reali.

@@ -1,6 +1,6 @@
 # Brainstorming e scelta della soluzione
 
-Preparazione del 23 ottobre, aggiornata il 25 ottobre 2026. Andrea riferisce che il gruppo ha votato per il focus **gestione flessibile dei pasti**, e ha successivamente confermato la proposta dei quattro bisogni B01-B04, inclusa la spesa; l'organizzazione intorno agli allenamenti resta da approfondire: vedi [Focus e decisioni](focus-e-decisioni.md).
+Preparazione del 23 ottobre, aggiornata il 26 ottobre 2026. Andrea riferisce che il gruppo ha votato per il focus **gestione flessibile dei pasti**, e ha successivamente confermato la proposta dei quattro bisogni B01-B04, inclusa la spesa; l'organizzazione intorno agli allenamenti resta da approfondire: vedi [Focus e decisioni](focus-e-decisioni.md).
 
 Andrea riferisce che la discussione è avvenuta soprattutto a voce, con scambi in chat e post-it Figma. Le decisioni comunicate direttamente da Andrea sono in [Focus e decisioni](focus-e-decisioni.md); i post-it sulla revisione delle personas restano nel [registro del consolidamento](consolidamento-figma-2026-10-25.md). Le [otto proposte PRE e tre direzioni D1-D3](alternative-soluzione.md) sono una preparazione per il confronto, non idee attribuite ai singoli membri né soluzioni già votate. La scelta del focus non equivale alla selezione della soluzione. Andrea ha poi scelto D3 il 25 ottobre; la [soluzione concettuale](soluzione-concettuale.md) è pronta, mentre la documentazione del confronto del gruppo resta aperta.
 
@@ -17,7 +17,7 @@ Andrea ha accettato la proposta dei quattro bisogni con i rispettivi confini. Le
 | B03 - Riorganizzare l'uso degli ingredienti | P02-E07/E08; P03-E04/E08 | Confermato da Andrea | Adattamento di un'intenzione precedente dopo un cambiamento | Come sopra |
 | B04 - Valutare quantità e occasioni di consumo | P02-E06/E07; P03-E05/E07 | C04 selezionato come B04 su conferma di Andrea | Decisione prima dell'acquisto, distinta dall'adattamento di alimenti già comprati | Come sopra |
 
-Questa è la registrazione della proposta accettata da Andrea; non ricostruisce una sessione collettiva con post-it né voti sui singoli bisogni. Conservare le immagini effettive della lista completa, dei raggruppamenti e della discussione del gruppo per la presentazione. Non attribuire retroattivamente ai membri le proposte della preparazione.
+Questa è la registrazione della proposta accettata da Andrea; non ricostruisce una sessione collettiva con post-it né voti sui singoli bisogni. L'[area dedicata ai bisogni](https://www.figma.com/board/Aa9cVd9wI6ifqZyzO30I9m/Compito-2?node-id=121-228) contiene tutti gli otto candidati, le fonti e i raggruppamenti. Il [registro specifico](brainstorming-bisogni.md) indica cosa è preparato e cosa resta da aggiungere. Conservare le immagini effettive della discussione del gruppo e dei successivi aggiornamenti per la presentazione. Non attribuire retroattivamente ai membri le proposte della preparazione.
 
 La C2 richiede 3-4 bisogni: la selezione comprende quattro attività distinguibili. C05 viene ricondotto a B02, C06 rimane un vincolo di progettazione, C07 un contesto di B02/B03; C08 non viene scelto come autonomo perché riguarda una preoccupazione futura. Le rispettive evidenze e i limiti restano nella lista completa.
 
