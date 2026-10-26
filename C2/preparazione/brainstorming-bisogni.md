@@ -8,7 +8,7 @@
 
 La base è il riesame dei report C1. Andrea ha già confermato la selezione B01-B04; il gruppo ha scelto il focus di gestione flessibile dei pasti, secondo quanto riferito da Andrea. L'area rende visibile la sintesi preparatoria, con tutti i candidati e le motivazioni della loro collocazione.
 
-Restano da aggiungere le tracce effettive del confronto del gruppo e i dati della nuova attività con P02. Andrea ha indicato la possibilità di recuperare un diario di circa 3-4 giorni su spesa e preparazioni, suggerito dai docenti dopo la C1. Il materiale non è ancora disponibile: periodo, modalità e risultati non sono dichiarati come acquisiti.
+Sono presenti primi commenti effettivi di Andrea e Marco sulla board; sono state aggiunte otto bozze di commento preparate per Andrea, da rivedere. Restano da completare l'esito condiviso del confronto e i dati della nuova attività con P02. Andrea ha indicato la possibilità di recuperare un diario di circa 3-4 giorni su spesa e preparazioni, suggerito dai docenti dopo la C1. Il materiale non è ancora disponibile: periodo, modalità e risultati non sono dichiarati come acquisiti.
 
 ## Tutti gli otto candidati
 
@@ -40,19 +40,37 @@ Le [schede delle evidenze](evidenze-e-bisogni.md) contengono formulazioni comple
 
 La sintesi conserva le strategie già efficaci: metodo soddisfacente di P02, riprogrammazione riuscita del pollo di P03 e pasti semplici preparati da P05 con poco tempo. La panna di P03 è rimasta inutilizzata; l'eliminazione non è accertata.
 
+## Commenti e pareri disponibili
+
+[Commenti e tracce in Figma](https://www.figma.com/board/Aa9cVd9wI6ifqZyzO30I9m/Compito-2?node-id=134-264)
+
+Le seguenti sono parafrasi di contributi effettivamente presenti sulla board, distinti dalle bozze:
+
+| Autore | Bisogno | Posizione espressa | Fonte originale |
+|---|---|---|---|
+| Marco | B01 | Propone B01 come priorità e la gestione degli alimenti come punto di partenza. | [Post-it](https://www.figma.com/board/Aa9cVd9wI6ifqZyzO30I9m/Compito-2?node-id=129-228) |
+| Marco | B02 | Collega B02 a B01: facilitare la scelta del pasto a partire dagli alimenti. | [Post-it](https://www.figma.com/board/Aa9cVd9wI6ifqZyzO30I9m/Compito-2?node-id=129-232) |
+| Marco | B03 | Propone di considerare un evento specifico o speciale e le preparazioni adatte a quel contesto. | [Post-it](https://www.figma.com/board/Aa9cVd9wI6ifqZyzO30I9m/Compito-2?node-id=129-236) |
+| Marco | B04 | Terrebbe la spesa dopo gli altri aspetti del progetto. | [Post-it](https://www.figma.com/board/Aa9cVd9wI6ifqZyzO30I9m/Compito-2?node-id=129-243) |
+| Andrea | B01 | Indica B01 come una priorità attorno a cui far ruotare gli altri supporti. | [Post-it](https://www.figma.com/board/Aa9cVd9wI6ifqZyzO30I9m/Compito-2?node-id=130-237) |
+
+Questi contributi mostrano una priorità per B01 e un collegamento con la scelta del pasto. Il peso della spesa e il rapporto con D3 sono da discutere; non si registra una nuova decisione collettiva.
+
+Le otto bozze CB-01-CB-08 propongono argomenti su tutti i candidati: centralità di B01; fattibilità B02; adattamento B03; ruolo successivo della spesa B04; C05 dentro B02; C06 come vincolo di sforzo; C07 come contesto; rinvio di C08. Sono testi preparati con assistenza per la revisione di Andrea, non nuovi pareri già confermati.
+
 ## Registrare il confronto effettivo
 
 [Spazio del gruppo in Figma](https://www.figma.com/board/Aa9cVd9wI6ifqZyzO30I9m/Compito-2?node-id=121-355)
 
 | Campo | Stato |
 |---|---|
-| Data, partecipanti e modalità | Da compilare con le informazioni effettive |
-| Candidati discussi, eventuali aggiunte e dubbi | Elenco preparatorio disponibile; osservazioni del gruppo da aggiungere |
-| Autore e motivazione delle osservazioni | Da registrare durante il confronto o ricostruire con conferma degli autori |
+| Data, autori e modalità | Contributi di Andrea e Marco osservati il 26 ottobre sulla board; confronto complessivo e altri partecipanti da documentare |
+| Candidati discussi, eventuali aggiunte e dubbi | Prime osservazioni su B01-B04 disponibili; ulteriori commenti e dubbi da aggiungere |
+| Autore e motivazione delle osservazioni | Andrea e Marco nei post-it originali collegati sopra; bozze preparate per Andrea riconoscibili separatamente |
 | Conferme, modifiche, accorpamenti e rinvii | Selezione di Andrea già registrata; esito del confronto del gruppo da documentare |
 | Immagini del percorso | Acquisire gli screenshot della discussione e dell'esito, mantenendo riconoscibili le versioni |
 
-Questa preparazione non viene presentata come una sessione collettiva già svolta. Le aree da compilare non contengono voti, presenze o commenti attribuiti ai componenti.
+I commenti firmati documentano posizioni individuali in corso di confronto. Non sono registrati voti, una riunione con presenze definite o un esito collettivo. Le bozze per Andrea rimangono da rivedere e confermare.
 
 ## Integrare il diario di P02
 
@@ -71,10 +89,14 @@ Non si assume in anticipo che il diario confermi tutti i bisogni o D3. L'attivit
 
 Per mostrare la preparazione attuale si può usare la didascalia:
 
-> Sintesi preparatoria dei bisogni basata sulla C1, con selezione B01–B04 confermata da Andrea. Lo spazio del confronto e l'integrazione del diario P02 sono da completare.
+> Sintesi preparatoria dei bisogni basata sulla C1, con selezione B01–B04 confermata da Andrea. Primi commenti di Andrea e Marco disponibili; bozze assistite riconoscibili. Esito condiviso e integrazione del diario P02 da completare.
 
 Per documentare il processo nella consegna finale, conservare anche le immagini del confronto effettivo e dei successivi aggiornamenti. L'elenco completo degli otto candidati deve restare visibile insieme alle motivazioni della selezione.
 
-## Verifica dello spazio
+## Verifica della creazione iniziale
 
 Area aggiunta a destra dei materiali esistenti. Tutti i 528 elementi preesistenti, inclusi i 53 post-it, sono stati verificati invariati. Sono state create otto schede dei candidati, quattro gruppi, tre aree per la discussione e due per il diario. L'impaginazione è stata verificata visivamente.
+
+## Aggiornamento dei commenti
+
+Aggiunte otto bozze sui bisogni e tre bozze di idee nell'area di Andrea. I contributi scritti direttamente da Andrea e Marco sono rimasti distinti e non sono stati riscritti. Gli screenshot per il report finale sono ancora da raccogliere, come confermato da Andrea.

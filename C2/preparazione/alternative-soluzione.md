@@ -109,6 +109,12 @@ La differenza da esplorare è rendere comprensibili le conseguenze di una modifi
 
 La [scheda della soluzione](soluzione-concettuale.md) registra la scelta di Andrea e ne chiarisce i collegamenti ai quattro bisogni. Idee individuali, metodo e assegnazioni effettive del confronto del gruppo restano da documentare; la conferma di Andrea non viene trasformata in una votazione collettiva.
 
+## Contributi del 26 ottobre
+
+Nel [registro delle idee individuali](brainstorming-e-scelta.md#3-raccogliere-le-idee-individuali) sono ora collegati gli spunti reali di Andrea sul contesto sportivo e quelli di Marco su ingredienti disponibili, benefici attesi e adattabilità. Tre ulteriori bozze preparate per Andrea restano da rivedere e confermare.
+
+I [commenti sui bisogni](brainstorming-bisogni.md#commenti-e-pareri-disponibili) danno priorità a B01 e alla relazione con B02; Marco propone di trattare la spesa dopo gli altri aspetti. Il confronto deve chiarire come questi contributi si rapportino a D1-D3. La scelta precedente di D3 è quella di Andrea; non sono registrati un nuovo voto o un esito collettivo.
+
 ## Che cosa è già documentato nei prodotti esistenti
 
 Riesame del 25 ottobre su fonti ufficiali:

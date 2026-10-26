@@ -35,16 +35,25 @@ Raccogliere le idee effettive di ciascun componente prima dei raggruppamenti. Qu
 
 Ogni idea deve indicare scenario, attività da sostenere e beneficio atteso. Il compito chiede di non partire da funzionalità tecniche specifiche: formulare il supporto che la persona riceve nel suo contesto.
 
-| Autore | ID idea | Bisogno e scenario | Attività da sostenere | Beneficio atteso | Evidenza originale |
-|---|---|---|---|---|---|
-| Andrea Mauro | Da compilare | | | | |
-| Marco Macherelli | Da compilare | | | | |
-| Gabriele Martignoni | Da compilare | | | | |
-| Rime Chamkar | Da compilare | | | | |
-| Emanuele Marcantonio | Da compilare | | | | |
-| Edoardo Ughi | Da compilare | | | | |
+| Autore e stato | ID | Ambito | Contenuto disponibile | Fonte originale |
+|---|---|---|---|---|
+| Andrea, spunto proprio | A-S01 | Sport, ipotesi esplorativa | Ipotizza supporto su cosa mangiare e quantità prima di una corsa, riconoscendo l'assenza di interviste specifiche | [Post-it](https://www.figma.com/board/Aa9cVd9wI6ifqZyzO30I9m/Compito-2?node-id=130-290) |
+| Andrea, spunto proprio | A-S02 | Sport e ingredienti | Propone di partire dagli alimenti disponibili per individuare preparazioni o spuntini adatti al contesto | [Post-it](https://www.figma.com/board/Aa9cVd9wI6ifqZyzO30I9m/Compito-2?node-id=130-297) |
+| Andrea, proposta tecnica | A-S03 | Possibile AI | Propone modelli AI per valutazioni nutrizionali; necessità e modalità rimangono da valutare | [Post-it](https://www.figma.com/board/Aa9cVd9wI6ifqZyzO30I9m/Compito-2?node-id=130-301) |
+| Marco, spunto proprio | IM-01 | B01/B02 | Partire dagli alimenti disponibili in casa per individuare una preparazione | [Post-it](https://www.figma.com/board/Aa9cVd9wI6ifqZyzO30I9m/Compito-2?node-id=129-247) |
+| Marco, benefici attesi | IM-02 | Trasversale | Ridurre sprechi e tempo di scelta/preparazione; benefici da verificare | [Post-it](https://www.figma.com/board/Aa9cVd9wI6ifqZyzO30I9m/Compito-2?node-id=129-251) |
+| Marco, criterio di adattabilità | IM-03 | B02 e contesti | Adattare il supporto a necessità, capacità e preferenze | [Post-it](https://www.figma.com/board/Aa9cVd9wI6ifqZyzO30I9m/Compito-2?node-id=129-255) |
+| Andrea, bozza assistita da rivedere | IA-01 | B01, Marta/M | Dare agli alimenti presenti una destinazione concreta partendo dalle priorità | [Bozza](https://www.figma.com/board/Aa9cVd9wI6ifqZyzO30I9m/Compito-2?node-id=134-313) |
+| Andrea, bozza assistita da rivedere | IA-02 | B02, Gianfranco/G | Confrontare preparazioni rispetto a tempo, impegno e abitudini | [Bozza](https://www.figma.com/board/Aa9cVd9wI6ifqZyzO30I9m/Compito-2?node-id=134-317) |
+| Andrea, bozza assistita da rivedere | IA-03 | B03/B04, Luca/L-A | Riassegnare gli ingredienti dopo un cambiamento e rivalutare gli acquisti | [Bozza](https://www.figma.com/board/Aa9cVd9wI6ifqZyzO30I9m/Compito-2?node-id=134-321) |
+| Gabriele Martignoni | Da acquisire | | Proposta individuale di soluzione non ancora registrata in questa fase | |
+| Rime Chamkar | Da acquisire | | Proposta individuale di soluzione non ancora registrata in questa fase | |
+| Emanuele Marcantonio | Da acquisire | | Proposta individuale di soluzione non ancora registrata in questa fase | |
+| Edoardo Ughi | Da acquisire | | Proposta individuale di soluzione non ancora registrata in questa fase | |
 
-Aggiungere una riga per ogni idea effettiva. Conservare le versioni individuali prima dei raggruppamenti; una tabella ricostruita dopo non sostituisce le immagini del processo richieste dalla consegna.
+Gli spunti sono parafrasati e restano collegati ai post-it originali. Prima della selezione vanno riformulati come attività da sostenere, distinguendo benefici attesi, vincoli e mezzi tecnici. Le tre bozze per Andrea non sono conteggiate come proposte da lui già confermate. Conservare anche le immagini del processo richieste dalla consegna.
+
+Il filone sportivo e le informazioni nutrizionali sono opzioni esplorative aggiunte da Andrea. Il focus precedentemente confermato resta la gestione flessibile dei pasti; l'AI è una possibilità di realizzazione da valutare, non una necessità dimostrata né una soluzione già scelta dal gruppo.
 
 ## 4. Alternative preparatorie disponibili
 
@@ -58,7 +67,7 @@ Le tre direzioni integrative preparate per il confronto sono:
 | D2 - Dal tempo al pasto fattibile | Occorre decidere cosa preparare adesso | Confrontare impegno, familiarità e ingredienti |
 | D3 - Dal cambio alla nuova organizzazione | Un'intenzione non è più praticabile o diventa incerta | Rivedere ingredienti, pasti e quantità da acquistare |
 
-Andrea ha scelto D3 il 25 ottobre. La motivazione progettuale collega Luca e B03/B04; B01/B02 sostengono priorità e fattibilità. La descrizione in due frasi e i confini sono nella [scheda della soluzione](soluzione-concettuale.md). La conferma di Andrea non documenta voti o assegnazioni degli altri membri.
+Andrea ha scelto D3 il 25 ottobre. La motivazione progettuale collega Luca e B03/B04; B01/B02 sostengono priorità e fattibilità. La descrizione in due frasi e i confini sono nella [scheda della soluzione](soluzione-concettuale.md). La conferma di Andrea non documenta voti o assegnazioni degli altri membri. Nei nuovi commenti Andrea e Marco danno priorità a B01; Marco collega B02 a B01 e terrebbe la spesa in secondo piano. Queste posizioni, documentate nel [registro dei bisogni](brainstorming-bisogni.md#commenti-e-pareri-disponibili), alimentano il confronto fra le direzioni senza sostituirlo.
 
 Il caso sportivo può mettere alla prova le direzioni; mascotte, informazioni nutrizionali e AI rimangono proposte da valutare rispetto al supporto scelto. La ricerca documentale riesaminata il 25 ottobre mostra sovrapposizioni con prodotti esistenti, senza dimostrare la novità di una direzione.
 

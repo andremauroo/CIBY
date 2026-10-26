@@ -101,7 +101,7 @@ Questa tabella conserva l'elenco preparatorio e la sua collocazione nella selezi
 | C07 - Disporre del pasto previsto fuori casa o trovare un'alternativa praticabile | P01-E03/E09; P04-E02/E04 | Contesto da considerare in B02/B03, con strategie già adottate |
 | C08 - Coordinare menu differenti nella coppia | P01-E02 | Rinviato: preoccupazione futura, non difficoltà attuale accertata |
 
-La scelta mantiene quattro attività distinguibili: riconoscere, scegliere, adattare, valutare gli acquisti. Tutti gli otto candidati e i raggruppamenti sono ora visibili nello [spazio Figma dei bisogni](https://www.figma.com/board/Aa9cVd9wI6ifqZyzO30I9m/Compito-2?node-id=121-228). Il [registro del brainstorming sui bisogni](brainstorming-bisogni.md) distingue la sintesi preparatoria dalle tracce effettive della discussione del gruppo, ancora da aggiungere.
+La scelta mantiene quattro attività distinguibili: riconoscere, scegliere, adattare, valutare gli acquisti. Tutti gli otto candidati e i raggruppamenti sono ora visibili nello [spazio Figma dei bisogni](https://www.figma.com/board/Aa9cVd9wI6ifqZyzO30I9m/Compito-2?node-id=121-228). Il [registro del brainstorming sui bisogni](brainstorming-bisogni.md) distingue la sintesi preparatoria, i primi commenti effettivi di Andrea e Marco e le bozze da rivedere. L'esito condiviso e gli screenshot finali restano da completare.
 
 ## Riscontri da mantenere anche se complicano la proposta
 
