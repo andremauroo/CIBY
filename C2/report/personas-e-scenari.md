@@ -6,7 +6,7 @@
 
 Il focus è la gestione flessibile dei pasti e lavoriamo sui quattro bisogni B01-B04. Questa versione consolida le tre personas e quattro scenari principali. Integra la lettura dei 53 post-it della board e le evidenze C1, distinguendo la sintesi progettuale dai dati raccolti.
 
-L'area originale con profili, scenari e post-it è rimasta intatta. La versione consolidata si trova in una nuova area a destra: i commenti possono continuare a documentare il percorso. Il [registro del consolidamento](consolidamento-figma-2026-10-25.md) contiene le decisioni editoriali e la verifica di conservazione.
+L'area originale con profili, scenari e post-it è rimasta intatta. La versione consolidata si trova in una nuova area a destra: i commenti possono continuare a documentare il percorso.
 
 ## Ruolo delle tre personas
 
@@ -203,9 +203,7 @@ Deve valutare la quantità complessiva, ciò che possiede già e le occasioni re
 
 B01 riguarda riconoscimento e priorità, B02 la scelta della preparazione, B03 l'adattamento di ingredienti già acquistati e B04 la valutazione delle quantità prima dell'acquisto. Il nuovo scenario A rende visibile quest'ultimo confine.
 
-Il [caso sportivo S-Sport](approfondimento-sportivo-simulato.md) rimane un approfondimento aggiuntivo di B02/B03. La sua integrazione nelle alternative non richiede di cambiare retroattivamente i profili o le risposte delle interviste.
-
-Per le slide, mostrare prima le evidenze e le immagini del confronto, poi le scelte e la sintesi. I post-it originali documentano la revisione di personas e scenari; la C2 richiede anche tracce dei bisogni discussi e del brainstorming/selezione delle soluzioni. Il [registro del consolidamento](consolidamento-figma-2026-10-25.md) precisa questa distinzione.
+Lo sport rimane un contesto esplorativo di B02/B03. Non sono state svolte nuove attività con utenti sportivi e non viene introdotta una quarta persona.
 
 ## Riesame dopo il diario P02
 
@@ -218,12 +216,12 @@ Il diario del 21–26 ottobre aggiunge un rinvio riuscito e contesti concreti, s
 | Marta e scenario M/B01 | Schiscetta il 23 (E04) | Rafforza il contesto del pasto da portare. Non attesta dimenticanze, preparazione la sera prima o uso della stessa confezione |
 | Scenario A/B04 | Spesa giorno per giorno (M02) | Conserviamo la base C1 sulle quantità: formati e quantità non sono annotati nel diario |
 
-La nuova raccolta orienta il supporto verso i prossimi pasti e le occasioni effettive. Il successivo confronto su D1 porta a usare Marta come persona primaria, conservando Luca per i contesti di B03/B04. Il [diario](../report/P02-diario.md) e l'[analisi integrata](../report/analisi-tematica.md) tengono distinti i dati dagli esiti desiderati degli scenari.
+La nuova raccolta orienta il supporto verso i prossimi pasti e le occasioni effettive. Il successivo confronto su D1 porta a usare Marta come persona primaria, conservando Luca per i contesti di B03/B04. Il [diario](P02-diario.md) e l'[analisi integrata](analisi-tematica.md) tengono distinti i dati dagli esiti desiderati degli scenari.
 
 ## Fonti
 
 - [Evidenze e bisogni consolidati](evidenze-e-bisogni.md).
-- [Diario P02 del 21–26 ottobre](../report/P02-diario.md), E03/E04/E05/E07/E10, M02 e C01.
+- [Diario P02 del 21–26 ottobre](P02-diario.md), E03/E04/E05/E07/E10, M02 e C01.
 - [Report P01](../../C1/report%20interviste/P01.pdf), profilo, episodi ed evidenze E01/E03/E05/E08/E09.
 - [Report P02](../../C1/report%20interviste/P02.pdf), E03/E06-E08/E10/E12 e C01.
 - [Report P03](../../C1/report%20interviste/P03.pdf), E04/E05/E07/E08/E12/E13.

@@ -4,7 +4,7 @@
 
 Abbiamo scelto il focus di gestione flessibile dei pasti e lavoriamo sui quattro bisogni B01-B04. La discussione è avvenuta soprattutto a voce, con scambi in chat e post-it. In questa cartella raccogliamo le tracce utilizzabili, senza ricostruire conteggi o presenze.
 
-Il confronto conclusivo converge su D1. D2 contribuisce alla fattibilità della preparazione e D3 all'adattamento dopo un cambiamento. Le preferenze restano collegate ai post-it nel [report del confronto](../report/confronto-gruppo.md).
+Il confronto conclusivo converge su D1. D2 contribuisce alla fattibilità della preparazione e D3 all'adattamento dopo un cambiamento. Le preferenze restano collegate ai post-it nel [report del confronto](confronto-gruppo.md).
 
 ## Bisogni e scenari di partenza
 
@@ -64,7 +64,7 @@ Questi spunti ampliano il confronto e rimangono distinti dalle idee dei singoli 
 
 Il confronto asincrono su FigJam usa preferenze motivate. D1 raccoglie convergenza per utilità quotidiana, ingredienti già disponibili e relazione fra gestione e organizzazione dei pasti. Rime valorizza anche D3 per adattarsi ai cambiamenti. D2 rimane utile per il poco tempo di Gianfranco; Edoardo considera D3 più utile come integrazione alle altre direzioni.
 
-La [sintesi con tutti i sei componenti](../report/confronto-gruppo.md#preferenze-e-ragioni) collega ciascuna posizione al post-it originale. Non abbiamo applicato una quota di voti o categorie formali e non costruiamo un conteggio aggregato a partire dai commenti.
+La [sintesi con tutti i sei componenti](confronto-gruppo.md#preferenze-e-ragioni) collega ciascuna posizione al post-it originale. Non abbiamo applicato una quota di voti o categorie formali e non costruiamo un conteggio aggregato a partire dai commenti.
 
 La soluzione parte quindi da B01, usa B02 per valutare la fattibilità e sostiene B03 quando cambia il pasto. B04 entra per le quantità prima dell'acquisto. Manteniamo quattro bisogni, con Marta primaria per il nuovo punto di partenza. Il [confronto documentale](confronto-soluzioni-esistenti.md) mostra che ricette, priorità e sostituzioni da sole sono già supportate: approfondiamo il confronto delle conseguenze sui pasti vicini e sugli acquisti.
 

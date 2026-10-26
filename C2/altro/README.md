@@ -1,5 +1,5 @@
 # Materiali di supporto C2
 
-Le [immagini del processo](immagini-processo/README.md) conservano lo stato della board durante il lavoro. Le didascalie precisano che cosa mostrano e a quale fase del lavoro appartiene ogni immagine.
+Le [immagini del processo](immagini-processo/README.md) documentano il lavoro sui bisogni, l'integrazione del diario P02, le personas, le idee individuali e le preferenze sulle soluzioni.
 
-I report C1 restano nella loro [cartella originale](../../C1/README.md). Il caso sportivo è una [esplorazione progettuale simulata](../preparazione/approfondimento-sportivo-simulato.md).
+Le analisi e le motivazioni sono nei [report](../report/README.md); la sintesi è nella [presentazione](../presentazione/CIBY-C2.pdf).

@@ -49,7 +49,7 @@ Le fonti lette non permettono di stabilire se i prodotti confrontati sostengano 
 - P02-E06/E07 e P03-E05/E07: quantità e occasioni realistiche di consumo.
 - P01-E04/E07: attenzione esplorativa allo sforzo di contestualizzazione, soprattutto da un caso.
 
-Le [schede dei bisogni](evidenze-e-bisogni.md) mantengono fonti e limiti. Il [diario P02](../report/P02-diario.md) aggiunge un rinvio riuscito. Questo conserva la domanda sul valore aggiunto del supporto, senza trasformare il cambiamento di programma in una difficoltà automatica.
+Le [schede dei bisogni](evidenze-e-bisogni.md) mantengono fonti e limiti. Il [diario P02](P02-diario.md) aggiunge un rinvio riuscito. Questo conserva la domanda sul valore aggiunto del supporto, senza trasformare il cambiamento di programma in una difficoltà automatica.
 
 ## Formulazione utilizzabile nella presentazione
 

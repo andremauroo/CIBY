@@ -1,14 +1,14 @@
 # Brainstorming e selezione dei bisogni
 
-**CIBY / MAGGICAL - Preparazione del 26 ottobre 2026**
+**CIBY / MAGGICAL - Sintesi del 26 ottobre 2026**
 
 [Apri l'area Figma](https://www.figma.com/board/Aa9cVd9wI6ifqZyzO30I9m/Compito-2?node-id=121-228)
 
-## Stato del lavoro
+## Percorso seguito
 
 Partiamo dal riesame C1 e lavoriamo su B01-B04 nel focus di gestione flessibile dei pasti. La board conserva tutti i candidati, le loro fonti e i raggruppamenti.
 
-Sono presenti commenti individuali e proposte in bozza. Il [diario P02 è stato analizzato e integrato](../report/analisi-tematica.md); il [confronto conclusivo](../report/confronto-gruppo.md) è documentato con preferenze e motivazioni. Abbiamo già acquisito le [immagini del processo attuale](../altro/immagini-processo/README.md).
+Sono presenti commenti individuali e proposte in bozza. Il [diario P02 è stato analizzato e integrato](analisi-tematica.md); il [confronto conclusivo](confronto-gruppo.md) è documentato con preferenze e motivazioni. Abbiamo già acquisito le [immagini del processo attuale](../altro/immagini-processo/README.md).
 
 ## Tutti gli otto candidati
 
@@ -60,34 +60,17 @@ Le seguenti sono parafrasi di contributi effettivamente presenti sulla board, di
 | Gabriele | B01, C06, C08 | Dà priorità a B01, richiama semplicità d'uso e rinvia il coordinamento nella coppia a sviluppi futuri. | [B01](https://www.figma.com/board/Aa9cVd9wI6ifqZyzO30I9m/Compito-2?node-id=161-320), [C06](https://www.figma.com/board/Aa9cVd9wI6ifqZyzO30I9m/Compito-2?node-id=165-330), [C08](https://www.figma.com/board/Aa9cVd9wI6ifqZyzO30I9m/Compito-2?node-id=165-363) |
 | Edoardo | B04, C07 | Legge B04 come sottosezione di B03 e propone di destinare ingredienti a un pasto da portare. La differenza di posizione su B03/B04 è conservata nella sintesi. | [B04](https://www.figma.com/board/Aa9cVd9wI6ifqZyzO30I9m/Compito-2?node-id=175-402), [C07](https://www.figma.com/board/Aa9cVd9wI6ifqZyzO30I9m/Compito-2?node-id=175-416) |
 
-Questi contributi mostrano una priorità per B01 e un collegamento con la scelta del pasto. Il commento C06 richiama lo sforzo d'uso; il tema specifico della contestualizzazione resta fondato soprattutto su P01-E04/E07 e non viene generalizzato a tutto il campione. La sintesi mantiene la spesa come decisione collegata, con B04 distinto da B03 per il momento prima dell’acquisto. D1 guida il percorso; il [report del confronto](../report/confronto-gruppo.md) esplicita le ragioni.
+Questi contributi mostrano una priorità per B01 e un collegamento con la scelta del pasto. Il commento C06 richiama lo sforzo d'uso; il tema specifico della contestualizzazione resta fondato soprattutto su P01-E04/E07 e non viene generalizzato a tutto il campione. La sintesi mantiene la spesa come decisione collegata, con B04 distinto da B03 per il momento prima dell’acquisto. D1 guida il percorso; il [report del confronto](confronto-gruppo.md) esplicita le ragioni.
 
-Le otto bozze CB-01-CB-08 propongono argomenti su tutti i candidati: centralità di B01; fattibilità B02; adattamento B03; ruolo successivo della spesa B04; C05 dentro B02; C06 come vincolo di sforzo; C07 come contesto; rinvio di C08. Sono proposte in bozza da discutere, distinte dai commenti individuali già presenti.
 
 ## Esito del confronto
 
 Sintesi del 26 ottobre dopo i contributi individuali in FigJam. Manteniamo B01–B04: riconoscimento, scelta praticabile, riorganizzazione e valutazione delle quantità. Le fonti C1 rendono B04 una decisione prima dell'acquisto, distinta dalla revisione successiva B03. Conserviamo sia la proposta di Edoardo di accorparli sia la distinzione motivata da Emanuele. Il confronto sulle soluzioni converge su D1 e dà a B01 il ruolo di punto di partenza quotidiano.
 
-C05 entra in B02, C06 resta trasversale, C07 un contesto di B02/B03, C08 è rinviato. Non è stata svolta una votazione separata sui bisogni con un conteggio aggregato. Il [report](../report/confronto-gruppo.md) documenta modalità, fonti e decisioni progettuali della sintesi.
+C05 entra in B02, C06 resta trasversale, C07 un contesto di B02/B03, C08 è rinviato. Non è stata svolta una votazione separata sui bisogni con un conteggio aggregato. Il [report](confronto-gruppo.md) documenta modalità, fonti e decisioni progettuali della sintesi.
 
 ## Integrazione del diario di P02
 
-[Analisi in Figma](https://www.figma.com/board/Aa9cVd9wI6ifqZyzO30I9m/Compito-2?node-id=121-374) · [Analisi completa](../report/analisi-tematica.md).
+[Analisi in Figma](https://www.figma.com/board/Aa9cVd9wI6ifqZyzO30I9m/Compito-2?node-id=121-374) · [Analisi completa](analisi-tematica.md).
 
 Il materiale del 21–26 ottobre è ricevuto, codificato e confrontato con la C1. Manteniamo B01–B04 come selezione di lavoro: B03 riceve un episodio di rinvio riuscito, B02/C07 contesti concreti; B01/B04 conservano la base C1 senza nuove prove dirette di dimenticanze o quantità. La sintesi conserva questa distinzione fra nuove osservazioni e base C1.
-
-## Immagini per la consegna
-
-Per mostrare la preparazione attuale si può usare la didascalia:
-
-> Bisogni candidati con evidenze C1 e integrazione del diario P02. Commenti del gruppo e proposte in bozza rimangono distinguibili. La selezione mantiene B01–B04, con riconoscimento e scelta al centro del percorso.
-
-Le immagini conclusive del confronto effettivo sono archiviate insieme a quelle delle fasi precedenti. L'elenco completo degli otto candidati deve restare visibile insieme alle motivazioni della selezione.
-
-## Verifica della creazione iniziale
-
-Area aggiunta a destra dei materiali esistenti. Tutti i 528 elementi preesistenti, inclusi i 53 post-it, sono stati verificati invariati. Sono state create otto schede dei candidati, quattro gruppi, tre aree per la discussione e due per il diario. L'impaginazione è stata verificata visivamente.
-
-## Aggiornamento dei commenti
-
-Aggiunte otto bozze sui bisogni e tre bozze di idee nell'area di Andrea. I contributi scritti direttamente da Andrea e Marco sono rimasti distinti e non sono stati riscritti. Le immagini del 26 ottobre sono archiviate in [immagini del processo](../altro/immagini-processo/README.md). Le immagini conclusive conservano tutti i nuovi contributi e la sintesi, senza modificare i post-it originali.

@@ -26,5 +26,5 @@ La frase parte dagli alimenti disponibili, rende esplicita la scelta di una prep
 
 ## Stato e limiti
 
-Manteniamo la formulazione già scelta: D1 parte dagli alimenti presenti e conserva l’adattamento di pasti e acquisti. Il [diario P02](../report/analisi-tematica.md) ne mantiene pertinente il riferimento ai programmi che cambiano, senza dimostrare l'utilità di CIBY. Il [confronto conclusivo](../report/confronto-gruppo.md) ne documenta la coerenza con la direzione scelta. Non contiene benefici misurati e non dimostra la novità della soluzione: il [confronto documentale](confronto-soluzioni-esistenti.md) precisa le sovrapposizioni e il compito specifico da approfondire.
+Manteniamo la formulazione già scelta: D1 parte dagli alimenti presenti e conserva l’adattamento di pasti e acquisti. Il [diario P02](analisi-tematica.md) ne mantiene pertinente il riferimento ai programmi che cambiano, senza dimostrare l'utilità di CIBY. Il [confronto conclusivo](confronto-gruppo.md) ne documenta la coerenza con la direzione scelta. Non contiene benefici misurati e non dimostra la novità della soluzione: il [confronto documentale](confronto-soluzioni-esistenti.md) precisa le sovrapposizioni e il compito specifico da approfondire.
 

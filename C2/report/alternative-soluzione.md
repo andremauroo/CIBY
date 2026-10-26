@@ -4,7 +4,7 @@
 
 [Spazio di confronto in Figma](https://www.figma.com/board/Aa9cVd9wI6ifqZyzO30I9m/Compito-2?node-id=101-228)
 
-Otto spunti e tre direzioni preparati sui quattro scenari consolidati. Sono proposte per ampliare il confronto, distinti dalle idee individuali; la scelta successiva è documentata nel report del confronto. Abbiamo discusso soprattutto a voce, affiancando poi le tracce della board. Gli spunti di mascotte e informazioni nutrizionali sono registrate in [Focus e decisioni](focus-e-decisioni.md); i commenti Figma alla revisione sono nel [registro del consolidamento](consolidamento-figma-2026-10-25.md).
+Otto spunti e tre direzioni preparati sui quattro scenari consolidati. Sono proposte per ampliare il confronto, distinti dalle idee individuali; la scelta successiva è documentata nel report del confronto. Abbiamo discusso soprattutto a voce, affiancando poi le tracce della board. Gli spunti di mascotte e informazioni nutrizionali sono registrate in [Soluzione e confini](soluzione-concettuale.md).
 
 ## Da scenari a spunti
 
@@ -99,7 +99,7 @@ Questo è un ragionamento progettuale, non un punteggio di usabilità né l'esit
 
 ## Direzione scelta: D1
 
-I post-it di preferenza convergono su D1 per partire dagli alimenti disponibili e individuare un utilizzo concreto. D2 contribuisce alla scelta rispetto a tempo e impegno; D3 alla possibilità di adattare o rinviare la preparazione. Il [confronto del gruppo](../report/confronto-gruppo.md) documenta ragioni e differenze di posizione, compreso il valore dato da Rime a D3.
+I post-it di preferenza convergono su D1 per partire dagli alimenti disponibili e individuare un utilizzo concreto. D2 contribuisce alla scelta rispetto a tempo e impegno; D3 alla possibilità di adattare o rinviare la preparazione. Il [confronto del gruppo](confronto-gruppo.md) documenta ragioni e differenze di posizione, compreso il valore dato da Rime a D3.
 
 > CIBY aiuta chi gestisce i propri pasti a dare agli alimenti già disponibili un utilizzo nei prossimi pasti, scegliendo preparazioni compatibili con tempo, impegno e abitudini. Quando i programmi cambiano, sostiene il confronto fra adattare e rinviare una preparazione, chiarendo che cosa resta da usare e che cosa occorre ancora acquistare.
 
@@ -117,15 +117,11 @@ Perciò ricette, priorità e sostituzioni da sole non bastano a motivare la novi
 
 ## Sport, mascotte e AI nel confronto
 
-- **Sport:** usare S-Sport per confrontare le direzioni quando cambia il tempo disponibile intorno all'allenamento. È una variante progettuale simulata.
+- **Sport:** una variante ipotetica considera un cambiamento del tempo disponibile intorno all'allenamento. È un contesto progettuale, senza nuove attività con utenti sportivi.
 - **Mascotte eventualmente personalizzabile:** spunto di realizzazione; valutare quale passaggio della scelta renda più comprensibile o sostenibile. Non viene usata come prova di novità della soluzione.
 - **Informazioni nutrizionali:** interesse emerso nella discussione di progetto, da trattare come possibile supporto alla comprensione degli alimenti. P04 non chiede maggiore precisione; non si presume una domanda generale di monitoraggio.
 - **AI:** possibile mezzo di realizzazione da valutare successivamente, distinguendo il supporto desiderato dalla tecnologia scelta.
 
 ## Documentazione del confronto
 
-La board contiene idee di tutti i sei componenti e preferenze motivate sulle tre direzioni. Il [report](../report/confronto-gruppo.md) descrive il metodo asincrono effettivo, senza attribuire una quota di voti o categorie formali. Le [immagini](../altro/immagini-processo/README.md#immagini-conclusive) conservano il processo e le proposte in bozza.
-
-## Continuità dello spazio Figma
-
-La prima versione dell'area raccoglieva sei spazi individuali, otto spunti e tre direzioni; D3 era stata sviluppata come ipotesi di lavoro. Il confronto successivo ha spostato il punto di partenza su D1. Le immagini delle diverse fasi restano archiviate con nomi distinti. Nel consolidamento finale tutti i 118 post-it sono rimasti invariati; sono stati aggiornati i testi di sintesi.
+La board contiene idee di tutti i sei componenti e preferenze motivate sulle tre direzioni. Il [report](confronto-gruppo.md) descrive il metodo asincrono effettivo, senza attribuire una quota di voti o categorie formali. Le [immagini](../altro/immagini-processo/README.md#immagini-conclusive) conservano il processo e le proposte in bozza.

@@ -72,4 +72,4 @@ Mancano il pranzo di giovedì e la cena effettiva di venerdì; l'assenza di una 
 
 Manteniamo i quattro bisogni come selezione di lavoro. B03 riceve un approfondimento concreto del rinvio riuscito; B02/C07 un contesto più ricco. B01 e B04 conservano le evidenze C1, senza nuove conferme di dimenticanze o quantità eccessive. Per CIBY approfondiamo la revisione dei prossimi pasti e delle occasioni realistiche, lasciando aperto dove un supporto aggiungerebbe valore rispetto all'adattamento già riuscito.
 
-[Analisi tematica](analisi-tematica.md) · [Evidenze e bisogni](../preparazione/evidenze-e-bisogni.md) · [Personas e scenari](../preparazione/personas-e-scenari.md).
+[Analisi tematica](analisi-tematica.md) · [Evidenze e bisogni](evidenze-e-bisogni.md) · [Personas e scenari](personas-e-scenari.md).

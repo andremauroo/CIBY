@@ -8,7 +8,7 @@ Alle discussioni soprattutto a voce e agli scambi in chat abbiamo affiancato la 
 
 Il metodo effettivo è un **confronto asincrono con preferenze motivate**. I metodi dei tre voti e delle quattro categorie sono possibilità proposte dal punto 6 del compito. Non abbiamo applicato una quota di tre voti né assegnato categorie formali: documentiamo il percorso realmente seguito, senza trasformare ogni commento in un voto equivalente.
 
-Le proposte di tutti i sei componenti sono collegate nel [registro delle idee individuali](../preparazione/brainstorming-e-scelta.md#idee-individuali). Gli spunti PRE restano distinguibili dalle idee individuali del gruppo.
+Le proposte di tutti i sei componenti sono collegate nel [registro delle idee individuali](brainstorming-e-scelta.md#idee-individuali). Gli spunti PRE restano distinguibili dalle idee individuali del gruppo.
 
 ## Preferenze e ragioni
 
@@ -35,7 +35,7 @@ Manteniamo **B01–B04**. B01 guida il percorso quotidiano e B02 la fattibilità
 
 Nei commenti Edoardo proponeva di accorpare B04 a B03; Emanuele li distingueva, mentre Marco dava alla spesa un ruolo successivo. Manteniamo la distinzione per rendere visibile la decisione prima dell'acquisto, con la spesa collegata all'uso degli alimenti e senza renderla il punto di partenza. È la scelta progettuale della sintesi, non l'esito di una votazione separata su B04.
 
-C05 confluisce in B02, C06 resta un vincolo di sforzo sostenibile, C07 un contesto di B02/B03. C08 è rinviato per la base limitata e il carattere futuro della preoccupazione. Le [motivazioni e fonti](../preparazione/brainstorming-bisogni.md) conservano tutti gli otto candidati.
+C05 confluisce in B02, C06 resta un vincolo di sforzo sostenibile, C07 un contesto di B02/B03. C08 è rinviato per la base limitata e il carattere futuro della preoccupazione. Le [motivazioni e fonti](brainstorming-bisogni.md) conservano tutti gli otto candidati.
 
 Allineiamo la priorità delle personas a D1: **Marta è il riferimento principale**, perché mette alla prova riconoscimento e priorità in una routine efficace. Gianfranco approfondisce la scelta B02; Luca adattamento B03 e quantità B04. È un aggiornamento progettuale dei ruoli, non un voto separato sulle personas. I quattro scenari e i loro confini restano validi.
 
@@ -43,14 +43,12 @@ Allineiamo la priorità delle personas a D1: **Marta è il riferimento principal
 
 > CIBY aiuta chi gestisce i propri pasti a dare agli alimenti già disponibili un utilizzo nei prossimi pasti, scegliendo preparazioni compatibili con tempo, impegno e abitudini. Quando i programmi cambiano, sostiene il confronto fra adattare e rinviare una preparazione, chiarendo che cosa resta da usare e che cosa occorre ancora acquistare.
 
-Il [confronto documentale con prodotti esistenti](../preparazione/confronto-soluzioni-esistenti.md) mostra che ingredienti, ricette e priorità di scadenza sono già supportati. Approfondiamo il confronto fra utilizzo immediato, adattamento e rinvio sui pasti successivi, chiarendone le conseguenze sugli alimenti rimasti e sugli acquisti. È una proposta da verificare nel percorso completo, senza dichiarazioni di unicità o efficacia dimostrata.
+Il [confronto documentale con prodotti esistenti](confronto-soluzioni-esistenti.md) mostra che ingredienti, ricette e priorità di scadenza sono già supportati. Approfondiamo il confronto fra utilizzo immediato, adattamento e rinvio sui pasti successivi, chiarendone le conseguenze sugli alimenti rimasti e sugli acquisti. È una proposta da verificare nel percorso completo, senza dichiarazioni di unicità o efficacia dimostrata.
 
 ## Documentazione visiva
 
 - [Otto bisogni e commenti](../altro/immagini-processo/bisogni-candidati-finale-2026-10-26.png).
-- [Sintesi del confronto sui bisogni](../altro/immagini-processo/bisogni-confronto-finale-2026-10-26.png).
 - [Sei aree delle idee individuali](../altro/immagini-processo/README.md#immagini-conclusive).
 - [Tre direzioni e preferenze](../altro/immagini-processo/preferenze-soluzioni-finale-2026-10-26.png).
-- [Soluzione e motivazioni](../altro/immagini-processo/sintesi-soluzione-finale-2026-10-26.png).
 
-I 118 post-it presenti al consolidamento sono rimasti invariati nel testo, nelle dimensioni, nei colori, nei genitori e nelle posizioni. Sono cambiati i soli testi di sintesi e la posizione del riquadro conclusivo, per lasciare leggibili i nuovi commenti.
+Le immagini documentano i contributi e le preferenze raccolti sulla board. La cattura dell'area di Andrea è aggiornata al 27 ottobre, dopo la rimozione delle bozze gialle.

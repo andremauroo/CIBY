@@ -2,7 +2,7 @@
 
 **CIBY / MAGGICAL - Aggiornamento del 26 ottobre 2026**
 
-Partiamo dalla C1 pubblicata il 12 ottobre 2026 e integriamo il [diario quotidiano P02 del 21–26 ottobre](../report/P02-diario.md). Lavoriamo su B01–B04 nel focus di **gestione flessibile dei pasti**. La nuova raccolta approfondisce un rinvio riuscito e le occasioni di consumo; non aggiunge prove dirette su dimenticanze o quantità eccessive.
+Partiamo dalla C1 pubblicata il 12 ottobre 2026 e integriamo il [diario quotidiano P02 del 21–26 ottobre](P02-diario.md). Lavoriamo su B01–B04 nel focus di **gestione flessibile dei pasti**. La nuova raccolta approfondisce un rinvio riuscito e le occasioni di consumo; non aggiunge prove dirette su dimenticanze o quantità eccessive.
 
 ## Perimetro di lavoro
 
@@ -12,7 +12,7 @@ P01, P02, P03 e P05 hanno responsabilità su spesa e pasti. P04 serve da confron
 
 ## I quattro bisogni selezionati
 
-B01-B03 mantengono gli identificativi C1. **B04 deriva dal candidato C04** e aggiunge la decisione sulle quantità prima dell'acquisto. Il [focus](focus-e-decisioni.md) ne chiarisce il ruolo.
+B01-B03 mantengono gli identificativi C1. **B04 deriva dal candidato C04** e aggiunge la decisione sulle quantità prima dell'acquisto. Il [soluzione](soluzione-concettuale.md) ne chiarisce il ruolo.
 
 | ID | Formulazione del bisogno | Situazione principale | Esito desiderato |
 |---|---|---|---|
@@ -84,7 +84,7 @@ Il diario comprende sei giorni di appunti sul telefono. Il chiarimento C01 disti
 | B03 | P02-D01-E05/E07 e C01 | Episodio datato di rinvio riuscito. Approfondisce l'attività di adattamento senza dimostrare una difficoltà irrisolta |
 | B04 | P02-D01-M02 | Spesa giorno per giorno; quantità e confezioni non annotate. La nuova raccolta non conferma acquisti eccessivi |
 
-La [matrice tematica](../report/analisi-tematica.md) collega estratti, codici e temi C1. Per il progetto questo orienta verso i prossimi pasti e le occasioni realistiche, conservando le strategie già efficaci. Le formulazioni dei quattro bisogni restano stabili; il loro peso conclusivo è da chiudere nel confronto del gruppo.
+La [matrice tematica](analisi-tematica.md) collega estratti, codici e temi C1. Per il progetto questo orienta verso i prossimi pasti e le occasioni realistiche, conservando le strategie già efficaci. Le formulazioni dei quattro bisogni restano stabili; il loro peso conclusivo è da chiudere nel confronto del gruppo.
 
 ## Come ritrovare le fonti
 
@@ -101,7 +101,7 @@ Q indica una domanda della traccia; T un segmento tematico, non un minuto audio.
 
 ## Candidati considerati e loro collocazione
 
-Conserviamo tutti i candidati e le ragioni della loro collocazione. Il [confronto conclusivo](../report/confronto-gruppo.md) documenta le motivazioni della selezione.
+Conserviamo tutti i candidati e le ragioni della loro collocazione. Il [confronto conclusivo](confronto-gruppo.md) documenta le motivazioni della selezione.
 
 | Candidato | Evidenze C1 | Collocazione attuale |
 |---|---|---|
@@ -114,7 +114,7 @@ Conserviamo tutti i candidati e le ragioni della loro collocazione. Il [confront
 | C07 - Disporre del pasto previsto fuori casa o trovare un'alternativa praticabile | P01-E03/E09; P04-E02/E04 | Contesto da considerare in B02/B03, con strategie già adottate |
 | C08 - Coordinare menu differenti nella coppia | P01-E02 | Rinviato: preoccupazione futura, non difficoltà attuale accertata |
 
-La scelta mantiene quattro attività distinguibili: riconoscere, scegliere, adattare, valutare gli acquisti. Tutti gli otto candidati e i raggruppamenti sono ora visibili nello [spazio Figma dei bisogni](https://www.figma.com/board/Aa9cVd9wI6ifqZyzO30I9m/Compito-2?node-id=121-228). Il [registro del brainstorming sui bisogni](brainstorming-bisogni.md) distingue la sintesi preparatoria, i commenti effettivi del gruppo e le bozze da rivedere. Le [immagini attuali](../altro/immagini-processo/README.md) sono archiviate; esito e immagini del confronto conclusivo sono ora collegati al report.
+La scelta mantiene quattro attività distinguibili: riconoscere, scegliere, adattare, valutare gli acquisti. Tutti gli otto candidati e i raggruppamenti sono ora visibili nello [spazio Figma dei bisogni](https://www.figma.com/board/Aa9cVd9wI6ifqZyzO30I9m/Compito-2?node-id=121-228). Il [registro del brainstorming sui bisogni](brainstorming-bisogni.md) distingue la sintesi preparatoria, i commenti effettivi del gruppo e le proposte preparatorie. Le [immagini attuali](../altro/immagini-processo/README.md) sono archiviate; esito e immagini del confronto conclusivo sono ora collegati al report.
 
 ## Riscontri da mantenere anche se complicano la proposta
 
@@ -128,9 +128,9 @@ La scelta mantiene quattro attività distinguibili: riconoscere, scegliere, adat
 
 ## Sport, nutrizione e idee di realizzazione
 
-L'organizzazione dei pasti intorno agli allenamenti resta un contesto esplorativo per B02/B03. I riscontri P03/P04 e i loro limiti sono nella [valutazione dedicata](valutazione-filone-sportivo.md). Non viene introdotto un quinto bisogno.
+L'organizzazione dei pasti intorno agli allenamenti resta un contesto esplorativo per B02/B03. Non sono disponibili nuove osservazioni specifiche con utenti sportivi. Non viene introdotto un quinto bisogno.
 
-Mascotte, personalizzazione e informazioni nutrizionali con possibile AI sono spunti di realizzazione. Li valuteremo rispetto alle attività da sostenere, come indicato nel [focus](focus-e-decisioni.md).
+Mascotte, personalizzazione e informazioni nutrizionali con possibile AI sono spunti di realizzazione. Li valuteremo rispetto alle attività da sostenere, come indicato nel [soluzione](soluzione-concettuale.md).
 
 ## Collegamento agli scenari consolidati
 
@@ -143,6 +143,6 @@ Mascotte, personalizzazione e informazioni nutrizionali con possibile AI sono sp
 
 Testi, fonti e natura narrativa sono in [Personas e scenari](personas-e-scenari.md). Marta è la persona primaria per B01, coerentemente con D1; Gianfranco approfondisce B02 e Luca B03/B04. La variante sportiva rimane un approfondimento dichiaratamente simulato di B02/B03.
 
-La [sintesi Figma](https://www.figma.com/board/Aa9cVd9wI6ifqZyzO30I9m/Compito-2?node-id=91-228) affianca l'area originale: tutti i 53 post-it e i contenuti preesistenti sono stati preservati. Le decisioni editoriali sono nel [registro del consolidamento](consolidamento-figma-2026-10-25.md).
+La [sintesi Figma](https://www.figma.com/board/Aa9cVd9wI6ifqZyzO30I9m/Compito-2?node-id=91-228) affianca l'area originale: tutti i 53 post-it e i contenuti preesistenti sono stati preservati.
 
 L'[integrazione in Figma](https://www.figma.com/board/Aa9cVd9wI6ifqZyzO30I9m/Compito-2?node-id=121-374) affianca le evidenze C1 con i nuovi riferimenti P02-D01. Il diario è un'attività reale con P02; il successivo confronto converge su D1, integrando l’adattamento di D3; i benefici restano da verificare.

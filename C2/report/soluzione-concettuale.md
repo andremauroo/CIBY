@@ -18,7 +18,7 @@ La frase approvata rimane coerente con D1 e con l'adattamento introdotto da D3. 
 
 ## Perché D1
 
-I pareri del gruppo valorizzano il punto di partenza quotidiano degli alimenti già presenti. D1 consente di riconoscere una priorità e trasformarla in una preparazione fattibile, mantenendo la possibilità di adattare o rinviare il consumo. D2 approfondisce tempo e impegno; D3 contribuisce alla riorganizzazione. Il [confronto documentato](../report/confronto-gruppo.md) conserva anche le preferenze alternative.
+I pareri del gruppo valorizzano il punto di partenza quotidiano degli alimenti già presenti. D1 consente di riconoscere una priorità e trasformarla in una preparazione fattibile, mantenendo la possibilità di adattare o rinviare il consumo. D2 approfondisce tempo e impegno; D3 contribuisce alla riorganizzazione. Il [confronto documentato](confronto-gruppo.md) conserva anche le preferenze alternative.
 
 Marta è la persona primaria per B01; Gianfranco e Luca coprono fattibilità, cambiamenti e acquisti. Il profilo primario cambia insieme al punto di partenza della soluzione, conservando i quattro scenari.
 
@@ -44,12 +44,12 @@ Nello scenario L manca un ingrediente della preparazione prevista. Luca può con
 ## Confini e possibilità da approfondire
 
 - **Spesa:** inclusa nel focus attraverso B04. Considerare anche costo e impegno di una spesa aggiuntiva; acquistare meno non è sempre la scelta migliore.
-- **Sport:** il [caso S-Sport](approfondimento-sportivo-simulato.md) esplora la riorganizzazione dei pasti dopo un cambiamento dell'orario di allenamento. Rimane una simulazione progettuale; l'ottimizzazione della prestazione o dei nutrienti non è il centro della soluzione.
+- **Sport:** una variante ipotetica esplora la riorganizzazione dei pasti dopo un cambiamento dell'orario di allenamento. Rimane una simulazione progettuale; l'ottimizzazione della prestazione o dei nutrienti non è il centro della soluzione.
 - **Mascotte, personalizzazione, informazioni nutrizionali e possibile AI:** spunti per la futura realizzazione, da valutare rispetto al beneficio nel percorso. Non sono richieste emerse dalle interviste né scelte tecniche già confermate.
 - **Beneficio e novità:** rendere comprensibili le conseguenze su ingredienti, pasti e acquisti è l'ipotesi da verificare. Il [confronto documentale](confronto-soluzioni-esistenti.md) mostra sovrapposizioni con prodotti esistenti; non dimostra unicità o efficacia.
 
 ## Stato della sintesi
 
-Il [confronto del gruppo](../report/confronto-gruppo.md) è documentato con contributi di tutti i componenti, preferenze, motivazioni e immagini. Nome, ragione della scelta e value proposition sono definiti. Il diario reale P02 e l'analisi sono integrati; la simulazione sportiva resta separata.
+Il [confronto del gruppo](confronto-gruppo.md) è documentato con contributi di tutti i componenti, preferenze, motivazioni e immagini. Nome, ragione della scelta e value proposition sono definiti. Il diario reale P02 e l'analisi sono integrati; la simulazione sportiva resta separata.
 
 La [presentazione](../presentazione/README.md) segue l'ordine delle evidenze prima delle scelte. La verifica conclusiva riguarda leggibilità, corrispondenza delle fonti e collegamenti della repo.
