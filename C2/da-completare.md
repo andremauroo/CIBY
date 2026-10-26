@@ -1,32 +1,25 @@
-# Cosa manca per chiudere la C2
+# Verifica conclusiva C2
 
-**Aggiornamento del 26 ottobre 2026, dopo l'integrazione del diario P02.**
+**26 ottobre 2026 · Contenuti consolidati dopo i pareri del gruppo.**
 
-## Materiali già integrati
+## Completato
 
-- [Diario P02 del 21–26 ottobre](report/P02-diario.md), con metodo, contesti, [appunti](report/P02-diario-originale.md), evidenze e chiarimento sul rinvio.
-- [Analisi tematica C1–C2](report/analisi-tematica.md), con impatto su bisogni, personas, scenari e direzione D3.
-- Contributi nelle aree di tutti i sei componenti, incluse le [tre idee di Emanuele](preparazione/brainstorming-e-scelta.md#idee-individuali).
-- Nome CIBY, motivazione e [value proposition](preparazione/value-proposition.md).
+- Diario reale P02, trascrizione, metodo e analisi C1–C2.
+- Otto bisogni discussi e selezione B01–B04 con fonti, accorpamenti e differenze di posizione.
+- Tre personas, Marta primaria per D1, e quattro scenari concettuali.
+- Idee di tutti i sei componenti, preferenze motivate e confronto conclusivo documentato.
+- D1 come punto di partenza, con fattibilità D2 e adattamento D3 nel percorso.
+- Soluzione in due frasi, confronto con prodotti esistenti, nome e value proposition.
+- Screenshot conclusivi, conservando tutti i post-it e le immagini delle fasi precedenti.
 
-## 1. Confronto conclusivo del gruppo
+## Revisione della presentazione
 
-Registrare metodo ed esito effettivo del confronto sulle soluzioni, con ragioni e alternative considerate. La [scheda](report/confronto-gruppo.md) raccoglie i materiali da confrontare. Non serve aggiungere una riunione formale solo per documentarla: conserviamo le tracce del confronto realmente svolto.
+La presentazione comprende 31 slide: 23 di contenuto, sei di appendice e due finali di riferimenti. Abbiamo rivisto copertina, allineamento dei nomi, formulazioni e impaginazione. I richiami alle appendici indicano le schede nelle slide 24–26; il collegamento Figma è cliccabile nella slide 30.
 
-Restano da chiudere:
+La versione aggiornata dell’area di Andrea contiene soltanto i tre post-it rossi originali. La value proposition conclusiva è:
 
-- B01 come punto di partenza quotidiano e D3 come supporto dopo un cambiamento.
-- Il ruolo di B04: decisione distinta sulle quantità oppure parte di B03, tenendo conto delle posizioni diverse nei commenti.
-- Luca come persona primaria con questa organizzazione.
-- La soluzione conclusiva in 1–3 frasi e le ragioni della sua scelta rispetto alle alternative e ai prodotti confrontati.
+> Con CIBY scegli cosa preparare con quello che hai, anche quando cambiano i programmi.
 
-Il diario aggiunge un rinvio riuscito. Non dimostra bisogno di un'app in quell'episodio né conferma nuovi sprechi o quantità eccessive: il confronto deve conservare questa distinzione.
+Il [PDF C2](presentazione/CIBY-C2.pdf) e la versione modificabile sono collegati dalla [pagina C2](README.md). La presenza sulla repo non implica l’invio a eventuali altre piattaforme del corso.
 
-## 2. Immagini e chiusura dei materiali
-
-1. Acquisire gli screenshot conclusivi dei bisogni e delle idee, includendo i nuovi contributi e l'esito del confronto. I post-it originali restano intatti; le immagini delle fasi precedenti sono archiviate.
-2. Trasferire metodo, esito e motivazioni nella presentazione. I contenuti del nuovo needfinding e dell'analisi sono già inseriti.
-3. Rivedere la coerenza tra dati, bisogni, personas, scenari, soluzione e frase di beneficio. Rimuovere le indicazioni di attesa effettivamente risolte.
-4. Controllare tutte le pagine del PDF definitivo e pubblicarlo nella cartella presentazione, collegandolo dalla pagina C2.
-
-Le cartelle sono predisposte. Prototipo, storyboard, mascotte realizzata e implementazione AI non sono richiesti per questa consegna. Lo sport resta un contesto esplorativo; il caso simulato è distinto dal nuovo diario reale.
+I controlli su file e collegamenti accompagnano la pubblicazione. Non servono nuove interviste, una persona sportiva o un prototipo per completare questi materiali. Lo sport rimane una simulazione progettuale distinta dal diario reale.

@@ -1,3 +1,5 @@
+> Versione precedente al confronto conclusivo. Per la revisione e la consegna usare il [PDF C2 aggiornato](../CIBY-C2.pdf) e la [versione modificabile](../CIBY-C2.pptx). I contenuti di questa cartella conservano la fase di lavoro precedente.
+
 # Presentazione C2: bozza di lavoro
 
 **CIBY · MAGGICAL · 26 ottobre 2026**
@@ -21,4 +23,4 @@ Le immagini provengono dalla board al 26 ottobre e mostrano anche proposte ancor
 - Slide 19: metodo effettivo ed esito motivato della selezione.
 - Eventuali revisioni delle priorità, della persona primaria e della soluzione alla luce dei nuovi materiali.
 
-La lista dettagliata e i materiali da integrare sono in [Da completare](../../da-completare.md). Questa bozza non è il PDF definitivo della consegna.
+La lista dettagliata e i materiali da integrare sono in [Verifica conclusiva](../../da-completare.md). Questa bozza non è il PDF definitivo della consegna.

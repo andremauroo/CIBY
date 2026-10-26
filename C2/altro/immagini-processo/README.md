@@ -1,6 +1,6 @@
 # Immagini del processo
 
-**Immagini acquisite il 26 ottobre 2026.** Le prime sei documentano una fase in cui la board conteneva 76 post-it. La sintesi con la motivazione del nome è stata acquisita successivamente, con 94 post-it presenti nella board. Tutti sono rimasti intatti durante gli aggiornamenti delle sintesi. Le immagini non documentano un confronto già concluso.
+**Immagini acquisite il 26 ottobre 2026.** Le prime sei documentano una fase in cui la board conteneva 76 post-it. La sintesi con la motivazione del nome è stata acquisita successivamente, con 94 post-it presenti nella board. Tutti sono rimasti intatti durante gli aggiornamenti delle sintesi. Le prime immagini non documentano il confronto conclusivo: la sezione finale raccoglie la fase aggiornata.
 
 | Immagine | Che cosa mostra | Fonte nella board |
 |---|---|---|
@@ -30,3 +30,31 @@ Dopo i contributi mancanti conserveremo nuove immagini con nomi distinti, manten
 ## Integrazione del diario
 
 [Diario P02 e analisi C1–C2](diario-p02-analisi-2026-10-26.png): area 121:374 aggiornata con metodo, rinvio della bowl, codici e impatto sui bisogni. Il 26 ottobre i 107 post-it presenti sono rimasti invariati durante l'aggiornamento delle sole sintesi. La [scheda dell'attività](../../report/P02-diario.md) e l'[analisi](../../report/analisi-tematica.md) conservano i riferimenti completi.
+
+## Immagini conclusive
+
+Screenshot del 26 ottobre, dopo i contributi del gruppo e il consolidamento D1. Tutti i 118 post-it sono rimasti invariati. Sono stati aggiornati soltanto i testi di sintesi e il riquadro conclusivo, senza spostare i commenti.
+
+| Immagine | Contenuto |
+|---|---|
+| [Otto candidati](bisogni-candidati-finale-2026-10-26.png) | Tutti i bisogni discussi, risposte specifiche e commenti originali |
+| [Confronto sui bisogni](bisogni-confronto-finale-2026-10-26.png) | Sintesi B01–B04 e proposte in bozza conservate |
+| [Andrea](idee-andrea-finale-2026-10-26.png) | Spunti sportivi originali e bozze gialle distinte |
+| [Marco](idee-marco-finale-2026-10-26.png) | Ingredienti disponibili, modularità e benefici attesi |
+| [Gabriele](idee-gabriele-finale-2026-10-26.png) | Consapevolezza, informazioni e consumo prima di una partenza |
+| [Rime](idee-rime-finale-2026-10-26.png) | Sostituzioni, quantità e tempo |
+| [Emanuele](idee-emanuele-finale-2026-10-26.png) | Poche informazioni iniziali, revisione e pasti vicini |
+| [Edoardo](idee-edoardo-finale-2026-10-26.png) | Scorte, scambio di pasti e preparazioni rapide |
+| [Direzioni e preferenze](preferenze-soluzioni-finale-2026-10-26.png) | D1–D3 con tutti i pareri di scelta, compresi quelli esterni alle sezioni |
+| [Sintesi della soluzione](sintesi-soluzione-finale-2026-10-26.png) | D1, descrizione, motivazioni, nome e value proposition |
+| [Personas e scenari](personas-consolidate-finale-2026-10-26.png) | Allineamento dei ruoli e quattro scenari |
+
+L'immagine delle preferenze è un ritaglio dello screenshot della pagina intera: conserva la disposizione originale, inclusi i post-it esterni alle tre sezioni. Non sono stati ricomposti o aggiunti voti. Le altre immagini inquadrano le singole aree della board. Le correzioni a due didascalie hanno evitato sovrapposizioni, mantenendo intatti i contributi.
+
+Le immagini conservano anche affermazioni iniziali sui benefici o sulla necessità dell'AI. Rimangono proposte dei componenti, non risultati validati. Il [confronto del gruppo](../../report/confronto-gruppo.md) esplicita le scelte finali.
+
+## Aggiornamento del riquadro di Andrea
+
+[Idee di Andrea, 27 ottobre](idee-andrea-2026-10-27.png): nuova cattura dell’area 101:238, dopo la revisione della board da parte del gruppo. Contiene soltanto i tre post-it rossi originali. La slide sulle idee individuali usa questa immagine; le catture precedenti conservano le fasi preparatorie.
+
+La value proposition visibile nelle catture del 26 ottobre appartiene a quella fase. La formulazione conclusiva è riportata nel [documento dedicato](../../preparazione/value-proposition.md), nella presentazione e nella board aggiornata.

@@ -1,3 +1,5 @@
+> Registro della fase del 25 ottobre. Il successivo [confronto del gruppo](../report/confronto-gruppo.md) ha portato a D1 e all’allineamento di Marta come persona primaria. Il testo seguente conserva le decisioni della fase precedente.
+
 # Consolidamento Figma di personas e scenari
 
 **CIBY / MAGGICAL - 25 ottobre 2026**

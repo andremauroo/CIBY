@@ -1,3 +1,5 @@
+> Registro della fase del 25 ottobre. Il successivo [confronto del gruppo](../report/confronto-gruppo.md) ha portato a D1 e all’allineamento di Marta come persona primaria. Il testo seguente conserva le decisioni della fase precedente.
+
 # Revisione Figma del 25 ottobre 2026
 
 Board verificata: [Compito 2 - Dai report a personas e scenari](https://www.figma.com/board/Aa9cVd9wI6ifqZyzO30I9m/Compito-2).

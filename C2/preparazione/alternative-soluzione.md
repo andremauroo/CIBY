@@ -1,10 +1,10 @@
 # Alternative concettuali per CIBY
 
-**MAGGICAL - Preparazione del 25 ottobre 2026**
+**MAGGICAL - Alternative del 25 ottobre, scelta aggiornata il 26 ottobre 2026**
 
 [Spazio di confronto in Figma](https://www.figma.com/board/Aa9cVd9wI6ifqZyzO30I9m/Compito-2?node-id=101-228)
 
-Otto spunti e tre direzioni preparati sui quattro scenari consolidati. Sono proposte per ampliare il confronto, non idee attribuite ai singoli membri né alternative già votate. Abbiamo discusso soprattutto a voce, affiancando poi le tracce della board. Gli spunti di mascotte e informazioni nutrizionali sono registrate in [Focus e decisioni](focus-e-decisioni.md); i commenti Figma alla revisione sono nel [registro del consolidamento](consolidamento-figma-2026-10-25.md).
+Otto spunti e tre direzioni preparati sui quattro scenari consolidati. Sono proposte per ampliare il confronto, distinti dalle idee individuali; la scelta successiva è documentata nel report del confronto. Abbiamo discusso soprattutto a voce, affiancando poi le tracce della board. Gli spunti di mascotte e informazioni nutrizionali sono registrate in [Focus e decisioni](focus-e-decisioni.md); i commenti Figma alla revisione sono nel [registro del consolidamento](consolidamento-figma-2026-10-25.md).
 
 ## Da scenari a spunti
 
@@ -97,23 +97,13 @@ Questo è un ragionamento progettuale, non un punteggio di usabilità né l'esit
 | L / B03 - Ingrediente mancante | Recupero guidato da ciò che resta da usare | Recupero guidato dall'impegno sostenibile | Punto di partenza centrale: confrontare adattamento e rinvio |
 | A / B04 - Quantità prima della spesa | Considerare le scorte prima di aggiungere acquisti | Valutare quanto si riuscirà a preparare | Confrontare acquisti rispetto a occasioni confermate e incerte |
 
-## Direzione di lavoro: D3
+## Direzione scelta: D1
 
-D3 è la direzione attualmente sviluppata. La motivazione progettuale della proposta è il collegamento con i due bisogni principali della persona primaria Luca: adattamento B03 e quantità B04. B01 e B02 permettono di riconoscere le priorità e confrontare la fattibilità delle alternative.
+I post-it di preferenza convergono su D1 per partire dagli alimenti disponibili e individuare un utilizzo concreto. D2 contribuisce alla scelta rispetto a tempo e impegno; D3 alla possibilità di adattare o rinviare la preparazione. Il [confronto del gruppo](../report/confronto-gruppo.md) documenta ragioni e differenze di posizione, compreso il valore dato da Rime a D3.
 
-La differenza da esplorare è rendere comprensibili le conseguenze di una modifica: cosa si riesce ancora a preparare, quali ingredienti restano senza destinazione e cosa cambia nei successivi acquisti. Non serve assumere un piano rigido per l'intera settimana.
+> CIBY aiuta chi gestisce i propri pasti a dare agli alimenti già disponibili un utilizzo nei prossimi pasti, scegliendo preparazioni compatibili con tempo, impegno e abitudini. Quando i programmi cambiano, sostiene il confronto fra adattare e rinviare una preparazione, chiarendo che cosa resta da usare e che cosa occorre ancora acquistare.
 
-**Soluzione concettuale in due frasi:**
-
-> CIBY sostiene chi gestisce i propri pasti nel rivedere l'uso degli ingredienti quando cambia una preparazione o un'occasione di consumo. Aiuta a confrontare alternative praticabili e comprenderne le conseguenze sugli ingredienti rimasti, sui pasti successivi e sulle quantità ancora da acquistare.
-
-La [scheda della soluzione](soluzione-concettuale.md) chiarisce i collegamenti ai quattro bisogni. Le idee mancanti, il metodo e l'esito effettivo del confronto conclusivo restano da documentare.
-
-## Contributi del 26 ottobre
-
-Nel [registro delle idee individuali](brainstorming-e-scelta.md#idee-individuali) sono ora collegati gli spunti reali di Andrea sul contesto sportivo e quelli di Marco su ingredienti disponibili, benefici attesi e adattabilità. Tre ulteriori bozze preparate per Andrea restano da rivedere e confermare.
-
-I [commenti sui bisogni](brainstorming-bisogni.md#commenti-e-pareri-disponibili) danno priorità a B01 e alla relazione con B02; Marco propone di trattare la spesa dopo gli altri aspetti. Il confronto deve chiarire come questi contributi si rapportino a D1-D3. D3 rimane la direzione di lavoro; l'esito conclusivo del confronto è ancora da registrare.
+La [scheda della soluzione](soluzione-concettuale.md) collega il percorso ai quattro bisogni. La persona primaria diventa Marta, coerentemente con il punto di partenza B01. La spesa entra quando occorre valutare quantità effettivamente necessarie.
 
 ## Che cosa è già documentato nei prodotti esistenti
 
@@ -123,7 +113,7 @@ Riesame del 25 ottobre su fonti ufficiali:
 - Food+ descrive ricerca dagli ingredienti con priorità di consumo, piani personalizzati e suggerimenti di aggiornamento della lista degli alimenti. [Pagina ufficiale](https://samsungfood.com/foodplus-promo/uk/).
 - Sously descrive sostituzioni con proporzioni, conseguenze sul piatto e aggiornamento della preparazione. [Guida ufficiale](https://www.sously.app/help/substitute-ingredients/).
 
-Perciò ricette, priorità e sostituzioni da sole non bastano a motivare la novità di CIBY. D3 è un'ipotesi di differenziazione da verificare sul percorso completo. Non sono state provate le app e una funzione non individuata nella documentazione non viene classificata come assente. Il [confronto esteso](confronto-soluzioni-esistenti.md) conserva limiti e domande aperte.
+Perciò ricette, priorità e sostituzioni da sole non bastano a motivare la novità di CIBY. Il confronto fra utilizzo immediato, adattamento e rinvio è l'ipotesi da verificare nel percorso completo di D1. Non sono state provate le app e una funzione non individuata nella documentazione non viene classificata come assente. Il [confronto esteso](confronto-soluzioni-esistenti.md) conserva limiti e domande aperte.
 
 ## Sport, mascotte e AI nel confronto
 
@@ -132,18 +122,10 @@ Perciò ricette, priorità e sostituzioni da sole non bastano a motivare la novi
 - **Informazioni nutrizionali:** interesse emerso nella discussione di progetto, da trattare come possibile supporto alla comprensione degli alimenti. P04 non chiede maggiore precisione; non si presume una domanda generale di monitoraggio.
 - **AI:** possibile mezzo di realizzazione da valutare successivamente, distinguendo il supporto desiderato dalla tecnologia scelta.
 
-## Come completare la documentazione del confronto
+## Documentazione del confronto
 
-Raccogliere prima le idee effettive dei componenti, anche ricostruendo quanto discusso a voce e facendone confermare la sintesi dagli autori. Gli spunti PRE possono ampliare la discussione, mantenendo la loro natura preparatoria.
+La board contiene idee di tutti i sei componenti e preferenze motivate sulle tre direzioni. Il [report](../report/confronto-gruppo.md) descrive il metodo asincrono effettivo, senza attribuire una quota di voti o categorie formali. Le [immagini](../altro/immagini-processo/README.md#immagini-conclusive) conservano il processo e le proposte in bozza.
 
-Per confrontare tre direzioni integrate, il **metodo delle quattro categorie** è una scelta pratica coerente con la consegna: ciascun membro assegna una o due idee a scelta razionale, potrebbe piacere di più, preferita, scommessa a lungo termine. Conservare le assegnazioni e le motivazioni.
+## Continuità dello spazio Figma
 
-In alternativa, i tre voti a testa vanno assegnati a tre idee diverse nell'insieme più ampio degli spunti e delle idee raccolte. Applicarli a sole tre alternative obbligherebbe ogni persona a votarle tutte.
-
-La descrizione in due frasi è disponibile; completare presenti, metodo, alternative, assegnazioni effettive, ragioni della decisione e immagini. Il [documento di processo](brainstorming-e-scelta.md) contiene le schede.
-
-## Stato dello spazio Figma
-
-Sei aree individuali da compilare, otto spunti preparatori e tre direzioni integrative. Non sono stati inseriti voti né attribuite ai colleghi proposte non documentate.
-
-Verifica alla creazione dell'area: tutti i 354 elementi precedenti, inclusi i 53 post-it, sono rimasti invariati. La successiva registrazione di D3 ha aggiornato soltanto la sintesi del confronto e aggiunto le due frasi della soluzione. Anche in questo aggiornamento i 53 post-it sono stati verificati invariati. I nuovi contenuti sono nell'area di confronto, sotto la sintesi di personas e scenari.
+La prima versione dell'area raccoglieva sei spazi individuali, otto spunti e tre direzioni; D3 era stata sviluppata come ipotesi di lavoro. Il confronto successivo ha spostato il punto di partenza su D1. Le immagini delle diverse fasi restano archiviate con nomi distinti. Nel consolidamento finale tutti i 118 post-it sono rimasti invariati; sono stati aggiornati i testi di sintesi.

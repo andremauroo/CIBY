@@ -12,16 +12,16 @@ Restringere il dominio del needfinding, approfondire i bisogni e definire una so
 |---|---|---|---|
 | Nuove attività con utenti, considerando il feedback C1 | p. 1, punto 1 | [Diario P02 del 21–26 ottobre](../report/P02-diario.md), metodo e contesti documentati | Raccolta e analisi completate; limiti degli appunti esplicitati |
 | Almeno un'attività con un utente immediato | p. 1, punto 1 | Nuovo diario dello stesso P02, che gestisce acquisti e pasti propri | Attività documentata, senza aggiungere un nuovo partecipante |
-| Integrare la nuova raccolta nell'analisi tematica | p. 1, punto 2 | [Analisi C1–C2](../report/analisi-tematica.md): estratti, codici, temi e impatto | Integrazione completata; recepire l'esito del confronto conclusivo |
-| Brainstorming su tutti i bisogni, documentato con immagini | p. 1, punto 2; p. 2, sezione 3a | [Otto candidati e raggruppamenti](brainstorming-bisogni.md), commenti e [immagini attuali](../altro/immagini-processo/README.md) | Esito conclusivo e aggiornamento delle immagini dopo i nuovi contributi |
-| Selezionare 3-4 bisogni consistenti, collegati a risposte specifiche | p. 1, punto 3; p. 2, sezione 3b | [B01-B04 con evidenze e confini](evidenze-e-bisogni.md) | Riesame con diario completato; esito conclusivo da registrare |
-| Specificare personas e uno scenario per ogni bisogno | p. 1, punto 4 | [Tre personas e quattro scenari](personas-e-scenari.md) | Riesame con diario documentato; eventuali revisioni dopo il confronto |
-| Idee individuali di ciascun membro e confronto successivo | p. 1, punto 5 | [Contributi di tutti i sei componenti](brainstorming-e-scelta.md#idee-individuali), spunti preparatori e immagini | Ragioni ed esito del confronto, immagini conclusive |
+| Integrare la nuova raccolta nell'analisi tematica | p. 1, punto 2 | [Analisi C1–C2](../report/analisi-tematica.md): estratti, codici, temi e impatto | Integrazione e collegamento alla scelta D1 documentati |
+| Brainstorming su tutti i bisogni, documentato con immagini | p. 1, punto 2; p. 2, sezione 3a | [Otto candidati e raggruppamenti](brainstorming-bisogni.md), commenti e [immagini attuali](../altro/immagini-processo/README.md) | Otto candidati, commenti e immagini conclusive disponibili |
+| Selezionare 3-4 bisogni consistenti, collegati a risposte specifiche | p. 1, punto 3; p. 2, sezione 3b | [B01-B04 con evidenze e confini](evidenze-e-bisogni.md) | Quattro bisogni mantenuti; ragioni e posizioni diverse documentate |
+| Specificare personas e uno scenario per ogni bisogno | p. 1, punto 4 | [Tre personas e quattro scenari](personas-e-scenari.md) | Tre personas, Marta primaria per D1, quattro scenari |
+| Idee individuali di ciascun membro e confronto successivo | p. 1, punto 5 | [Contributi di tutti i sei componenti](brainstorming-e-scelta.md#idee-individuali), spunti preparatori e immagini | Sei componenti, preferenze motivate, ragioni e immagini documentati |
 | Soluzioni come attività da sostenere, senza dettagli tecnologici | p. 1, punto 5 | [Otto spunti e tre direzioni](alternative-soluzione.md) | Conservare questa distinzione nella selezione |
-| Selezionare una soluzione promettente puntando alla novità | pp. 1-2, punto 6 | D3 come direzione di lavoro, [confronto documentale](confronto-soluzioni-esistenti.md) e [scheda della selezione](../report/confronto-gruppo.md) | Metodo ed esito effettivi; differenziazione da motivare senza dichiararla dimostrata |
-| Descrivere la soluzione in 1-3 frasi | p. 2, sezione 4c | [Descrizione concettuale in due frasi](soluzione-concettuale.md) | Riesame dopo il confronto |
-| Nome di 1-2 parole, ragione della scelta e value proposition | p. 2, punto 7 e sezione 5 | [Nome CIBY, motivazione e frase di beneficio](value-proposition.md) | Nessuna integrazione specifica; eventuale riesame della frase di beneficio dopo il confronto |
-| Spazio C2 e presentazione PDF con cinque sezioni | p. 2, Cosa consegnare | Cartelle predisposte e [bozza PDF modificabile](../presentazione/bozza/README.md) | Integrazioni, verifica e pubblicazione del PDF definitivo |
+| Selezionare una soluzione promettente puntando alla novità | pp. 1-2, punto 6 | D1 come direzione scelta, [confronto documentale](confronto-soluzioni-esistenti.md) e [scheda della selezione](../report/confronto-gruppo.md) | Confronto asincrono con preferenze motivate, D1 e differenziazione come ipotesi |
+| Descrivere la soluzione in 1-3 frasi | p. 2, sezione 4c | [Descrizione concettuale in due frasi](soluzione-concettuale.md) | Descrizione allineata a D1 |
+| Nome di 1-2 parole, ragione della scelta e value proposition | p. 2, punto 7 e sezione 5 | [Nome CIBY, motivazione e frase di beneficio](value-proposition.md) | Nome motivato e frase coerente con D1 |
+| Spazio C2 e presentazione PDF con cinque sezioni | p. 2, Cosa consegnare | [Presentazione PDF e modificabile](../presentazione/README.md) | Materiali integrati; controlli visivi e dei collegamenti prima della pubblicazione |
 
 ## Requisiti da non aggiungere
 
@@ -34,7 +34,7 @@ Prototipo, storyboard, schermate dell'app e implementazione non sono richiesti i
 - Tre voti per persona, da assegnare a tre idee diverse.
 - In alternativa, quattro categorie: «scelta razionale», «quella che potrebbe piacere di più», «preferita», «scommessa a lungo termine». Ogni membro sceglie una o due idee da assegnare alle categorie.
 
-Documentiamo il metodo realmente usato. Con sole tre alternative, i tre voti distinti non le distinguerebbero: possiamo usare le categorie oppure votare sul ventaglio più ampio delle idee.
+Il gruppo ha usato preferenze motivate in modo asincrono su FigJam. I due metodi sono proposti dal compito come possibilità; non attribuiamo quote o categorie che non sono state applicate. Il [report](../report/confronto-gruppo.md) documenta i contributi e la convergenza su D1.
 
 ## Ordine della presentazione
 
@@ -44,6 +44,6 @@ L'introduzione può anticipare il dominio e la domanda di approfondimento, richi
 
 ## Chiusura
 
-La lista operativa è unica: [Da completare](../da-completare.md). Prima di chiamare il PDF consegna finale dobbiamo verificare che ogni riga della tabella sia coperta da materiali effettivi, che le indicazioni di attesa siano state risolte e che il file sia leggibile e raggiungibile dalla pagina C2.
+La lista operativa è unica: [Verifica conclusiva](../da-completare.md). La verifica tecnica controlla copertura delle richieste, assenza di attese superate, leggibilità delle pagine e collegamenti della repo. L’ultimo passaggio del gruppo è la lettura del PDF per eventuali correzioni puntuali.
 
 Riferimento teorico: **3 Requisiti-Personas-Scenari.pdf**, p. 5 sulla tracciabilità, pp. 15-17 sulle personas, pp. 21 e 27 sul contesto degli scenari e p. 29 sulla distinzione tra scenari concettuali e concreti.

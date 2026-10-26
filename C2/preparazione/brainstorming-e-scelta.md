@@ -4,7 +4,7 @@
 
 Abbiamo scelto il focus di gestione flessibile dei pasti e lavoriamo sui quattro bisogni B01-B04. La discussione è avvenuta soprattutto a voce, con scambi in chat e post-it. In questa cartella raccogliamo le tracce utilizzabili, senza ricostruire conteggi o presenze.
 
-D3 è la direzione attualmente sviluppata. Le alternative D1 e D2 rimangono nel confronto; l'esito conclusivo della selezione deve ancora essere documentato.
+Il confronto conclusivo converge su D1. D2 contribuisce alla fattibilità della preparazione e D3 all'adattamento dopo un cambiamento. Le preferenze restano collegate ai post-it nel [report del confronto](../report/confronto-gruppo.md).
 
 ## Bisogni e scenari di partenza
 
@@ -27,9 +27,6 @@ Le [schede dei bisogni](evidenze-e-bisogni.md) conservano risposte specifiche e 
 | Marco, spunto proprio | IM-01 | B01/B02 | Partire dagli alimenti disponibili in casa per individuare una preparazione | [Post-it](https://www.figma.com/board/Aa9cVd9wI6ifqZyzO30I9m/Compito-2?node-id=129-247) |
 | Marco, benefici attesi | IM-02 | Trasversale | Ridurre sprechi e tempo di scelta/preparazione; benefici da verificare | [Post-it](https://www.figma.com/board/Aa9cVd9wI6ifqZyzO30I9m/Compito-2?node-id=129-251) |
 | Marco, criterio di adattabilità | IM-03 | B02 e contesti | Adattare il supporto a necessità, capacità e preferenze | [Post-it](https://www.figma.com/board/Aa9cVd9wI6ifqZyzO30I9m/Compito-2?node-id=129-255) |
-| Bozza nell'area di Andrea | IA-01 | B01, Marta/M | Dare agli alimenti presenti una destinazione concreta partendo dalle priorità | [Bozza](https://www.figma.com/board/Aa9cVd9wI6ifqZyzO30I9m/Compito-2?node-id=134-313) |
-| Bozza nell'area di Andrea | IA-02 | B02, Gianfranco/G | Confrontare preparazioni rispetto a tempo, impegno e abitudini | [Bozza](https://www.figma.com/board/Aa9cVd9wI6ifqZyzO30I9m/Compito-2?node-id=134-317) |
-| Bozza nell'area di Andrea | IA-03 | B03/B04, Luca/L-A | Riassegnare gli ingredienti dopo un cambiamento e rivalutare gli acquisti | [Bozza](https://www.figma.com/board/Aa9cVd9wI6ifqZyzO30I9m/Compito-2?node-id=134-321) |
 | Gabriele, criterio di autonomia | IG-01 | Trasversale | Mantenere consapevolezza sulle scelte alimentari, imparando dal supporto senza delegarle interamente | [Post-it](https://www.figma.com/board/Aa9cVd9wI6ifqZyzO30I9m/Compito-2?node-id=161-308) |
 | Gabriele, spunto informativo | IG-02 | Possibile estensione | Approfondire gli alimenti acquistati o usati, dalle curiosità alle informazioni sull'energia fornita | [Post-it](https://www.figma.com/board/Aa9cVd9wI6ifqZyzO30I9m/Compito-2?node-id=161-312) |
 | Gabriele, spunto proprio | IG-03 | B01/B03, partenza per una vacanza | Distribuire il consumo di ciò che è in frigorifero prima della partenza | [Post-it](https://www.figma.com/board/Aa9cVd9wI6ifqZyzO30I9m/Compito-2?node-id=161-316) |
@@ -43,9 +40,9 @@ Le [schede dei bisogni](evidenze-e-bisogni.md) conservano risposte specifiche e 
 | Edoardo, spunto proprio | IE-02 | B03, Luca/L | Scambiare due pasti previsti quando manca un ingrediente, rinviando la preparazione interessata | [Post-it](https://www.figma.com/board/Aa9cVd9wI6ifqZyzO30I9m/Compito-2?node-id=175-381) |
 | Edoardo, beneficio atteso | IE-03 | B01/B02, Marta/M | Sostenere l'uso degli alimenti con preparazioni rapide; la riduzione dello spreco rimane un beneficio da verificare | [Post-it](https://www.figma.com/board/Aa9cVd9wI6ifqZyzO30I9m/Compito-2?node-id=175-386) |
 
-Gli spunti sono parafrasati e collegati agli originali. Le tre proposte IA restano bozze da discutere; non vengono conteggiate come contributi individuali già adottati.
+Gli spunti sono parafrasati e collegati agli originali. L’area di Andrea mostra i tre spunti originali sullo sport. La cattura aggiornata del 27 ottobre sostituisce nelle slide quella della fase preparatoria.
 
-Alla rilettura del 26 ottobre sono presenti contributi nelle aree di tutti i sei componenti, incluse le tre idee EM-01–EM-03 di Emanuele. Le nuove proposte ampliano il confronto, senza costituire da sole un esito della selezione. Informazioni nutrizionali e consumo prima di una vacanza sono spunti progettuali, non risultati di nuove interviste.
+Alla rilettura del 26 ottobre sono presenti contributi nelle aree di tutti i sei componenti, incluse le tre idee EM-01–EM-03 di Emanuele. Le idee sono seguite dai post-it di preferenza sulle tre direzioni. Informazioni nutrizionali e consumo prima di una vacanza sono spunti progettuali, non risultati di nuove interviste.
 
 Il compito richiede idee per ogni scenario e un'elaborazione individuale di ciascun componente. Completando il confronto controlliamo entrambe le coperture. Traduciamo eventuali proposte tecniche nell'attività che intendono sostenere, conservando l'idea originale.
 
@@ -65,18 +62,18 @@ Questi spunti ampliano il confronto e rimangono distinti dalle idee dei singoli 
 
 ## Ragioni e selezione
 
-D3 collega soprattutto Luca e B03/B04, con B01/B02 per priorità e fattibilità. I commenti sui bisogni danno rilievo a B01 e suggeriscono di mantenere la spesa come passaggio successivo. Il confronto deve chiarire come questa priorità si combina con D3.
+Il confronto asincrono su FigJam usa preferenze motivate. D1 raccoglie convergenza per utilità quotidiana, ingredienti già disponibili e relazione fra gestione e organizzazione dei pasti. Rime valorizza anche D3 per adattarsi ai cambiamenti. D2 rimane utile per il poco tempo di Gianfranco; Edoardo considera D3 più utile come integrazione alle altre direzioni.
 
-Una lettura possibile parte dagli alimenti disponibili, confronta preparazioni fattibili e sostiene la revisione quando cambia un pasto. Gli acquisti entrano quando occorre valutare quantità ancora necessarie. La descrizione resta una proposta da discutere, senza anticipare voti o assegnazioni.
+La [sintesi con tutti i sei componenti](../report/confronto-gruppo.md#preferenze-e-ragioni) collega ciascuna posizione al post-it originale. Non abbiamo applicato una quota di voti o categorie formali e non costruiamo un conteggio aggregato a partire dai commenti.
 
-Per la selezione usiamo uno dei metodi del punto 6 del compito: tre voti su tre idee diverse, oppure quattro categorie. La [scheda del confronto](../report/confronto-gruppo.md) è predisposta per registrare modalità, contributi, ragioni ed esito effettivi.
-
-Il [confronto documentale](confronto-soluzioni-esistenti.md), aggiornato al 26 ottobre, mostra sovrapposizioni con prodotti esistenti. La possibile differenziazione riguarda le conseguenze di una revisione su ingredienti, occasioni successive e acquisti; non è una novità già dimostrata.
+La soluzione parte quindi da B01, usa B02 per valutare la fattibilità e sostiene B03 quando cambia il pasto. B04 entra per le quantità prima dell'acquisto. Manteniamo quattro bisogni, con Marta primaria per il nuovo punto di partenza. Il [confronto documentale](confronto-soluzioni-esistenti.md) mostra che ricette, priorità e sostituzioni da sole sono già supportate: approfondiamo il confronto delle conseguenze sui pasti vicini e sugli acquisti.
 
 ## Soluzione, nome e value proposition
 
-La [soluzione concettuale](soluzione-concettuale.md) descrive D3 in due frasi. Il nome **CIBY** richiama il cibo e ha un suono amichevole, legato alla possibilità di una futura mascotte o di un elemento caratteristico che possa portare questo nome. La [motivazione](value-proposition.md#perché-ciby) è raccolta insieme alla value proposition.
+> CIBY aiuta chi gestisce i propri pasti a dare agli alimenti già disponibili un utilizzo nei prossimi pasti, scegliendo preparazioni compatibili con tempo, impegno e abitudini. Quando i programmi cambiano, sostiene il confronto fra adattare e rinviare una preparazione, chiarendo che cosa resta da usare e che cosa occorre ancora acquistare.
 
-> CIBY ti aiuta a scegliere cosa preparare con gli alimenti che hai, adattando pasti e acquisti quando cambiano i programmi.
+**CIBY** richiama il cibo e ha un suono amichevole, legato alla possibile futura mascotte o a un elemento caratteristico. [Motivazione](value-proposition.md#perché-ciby).
 
-La [value proposition](value-proposition.md) rimane coerente con la lettura del diario; il confronto conclusivo potrà precisarla. Le integrazioni aperte sono in [Da completare](../da-completare.md).
+> Con CIBY scegli cosa preparare con quello che hai, anche quando cambiano i programmi.
+
+Le [immagini conclusive](../altro/immagini-processo/README.md#immagini-conclusive) comprendono tutte le aree individuali e le preferenze sulle direzioni. I post-it conservano le proposte iniziali e i benefici attesi, senza trasformarli in risultati della ricerca.

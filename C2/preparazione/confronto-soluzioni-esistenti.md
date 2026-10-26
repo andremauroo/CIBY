@@ -6,7 +6,7 @@
 
 La ricerca dagli ingredienti, la priorità di consumo, la pianificazione e l'adattamento di ricette sono già documentati da prodotti esistenti. Anche una gestione flessibile delle date dei pasti non basta, da sola, a sostenere la novità di CIBY.
 
-Il compito da approfondire è il confronto delle conseguenze di un cambiamento sull'uso degli ingredienti, sulle occasioni successive e sugli acquisti. È un'ipotesi progettuale collegata a B03/B04 e alla direzione di lavoro D3, con B01/B02 per priorità e fattibilità. Non è un vantaggio già dimostrato.
+Il compito da approfondire è il confronto delle conseguenze di un cambiamento sull'uso degli ingredienti, sulle occasioni successive e sugli acquisti. È un'ipotesi progettuale che integra l'adattamento D3 nel percorso scelto D1: dagli alimenti disponibili al prossimo utilizzo, con B02 per la fattibilità e B04 per gli acquisti. Non è un vantaggio già dimostrato.
 
 ## Metodo
 

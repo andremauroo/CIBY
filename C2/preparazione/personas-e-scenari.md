@@ -1,6 +1,6 @@
 # Personas e scenari consolidati
 
-**CIBY / MAGGICAL - Consolidamento del 25 ottobre, integrazione del diario il 26 ottobre 2026**
+**CIBY / MAGGICAL - Consolidamento del 25 ottobre, diario e allineamento a D1 il 26 ottobre 2026**
 
 [Apri la sintesi consolidata in Figma](https://www.figma.com/board/Aa9cVd9wI6ifqZyzO30I9m/Compito-2?node-id=91-228)
 
@@ -12,13 +12,13 @@ L'area originale con profili, scenari e post-it è rimasta intatta. La versione 
 
 | Persona | Obiettivo distintivo | Bisogni principali | Ruolo |
 |---|---|---|---|
-| Luca | Riorganizzare pasti e ingredienti, valutando anche quantità e occasioni prima dell'acquisto | B03 e B04 | Primaria |
+| Luca | Riorganizzare pasti e ingredienti, valutando anche quantità e occasioni prima dell'acquisto | B03 e B04 | Complementare |
 | Gianfranco | Arrivare a una preparazione praticabile nella situazione del momento | B02 | Complementare |
-| Marta | Mantenere visibili anche gli alimenti fuori routine nella preparazione anticipata | B01 | Complementare |
+| Marta | Mantenere visibili anche gli alimenti fuori routine nella preparazione anticipata | B01 | Primaria |
 
-Luca è la persona primaria di lavoro perché collega l'adattamento dopo un imprevisto (B03) con la valutazione delle quantità prima dell'acquisto (B04). Questa scelta rende centrale il rapporto fra intenzioni, ingredienti e occasioni reali di consumo nel focus di gestione flessibile dei pasti. Gianfranco approfondisce la scelta quotidiana B02; Marta mette alla prova riconoscimento e priorità B01 in una routine già efficace.
+Il confronto sulle soluzioni converge su D1, che parte dagli alimenti disponibili. Allineiamo la priorità a **Marta**, perché B01 mette alla prova riconoscimento e uso anche in una routine già efficace. Gianfranco approfondisce la scelta praticabile B02; Luca conserva adattamento B03 e quantità B04.
 
-La priorità è una scelta progettuale motivata in questo consolidamento; non viene attribuita a una nuova votazione del gruppo o a una validazione con utenti.
+È un aggiornamento progettuale coerente con il punto di partenza scelto, non un voto separato sulle personas o una validazione con utenti. La precedente priorità di Luca corrispondeva alla fase in cui sviluppavamo D3.
 
 Nomi, età e dettagli narrativi caratterizzano archetipi; le immagini illustrative provengono dalle schede già presenti. I profili non sono trascrizioni di singoli partecipanti. Le scale numeriche di personalità del template non vengono riproposte nella sintesi: non sono misure empiriche e non aggiungono una distinzione utile ai compiti.
 
@@ -37,7 +37,7 @@ Nomi, età e dettagli narrativi caratterizzano archetipi; le immagini illustrati
 [Scheda consolidata in Figma](https://www.figma.com/board/Aa9cVd9wI6ifqZyzO30I9m/Compito-2?node-id=91-231) · [Scheda originale con post-it](https://www.figma.com/board/Aa9cVd9wI6ifqZyzO30I9m/Compito-2?node-id=10-54)
 
 **Archetipo:** Riorganizza pasti e acquisti.  
-**Ruolo:** Persona primaria.  
+**Ruolo:** Persona complementare.  
 **Contesto narrativo:** 21 anni, studente. Gestisce principalmente spesa e pasti personali.
 
 **Profilo:** Luca compra ingredienti pensando a come usarli e sa cercare preparazioni attraverso fonti che conosce. Quando un impegno cambia o una preparazione non è più fattibile, deve rivedere l'uso degli acquisti. Anche le confezioni possono superare ciò che riuscirà a consumare nei pasti effettivi.
@@ -100,8 +100,8 @@ Nomi, età e dettagli narrativi caratterizzano archetipi; le immagini illustrati
 
 [Scheda consolidata in Figma](https://www.figma.com/board/Aa9cVd9wI6ifqZyzO30I9m/Compito-2?node-id=91-279) · [Scheda originale con post-it](https://www.figma.com/board/Aa9cVd9wI6ifqZyzO30I9m/Compito-2?node-id=10-146)
 
-**Archetipo:** Organizza i pasti tra studio e lavoro.  
-**Ruolo:** Persona complementare.  
+**Archetipo:** Organizza oggi il pranzo di domani.  
+**Ruolo:** Persona primaria.  
 **Contesto narrativo:** 26 anni, studia e lavora. Vive con il partner e gestisce buona parte dei pasti per due.
 
 **Profilo:** Marta prepara in anticipo il proprio pranzo da portare al lavoro e si affida a prodotti e piatti abituali. La routine contiene lo sforzo quotidiano; un alimento acquistato fuori dalle abitudini può però rimanere meno visibile. Vuole includerlo nelle preparazioni senza perdere la praticità della propria organizzazione.
@@ -218,7 +218,7 @@ Il diario del 21–26 ottobre aggiunge un rinvio riuscito e contesti concreti, s
 | Marta e scenario M/B01 | Schiscetta il 23 (E04) | Rafforza il contesto del pasto da portare. Non attesta dimenticanze, preparazione la sera prima o uso della stessa confezione |
 | Scenario A/B04 | Spesa giorno per giorno (M02) | Conserviamo la base C1 sulle quantità: formati e quantità non sono annotati nel diario |
 
-La nuova raccolta orienta il supporto verso i prossimi pasti e le occasioni effettive. La priorità di Luca rimane una scelta progettuale di lavoro, da chiudere nel confronto. Il [diario](../report/P02-diario.md) e l'[analisi integrata](../report/analisi-tematica.md) tengono distinti i dati dagli esiti desiderati degli scenari.
+La nuova raccolta orienta il supporto verso i prossimi pasti e le occasioni effettive. Il successivo confronto su D1 porta a usare Marta come persona primaria, conservando Luca per i contesti di B03/B04. Il [diario](../report/P02-diario.md) e l'[analisi integrata](../report/analisi-tematica.md) tengono distinti i dati dagli esiti desiderati degli scenari.
 
 ## Fonti
 

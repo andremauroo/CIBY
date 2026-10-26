@@ -45,7 +45,7 @@ Le dimenticanze di B01 e le confezioni eccessive di B04 rimangono fondate sulle 
 | B01 — disponibilità e priorità | Nessuna nuova prova diretta di dimenticanza o priorità | Formulazione ed evidenze C1 conservate; esplicitato il limite del diario |
 | B02 — pasto praticabile | Contesti e preparazioni concretizzati, senza dati su tempo o fatica | Aggiunti E03/E04/E10; C07 resta un contesto di B02/B03 |
 | B03 — riorganizzazione | Episodio datato di rinvio riuscito | Aggiunti E05/E07 e C01; conservato il funzionamento della strategia attuale |
-| B04 — quantità e occasioni | La spesa quotidiana descrive il metodo, non le quantità | Base C1 conservata. Ruolo distinto o collegato a B03 da chiudere nel confronto del gruppo |
+| B04 — quantità e occasioni | La spesa quotidiana descrive il metodo, non le quantità | Base C1 conservata. Distinto da B03 nella sintesi, per il momento prima dell’acquisto; differenza di posizione documentata nel confronto |
 | Personas | Non emerge un nuovo archetipo | Luca conserva il collegamento con B03; il rinvio riuscito non giustifica un profilo incapace di adattarsi. La priorità rimane una scelta progettuale |
 | Scenari | Quattro scenari concettuali mantenuti | Esplicitato che il diario sostiene un rinvio senza causa nota, non il dettaglio dell'ingrediente mancante dello scenario L |
 | Direzione D3 | Pertinente all'attività, senza validazione della soluzione | Il confronto riguarda adattamento o rinvio dei prossimi pasti; benefici e novità restano da verificare |
@@ -56,3 +56,7 @@ Le dimenticanze di B01 e le confezioni eccessive di B04 rimangono fondate sulle 
 > Il diario di P02 rende più concreto il legame fra pasti vicini: una bowl prevista venerdì viene consumata sabato, mentre nella settimana compaiono schiscetta, mensa e pasti condivisi. L'adattamento riesce già nella routine. Per CIBY approfondiamo quindi come sostenere la revisione dei prossimi pasti, rispettando le strategie efficaci; il diario non aggiunge prove su sprechi o quantità eccessive.
 
 Le note del diario vengono presentate prima delle implicazioni per bisogni e soluzione. Non introduciamo un quinto bisogno né una nuova persona; integriamo il grado di sostegno disponibile per B01–B04.
+
+## Collegamento alla scelta successiva
+
+Il confronto delle soluzioni converge su D1, dal cibo disponibile al prossimo utilizzo. Gli approfondimenti del diario contribuiscono alla continuità fra pasti e alla possibilità di rinviare il consumo nel percorso di D1. Il diario non è la causa della preferenza del gruppo né valida la soluzione. La persona primaria viene allineata a Marta per B01; Luca conserva i compiti di B03/B04. [Confronto e motivazioni](confronto-gruppo.md).

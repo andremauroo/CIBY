@@ -1,28 +1,26 @@
 # Soluzione concettuale CIBY
 
-**MAGGICAL · D3 come direzione di lavoro · 26 ottobre 2026**
+**MAGGICAL · D1 come direzione scelta · 26 ottobre 2026**
 
 [Soluzione e stato del confronto in Figma](https://www.figma.com/board/Aa9cVd9wI6ifqZyzO30I9m/Compito-2?node-id=102-354)
 
 ## Descrizione concettuale
 
-> CIBY sostiene chi gestisce i propri pasti nel rivedere l'uso degli ingredienti quando cambia una preparazione o un'occasione di consumo. Aiuta a confrontare alternative praticabili e comprenderne le conseguenze sugli ingredienti rimasti, sui pasti successivi e sulle quantità ancora da acquistare.
+> CIBY aiuta chi gestisce i propri pasti a dare agli alimenti già disponibili un utilizzo nei prossimi pasti, scegliendo preparazioni compatibili con tempo, impegno e abitudini. Quando i programmi cambiano, sostiene il confronto fra adattare e rinviare una preparazione, chiarendo che cosa resta da usare e che cosa occorre ancora acquistare.
 
-La formulazione contiene due frasi e descrive l'attività da sostenere. Il punto di partenza è un'intenzione che cambia o diventa incerta: una preparazione non più fattibile, un pasto rinviato, una diversa disponibilità a cucinare. La persona confronta alternative e decide come usare gli ingredienti e cosa acquistare.
+La formulazione descrive in due frasi l’attività da sostenere. Il punto di partenza è un alimento disponibile, anche fuori dalla routine, a cui assegnare un utilizzo realistico. Le alternative tengono conto dell’impegno della persona e restano modificabili.
 
 ## Value proposition
 
-> CIBY ti aiuta a scegliere cosa preparare con gli alimenti che hai, adattando pasti e acquisti quando cambiano i programmi.
+> Con CIBY scegli cosa preparare con quello che hai, anche quando cambiano i programmi.
 
-Versione di lavoro del 26 ottobre. Il [registro dedicato](value-proposition.md) ne riporta significato e stato; l'[analisi del diario P02](../report/analisi-tematica.md) la mantiene coerente con la direzione di lavoro; il confronto del gruppo potrà precisarla.
+La frase approvata rimane coerente con D1 e con l'adattamento introdotto da D3. Il [registro](value-proposition.md) ne spiega il collegamento ai bisogni.
 
-## Perché D3
+## Perché D1
 
-La direzione collega i due bisogni principali della persona primaria Luca: riorganizzare ingredienti già acquistati (B03) e valutare le quantità dei nuovi acquisti rispetto alle occasioni realistiche di consumo (B04). Disponibilità e priorità (B01), insieme alla fattibilità della preparazione (B02), servono a rendere praticabile la nuova organizzazione.
+I pareri del gruppo valorizzano il punto di partenza quotidiano degli alimenti già presenti. D1 consente di riconoscere una priorità e trasformarla in una preparazione fattibile, mantenendo la possibilità di adattare o rinviare il consumo. D2 approfondisce tempo e impegno; D3 contribuisce alla riorganizzazione. Il [confronto documentato](../report/confronto-gruppo.md) conserva anche le preferenze alternative.
 
-D1 e D2 sono conservate nel [confronto delle alternative](alternative-soluzione.md). Riconoscere cosa usare prima e valutare il tempo e l'impegno restano contributi al percorso di D3. Il fulcro della soluzione scelta è comprendere le conseguenze di un cambiamento, senza richiedere un piano rigido per l'intera settimana.
-
-Questa è la motivazione progettuale della direzione attualmente sviluppata. Metodo ed esito del confronto conclusivo sulle alternative restano da documentare.
+Marta è la persona primaria per B01; Gianfranco e Luca coprono fattibilità, cambiamenti e acquisti. Il profilo primario cambia insieme al punto di partenza della soluzione, conservando i quattro scenari.
 
 ## Collegamenti ai quattro bisogni
 
@@ -50,12 +48,8 @@ Nello scenario L manca un ingrediente della preparazione prevista. Luca può con
 - **Mascotte, personalizzazione, informazioni nutrizionali e possibile AI:** spunti per la futura realizzazione, da valutare rispetto al beneficio nel percorso. Non sono richieste emerse dalle interviste né scelte tecniche già confermate.
 - **Beneficio e novità:** rendere comprensibili le conseguenze su ingredienti, pasti e acquisti è l'ipotesi da verificare. Il [confronto documentale](confronto-soluzioni-esistenti.md) mostra sovrapposizioni con prodotti esistenti; non dimostra unicità o efficacia.
 
-## Stato e passi ancora aperti
+## Stato della sintesi
 
-- Descrizione concettuale pronta in due frasi; D3 come direzione di lavoro.
-- Idee individuali, partecipanti, metodo, esito e immagini del confronto del gruppo da documentare nel [registro del processo](brainstorming-e-scelta.md).
-- Nome **CIBY**: richiamo al cibo e suono amichevole, collegato all'idea di una futura mascotte o di un elemento caratteristico con questo nome. [Motivazione completa](value-proposition.md#perché-ciby).
-- Value proposition di lavoro riesaminata con il diario; scelta conclusiva ancora da documentare.
-- [Diario P02](../report/P02-diario.md) ricevuto e analizzato: il rinvio della bowl è riuscito e non documenta una difficoltà irrisolta. CIBY deve aggiungere valore alle strategie già presenti. [Bozza delle slide](../presentazione/bozza/README.md) aggiornata; confronto conclusivo e PDF definitivo ancora da completare.
+Il [confronto del gruppo](../report/confronto-gruppo.md) è documentato con contributi di tutti i componenti, preferenze, motivazioni e immagini. Nome, ragione della scelta e value proposition sono definiti. Il diario reale P02 e l'analisi sono integrati; la simulazione sportiva resta separata.
 
-La registrazione di D3 in Figma ha aggiornato la sintesi del confronto e aggiunto la descrizione concettuale. Tutti i 53 post-it sono rimasti invariati.
+La [presentazione](../presentazione/README.md) segue l'ordine delle evidenze prima delle scelte. La verifica conclusiva riguarda leggibilità, corrispondenza delle fonti e collegamenti della repo.

@@ -4,22 +4,23 @@
 
 Con la C2 approfondiamo la **gestione flessibile dei pasti**: riconoscere gli alimenti disponibili, scegliere una preparazione praticabile e riorganizzare ingredienti e acquisti quando cambiano i programmi. L'organizzazione intorno agli allenamenti rimane un contesto da esplorare.
 
-La presentazione è ancora una bozza. La lista unica delle integrazioni è in [Da completare](da-completare.md).
+La sintesi segue il confronto del gruppo: **D1, dagli alimenti disponibili al prossimo utilizzo**, con fattibilità e adattamento nel percorso. La [verifica conclusiva](da-completare.md) riassume i contenuti e le correzioni della presentazione.
 
 ## Presentazione
 
-- [Bozza PDF](presentazione/bozza/CIBY-C2-bozza.pdf).
-- [Versione modificabile](presentazione/bozza/CIBY-C2-bozza.pptx).
-- [Contenuti e integrazioni](presentazione/bozza/README.md).
+- [Presentazione PDF C2](presentazione/CIBY-C2.pdf).
+- [Versione modificabile](presentazione/CIBY-C2.pptx).
+- [Contenuti e ordine delle slide](presentazione/README.md).
+- [Board Figma del gruppo](https://www.figma.com/board/Aa9cVd9wI6ifqZyzO30I9m/Compito-2): bisogni, personas, scenari e confronto delle soluzioni.
 
-Il PDF definitivo sarà collegato qui dopo le integrazioni e il controllo finale.
+La versione precedente resta nell’archivio delle bozze. Per la revisione e la consegna usiamo i file collegati sopra.
 
 ## Struttura della cartella
 
 | Cartella | Contenuto |
 |---|---|
 | [presentazione](presentazione/README.md) | Slide PDF e versione modificabile |
-| [report](report/README.md) | Diario P02, analisi integrata C1–C2 e traccia del confronto conclusivo |
+| [report](report/README.md) | Diario P02, analisi integrata C1–C2 e documentazione del confronto conclusivo |
 | [altro](altro/README.md) | Immagini del processo e relativi riferimenti |
 | [preparazione](preparazione/requisiti-e-piano.md) | Evidenze, bisogni, personas, scenari e alternative |
 
@@ -35,12 +36,11 @@ Il PDF definitivo sarà collegato qui dopo le integrazioni e il controllo finale
 | [Idee e confronto](preparazione/brainstorming-e-scelta.md) | Contributi disponibili e percorso di selezione |
 | [Alternative](preparazione/alternative-soluzione.md) | Otto spunti e tre direzioni D1-D3 |
 | [Prodotti esistenti](preparazione/confronto-soluzioni-esistenti.md) | Confronto documentale con SuperCook, Samsung Food e Sously |
-| [Soluzione](preparazione/soluzione-concettuale.md) | Descrizione di D3 in due frasi e legame con i bisogni |
+| [Soluzione](preparazione/soluzione-concettuale.md) | Descrizione di D1 in due frasi e legame con i bisogni |
 | [Nome e value proposition](preparazione/value-proposition.md) | Motivazione del nome e beneficio che vogliamo comunicare |
 | [Scaletta](preparazione/scaletta-presentazione.md) | Ordine dei contenuti |
 | [Caso sportivo simulato](preparazione/approfondimento-sportivo-simulato.md) | Esplorazione progettuale distinta dalla ricerca con utenti |
 
-[Board FigJam del gruppo](https://www.figma.com/board/Aa9cVd9wI6ifqZyzO30I9m/Compito-2).
 
 ## Fonti e continuità con la C1
 
