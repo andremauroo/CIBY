@@ -1,12 +1,12 @@
 # Traccia per i nuovi approfondimenti
 
-Preparata il 23 ottobre 2026. **Aggiornamento del 25 ottobre: la traccia non è stata attuata; Andrea ha confermato che non sarà possibile organizzare nuove attività per la C2.** Le proposte sotto sono conservate come riferimento per eventuali ricerche future. Durate e numero di sessioni erano ipotesi organizzative, non requisiti aggiunti al compito.
+Preparata il 23 ottobre 2026. **Traccia iniziale non attuata**, conservata come riferimento per ricerche future. Durate e numero di sessioni erano ipotesi organizzative, non requisiti aggiunti al compito.
 
 Per l'approfondimento attuale è stato preparato il [caso sportivo simulato S-Sport](approfondimento-sportivo-simulato.md), con assunzioni ed esiti ipotetici dichiarati. Non sono state compilate schede di sessione né aggiunte testimonianze; il requisito delle nuove attività rimane non coperto.
 
 ## Aggiornamento del 26 ottobre
 
-Andrea ha indicato la possibilità di recuperare un diario di P02 di circa 3-4 giorni su spesa e preparazioni, suggerito dai docenti dopo la C1. Il materiale non è ancora disponibile; la possibilità non viene registrata come attività già svolta. Quando sarà acquisito, documentare periodo, contesto e modalità effettiva, distinguendo diario quotidiano e ricostruzione retrospettiva. Il [registro dei bisogni](brainstorming-bisogni.md#integrare-il-diario-di-p02) descrive l'integrazione da estratti a codici, temi e possibili modifiche.
+È in preparazione la raccolta di un diario P02 di circa 3-4 giorni su spesa e preparazioni, seguendo il suggerimento ricevuto dopo la C1. Il materiale non è ancora disponibile; la possibilità non viene registrata come attività già svolta. Quando sarà acquisito, documentare periodo, contesto e modalità effettiva, distinguendo diario quotidiano e ricostruzione retrospettiva. La [scheda del diario](../report/P02-diario.md) e lo [schema di analisi](../report/analisi-tematica.md) sono pronti per ricevere i materiali effettivi.
 
 ## Cosa vogliamo capire
 

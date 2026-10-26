@@ -10,7 +10,7 @@ Il testo completo è in [Personas e scenari](personas-e-scenari.md). La [revisio
 
 ## Conservazione dell'area di lavoro
 
-Su richiesta di Andrea, nessun post-it esistente è stato eliminato, modificato, spostato o riformattato. Anche i profili e gli scenari originali sono stati lasciati intatti per conservare il contesto della discussione.
+Per conservare la discussione, nessun post-it esistente è stato eliminato, modificato, spostato o riformattato. Anche i profili e gli scenari originali sono stati lasciati intatti per conservare il contesto della discussione.
 
 La verifica prima/dopo ha confrontato identificativi, parentela, posizione, dimensioni, visibilità, blocco, testo e formattazione dei contenuti esistenti, includendo testo e autore dei post-it.
 

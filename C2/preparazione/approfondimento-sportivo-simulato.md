@@ -76,7 +76,7 @@ Questa tabella formula domande progettuali; non contiene risultati di una simula
 | H-SP02 - Dopo il cambiamento è utile vedere anche le conseguenze sugli ingredienti rinviati | Collegamento tra nuova cena e occasioni successive di utilizzo | Routine o promemoria personali già sufficienti |
 | H-SP03 - Il confronto può sostenere una scelta mantenendo il controllo dell'utente | Comprensione delle alternative, anziché un programma imposto | La persona preferisce una propria preparazione abituale senza ulteriore supporto |
 | H-SP04 - Gli impegni sportivi possono influire sulle quantità da acquistare | Occasioni realistiche di consumo nei giorni successivi | Spesa già frequente e quantità adeguate senza difficoltà |
-| H-SP05 - Informazioni nutrizionali semplici potrebbero contribuire alla scelta | Possibile collegamento con l'idea proposta da Andrea | Informazioni non cercate o non pertinenti alla decisione del momento, come suggerisce anche P04 |
+| H-SP05 - Informazioni nutrizionali semplici potrebbero contribuire alla scelta | Possibile collegamento con gli spunti di realizzazione | Informazioni non cercate o non pertinenti alla decisione del momento, come suggerisce anche P04 |
 
 Non emerge un nuovo bisogno di tracciare calorie o macro. La mascotte e l'eventuale AI restano idee da confrontare nella fase delle soluzioni; il caso non ne seleziona la forma né dimostra l'utilità.
 

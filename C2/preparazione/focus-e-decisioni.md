@@ -1,78 +1,49 @@
 # Focus e decisioni C2
 
-**CIBY / MAGGICAL - Registrazione del 25 ottobre 2026**
+**CIBY · MAGGICAL · Aggiornamento del 26 ottobre 2026**
 
-## Direzione scelta
+## Il nostro ambito
 
-Andrea riferisce che il gruppo ha discusso e votato per la **gestione flessibile dei pasti**. Conferma di procedere con questa direzione. Successivamente accetta la proposta dei quattro bisogni B01-B04, includendo la valutazione delle quantità da acquistare; l'organizzazione intorno agli allenamenti rimane un approfondimento esplorativo.
+Abbiamo scelto di approfondire la **gestione flessibile dei pasti**. Il punto comune è la responsabilità concreta su spesa e preparazioni, anche vivendo con altre persone.
 
-> Aiutare giovani adulti che gestiscono autonomamente i propri pasti a utilizzare gli ingredienti disponibili e trovare una preparazione praticabile, anche quando cambiano i programmi.
+> Aiutare giovani adulti che gestiscono i propri pasti a utilizzare gli ingredienti disponibili e scegliere una preparazione praticabile, anche quando cambiano i programmi.
 
-Questa è la formulazione di lavoro del focus. Andrea ha poi scelto D3: riorganizzare pasti e acquisti dopo un cambiamento. La [descrizione concettuale in due frasi](soluzione-concettuale.md) è pronta; documentazione del confronto del gruppo e value proposition finale restano aperte.
+Lavoriamo su quattro bisogni: B01 riconoscere disponibilità e priorità, B02 scegliere un pasto praticabile, B03 riorganizzare gli ingredienti dopo un cambiamento e B04 valutare le quantità prima dell'acquisto. B04 deriva dal candidato C04 già presente nell'analisi.
 
-## Ambito e priorità
+## Bisogni e direzione di soluzione
 
-| Elemento | Attività da sostenere | Stato |
+| Bisogno | Attività | Ruolo nel progetto |
 |---|---|---|
-| B01 - Disponibilità e priorità | Riconoscere gli alimenti disponibili e quali utilizzare prima | Selezionato, sostenuto dalla C1 |
-| B02 - Pasto praticabile | Scegliere un pasto praticabile rispetto a ingredienti, tempo, impegno e preferenze | Selezionato, sostenuto dalla C1 |
-| B03 - Adattamento agli imprevisti | Riorganizzare l'utilizzo degli ingredienti quando cambia il programma previsto | Selezionato, sostenuto dalla C1 |
-| B04 - Quantità e occasioni di consumo | Valutare quantità da acquistare compatibili con le occasioni realistiche di consumo | Selezionato su conferma di Andrea; già candidato C04 |
-| Contesto sportivo | Organizzare preparazioni e pasti intorno agli allenamenti | Approfondimento esplorativo di B02/B03, con eventuale integrazione |
+| B01 | Riconoscere gli alimenti disponibili e quali usare prima | Punto di partenza delle decisioni |
+| B02 | Scegliere una preparazione compatibile con ingredienti, tempo, impegno e preferenze | Valutazione della fattibilità |
+| B03 | Riorganizzare ingredienti e pasti quando il programma cambia | Attività centrale di adattamento |
+| B04 | Valutare quantità compatibili con le occasioni realistiche di consumo | Decisione prima dell'acquisto o dopo una revisione dei pasti |
 
-Andrea ha confermato la proposta dei quattro bisogni e i loro confini. C04 viene rinominato B04; le sue evidenze provengono da P02 e P03. Le [schede consolidate](evidenze-e-bisogni.md) riportano per ciascun bisogno situazione, ostacolo, fonti, motivazione ed esito desiderato. La copertura è stata completata con tre personas e quattro scenari principali nella [sintesi consolidata](personas-e-scenari.md). Restano da documentare nelle slide le tracce effettive del confronto del gruppo sui bisogni e sulle soluzioni.
+La direzione attualmente sviluppata è **D3: riorganizzare pasti e acquisti dopo un cambiamento**. La [descrizione concettuale](soluzione-concettuale.md) contiene due frasi e rimane centrata sull'attività della persona.
 
-Per B04, la domanda riguarda il momento dell'acquisto: valutare quantità e occasioni realistiche di consumo prima di comprare. B03 riguarda invece cosa fare con ingredienti già acquistati quando il piano cambia. Questa distinzione motiva l'inclusione del quarto bisogno.
+Nei commenti sui bisogni B01 emerge come priorità, mentre la spesa può avere un ruolo successivo. Una lettura coerente usa gli alimenti disponibili come punto di partenza e D3 per confrontare come adattare o rinviare il loro utilizzo. B04 entra quando la decisione coinvolge acquisti. Questo rapporto e la priorità di Luca restano da chiudere nel [confronto conclusivo](../report/confronto-gruppo.md).
 
-## Come entra lo sport
+La scelta dell'ambito e la selezione conclusiva di una soluzione sono passaggi distinti. Le alternative D1 e D2 rimangono visibili; non sono ancora disponibili assegnazioni o voti collettivi sulle tre direzioni.
 
-Andrea conferma l'interesse per l'organizzazione dei pasti per gli allenamenti, senza fare dell'ottimizzazione nutrizionale o della prestazione il centro del progetto.
+## Sport e idee di realizzazione
 
-Il contesto da esplorare riguarda disponibilità a cucinare, tempi, preparazione anticipata, ingredienti e riorganizzazione in caso di cambiamenti di orario. Non costituisce automaticamente un bisogno aggiuntivo o una nuova persona.
+Esploriamo lo sport come contesto organizzativo di B02/B03: tempi dei pasti, disponibilità a cucinare e cambiamenti di orario degli allenamenti. Il [caso S-Sport](approfondimento-sportivo-simulato.md) è una simulazione progettuale; non introduce un nuovo partecipante o un quinto bisogno.
 
-Le evidenze sportive disponibili restano quelle di P03 e P04, con i limiti descritti nella [valutazione dedicata](valutazione-filone-sportivo.md). È stato preparato il [caso S-Sport](approfondimento-sportivo-simulato.md), con fonti C1, assunzioni, scenario e ipotesi aperte. È una simulazione progettuale distinta dai dati delle interviste reali; rimane da valutare la sua integrazione negli scenari e nelle alternative.
+Mascotte, personalizzazione, informazioni nutrizionali e possibile AI sono spunti per le fasi successive. Il compito C2 richiede una soluzione concettuale, quindi queste idee non definiscono ancora funzionalità o scelte tecniche. L'ottimizzazione nutrizionale o della prestazione rimane fuori dal focus attuale.
 
-## Idee per la futura realizzazione
+## Nome e value proposition
 
-Andrea propone di tenere in considerazione:
+Il progetto si chiama **CIBY** e il gruppo **MAGGICAL**. Abbiamo scelto CIBY per il richiamo al cibo, al centro dell'esperienza, e per il suono amichevole, legato all'idea di una futura mascotte o di un elemento caratteristico che potrebbe portare questo nome. La [motivazione del nome](value-proposition.md#perché-ciby) mantiene questa possibilità distinta dalle scelte già definite.
 
-- una mascotte che accompagni la persona nelle scelte;
-- la possibilità di personalizzarla;
-- suggerimenti e spiegazioni sui valori nutrizionali degli alimenti;
-- un possibile contributo dell'AI a questo supporto.
+> CIBY ti aiuta a scegliere cosa preparare con gli alimenti che hai, adattando pasti e acquisti quando cambiano i programmi.
 
-Sono idee di interazione e realizzazione da confrontare nelle fasi successive. Non sono bisogni emersi dalle interviste né funzionalità già selezionate dal gruppo.
+Questa è la nostra [value proposition di lavoro](value-proposition.md). Il diario e il confronto potranno precisarla.
 
-L'attività a cui potrebbero contribuire è comprendere le caratteristiche degli alimenti e valutare alternative nel contesto del proprio pasto. Nel definirle, andranno chiariti il beneficio della mascotte, il ruolo della personalizzazione e la provenienza delle informazioni nutrizionali. La scelta dell'AI rimane aperta.
+## Materiali di riferimento
 
-## Traccia della decisione
-
-| Campo | Informazione disponibile |
-|---|---|
-| Fonte | Conferma di Andrea in questa conversazione |
-| Esito riferito | Il gruppo ha votato per la gestione flessibile dei pasti |
-| Selezione successiva dei bisogni | Andrea accetta la proposta B01-B04, compresa la valutazione delle quantità prima dell'acquisto |
-| Estensione da approfondire | Organizzazione dei pasti intorno agli allenamenti |
-| Idee aggiunte da Andrea | Mascotte, eventuale personalizzazione, informazioni nutrizionali, possibile AI |
-| Dettagli non forniti | Data della riunione, presenti, alternative votate, metodo e conteggi |
-| Approfondimento preparato | Caso S-Sport simulato: organizzazione dei pasti dopo un cambiamento dell'orario di allenamento |
-| Consolidamento preparato | Luca primaria, Gianfranco e Marta complementari; scenari M/B01, G/B02, L/B03 e A/B04. Area Figma originale e 53 post-it preservati |
-| Preparazione delle alternative | Otto spunti e tre direzioni D1-D3 conservati per il confronto |
-| Scelta della soluzione | Andrea ha scelto D3 il 25 ottobre 2026; descrizione concettuale in due frasi pronta |
-| Nome CIBY | Confermato; motivazione rinviata da Andrea dopo il confronto con i colleghi |
-| Tracce disponibili | Focus e proposte di mascotte/nutrizione comunicati direttamente da Andrea; confronto sulle personas nei post-it |
-| Passaggi successivi | Raccolta o ricostruzione confermata delle idee individuali e documentazione del confronto del gruppo; motivazione del nome e value proposition |
-
-La votazione riferita riguarda la direzione di progetto. La successiva conferma dei quattro bisogni proviene da Andrea; non vengono ricostruiti voti del gruppo sui singoli bisogni. La successiva scelta di D3 è stata espressa da Andrea; non vengono ricostruiti voti o assegnazioni degli altri membri per il processo richiesto al punto 6 del compito.
-
-## Collegamenti
-
-- [Evidenze e bisogni](evidenze-e-bisogni.md): risposte specifiche e candidati.
-- [Personas e scenari](personas-e-scenari.md): tre personas e quattro scenari consolidati.
-- [Brainstorming e scelta](brainstorming-e-scelta.md): processo di generazione e selezione delle soluzioni.
-
-## Soluzione scelta e documentazione da completare
-
-Lo [spazio Figma](https://www.figma.com/board/Aa9cVd9wI6ifqZyzO30I9m/Compito-2?node-id=101-228) e le [alternative concettuali](alternative-soluzione.md) sono pronti. Andrea ha scelto D3: la riorganizzazione di ingredienti, pasti e acquisti dopo un cambiamento. La motivazione progettuale collega Luca e B03/B04, con B01/B02 per priorità e fattibilità; la [scheda della soluzione](soluzione-concettuale.md) ne definisce il supporto e i confini.
-
-Le decisioni comunicate direttamente da Andrea confermano il focus già scelto e alcune possibilità di interazione; i post-it documentano la revisione. Questi elementi non vengono utilizzati come voti sulle tre nuove direzioni. La direzione di soluzione è confermata da Andrea; la documentazione del confronto del gruppo e la value proposition finale rimangono aperte.
+- [Evidenze e bisogni](evidenze-e-bisogni.md).
+- [Personas e scenari](personas-e-scenari.md).
+- [Brainstorming sui bisogni](brainstorming-bisogni.md).
+- [Idee e confronto](brainstorming-e-scelta.md).
+- [Alternative](alternative-soluzione.md) e [prodotti esistenti](confronto-soluzioni-esistenti.md).
+- [Integrazioni aperte](../da-completare.md).

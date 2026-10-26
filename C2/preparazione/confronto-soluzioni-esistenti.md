@@ -6,7 +6,7 @@
 
 La ricerca dagli ingredienti, la priorità di consumo, la pianificazione e l'adattamento di ricette sono già documentati da prodotti esistenti. Anche una gestione flessibile delle date dei pasti non basta, da sola, a sostenere la novità di CIBY.
 
-Il compito da approfondire è il confronto delle conseguenze di un cambiamento sull'uso degli ingredienti, sulle occasioni successive e sugli acquisti. È un'ipotesi progettuale collegata a B03/B04 e alla direzione D3 scelta da Andrea, con B01/B02 per priorità e fattibilità. Non è un vantaggio già dimostrato.
+Il compito da approfondire è il confronto delle conseguenze di un cambiamento sull'uso degli ingredienti, sulle occasioni successive e sugli acquisti. È un'ipotesi progettuale collegata a B03/B04 e alla direzione di lavoro D3, con B01/B02 per priorità e fattibilità. Non è un vantaggio già dimostrato.
 
 ## Metodo
 
@@ -55,7 +55,7 @@ Le [schede dei bisogni](evidenze-e-bisogni.md) mantengono fonti e limiti. Il dia
 
 > Ricette dagli ingredienti, priorità di consumo e pianificazione sono già presenti nei prodotti confrontati. CIBY approfondisce come aiutare la persona a confrontare le conseguenze di un cambiamento su ingredienti, pasti successivi e acquisti. Il vantaggio specifico resta da verificare.
 
-La [value proposition approvata da Andrea](value-proposition.md) comunica il beneficio desiderato. Il confronto documentale motiva il compito da esplorare, senza dimostrare unicità o efficacia.
+La [value proposition di lavoro](value-proposition.md) comunica il beneficio desiderato. Il confronto documentale motiva il compito da esplorare, senza dimostrare unicità o efficacia.
 
 ## Possibile verifica successiva
 

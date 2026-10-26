@@ -4,7 +4,7 @@
 
 [Apri la sintesi consolidata in Figma](https://www.figma.com/board/Aa9cVd9wI6ifqZyzO30I9m/Compito-2?node-id=91-228)
 
-Il focus è la gestione flessibile dei pasti, con i quattro bisogni B01-B04 confermati da Andrea. Questa versione consolida le tre personas e quattro scenari principali. Integra la lettura dei 53 post-it della board e le evidenze C1, distinguendo la sintesi progettuale dai dati raccolti.
+Il focus è la gestione flessibile dei pasti e lavoriamo sui quattro bisogni B01-B04. Questa versione consolida le tre personas e quattro scenari principali. Integra la lettura dei 53 post-it della board e le evidenze C1, distinguendo la sintesi progettuale dai dati raccolti.
 
 L'area originale con profili, scenari e post-it è rimasta intatta. La versione consolidata si trova in una nuova area a destra: i commenti possono continuare a documentare il percorso. Il [registro del consolidamento](consolidamento-figma-2026-10-25.md) contiene le decisioni editoriali e la verifica di conservazione.
 

@@ -2,7 +2,7 @@
 
 **CIBY / MAGGICAL - Aggiornamento del 26 ottobre 2026**
 
-Base di ricerca: C1 pubblicata il 12 ottobre 2026. Andrea ha confermato la proposta di lavorare sui quattro bisogni B01-B04 nel focus di **gestione flessibile dei pasti**. Non sono ancora disponibili nuovi dati con utenti. Andrea ha indicato la possibilità di recuperare un diario di P02 su circa 3-4 giorni di spesa e preparazioni; acquisizione e analisi restano da svolgere. La conferma riguarda la selezione e la formulazione dei bisogni; non dimostra l'efficacia di una soluzione.
+Partiamo dalla C1 pubblicata il 12 ottobre 2026 e lavoriamo su B01-B04 nel focus di **gestione flessibile dei pasti**. Il diario P02 su circa 3-4 giorni di spesa e preparazioni non è ancora disponibile. Le attività descritte sotto derivano dalle risposte C1; i risultati nuovi saranno integrati dopo la raccolta.
 
 ## Perimetro di lavoro
 
@@ -12,7 +12,7 @@ P01, P02, P03 e P05 hanno responsabilità su spesa e pasti. P04 serve da confron
 
 ## I quattro bisogni selezionati
 
-B01-B03 mantengono gli identificativi C1. **B04 è il candidato precedentemente indicato come C04**, ora incluso su conferma di Andrea. Il [registro delle decisioni](focus-e-decisioni.md) distingue questa conferma dalla votazione sul focus riferita per il gruppo.
+B01-B03 mantengono gli identificativi C1. **B04 deriva dal candidato C04** e aggiunge la decisione sulle quantità prima dell'acquisto. Il [focus](focus-e-decisioni.md) ne chiarisce il ruolo.
 
 | ID | Formulazione del bisogno | Situazione principale | Esito desiderato |
 |---|---|---|---|
@@ -88,7 +88,7 @@ Q indica una domanda della traccia; T un segmento tematico, non un minuto audio.
 
 ## Candidati considerati e loro collocazione
 
-Questa tabella conserva l'elenco preparatorio e la sua collocazione nella selezione accettata da Andrea. Non documenta una sessione collettiva con post-it o votazioni sui singoli bisogni.
+Conserviamo tutti i candidati e le ragioni della loro collocazione. Il confronto conclusivo deve ancora essere documentato.
 
 | Candidato | Evidenze C1 | Collocazione attuale |
 |---|---|---|
@@ -101,7 +101,7 @@ Questa tabella conserva l'elenco preparatorio e la sua collocazione nella selezi
 | C07 - Disporre del pasto previsto fuori casa o trovare un'alternativa praticabile | P01-E03/E09; P04-E02/E04 | Contesto da considerare in B02/B03, con strategie già adottate |
 | C08 - Coordinare menu differenti nella coppia | P01-E02 | Rinviato: preoccupazione futura, non difficoltà attuale accertata |
 
-La scelta mantiene quattro attività distinguibili: riconoscere, scegliere, adattare, valutare gli acquisti. Tutti gli otto candidati e i raggruppamenti sono ora visibili nello [spazio Figma dei bisogni](https://www.figma.com/board/Aa9cVd9wI6ifqZyzO30I9m/Compito-2?node-id=121-228). Il [registro del brainstorming sui bisogni](brainstorming-bisogni.md) distingue la sintesi preparatoria, i primi commenti effettivi di Andrea e Marco e le bozze da rivedere. L'esito condiviso e gli screenshot finali restano da completare.
+La scelta mantiene quattro attività distinguibili: riconoscere, scegliere, adattare, valutare gli acquisti. Tutti gli otto candidati e i raggruppamenti sono ora visibili nello [spazio Figma dei bisogni](https://www.figma.com/board/Aa9cVd9wI6ifqZyzO30I9m/Compito-2?node-id=121-228). Il [registro del brainstorming sui bisogni](brainstorming-bisogni.md) distingue la sintesi preparatoria, i primi commenti effettivi di Andrea e Marco e le bozze da rivedere. Le [immagini attuali](../altro/immagini-processo/README.md) sono archiviate; esito e immagini del confronto conclusivo restano da integrare.
 
 ## Riscontri da mantenere anche se complicano la proposta
 
@@ -117,7 +117,7 @@ La scelta mantiene quattro attività distinguibili: riconoscere, scegliere, adat
 
 L'organizzazione dei pasti intorno agli allenamenti resta un contesto esplorativo per B02/B03. I riscontri P03/P04 e i loro limiti sono nella [valutazione dedicata](valutazione-filone-sportivo.md). Non viene introdotto un quinto bisogno.
 
-Mascotte, personalizzazione e suggerimenti nutrizionali con possibile AI sono idee proposte da Andrea, registrate in [Focus e decisioni](focus-e-decisioni.md). Verranno confrontate rispetto alle attività da sostenere.
+Mascotte, personalizzazione e informazioni nutrizionali con possibile AI sono spunti di realizzazione. Li valuteremo rispetto alle attività da sostenere, come indicato nel [focus](focus-e-decisioni.md).
 
 ## Collegamento agli scenari consolidati
 

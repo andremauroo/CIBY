@@ -1,6 +1,6 @@
 # Soluzione concettuale CIBY
 
-**MAGGICAL - D3 scelta da Andrea il 25 ottobre 2026**
+**MAGGICAL · D3 come direzione di lavoro · 26 ottobre 2026**
 
 [Soluzione e stato del confronto in Figma](https://www.figma.com/board/Aa9cVd9wI6ifqZyzO30I9m/Compito-2?node-id=102-354)
 
@@ -14,7 +14,7 @@ La formulazione contiene due frasi e descrive l'attività da sostenere. Il punto
 
 > CIBY ti aiuta a scegliere cosa preparare con gli alimenti che hai, adattando pasti e acquisti quando cambiano i programmi.
 
-Versione di lavoro approvata da Andrea il 26 ottobre. Il [registro dedicato](value-proposition.md) ne riporta significato e stato; l'integrazione del diario P02 e il confronto del gruppo potranno precisarla.
+Versione di lavoro del 26 ottobre. Il [registro dedicato](value-proposition.md) ne riporta significato e stato; l'integrazione del diario P02 e il confronto del gruppo potranno precisarla.
 
 ## Perché D3
 
@@ -22,7 +22,7 @@ La direzione collega i due bisogni principali della persona primaria Luca: riorg
 
 D1 e D2 sono conservate nel [confronto delle alternative](alternative-soluzione.md). Riconoscere cosa usare prima e valutare il tempo e l'impegno restano contributi al percorso di D3. Il fulcro della soluzione scelta è comprendere le conseguenze di un cambiamento, senza richiedere un piano rigido per l'intera settimana.
 
-Questa è la motivazione progettuale della proposta. Andrea ha scelto D3 in questa conversazione; non sono disponibili voti o assegnazioni degli altri componenti sulle tre direzioni.
+Questa è la motivazione progettuale della direzione attualmente sviluppata. Metodo ed esito del confronto conclusivo sulle alternative restano da documentare.
 
 ## Collegamenti ai quattro bisogni
 
@@ -47,15 +47,15 @@ Nello scenario L manca un ingrediente della preparazione prevista. Luca può con
 
 - **Spesa:** inclusa nel focus attraverso B04. Considerare anche costo e impegno di una spesa aggiuntiva; acquistare meno non è sempre la scelta migliore.
 - **Sport:** il [caso S-Sport](approfondimento-sportivo-simulato.md) esplora la riorganizzazione dei pasti dopo un cambiamento dell'orario di allenamento. Rimane una simulazione progettuale; l'ottimizzazione della prestazione o dei nutrienti non è il centro della soluzione.
-- **Mascotte, personalizzazione, informazioni nutrizionali e possibile AI:** proposte di Andrea per la futura realizzazione, da valutare rispetto al beneficio nel percorso. Non sono richieste emerse dalle interviste né scelte tecniche già confermate.
+- **Mascotte, personalizzazione, informazioni nutrizionali e possibile AI:** spunti per la futura realizzazione, da valutare rispetto al beneficio nel percorso. Non sono richieste emerse dalle interviste né scelte tecniche già confermate.
 - **Beneficio e novità:** rendere comprensibili le conseguenze su ingredienti, pasti e acquisti è l'ipotesi da verificare. Il [confronto documentale](confronto-soluzioni-esistenti.md) mostra sovrapposizioni con prodotti esistenti; non dimostra unicità o efficacia.
 
 ## Stato e passi ancora aperti
 
-- Descrizione concettuale pronta in due frasi; direzione D3 confermata da Andrea.
+- Descrizione concettuale pronta in due frasi; D3 come direzione di lavoro.
 - Idee individuali, partecipanti, metodo, esito e immagini del confronto del gruppo da documentare nel [registro del processo](brainstorming-e-scelta.md).
-- Nome **CIBY** confermato; Andrea comunicherà la motivazione dopo il confronto con i colleghi. Nessuna spiegazione viene anticipata.
-- Value proposition di lavoro approvata da Andrea il 26 ottobre, da riesaminare con i nuovi dati e il confronto del gruppo.
-- Diario P02 proposto ma non ancora disponibile; i casi simulati non coprono il requisito delle attività reali. [Scaletta della presentazione](scaletta-presentazione.md) predisposta; slide e PDF finale ancora da realizzare.
+- Nome **CIBY**: richiamo al cibo e suono amichevole, collegato all'idea di una futura mascotte o di un elemento caratteristico con questo nome. [Motivazione completa](value-proposition.md#perché-ciby).
+- Value proposition di lavoro pronta, da riesaminare con i nuovi dati e il confronto.
+- Diario P02 proposto ma non ancora disponibile; i casi simulati non coprono il requisito delle attività reali. [Bozza delle slide](../presentazione/bozza/README.md) disponibile; integrazioni e PDF definitivo ancora da completare.
 
 La registrazione di D3 in Figma ha aggiornato la sintesi del confronto e aggiunto la descrizione concettuale. Tutti i 53 post-it sono rimasti invariati.

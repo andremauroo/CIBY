@@ -1,39 +1,23 @@
-# Brainstorming e scelta della soluzione
+# Idee e confronto delle soluzioni
 
-Preparazione del 23 ottobre, aggiornata il 26 ottobre 2026. Andrea riferisce che il gruppo ha votato per il focus **gestione flessibile dei pasti**, e ha successivamente confermato la proposta dei quattro bisogni B01-B04, inclusa la spesa; l'organizzazione intorno agli allenamenti resta da approfondire: vedi [Focus e decisioni](focus-e-decisioni.md).
+**CIBY · MAGGICAL · Aggiornamento del 26 ottobre 2026**
 
-Andrea riferisce che la discussione è avvenuta soprattutto a voce, con scambi in chat e post-it Figma. Le decisioni comunicate direttamente da Andrea sono in [Focus e decisioni](focus-e-decisioni.md); i post-it sulla revisione delle personas restano nel [registro del consolidamento](consolidamento-figma-2026-10-25.md). Le [otto proposte PRE e tre direzioni D1-D3](alternative-soluzione.md) sono una preparazione per il confronto, non idee attribuite ai singoli membri né soluzioni già votate. La scelta del focus non equivale alla selezione della soluzione. Andrea ha poi scelto D3 il 25 ottobre; la [soluzione concettuale](soluzione-concettuale.md) è pronta, mentre la documentazione del confronto del gruppo resta aperta.
+Abbiamo scelto il focus di gestione flessibile dei pasti e lavoriamo sui quattro bisogni B01-B04. La discussione è avvenuta soprattutto a voce, con scambi in chat e post-it. In questa cartella raccogliamo le tracce utilizzabili, senza ricostruire conteggi o presenze.
 
-[Apri lo spazio di confronto in Figma](https://www.figma.com/board/Aa9cVd9wI6ifqZyzO30I9m/Compito-2?node-id=101-228). I 53 post-it e tutti gli elementi precedenti sono rimasti invariati.
+D3 è la direzione attualmente sviluppata. Le alternative D1 e D2 rimangono nel confronto; l'esito conclusivo della selezione deve ancora essere documentato.
 
-## 1. Selezione dei bisogni confermata
+## Bisogni e scenari di partenza
 
-Andrea ha accettato la proposta dei quattro bisogni con i rispettivi confini. Le [schede dei bisogni](evidenze-e-bisogni.md) riportano tutti i candidati considerati, le fonti specifiche, la motivazione e gli esiti desiderati.
+| Bisogno | Scenario | Persona |
+|---|---|---|
+| B01: riconoscere disponibilità e priorità | M: cena e pranzo del giorno dopo | Marta |
+| B02: scegliere un pasto praticabile | G: cena dopo le lezioni | Gianfranco |
+| B03: riorganizzare dopo un cambiamento | L: manca un ingrediente | Luca |
+| B04: valutare quantità e occasioni | A: confezione e pasti previsti | Luca |
 
-| Bisogno | Evidenze principali | Decisione registrata | Motivazione | Traccia del processo |
-|---|---|---|---|---|
-| B01 - Riconoscere disponibilità e priorità | P01-E05; P03-E06/E07; P05-E03/E04/E11 | Confermato da Andrea | Attività di riconoscimento distinta dalla scelta della preparazione | Conferma in conversazione; immagini del confronto del gruppo da raccogliere |
-| B02 - Scegliere un pasto praticabile | P01-E01/E09; P02-E03/E10/E12; P03-E12/E13; P05-E06 | Confermato da Andrea | Decisione quotidiana che integra ingredienti, tempo, impegno e preferenze | Come sopra |
-| B03 - Riorganizzare l'uso degli ingredienti | P02-E07/E08; P03-E04/E08 | Confermato da Andrea | Adattamento di un'intenzione precedente dopo un cambiamento | Come sopra |
-| B04 - Valutare quantità e occasioni di consumo | P02-E06/E07; P03-E05/E07 | C04 selezionato come B04 su conferma di Andrea | Decisione prima dell'acquisto, distinta dall'adattamento di alimenti già comprati | Come sopra |
+Le [schede dei bisogni](evidenze-e-bisogni.md) conservano risposte specifiche e motivazioni. La [sintesi di personas e scenari](personas-e-scenari.md) descrive contesti ed esiti desiderati.
 
-Questa è la registrazione della proposta accettata da Andrea; non ricostruisce una sessione collettiva con post-it né voti sui singoli bisogni. L'[area dedicata ai bisogni](https://www.figma.com/board/Aa9cVd9wI6ifqZyzO30I9m/Compito-2?node-id=121-228) contiene tutti gli otto candidati, le fonti e i raggruppamenti. Il [registro specifico](brainstorming-bisogni.md) indica cosa è preparato e cosa resta da aggiungere. Conservare le immagini effettive della discussione del gruppo e dei successivi aggiornamenti per la presentazione. Non attribuire retroattivamente ai membri le proposte della preparazione.
-
-La C2 richiede 3-4 bisogni: la selezione comprende quattro attività distinguibili. C05 viene ricondotto a B02, C06 rimane un vincolo di progettazione, C07 un contesto di B02/B03; C08 non viene scelto come autonomo perché riguarda una preoccupazione futura. Le rispettive evidenze e i limiti restano nella lista completa.
-
-## 2. Consolidare personas e scenari
-
-Prima di proporre soluzioni, verificare che ogni bisogno scelto abbia uno scenario concettuale, con contesto, motivazione, ostacolo e risultato desiderato. Collegare ciascuno a una persona fondata su pattern della ricerca.
-
-Il [consolidamento di Gianfranco, Luca e Marta con gli scenari G/L/M/A](personas-e-scenari.md) è disponibile nella repo e nella nuova area Figma. Luca è la persona primaria di lavoro e compare negli scenari L/B03 e A/B04; Gianfranco e Marta approfondiscono B02 e B01. Tutti i post-it originali sono rimasti invariati. Il [filone sportivo](valutazione-filone-sportivo.md) è un'ulteriore ipotesi di contesto. Il [caso simulato S-Sport](approfondimento-sportivo-simulato.md) è pronto per il confronto, con fonti, assunzioni e possibili riscontri contrari. È distinto dalle interviste e affianca i quattro scenari principali.
-
-Gli screenshot dei post-it attuali documentano il confronto su personas e scenari. Per i bisogni e le soluzioni conservare anche le tracce specifiche delle discussioni e delle scelte effettive: vedi [Consolidamento Figma](consolidamento-figma-2026-10-25.md).
-
-## 3. Raccogliere le idee individuali
-
-Raccogliere le idee effettive di ciascun componente prima dei raggruppamenti. Quanto discusso a voce può essere ricostruito come tale, con conferma degli autori. Per ampliare le alternative si può aggiungere una fase individuale di 10-15 minuti, poi lettura e confronto collettivo; è una proposta di conduzione, non una sessione dichiarata svolta.
-
-Ogni idea deve indicare scenario, attività da sostenere e beneficio atteso. Il compito chiede di non partire da funzionalità tecniche specifiche: formulare il supporto che la persona riceve nel suo contesto.
+## Idee individuali
 
 | Autore e stato | ID | Ambito | Contenuto disponibile | Fonte originale |
 |---|---|---|---|---|
@@ -43,68 +27,54 @@ Ogni idea deve indicare scenario, attività da sostenere e beneficio atteso. Il 
 | Marco, spunto proprio | IM-01 | B01/B02 | Partire dagli alimenti disponibili in casa per individuare una preparazione | [Post-it](https://www.figma.com/board/Aa9cVd9wI6ifqZyzO30I9m/Compito-2?node-id=129-247) |
 | Marco, benefici attesi | IM-02 | Trasversale | Ridurre sprechi e tempo di scelta/preparazione; benefici da verificare | [Post-it](https://www.figma.com/board/Aa9cVd9wI6ifqZyzO30I9m/Compito-2?node-id=129-251) |
 | Marco, criterio di adattabilità | IM-03 | B02 e contesti | Adattare il supporto a necessità, capacità e preferenze | [Post-it](https://www.figma.com/board/Aa9cVd9wI6ifqZyzO30I9m/Compito-2?node-id=129-255) |
-| Andrea, bozza assistita da rivedere | IA-01 | B01, Marta/M | Dare agli alimenti presenti una destinazione concreta partendo dalle priorità | [Bozza](https://www.figma.com/board/Aa9cVd9wI6ifqZyzO30I9m/Compito-2?node-id=134-313) |
-| Andrea, bozza assistita da rivedere | IA-02 | B02, Gianfranco/G | Confrontare preparazioni rispetto a tempo, impegno e abitudini | [Bozza](https://www.figma.com/board/Aa9cVd9wI6ifqZyzO30I9m/Compito-2?node-id=134-317) |
-| Andrea, bozza assistita da rivedere | IA-03 | B03/B04, Luca/L-A | Riassegnare gli ingredienti dopo un cambiamento e rivalutare gli acquisti | [Bozza](https://www.figma.com/board/Aa9cVd9wI6ifqZyzO30I9m/Compito-2?node-id=134-321) |
-| Gabriele Martignoni | Da acquisire | | Proposta individuale di soluzione non ancora registrata in questa fase | |
-| Rime Chamkar | Da acquisire | | Proposta individuale di soluzione non ancora registrata in questa fase | |
+| Bozza nell'area di Andrea | IA-01 | B01, Marta/M | Dare agli alimenti presenti una destinazione concreta partendo dalle priorità | [Bozza](https://www.figma.com/board/Aa9cVd9wI6ifqZyzO30I9m/Compito-2?node-id=134-313) |
+| Bozza nell'area di Andrea | IA-02 | B02, Gianfranco/G | Confrontare preparazioni rispetto a tempo, impegno e abitudini | [Bozza](https://www.figma.com/board/Aa9cVd9wI6ifqZyzO30I9m/Compito-2?node-id=134-317) |
+| Bozza nell'area di Andrea | IA-03 | B03/B04, Luca/L-A | Riassegnare gli ingredienti dopo un cambiamento e rivalutare gli acquisti | [Bozza](https://www.figma.com/board/Aa9cVd9wI6ifqZyzO30I9m/Compito-2?node-id=134-321) |
+| Gabriele, criterio di autonomia | IG-01 | Trasversale | Mantenere consapevolezza sulle scelte alimentari, imparando dal supporto senza delegarle interamente | [Post-it](https://www.figma.com/board/Aa9cVd9wI6ifqZyzO30I9m/Compito-2?node-id=161-308) |
+| Gabriele, spunto informativo | IG-02 | Possibile estensione | Approfondire gli alimenti acquistati o usati, dalle curiosità alle informazioni sull'energia fornita | [Post-it](https://www.figma.com/board/Aa9cVd9wI6ifqZyzO30I9m/Compito-2?node-id=161-312) |
+| Gabriele, spunto proprio | IG-03 | B01/B03, partenza per una vacanza | Distribuire il consumo di ciò che è in frigorifero prima della partenza | [Post-it](https://www.figma.com/board/Aa9cVd9wI6ifqZyzO30I9m/Compito-2?node-id=161-316) |
+| Rime, spunto proprio | IR-01 | B03, Luca/L | Distinguere ingredienti essenziali e sostituibili per adattare una preparazione senza rivedere tutto il programma | [Post-it](https://www.figma.com/board/Aa9cVd9wI6ifqZyzO30I9m/Compito-2?node-id=158-298) |
+| Rime, spunto proprio | IR-02 | B03/B04, Luca/L-A | Distribuire le quantità degli ingredienti fra più pasti, mantenendo varietà | [Post-it](https://www.figma.com/board/Aa9cVd9wI6ifqZyzO30I9m/Compito-2?node-id=164-317) |
+| Rime, criterio di fattibilità | IR-03 | B02/B03, Gianfranco/G | Valutare il tempo richiesto dalle alternative oltre alla disponibilità degli ingredienti | [Post-it](https://www.figma.com/board/Aa9cVd9wI6ifqZyzO30I9m/Compito-2?node-id=164-324) |
 | Emanuele Marcantonio | Da acquisire | | Proposta individuale di soluzione non ancora registrata in questa fase | |
-| Edoardo Ughi | Da acquisire | | Proposta individuale di soluzione non ancora registrata in questa fase | |
+| Edoardo, spunto proprio | IE-01 | B01 | Riconoscere ciò che è già in casa per evitare acquisti duplicati | [Post-it](https://www.figma.com/board/Aa9cVd9wI6ifqZyzO30I9m/Compito-2?node-id=175-365) |
+| Edoardo, spunto proprio | IE-02 | B03, Luca/L | Scambiare due pasti previsti quando manca un ingrediente, rinviando la preparazione interessata | [Post-it](https://www.figma.com/board/Aa9cVd9wI6ifqZyzO30I9m/Compito-2?node-id=175-381) |
+| Edoardo, beneficio atteso | IE-03 | B01/B02, Marta/M | Sostenere l'uso degli alimenti con preparazioni rapide; la riduzione dello spreco rimane un beneficio da verificare | [Post-it](https://www.figma.com/board/Aa9cVd9wI6ifqZyzO30I9m/Compito-2?node-id=175-386) |
 
-Gli spunti sono parafrasati e restano collegati ai post-it originali. Prima della selezione vanno riformulati come attività da sostenere, distinguendo benefici attesi, vincoli e mezzi tecnici. Le tre bozze per Andrea non sono conteggiate come proposte da lui già confermate. Conservare anche le immagini del processo richieste dalla consegna.
+Gli spunti sono parafrasati e collegati agli originali. Le tre proposte IA restano bozze da discutere; non vengono conteggiate come contributi individuali già adottati.
 
-Il filone sportivo e le informazioni nutrizionali sono opzioni esplorative aggiunte da Andrea. Il focus precedentemente confermato resta la gestione flessibile dei pasti; l'AI è una possibilità di realizzazione da valutare, non una necessità dimostrata né una soluzione già scelta dal gruppo.
+I contributi di Gabriele, Rime ed Edoardo sono presenti nella board alla rilettura del 26 ottobre. Nell'area di Emanuele non risultano ancora post-it. Le nuove proposte ampliano il confronto, senza costituire da sole un esito della selezione. Informazioni nutrizionali e consumo prima di una vacanza sono spunti progettuali, non risultati di nuove interviste.
 
-## 4. Alternative preparatorie disponibili
+Il compito richiede idee per ogni scenario e un'elaborazione individuale di ciascun componente. Completando il confronto controlliamo entrambe le coperture. Traduciamo eventuali proposte tecniche nell'attività che intendono sostenere, conservando l'idea originale.
 
-Gli spunti iniziali A-D sono stati sviluppati in [otto proposte PRE-01-PRE-08](alternative-soluzione.md), due per ciascuno scenario principale. Ogni proposta indica attività, beneficio atteso e fonti C1.
+Le [immagini attuali](../altro/immagini-processo/README.md) documentano i contributi già presenti. I post-it originali rimangono conservati.
 
-Le tre direzioni integrative preparate per il confronto sono:
+## Alternative preparatorie
 
-| Direzione | Punto di partenza | Supporto principale |
+Abbiamo predisposto [otto spunti PRE-01-PRE-08](alternative-soluzione.md), due per scenario, e tre direzioni integrative:
+
+| Direzione | Punto di partenza | Attività |
 |---|---|---|
-| D1 - Dall'alimento al prossimo utilizzo | Un alimento rischia di restare fuori dalle decisioni | Collegare priorità, preparazione e occasione di consumo |
-| D2 - Dal tempo al pasto fattibile | Occorre decidere cosa preparare adesso | Confrontare impegno, familiarità e ingredienti |
-| D3 - Dal cambio alla nuova organizzazione | Un'intenzione non è più praticabile o diventa incerta | Rivedere ingredienti, pasti e quantità da acquistare |
+| D1 | Un alimento disponibile | Trovargli un prossimo utilizzo |
+| D2 | Tempo e impegno possibili | Scegliere una preparazione praticabile |
+| D3 | Un cambiamento di programma | Riorganizzare ingredienti, pasti e acquisti |
 
-Andrea ha scelto D3 il 25 ottobre. La motivazione progettuale collega Luca e B03/B04; B01/B02 sostengono priorità e fattibilità. La descrizione in due frasi e i confini sono nella [scheda della soluzione](soluzione-concettuale.md). La conferma di Andrea non documenta voti o assegnazioni degli altri membri. Nei nuovi commenti Andrea e Marco danno priorità a B01; Marco collega B02 a B01 e terrebbe la spesa in secondo piano. Queste posizioni, documentate nel [registro dei bisogni](brainstorming-bisogni.md#commenti-e-pareri-disponibili), alimentano il confronto fra le direzioni senza sostituirlo.
+Questi spunti ampliano il confronto e rimangono distinti dalle idee dei singoli componenti.
 
-Il caso sportivo può mettere alla prova le direzioni; mascotte, informazioni nutrizionali e AI rimangono proposte da valutare rispetto al supporto scelto. La ricerca documentale riesaminata il 25 ottobre mostra sovrapposizioni con prodotti esistenti, senza dimostrare la novità di una direzione.
+## Ragioni e selezione
 
-## 5. Selezionare e documentare
+D3 collega soprattutto Luca e B03/B04, con B01/B02 per priorità e fattibilità. I commenti sui bisogni danno rilievo a B01 e suggeriscono di mantenere la spesa come passaggio successivo. Il confronto deve chiarire come questa priorità si combina con D3.
 
-Il compito offre due metodi. Il gruppo ne sceglie uno e registra il processo effettivo. Per confrontare le tre direzioni D1-D3, è pratico il metodo delle quattro categorie. I tre voti possono invece essere assegnati all'insieme più ampio delle idee: se le alternative fossero solo tre, ogni membro dovrebbe votarle tutte e il risultato non le distinguerebbe.
+Una lettura possibile parte dagli alimenti disponibili, confronta preparazioni fattibili e sostiene la revisione quando cambia un pasto. Gli acquisti entrano quando occorre valutare quantità ancora necessarie. La descrizione resta una proposta da discutere, senza anticipare voti o assegnazioni.
 
-**Votazione con post-it:** ogni membro assegna tre voti a tre idee diverse. Con tutti e sei i componenti presenti, la sessione prevede 18 voti complessivi. Registrare presenze reali ed eventuali assenze; non distribuire voti per conto di altri.
+Per la selezione usiamo uno dei metodi del punto 6 del compito: tre voti su tre idee diverse, oppure quattro categorie. La [scheda del confronto](../report/confronto-gruppo.md) è predisposta per registrare modalità, contributi, ragioni ed esito effettivi.
 
-| Componente presente | Primo voto | Secondo voto | Terzo voto | Motivazione o commento |
-|---|---|---|---|---|
-| Da compilare nella sessione | | | | |
+Il [confronto documentale](confronto-soluzioni-esistenti.md), aggiornato al 26 ottobre, mostra sovrapposizioni con prodotti esistenti. La possibile differenziazione riguarda le conseguenze di una revisione su ingredienti, occasioni successive e acquisti; non è una novità già dimostrata.
 
-**In alternativa, quattro categorie:** ogni membro sceglie una o due idee da assegnare a «scelta razionale», «quella che potrebbe piacere di più», «preferita», «scommessa a lungo termine». Conservare assegnazioni e motivazioni, senza trasformarle retroattivamente in una votazione a punti.
+## Soluzione, nome e value proposition
 
-In entrambi i casi: fotografare la situazione iniziale, tutte le idee, gli accorpamenti e la selezione; discutere l'esito anche rispetto ai bisogni. Se si decide diversamente dal risultato più immediato, annotarne la ragione.
-
-## 6. Registrare la decisione
-
-| Campo | Stato registrato |
-|---|---|
-| Data e fonte della scelta | 25 ottobre 2026: Andrea sceglie D3 in questa conversazione |
-| Presenti e metodo del confronto del gruppo | Da documentare; non desunti dalla conferma individuale |
-| Alternative preparate e riferimenti alle immagini | [D1-D3 e otto spunti](alternative-soluzione.md), nello [spazio Figma](https://www.figma.com/board/Aa9cVd9wI6ifqZyzO30I9m/Compito-2?node-id=101-228); immagini del processo effettivo da raccogliere |
-| Esito dei voti o delle categorie | Non disponibile |
-| Soluzione scelta | D3: riorganizzare pasti e acquisti dopo un cambiamento |
-| Bisogni, scenari ed evidenze che la motivano | B03/B04 e Luca, scenari L/A; B01/B02 con Marta/Gianfranco per priorità e fattibilità. [Tracciabilità](soluzione-concettuale.md#collegamenti-ai-quattro-bisogni) |
-| Differenza rispetto ai metodi attuali e confronto con soluzioni esistenti | Rendere comprensibili le conseguenze sugli ingredienti, sulle occasioni successive e sugli acquisti è l'ipotesi da verificare; [confronto documentale](confronto-soluzioni-esistenti.md) disponibile |
-| Alternative escluse e motivazioni del gruppo | Non documentate; D1/D2 sono conservate per il confronto, con elementi complementari a D3 |
-| Descrizione in 1-3 frasi | Due frasi nella [scheda della soluzione](soluzione-concettuale.md#descrizione-concettuale) |
-
-## 7. Nome e value proposition
-
-Il nome ufficiale del progetto è **CIBY**, confermato da Andrea; il gruppo si chiama **MAGGICAL**. Andrea comunicherà la motivazione effettiva del nome dopo essersi confrontato con i colleghi. Il punto resta aperto e non blocca la definizione della soluzione.
-
-La descrizione concettuale di D3 è consolidata nella [scheda della soluzione](soluzione-concettuale.md). Andrea ha approvato il 26 ottobre questa value proposition come versione di lavoro:
+La [soluzione concettuale](soluzione-concettuale.md) descrive D3 in due frasi. Il nome **CIBY** richiama il cibo e ha un suono amichevole, legato alla possibilità di una futura mascotte o di un elemento caratteristico che possa portare questo nome. La [motivazione](value-proposition.md#perché-ciby) è raccolta insieme alla value proposition.
 
 > CIBY ti aiuta a scegliere cosa preparare con gli alimenti che hai, adattando pasti e acquisti quando cambiano i programmi.
 
-Il [registro della value proposition](value-proposition.md) ne spiega il collegamento ai quattro bisogni. La frase potrà essere rivista con il diario P02 e gli esiti del confronto del gruppo; non costituisce un beneficio misurato né una prova di novità. La motivazione effettiva del nome resta da raccogliere.
+La [value proposition](value-proposition.md) potrà essere precisata con il diario e il confronto. Le integrazioni aperte sono in [Da completare](../da-completare.md).

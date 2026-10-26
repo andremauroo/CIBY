@@ -4,7 +4,7 @@
 
 [Spazio di confronto in Figma](https://www.figma.com/board/Aa9cVd9wI6ifqZyzO30I9m/Compito-2?node-id=101-228)
 
-Otto spunti e tre direzioni preparati sui quattro scenari consolidati. Sono proposte per ampliare il confronto, non idee attribuite ai singoli membri né alternative già votate. Andrea ha riferito che il gruppo ha discusso soprattutto a voce e ha confermato focus e bisogni. Le sue proposte di mascotte e informazioni nutrizionali sono registrate in [Focus e decisioni](focus-e-decisioni.md); i commenti Figma alla revisione sono nel [registro del consolidamento](consolidamento-figma-2026-10-25.md).
+Otto spunti e tre direzioni preparati sui quattro scenari consolidati. Sono proposte per ampliare il confronto, non idee attribuite ai singoli membri né alternative già votate. Abbiamo discusso soprattutto a voce, affiancando poi le tracce della board. Gli spunti di mascotte e informazioni nutrizionali sono registrate in [Focus e decisioni](focus-e-decisioni.md); i commenti Figma alla revisione sono nel [registro del consolidamento](consolidamento-figma-2026-10-25.md).
 
 ## Da scenari a spunti
 
@@ -97,9 +97,9 @@ Questo è un ragionamento progettuale, non un punteggio di usabilità né l'esit
 | L / B03 - Ingrediente mancante | Recupero guidato da ciò che resta da usare | Recupero guidato dall'impegno sostenibile | Punto di partenza centrale: confrontare adattamento e rinvio |
 | A / B04 - Quantità prima della spesa | Considerare le scorte prima di aggiungere acquisti | Valutare quanto si riuscirà a preparare | Confrontare acquisti rispetto a occasioni confermate e incerte |
 
-## Direzione scelta da Andrea: D3
+## Direzione di lavoro: D3
 
-Andrea ha scelto D3 il 25 ottobre 2026. La motivazione progettuale della proposta è il collegamento con i due bisogni principali della persona primaria Luca: adattamento B03 e quantità B04. B01 e B02 permettono di riconoscere le priorità e confrontare la fattibilità delle alternative.
+D3 è la direzione attualmente sviluppata. La motivazione progettuale della proposta è il collegamento con i due bisogni principali della persona primaria Luca: adattamento B03 e quantità B04. B01 e B02 permettono di riconoscere le priorità e confrontare la fattibilità delle alternative.
 
 La differenza da esplorare è rendere comprensibili le conseguenze di una modifica: cosa si riesce ancora a preparare, quali ingredienti restano senza destinazione e cosa cambia nei successivi acquisti. Non serve assumere un piano rigido per l'intera settimana.
 
@@ -107,13 +107,13 @@ La differenza da esplorare è rendere comprensibili le conseguenze di una modifi
 
 > CIBY sostiene chi gestisce i propri pasti nel rivedere l'uso degli ingredienti quando cambia una preparazione o un'occasione di consumo. Aiuta a confrontare alternative praticabili e comprenderne le conseguenze sugli ingredienti rimasti, sui pasti successivi e sulle quantità ancora da acquistare.
 
-La [scheda della soluzione](soluzione-concettuale.md) registra la scelta di Andrea e ne chiarisce i collegamenti ai quattro bisogni. Idee individuali, metodo e assegnazioni effettive del confronto del gruppo restano da documentare; la conferma di Andrea non viene trasformata in una votazione collettiva.
+La [scheda della soluzione](soluzione-concettuale.md) chiarisce i collegamenti ai quattro bisogni. Le idee mancanti, il metodo e l'esito effettivo del confronto conclusivo restano da documentare.
 
 ## Contributi del 26 ottobre
 
-Nel [registro delle idee individuali](brainstorming-e-scelta.md#3-raccogliere-le-idee-individuali) sono ora collegati gli spunti reali di Andrea sul contesto sportivo e quelli di Marco su ingredienti disponibili, benefici attesi e adattabilità. Tre ulteriori bozze preparate per Andrea restano da rivedere e confermare.
+Nel [registro delle idee individuali](brainstorming-e-scelta.md#idee-individuali) sono ora collegati gli spunti reali di Andrea sul contesto sportivo e quelli di Marco su ingredienti disponibili, benefici attesi e adattabilità. Tre ulteriori bozze preparate per Andrea restano da rivedere e confermare.
 
-I [commenti sui bisogni](brainstorming-bisogni.md#commenti-e-pareri-disponibili) danno priorità a B01 e alla relazione con B02; Marco propone di trattare la spesa dopo gli altri aspetti. Il confronto deve chiarire come questi contributi si rapportino a D1-D3. La scelta precedente di D3 è quella di Andrea; non sono registrati un nuovo voto o un esito collettivo.
+I [commenti sui bisogni](brainstorming-bisogni.md#commenti-e-pareri-disponibili) danno priorità a B01 e alla relazione con B02; Marco propone di trattare la spesa dopo gli altri aspetti. Il confronto deve chiarire come questi contributi si rapportino a D1-D3. D3 rimane la direzione di lavoro; l'esito conclusivo del confronto è ancora da registrare.
 
 ## Che cosa è già documentato nei prodotti esistenti
 
@@ -128,7 +128,7 @@ Perciò ricette, priorità e sostituzioni da sole non bastano a motivare la novi
 ## Sport, mascotte e AI nel confronto
 
 - **Sport:** usare S-Sport per confrontare le direzioni quando cambia il tempo disponibile intorno all'allenamento. È una variante progettuale simulata.
-- **Mascotte eventualmente personalizzabile:** proposta di Andrea; valutare quale passaggio della scelta renda più comprensibile o sostenibile. Non viene usata come prova di novità della soluzione.
+- **Mascotte eventualmente personalizzabile:** spunto di realizzazione; valutare quale passaggio della scelta renda più comprensibile o sostenibile. Non viene usata come prova di novità della soluzione.
 - **Informazioni nutrizionali:** interesse emerso nella discussione di progetto, da trattare come possibile supporto alla comprensione degli alimenti. P04 non chiede maggiore precisione; non si presume una domanda generale di monitoraggio.
 - **AI:** possibile mezzo di realizzazione da valutare successivamente, distinguendo il supporto desiderato dalla tecnologia scelta.
 

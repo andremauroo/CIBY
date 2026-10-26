@@ -6,9 +6,9 @@
 
 ## Stato del lavoro
 
-La base è il riesame dei report C1. Andrea ha già confermato la selezione B01-B04; il gruppo ha scelto il focus di gestione flessibile dei pasti, secondo quanto riferito da Andrea. L'area rende visibile la sintesi preparatoria, con tutti i candidati e le motivazioni della loro collocazione.
+Partiamo dal riesame C1 e lavoriamo su B01-B04 nel focus di gestione flessibile dei pasti. La board conserva tutti i candidati, le loro fonti e i raggruppamenti.
 
-Sono presenti primi commenti effettivi di Andrea e Marco sulla board; sono state aggiunte otto bozze di commento preparate per Andrea, da rivedere. Restano da completare l'esito condiviso del confronto e i dati della nuova attività con P02. Andrea ha indicato la possibilità di recuperare un diario di circa 3-4 giorni su spesa e preparazioni, suggerito dai docenti dopo la C1. Il materiale non è ancora disponibile: periodo, modalità e risultati non sono dichiarati come acquisiti.
+Sono presenti commenti individuali e proposte in bozza. Il confronto conclusivo e l'analisi del diario P02 restano da completare. Abbiamo già acquisito le [immagini del processo attuale](../altro/immagini-processo/README.md).
 
 ## Tutti gli otto candidati
 
@@ -53,10 +53,11 @@ Le seguenti sono parafrasi di contributi effettivamente presenti sulla board, di
 | Marco | B03 | Propone di considerare un evento specifico o speciale e le preparazioni adatte a quel contesto. | [Post-it](https://www.figma.com/board/Aa9cVd9wI6ifqZyzO30I9m/Compito-2?node-id=129-236) |
 | Marco | B04 | Terrebbe la spesa dopo gli altri aspetti del progetto. | [Post-it](https://www.figma.com/board/Aa9cVd9wI6ifqZyzO30I9m/Compito-2?node-id=129-243) |
 | Andrea | B01 | Indica B01 come una priorità attorno a cui far ruotare gli altri supporti. | [Post-it](https://www.figma.com/board/Aa9cVd9wI6ifqZyzO30I9m/Compito-2?node-id=130-237) |
+| Andrea | C06 | Sottolinea il peso dell'impegno richiesto e della rapidità d'uso. | [Post-it](https://www.figma.com/board/Aa9cVd9wI6ifqZyzO30I9m/Compito-2?node-id=130-308) |
 
-Questi contributi mostrano una priorità per B01 e un collegamento con la scelta del pasto. Il peso della spesa e il rapporto con D3 sono da discutere; non si registra una nuova decisione collettiva.
+Questi contributi mostrano una priorità per B01 e un collegamento con la scelta del pasto. Il commento C06 richiama lo sforzo d'uso; il tema specifico della contestualizzazione resta fondato soprattutto su P01-E04/E07 e non viene generalizzato a tutto il campione. Il peso della spesa e il rapporto con D3 sono da discutere; non si registra una nuova decisione collettiva.
 
-Le otto bozze CB-01-CB-08 propongono argomenti su tutti i candidati: centralità di B01; fattibilità B02; adattamento B03; ruolo successivo della spesa B04; C05 dentro B02; C06 come vincolo di sforzo; C07 come contesto; rinvio di C08. Sono testi preparati con assistenza per la revisione di Andrea, non nuovi pareri già confermati.
+Le otto bozze CB-01-CB-08 propongono argomenti su tutti i candidati: centralità di B01; fattibilità B02; adattamento B03; ruolo successivo della spesa B04; C05 dentro B02; C06 come vincolo di sforzo; C07 come contesto; rinvio di C08. Sono proposte in bozza da discutere, distinte dai commenti individuali già presenti.
 
 ## Registrare il confronto effettivo
 
@@ -67,10 +68,10 @@ Le otto bozze CB-01-CB-08 propongono argomenti su tutti i candidati: centralità
 | Data, autori e modalità | Contributi di Andrea e Marco osservati il 26 ottobre sulla board; confronto complessivo e altri partecipanti da documentare |
 | Candidati discussi, eventuali aggiunte e dubbi | Prime osservazioni su B01-B04 disponibili; ulteriori commenti e dubbi da aggiungere |
 | Autore e motivazione delle osservazioni | Andrea e Marco nei post-it originali collegati sopra; bozze preparate per Andrea riconoscibili separatamente |
-| Conferme, modifiche, accorpamenti e rinvii | Selezione di Andrea già registrata; esito del confronto del gruppo da documentare |
-| Immagini del percorso | Acquisire gli screenshot della discussione e dell'esito, mantenendo riconoscibili le versioni |
+| Conferme, modifiche, accorpamenti e rinvii | Selezione di lavoro B01-B04; esito conclusivo da documentare |
+| Immagini del percorso | Immagini attuali archiviate; aggiornare quelle del confronto conclusivo |
 
-I commenti firmati documentano posizioni individuali in corso di confronto. Non sono registrati voti, una riunione con presenze definite o un esito collettivo. Le bozze per Andrea rimangono da rivedere e confermare.
+I commenti firmati documentano posizioni individuali in corso di confronto. Non sono registrati voti, una riunione con presenze definite o un esito collettivo. Le proposte segnate come bozze rimangono da discutere.
 
 ## Integrare il diario di P02
 
@@ -89,7 +90,7 @@ Non si assume in anticipo che il diario confermi tutti i bisogni o D3. L'attivit
 
 Per mostrare la preparazione attuale si può usare la didascalia:
 
-> Sintesi preparatoria dei bisogni basata sulla C1, con selezione B01–B04 confermata da Andrea. Primi commenti di Andrea e Marco disponibili; bozze assistite riconoscibili. Esito condiviso e integrazione del diario P02 da completare.
+> Sintesi dei bisogni basata sulla C1, con selezione di lavoro B01–B04. Primi commenti di Andrea e Marco disponibili; proposte in bozza riconoscibili. Esito condiviso e integrazione del diario P02 da completare.
 
 Per documentare il processo nella consegna finale, conservare anche le immagini del confronto effettivo e dei successivi aggiornamenti. L'elenco completo degli otto candidati deve restare visibile insieme alle motivazioni della selezione.
 
@@ -99,4 +100,4 @@ Area aggiunta a destra dei materiali esistenti. Tutti i 528 elementi preesistent
 
 ## Aggiornamento dei commenti
 
-Aggiunte otto bozze sui bisogni e tre bozze di idee nell'area di Andrea. I contributi scritti direttamente da Andrea e Marco sono rimasti distinti e non sono stati riscritti. Gli screenshot per il report finale sono ancora da raccogliere, come confermato da Andrea.
+Aggiunte otto bozze sui bisogni e tre bozze di idee nell'area di Andrea. I contributi scritti direttamente da Andrea e Marco sono rimasti distinti e non sono stati riscritti. Le immagini del 26 ottobre sono archiviate in [immagini del processo](../altro/immagini-processo/README.md). Dopo il confronto conserveremo anche la fase conclusiva.

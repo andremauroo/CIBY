@@ -1,97 +1,49 @@
-# Requisiti e piano della C2
+# Requisiti e verifica della C2
 
-Aggiornamento: 26 ottobre 2026. Fonte principale: Compito2-focus.pdf, pp. 1-2. Scadenza: lunedì 26 ottobre 2026; nel documento non è indicato un orario.
+**Riferimento:** Compito2-focus.pdf, pp. 1-2. **Scadenza:** 26 ottobre 2026. Il documento non specifica un orario; il nostro obiettivo operativo è chiudere entro mezzanotte.
 
-## Obiettivo della consegna
+## Obiettivo
 
-Restringere il dominio della ricerca, approfondire i bisogni e arrivare a una formulazione del problema e a una soluzione concettuale con una value proposition specifica. Le personas servono a rappresentare pattern emersi dalla ricerca; gli scenari chiariscono contesto, motivazioni e conseguenze.
+Restringere il dominio del needfinding, approfondire i bisogni e definire una soluzione concettuale con una value proposition specifica. Manteniamo le richieste del compito come riferimento per decidere che cosa inserire nella consegna.
 
-## Decisione di ambito
+## Corrispondenza tra richieste e materiali
 
-Andrea riferisce che il gruppo ha votato per la **gestione flessibile dei pasti**. Andrea ha successivamente confermato i quattro bisogni B01-B04: riconoscere disponibilità e priorità, scegliere un pasto praticabile, adattare l'uso degli ingredienti e valutare le quantità da acquistare. B04 corrisponde al candidato C04. L'organizzazione dei pasti intorno agli allenamenti è un approfondimento per un'eventuale integrazione. Mascotte e suggerimenti nutrizionali con possibile AI sono idee per la successiva realizzazione. Vedi [Focus e decisioni](focus-e-decisioni.md).
-
-## Requisiti da coprire
-
-| Richiesta del compito | Fonte | Materiale da mostrare | Stato attuale |
+| Richiesta | Fonte nel compito | Materiale disponibile | Integrazione necessaria |
 |---|---|---|---|
-| Svolgere nuove attività con utenti, considerando anche il feedback C1 | p. 1, punto 1 | Format, partecipanti, luogo, aspetti approfonditi e risultati | Nuovo materiale non disponibile; Andrea valuta il recupero di un diario di P02 su circa 3-4 giorni |
-| Includere almeno un'attività con un utente immediato del dominio | p. 1, punto 1 | Motivazione della pertinenza del partecipante | Da documentare con il materiale reale di P02, se acquisito |
-| Integrare i nuovi dati nell'analisi tematica | p. 1, punto 2 | Estratti, codici, temi e differenze rispetto alla C1 | Base C1 disponibile; spazio per estratti, codici, temi e impatto del diario P02 predisposto |
-| Fare brainstorming sull'elenco dei bisogni e documentarlo | p. 1, punto 2; p. 2, sezione 3a | Immagini di tutti i bisogni discussi e motivi della selezione | Otto candidati e raggruppamenti in Figma, primi commenti reali di Andrea e Marco e bozze distinte; esito condiviso e screenshot finali da completare |
-| Scegliere 3-4 bisogni consistenti, collegati a interviste e risposte specifiche | p. 1, punto 3; p. 2, sezione 3b | Bisogni come attività, evidenze e motivazioni | B01-B04 confermati da Andrea; formulazioni, evidenze, confini ed esiti consolidati |
-| Specificare personas e uno scenario per ogni bisogno selezionato | p. 1, punto 4 | Archetipi motivati e scenari che mostrino contesto e utilità del supporto | Tre personas e quattro scenari consolidati; Luca primaria, nuovo scenario A/B04 sulla spesa |
-| Raccogliere idee individuali da ciascun membro, poi discuterle insieme | p. 1, punto 5 | Idee originali, autore e raggruppamenti successivi | Spunti reali di Andrea e Marco collegati ai post-it; tre bozze per Andrea da rivedere. Contributi degli altri quattro membri da acquisire |
-| Esprimere le soluzioni come attività da supportare, prima dei dettagli tecnici | p. 1, punto 5; p. 2, sezione 4 | Proposte concettuali e soluzione scelta in 1-3 frasi | D3 scelta da Andrea e descritta in due frasi, con collegamenti ai quattro bisogni |
-| Selezionare una soluzione puntando alla novità e documentando il percorso | pp. 1-2, punto 6 | Voti su tre idee diverse per persona, oppure metodo delle quattro categorie | D3 scelta da Andrea; metodo ed esito del confronto del gruppo da documentare, novità da verificare |
-| Motivare un nome di 1-2 parole e una value proposition in una riga | p. 2, punto 7 | Nome, motivazione effettiva del gruppo, beneficio specifico | CIBY confermato; motivazione del nome da raccogliere. Value proposition di lavoro approvata da Andrea il 26 ottobre |
-| Pubblicare slide in PDF nello spazio C2 della repo | p. 2, Cosa consegnare | Presentazione con le cinque sezioni richieste | Cartella e scaletta dei contenuti predisposte; PDF da realizzare |
+| Nuove attività con utenti, considerando il feedback C1 | p. 1, punto 1 | [Scheda diario P02](../report/P02-diario.md) predisposta | Materiale reale, periodo, format, contesto o luogo, persone coinvolte e aspetti approfonditi |
+| Almeno un'attività con un utente immediato | p. 1, punto 1 | P02 gestisce acquisti e pasti propri; pertinenza motivata nella scheda | Documentare l'attività effettiva |
+| Integrare la nuova raccolta nell'analisi tematica | p. 1, punto 2 | [Schema di analisi](../report/analisi-tematica.md) e base C1 | Estratti, codici, temi e impatto sul progetto |
+| Brainstorming su tutti i bisogni, documentato con immagini | p. 1, punto 2; p. 2, sezione 3a | [Otto candidati e raggruppamenti](brainstorming-bisogni.md), commenti e [immagini attuali](../altro/immagini-processo/README.md) | Esito conclusivo e aggiornamento delle immagini dopo i nuovi contributi |
+| Selezionare 3-4 bisogni consistenti, collegati a risposte specifiche | p. 1, punto 3; p. 2, sezione 3b | [B01-B04 con evidenze e confini](evidenze-e-bisogni.md) | Riesame con diario e confronto |
+| Specificare personas e uno scenario per ogni bisogno | p. 1, punto 4 | [Tre personas e quattro scenari](personas-e-scenari.md) | Eventuali revisioni motivate dai nuovi materiali |
+| Idee individuali di ciascun membro e confronto successivo | p. 1, punto 5 | [Contributi di cinque componenti](brainstorming-e-scelta.md#idee-individuali), spunti preparatori e immagini | Idee di Emanuele e ragioni del confronto |
+| Soluzioni come attività da sostenere, senza dettagli tecnologici | p. 1, punto 5 | [Otto spunti e tre direzioni](alternative-soluzione.md) | Conservare questa distinzione nella selezione |
+| Selezionare una soluzione promettente puntando alla novità | pp. 1-2, punto 6 | D3 come direzione di lavoro, [confronto documentale](confronto-soluzioni-esistenti.md) e [scheda della selezione](../report/confronto-gruppo.md) | Metodo ed esito effettivi; differenziazione da motivare senza dichiararla dimostrata |
+| Descrivere la soluzione in 1-3 frasi | p. 2, sezione 4c | [Descrizione concettuale in due frasi](soluzione-concettuale.md) | Riesame dopo il confronto |
+| Nome di 1-2 parole, ragione della scelta e value proposition | p. 2, punto 7 e sezione 5 | [Nome CIBY, motivazione e frase di beneficio](value-proposition.md) | Nessuna integrazione specifica; eventuale riesame della frase di beneficio dopo il confronto |
+| Spazio C2 e presentazione PDF con cinque sezioni | p. 2, Cosa consegnare | Cartelle predisposte e [bozza PDF modificabile](../presentazione/bozza/README.md) | Integrazioni, verifica e pubblicazione del PDF definitivo |
 
-Il compito richiede 3-4 bisogni e uno scenario per ciascuno; non prescrive un numero identico di personas né un numero di slide. Almeno un'attività deve coinvolgere un utente immediato; non viene fissato un numero complessivo di nuove interviste. La traccia iniziale proponeva due approfondimenti; il 25 ottobre Andrea aveva escluso nuove attività. Il 26 ottobre ha indicato la possibilità di recuperare un diario di P02, come suggerito dai docenti: il materiale non è ancora disponibile. Il riesame C1 e i casi simulati restano distinti da interazioni effettive con utenti e non coprono quel requisito.
+## Requisiti da non aggiungere
 
-## Il feedback C1 diventa una regola per le slide
+Il compito non impone un numero di slide o un numero identico di personas e bisogni. Richiede 3-4 bisogni e uno scenario per ciascuno. Almeno una nuova attività deve coinvolgere un utente immediato; non fissa un numero complessivo di nuove interviste.
 
-Andrea riferisce un riscontro generale molto positivo. La correzione ricevuta riguarda l'ordine: una decisione deve seguire le informazioni che la motivano.
+Prototipo, storyboard, schermate dell'app e implementazione non sono richiesti in questa fase. Un caso simulato e la rilettura C1 non sostituiscono il nuovo coinvolgimento di utenti.
 
-Il filo della presentazione sarà: **dati raccolti → codici e temi → bisogni candidati e selezione → personas e scenari → alternative → scelta → soluzione e value proposition**.
+## Metodo di selezione proposto dal compito
 
-Nell'introduzione possiamo anticipare il tema e l'obiettivo di approfondimento. La motivazione di un restringimento definitivo del dominio deve comparire dopo i risultati che lo sostengono, oppure essere richiamata esplicitamente più avanti.
+- Tre voti per persona, da assegnare a tre idee diverse.
+- In alternativa, quattro categorie: «scelta razionale», «quella che potrebbe piacere di più», «preferita», «scommessa a lungo termine». Ogni membro sceglie una o due idee da assegnare alle categorie.
 
-## Scaletta causale iniziale
+Documentiamo il metodo realmente usato. Con sole tre alternative, i tre voti distinti non le distinguerebbero: possiamo usare le categorie oppure votare sul ventaglio più ampio delle idee.
 
-La [scaletta operativa del 26 ottobre](scaletta-presentazione.md) distribuisce questi contenuti nelle cinque sezioni della consegna, distinguendo materiali pronti e integrazioni attese.
+## Ordine della presentazione
 
-Questa è una proposta di contenuto, non un numero di slide imposto dai docenti.
+Il feedback C1 ci chiede di mostrare le cause prima delle decisioni. Il percorso è: raccolta e analisi, bisogni candidati e selezione, personas e scenari, alternative e confronto, soluzione, nome e value proposition.
 
-| Ordine | Contenuto | Da cosa dipende |
-|---|---|---|
-| 1 | CIBY, MAGGICAL e componenti del gruppo | Dati del gruppo |
-| 2 | Dominio di partenza, domande aperte della C1 e obiettivo della C2 | Risultati C1 |
-| 3 | Nuove attività: partecipanti, pertinenza, format, luogo e ruoli | Attività realmente svolte |
-| 4 | Episodi ed estratti nuovi, comprese strategie che funzionano | Report delle nuove sessioni |
-| 5 | Integrazione con C1: codici, temi confermati, modificati o nuovi | Confronto tra vecchi e nuovi dati |
-| 6 | Tutti i bisogni discussi e criteri di selezione | Analisi tematica e brainstorming sui bisogni |
-| 7 | I 3-4 bisogni selezionati, con riferimenti puntuali | Esito documentato della selezione |
-| 8 | Personas: pattern comportamentali e obiettivi distinti | Raggruppamenti sostenuti dalle risposte |
-| 9 | Uno scenario per ogni bisogno | Bisogni e personas |
-| 10 | Idee individuali e discussione collettiva | Scenari |
-| 11 | Confronto delle alternative e votazione o quattro categorie | Idee effettivamente raccolte |
-| 12 | Soluzione scelta in 1-3 frasi, ambito finale e ragioni della scelta | Risultati e selezione |
-| 13 | Nome CIBY, motivazione del gruppo e value proposition in una riga | Soluzione scelta |
-| 14 | Fonti e limiti rilevanti | Materiali utilizzati |
+L'introduzione può anticipare il dominio e la domanda di approfondimento, richiamando più avanti i risultati che motivano il focus. Le cinque sezioni e la loro distribuzione sono nella [scaletta](scaletta-presentazione.md).
 
-Per ogni slide di scelta, inserire nelle note o nella slide i riferimenti alle evidenze e alle slide precedenti che la sostengono. Non attribuire alla nuova ricerca risultati già emersi nella C1.
+## Chiusura
 
-## Piano aggiornato fino al 26 ottobre
+La lista operativa è unica: [Da completare](../da-completare.md). Prima di chiamare il PDF consegna finale dobbiamo verificare che ogni riga della tabella sia coperta da materiali effettivi, che le indicazioni di attesa siano state risolte e che il file sia leggibile e raggiungibile dalla pagina C2.
 
-Il piano iniziale prevedeva nuove attività il 24 ottobre, non documentate. Il 26 ottobre Andrea ha indicato la possibilità di recuperare un diario di P02 su spesa e preparazioni. In attesa del materiale reale, il lavoro prosegue con il riesame C1 e lo [spazio per consolidare i bisogni](brainstorming-bisogni.md); l'integrazione potrà modificare gli esiti preparati.
-
-| Ordine | Lavoro | Stato o risultato necessario |
-|---|---|---|
-| 1 | Definire il focus | Completato: gestione flessibile dei pasti, con spesa inclusa nei bisogni e sport da approfondire |
-| 2 | Consolidare i bisogni | Base C1 pronta: B01-B04 confermati da Andrea, con evidenze e confini; otto candidati in Figma. Restano confronto del gruppo e integrazione del diario P02 |
-| 3 | Preparare l'approfondimento sportivo simulato | Completato: [caso S-Sport](approfondimento-sportivo-simulato.md), con fonti C1, assunzioni, scenario e ipotesi aperte; nessuna nuova attività con utenti |
-| 4 | Consolidare personas e scenari | Completato: Luca primaria, Gianfranco e Marta complementari; quattro scenari G/L/M/A, sintesi Figma separata e post-it invariati |
-| 5 | Generare e selezionare alternative | In corso: spunti di Andrea e Marco e bozze di Andrea disponibili; D3 scelta in precedenza da Andrea. Restano gli altri contributi e la documentazione della selezione del gruppo |
-| 6 | Definire soluzione, nome e value proposition | [Descrizione concettuale D3](soluzione-concettuale.md) pronta in due frasi; value proposition di lavoro approvata da Andrea, motivazione del nome ancora da raccogliere |
-| 7 | Preparare e pubblicare la consegna | Slide PDF, ordine causale, leggibilità e collegamenti verificati |
-
-La votazione sulla direzione, riferita da Andrea, non viene utilizzata come documentazione sostitutiva della selezione della soluzione.
-
-## Verifica prima di chiamarla consegna finale
-
-- [ ] Le nuove attività sono documentate, con almeno un utente immediato.
-- [ ] Le evidenze nuove sono distinguibili dalle C1.
-- [x] I quattro bisogni sono formulati come attività, motivati e collegati a risposte specifiche.
-- [ ] La documentazione effettiva del confronto del gruppo sui bisogni è disponibile, incluse le immagini richieste.
-- [x] Ogni bisogno ha risposte specifiche di origine e almeno uno scenario.
-- [x] Le personas descrivono pattern rilevanti e obiettivi distinti, con una priorità motivata.
-- [ ] Esistono tracce delle idee individuali, del confronto e della selezione.
-- [x] La soluzione D3 scelta da Andrea è concettuale e descritta in due frasi.
-- [x] Una value proposition di lavoro è stata approvata da Andrea e collegata ai quattro bisogni.
-- [ ] La motivazione del nome è quella del gruppo e il messaggio finale è coerente con evidenze ed esito della selezione.
-- [ ] Ogni decisione segue le proprie evidenze nella presentazione.
-- [ ] Il PDF finale è leggibile e raggiungibile dalla pagina C2.
-
-## Riferimenti teorici
-
-3 Requisiti-Personas-Scenari.pdf: p. 5, tracciabilità; pp. 15-17, costruzione delle personas; pp. 21 e 27, contesto e completezza degli scenari; p. 29, distinzione tra scenari concettuali e concreti. Storyboard, interfacce e prototipi non sono richiesti dal file specifico della C2.
+Riferimento teorico: **3 Requisiti-Personas-Scenari.pdf**, p. 5 sulla tracciabilità, pp. 15-17 sulle personas, pp. 21 e 27 sul contesto degli scenari e p. 29 sulla distinzione tra scenari concettuali e concreti.
