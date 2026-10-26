@@ -71,7 +71,7 @@ Gli esiti sono criteri qualitativi per costruire e successivamente valutare scen
 
 **Criterio da rappresentare nello scenario:** la persona confronta la quantità da acquistare con le occasioni di utilizzo e motiva la scelta. La riduzione effettiva degli sprechi dovrà essere verificata successivamente.
 
-**Limite:** i report descrivono soprattutto pratiche e difficoltà generali, non un episodio di acquisto completo osservato. Il futuro scenario sarà una costruzione progettuale fondata su questi elementi.
+**Limite:** i report descrivono soprattutto pratiche e difficoltà generali, non un episodio di acquisto completo osservato. Lo [scenario A consolidato](personas-e-scenari.md#scenario-a---la-confezione-e-i-pasti-previsti) è una costruzione progettuale fondata su questi elementi.
 
 ## Come ritrovare le fonti
 

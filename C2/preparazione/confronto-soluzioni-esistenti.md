@@ -48,7 +48,7 @@ Le ipotesi restano espresse come attività da sostenere. Non ne viene dichiarata
 
 **H3 - Mantenere il contesto utile con uno sforzo sostenibile.** Aiutare la persona a ottenere supporto pertinente anche quando non ha una ricostruzione completa e aggiornata delle scorte. Collegamento C1: P01-E04/E07, un solo caso principale. Da capire: quale informazione serve davvero alla scelta e quale impegno la persona accetta? Non assumere come già dimostrato il rifiuto di un inventario.
 
-H1 e H2 proseguono direttamente gli scenari iniziali; H3 è più esplorativa. Non sono stati raccolti nuovi episodi. Nel riesame del 25 ottobre, D3 delle [alternative concettuali](alternative-soluzione.md) sviluppa soprattutto H1, mantenendo H2 e lo sforzo di contestualizzazione come aspetti collegati. È una raccomandazione preparatoria, non una soluzione selezionata.
+H1 e H2 proseguono direttamente gli scenari iniziali; H3 è più esplorativa. Non sono stati raccolti nuovi episodi. Nel riesame del 25 ottobre, D3 delle [alternative concettuali](alternative-soluzione.md) sviluppa soprattutto H1, mantenendo H2 e lo sforzo di contestualizzazione come aspetti collegati. Andrea ha successivamente scelto D3 il 25 ottobre: la [descrizione concettuale](soluzione-concettuale.md) è pronta. Restano da documentare il confronto del gruppo e il vantaggio specifico rispetto alle soluzioni esistenti.
 
 ## Domande per leggere i nuovi episodi
 
