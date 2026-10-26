@@ -16,9 +16,3 @@ La presentazione raccoglie la nuova attività con P02, l'analisi tematica C1–C
 - [Immagini del processo](altro/immagini-processo/README.md): bisogni discussi, diario, personas, idee individuali e preferenze.
 
 Il diario P02 è un'attività reale, integrata con i [report C1](../C1/README.md). Personas e scenari sono sintesi progettuali. L'organizzazione dei pasti intorno agli allenamenti rimane una possibilità da approfondire; le simulazioni considerate durante il lavoro non costituiscono dati raccolti con utenti.
-
-## Gruppo
-
-Andrea Mauro, Marco Macherelli, Gabriele Martignoni, Rime Chamkar, Emanuele Marcantonio, Edoardo Ughi.
-
-**Gruppo:** MAGGICAL. **Progetto:** CIBY.
