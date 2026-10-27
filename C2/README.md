@@ -13,6 +13,4 @@ La presentazione raccoglie la nuova attività con P02, l'analisi tematica C1–C
 
 - [Diario originale P02](altro/P02-diario-originale.md): appunti del 21–26 ottobre, informazioni sul metodo e chiarimento sul rinvio della bowl.
 
-- [Immagini del processo](altro/immagini-processo/README.md): bisogni discussi, diario, personas, idee individuali e preferenze.
-
 Il diario P02 è un'attività reale, integrata con i [report C1](../C1/README.md). Personas e scenari sono sintesi progettuali. L'organizzazione dei pasti intorno agli allenamenti rimane una possibilità da approfondire; le simulazioni considerate durante il lavoro non costituiscono dati raccolti con utenti.

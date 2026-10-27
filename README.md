@@ -20,4 +20,4 @@ Andrea Mauro, Marco Macherelli, Gabriele Martignoni, Rime Chamkar, Emanuele Marc
 
 La cartella C1 raccoglie la presentazione generale, i cinque report delle interviste P01–P05, il sondaggio con i risultati aggregati e la traccia comune delle domande.
 
-La cartella C2 raccoglie la presentazione PDF definitiva, il diario originale P02 e le immagini del processo. Analisi, bisogni, personas, scenari e scelta della soluzione sono documentati nella presentazione.
+La cartella C2 raccoglie la presentazione PDF definitiva e il diario originale P02. Analisi, bisogni, personas, scenari e scelta della soluzione sono documentati nella presentazione.
