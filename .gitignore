@@ -1,0 +1,10 @@
+# File locali di macOS
+.DS_Store
+
+# Dipendenze, build e configurazioni locali dell'app
+node_modules/
+dist/
+build/
+.env
+.env.*
+!.env.example

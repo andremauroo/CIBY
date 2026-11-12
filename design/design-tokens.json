@@ -1,0 +1,63 @@
+{
+  "name": "CIBY app concept v1",
+  "font": {
+    "family": "Manrope",
+    "display": {
+      "size": 32,
+      "weight": 800,
+      "lineHeight": 38
+    },
+    "title": {
+      "size": 24,
+      "weight": 700,
+      "lineHeight": 30
+    },
+    "heading": {
+      "size": 18,
+      "weight": 700,
+      "lineHeight": 25
+    },
+    "body": {
+      "size": 14,
+      "weight": 500,
+      "lineHeight": 21
+    },
+    "small": {
+      "size": 12,
+      "weight": 500,
+      "lineHeight": 17
+    }
+  },
+  "color": {
+    "surface": "#FAFBF8",
+    "card": "#FFFFFF",
+    "brand": "#39264F",
+    "brandSoft": "#ECE8FF",
+    "accent": "#F6D872",
+    "text": "#2B2434",
+    "secondary": "#6F6877",
+    "border": "#DDD9E2",
+    "onBrand": "#FFFFFF",
+    "leaf": "#547A43",
+    "user": "#F3E8EF",
+    "violet": "#7055A1"
+  },
+  "spacing": [
+    4,
+    8,
+    12,
+    16,
+    24,
+    32
+  ],
+  "radius": [
+    12,
+    20,
+    28,
+    999
+  ],
+  "viewport": {
+    "width": 390,
+    "height": 920
+  }
+}
