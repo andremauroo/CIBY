@@ -45,4 +45,4 @@ La C2 raccoglie la presentazione PDF definitiva e il diario originale P02. Anali
 
 ## Stato dell'app
 
-È disponibile una prima proposta grafica in [Figma](https://www.figma.com/design/EuBvAH0SMAk3UEjVfBMxMv), con una pagina dedicata al prototipo navigabile. L'implementazione dell'app e l'integrazione AI devono ancora iniziare.
+È disponibile una prima proposta grafica in [Figma](https://www.figma.com/design/EuBvAH0SMAk3UEjVfBMxMv), con una pagina dedicata al prototipo navigabile. È disponibile una [prima web app mobile](app/README.md) con scorte locali, dialogo dimostrativo, scelta e rinvio dei pasti. L'integrazione con un modello AI resta da valutare dopo le prove HCI.

@@ -12,7 +12,7 @@ Le quattro schermate sono Oggi, Dispensa, Fridgy e Cambio di programma. La Dispe
 
 La pagina “CIBY · App mobile” contiene la presentazione e i componenti. La pagina “Prototipo navigabile” contiene le schermate collegate. Dal pulsante Play si può partire dal flusso “CIBY · Dal frigo al prossimo pasto”.
 
-La navigazione delle aree, “Trova un’idea”, “Cambia programma”, “Scelgo la frittata” e la conferma dello spostamento sono collegate. Ricerca, filtri, inserimento scorte e chat libera sono rappresentazioni grafiche. Non c’è ancora un’app funzionante, un modello AI o un database. Tutti gli alimenti e le quantità sono dati dimostrativi.
+La navigazione delle aree, “Trova un’idea”, “Cambia programma”, “Scelgo la frittata” e la conferma dello spostamento sono collegate. Ricerca, filtri, inserimento scorte e chat libera sono rappresentazioni grafiche. La [prima implementazione frontend](../app/README.md) rende ora funzionanti scorte locali e flussi di scelta/rinvio; Fridgy resta una demo conversazionale senza modello AI o database remoto. Tutti gli alimenti e le quantità sono dati dimostrativi.
 
 I token esportati sono disponibili in [design-tokens.json](design-tokens.json). I colori e gli spazi principali sono anche variabili Figma; pulsanti e navigazione sono componenti riutilizzabili.
 
@@ -21,3 +21,7 @@ I token esportati sono disponibili in [design-tokens.json](design-tokens.json). 
 - [Applicazione](../app/README.md)
 - [Consegne e ricerca](../consegne/README.md)
 - [Indice del progetto](../README.md)
+
+## Esportazione per il frontend
+
+Le illustrazioni e le icone originali sono salvate in `app/public/assets`. La mappatura tra nodi Figma e SVG è documentata in [figma-export.json](figma-export.json). Il frontend usa Manrope locale e i colori di design-tokens.json.

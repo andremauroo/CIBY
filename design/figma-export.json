@@ -1,0 +1,44 @@
+{
+  "fileKey": "EuBvAH0SMAk3UEjVfBMxMv",
+  "fileUrl": "https://www.figma.com/design/EuBvAH0SMAk3UEjVfBMxMv",
+  "exportDate": "2026-11-13",
+  "assetDirectory": "../app/public/assets",
+  "screens": {
+    "2:70": {
+      "imgIllustrazioneZucchini": "e9eda.svg",
+      "imgIllustrazioneDish": "8d892.svg",
+      "imgIconHome": "c2520.svg",
+      "imgIconPantry": "aa8ab.svg",
+      "imgIconMeal": "3e441.svg",
+      "imgIconChat": "76b0b.svg"
+    },
+    "2:73": {
+      "imgIconSearch": "526d4.svg",
+      "imgIllustrazioneZucchini": "280eb.svg",
+      "imgIllustrazioneEggs": "104a0.svg",
+      "imgIllustrazioneRice": "6bf46.svg",
+      "imgIllustrazioneTomato": "dd50e.svg",
+      "imgIconHome": "c2520.svg",
+      "imgIconPantry": "aa8ab.svg",
+      "imgIconMeal": "3e441.svg",
+      "imgIconChat": "76b0b.svg"
+    },
+    "2:76": {
+      "imgIconChat": "76b0b.svg",
+      "imgIconMore": "7029a.svg",
+      "imgIconSend": "abf5f.svg",
+      "imgIconHome": "c2520.svg",
+      "imgIconPantry": "aa8ab.svg",
+      "imgIconMeal": "3e441.svg"
+    },
+    "2:79": {
+      "imgIllustrazioneDish": "59bc0.svg",
+      "imgIconCheck": "8c6f1.svg",
+      "imgIconHome": "c2520.svg",
+      "imgIconPantry": "aa8ab.svg",
+      "imgIconMeal": "3e441.svg",
+      "imgIconChat": "76b0b.svg"
+    }
+  },
+  "notes": "SVG originali esportati tramite get_design_context. Le schermate sono implementate come componenti React responsivi; nessuna schermata raster nell'app."
+}

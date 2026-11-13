@@ -1,0 +1,707 @@
+{
+  "provider": "TheMealDB",
+  "importedAt": "2026-11-13T19:48:31.626Z",
+  "usage": "Educational prototype; test key 1. Review provider terms before public distribution.",
+  "meals": [
+    {
+      "id": "52961",
+      "title": "Budino Di Ricotta",
+      "category": "Dessert",
+      "language": "en",
+      "minutes": null,
+      "servings": null,
+      "sourceUrl": "https://thehappyfoodie.co.uk/recipes/ricotta-cake-budino-di-ricotta",
+      "instructions": "Mash the ricotta and beat well with the egg yolks, stir in the flour, sugar, cinnamon, grated lemon rind and the rum and mix well. You can do this in a food processor. Beat the egg whites until stiff, fold in and pour into a buttered and floured 25cm cake tin. Bake in the oven at 180ºC/160ºC fan/gas 4 for about 40 minutes, or until it is firm.\r\n\r\nServe hot or cold dusted with icing sugar.",
+      "ingredients": [
+        {
+          "name": "Ricotta",
+          "measure": "500g"
+        },
+        {
+          "name": "Eggs",
+          "measure": "4 large"
+        },
+        {
+          "name": "Flour",
+          "measure": "3 tbs"
+        },
+        {
+          "name": "Sugar",
+          "measure": "250g"
+        },
+        {
+          "name": "Cinnamon",
+          "measure": "1 tsp"
+        },
+        {
+          "name": "Lemons",
+          "measure": "Grated Zest of 2"
+        },
+        {
+          "name": "Dark Rum",
+          "measure": "5 tbs"
+        },
+        {
+          "name": "Icing Sugar",
+          "measure": "sprinking"
+        }
+      ]
+    },
+    {
+      "id": "52796",
+      "title": "Chicken Alfredo Primavera",
+      "category": "Chicken",
+      "language": "en",
+      "minutes": null,
+      "servings": null,
+      "sourceUrl": "https://www.themealdb.com/meal/52796",
+      "instructions": "Heat 1 tablespoon of butter and 2 tablespoons of olive oil in a large skillet over medium-high heat. Season both sides of each chicken breast with seasoned salt and a pinch of pepper. Add the chicken to the skillet and cook for 5-7 minutes on each side, or until cooked through.  While the chicken is cooking, bring a large pot of water to a boil. Season the boiling water with a few generous pinches of kosher salt. Add the pasta and give it a stir. Cook, stirring occasionally, until al dente, about 12 minutes. Reserve 1/2 cup of  pasta water before draining the pasta.  Remove the chicken from the pan and transfer it to a cutting board; allow it to rest. Turn the heat down to medium and dd the remaining 1 tablespoon of butter and olive oil to the same pan you used to cook the chicken. Add the veggies (minus the garlic) and red pepper flakes to the pan and stir to coat with the oil and butter (refrain from seasoning with salt until the veggies are finished browning). Cook, stirring often, until the veggies are tender, about 5 minutes. Add the garlic and a generous pinch of salt and pepper to the pan and cook for 1 minute.  Deglaze the pan with the white wine. Continue to cook until the wine has reduced by half, about 3 minutes. Stir in the milk, heavy cream, and reserved pasta water. Bring the mixture to a gentle boil and allow to simmer and reduce for 2-3 minutes. Turn off the heat and add the Parmesan cheese and cooked pasta. Season with salt and pepper to taste. Garnish with Parmesan cheese and chopped parsley, if desired. ",
+      "ingredients": [
+        {
+          "name": "Butter",
+          "measure": "2 tablespoons"
+        },
+        {
+          "name": "Olive Oil",
+          "measure": "3 tablespoons"
+        },
+        {
+          "name": "Chicken",
+          "measure": "5 boneless"
+        },
+        {
+          "name": "Salt",
+          "measure": "1 teaspoon"
+        },
+        {
+          "name": "Squash",
+          "measure": "1 cut into 1/2-inch cubes"
+        },
+        {
+          "name": "Broccoli",
+          "measure": "1 Head chopped"
+        },
+        {
+          "name": "mushrooms",
+          "measure": "8-ounce sliced"
+        },
+        {
+          "name": "Pepper",
+          "measure": "1 red"
+        },
+        {
+          "name": "onion",
+          "measure": "1 chopped"
+        },
+        {
+          "name": "garlic",
+          "measure": "3 cloves"
+        },
+        {
+          "name": "red pepper flakes",
+          "measure": "1/2 teaspoon"
+        },
+        {
+          "name": "white wine",
+          "measure": "1/2 cup"
+        },
+        {
+          "name": "milk",
+          "measure": "1/2 cup"
+        },
+        {
+          "name": "heavy cream",
+          "measure": "1/2 cup"
+        },
+        {
+          "name": "Parmesan cheese",
+          "measure": "1 cup grated"
+        },
+        {
+          "name": "bowtie pasta",
+          "measure": "16 ounces"
+        },
+        {
+          "name": "Salt",
+          "measure": "pinch"
+        },
+        {
+          "name": "Pepper",
+          "measure": "pinch"
+        },
+        {
+          "name": "Parsley",
+          "measure": "chopped"
+        }
+      ]
+    },
+    {
+      "id": "52839",
+      "title": "Chilli prawn linguine",
+      "category": "Pasta",
+      "language": "en",
+      "minutes": null,
+      "servings": null,
+      "sourceUrl": "https://www.bbcgoodfood.com/recipes/1269/chilli-prawn-linguine",
+      "instructions": "Mix the dressing ingredients in a small bowl and season with salt and pepper. Set aside.\r\n\r\nCook the pasta according to the packet instructions. Add the sugar snap peas for the last minute or so of cooking time.\r\n\r\nMeanwhile, heat the oil in a wok or large frying pan, toss in the garlic and chilli and cook over a fairly gentle heat for about 30 seconds without letting the garlic brown. Tip in the prawns and cook over a high heat, stirring frequently, for about 3 minutes until they turn pink.\r\n\r\nAdd the tomatoes and cook, stirring occasionally, for 3 minutes until they just start to soften. Drain the pasta and sugar snaps well, then toss into the prawn mixture. Tear in the basil leaves, stir, and season with salt and pepper.\r\n\r\nServe with salad leaves drizzled with the lime dressing, and warm crusty bread.",
+      "ingredients": [
+        {
+          "name": "Linguine Pasta",
+          "measure": "280g"
+        },
+        {
+          "name": "Sugar Snap Peas",
+          "measure": "200g"
+        },
+        {
+          "name": "Olive Oil",
+          "measure": "2 tblsp"
+        },
+        {
+          "name": "Garlic Clove",
+          "measure": "2 cloves chopped"
+        },
+        {
+          "name": "Red Chilli",
+          "measure": "1 large"
+        },
+        {
+          "name": "King Prawns",
+          "measure": "24 Skinned"
+        },
+        {
+          "name": "Cherry Tomatoes",
+          "measure": "12"
+        },
+        {
+          "name": "Basil Leaves",
+          "measure": "Handful"
+        },
+        {
+          "name": "Lettuce",
+          "measure": "Leaves"
+        },
+        {
+          "name": "Bread",
+          "measure": "to serve"
+        },
+        {
+          "name": "Fromage Frais",
+          "measure": "2 tbsp"
+        },
+        {
+          "name": "Lime",
+          "measure": "Grated Zest of 2"
+        },
+        {
+          "name": "Caster Sugar",
+          "measure": "2 tsp"
+        }
+      ]
+    },
+    {
+      "id": "53064",
+      "title": "Fettuccine Alfredo",
+      "category": "Pasta",
+      "language": "en",
+      "minutes": null,
+      "servings": null,
+      "sourceUrl": "https://www.delish.com/cooking/recipe-ideas/a55312/best-homemade-fettuccine-alfredo-recipe/",
+      "instructions": "Cook pasta according to package instructions in a large pot of boiling water and salt. Add heavy cream and butter to a large skillet over medium heat until the cream bubbles and the butter melts. Whisk in parmesan and add seasoning (salt and black pepper). Let the sauce thicken slightly and then add the pasta and toss until coated in sauce. Garnish with parsley, and it's ready.",
+      "ingredients": [
+        {
+          "name": "Fettuccine",
+          "measure": "1 lb"
+        },
+        {
+          "name": "Heavy Cream",
+          "measure": "1/2 cup"
+        },
+        {
+          "name": "Butter",
+          "measure": "1/2 cup"
+        },
+        {
+          "name": "Parmesan",
+          "measure": "1/2 cup"
+        },
+        {
+          "name": "Parsley",
+          "measure": "2 tbsp"
+        },
+        {
+          "name": "Black Pepper",
+          "measure": ""
+        }
+      ]
+    },
+    {
+      "id": "52835",
+      "title": "Fettucine alfredo",
+      "category": "Pasta",
+      "language": "en",
+      "minutes": null,
+      "servings": null,
+      "sourceUrl": "https://www.bbcgoodfood.com/recipes/fettucine-alfredo",
+      "instructions": "In a medium saucepan, stir the clotted cream, butter and cornflour over a low-ish heat and bring to a low simmer. Turn off the heat and keep warm.\r\nMeanwhile, put the cheese and nutmeg in a small bowl and add a good grinding of black pepper, then stir everything together (don’t add any salt at this stage).\r\nPut the pasta in another pan with 2 tsp salt, pour over some boiling water and cook following pack instructions (usually 3-4 mins). When cooked, scoop some of the cooking water into a heatproof jug or mug and drain the pasta, but not too thoroughly.\r\nAdd the pasta to the pan with the clotted cream mixture, then sprinkle over the cheese and gently fold everything together over a low heat using a rubber spatula. When combined, splash in 3 tbsp of the cooking water. At first, the pasta will look wet and sloppy: keep stirring until the water is absorbed and the sauce is glossy. Check the seasoning before transferring to heated bowls. Sprinkle over some chives or parsley, then serve immediately.",
+      "ingredients": [
+        {
+          "name": "Clotted Cream",
+          "measure": "227g"
+        },
+        {
+          "name": "Butter",
+          "measure": "25g"
+        },
+        {
+          "name": "Corn Flour",
+          "measure": "1 tsp"
+        },
+        {
+          "name": "Parmesan Cheese",
+          "measure": "100g"
+        },
+        {
+          "name": "Nutmeg",
+          "measure": "Grated"
+        },
+        {
+          "name": "Fettuccine",
+          "measure": "250g"
+        },
+        {
+          "name": "Parsley",
+          "measure": "Chopped"
+        }
+      ]
+    },
+    {
+      "id": "52844",
+      "title": "Lasagne",
+      "category": "Pasta",
+      "language": "en",
+      "minutes": null,
+      "servings": null,
+      "sourceUrl": "https://www.bbcgoodfood.com/recipes/classic-lasagne",
+      "instructions": "Heat the oil in a large saucepan. Use kitchen scissors to snip the bacon into small pieces, or use a sharp knife to chop it on a chopping board. Add the bacon to the pan and cook for just a few mins until starting to turn golden. Add the onion, celery and carrot, and cook over a medium heat for 5 mins, stirring occasionally, until softened.\r\nAdd the garlic and cook for 1 min, then tip in the mince and cook, stirring and breaking it up with a wooden spoon, for about 6 mins until browned all over.\r\nStir in the tomato purée and cook for 1 min, mixing in well with the beef and vegetables. Tip in the chopped tomatoes. Fill each can half full with water to rinse out any tomatoes left in the can, and add to the pan. Add the honey and season to taste. Simmer for 20 mins.\r\nHeat oven to 200C/180C fan/gas 6. To assemble the lasagne, ladle a little of the ragu sauce into the bottom of the roasting tin or casserole dish, spreading the sauce all over the base. Place 2 sheets of lasagne on top of the sauce overlapping to make it fit, then repeat with more sauce and another layer of pasta. Repeat with a further 2 layers of sauce and pasta, finishing with a layer of pasta.\r\nPut the crème fraîche in a bowl and mix with 2 tbsp water to loosen it and make a smooth pourable sauce. Pour this over the top of the pasta, then top with the mozzarella. Sprinkle Parmesan over the top and bake for 25–30 mins until golden and bubbling. Serve scattered with basil, if you like.",
+      "ingredients": [
+        {
+          "name": "Olive Oil",
+          "measure": "1 tblsp"
+        },
+        {
+          "name": "Bacon",
+          "measure": "2"
+        },
+        {
+          "name": "Onion",
+          "measure": "1 finely chopped"
+        },
+        {
+          "name": "Celery",
+          "measure": "1 Stick"
+        },
+        {
+          "name": "Carrots",
+          "measure": "1 medium"
+        },
+        {
+          "name": "Garlic",
+          "measure": "2 cloves chopped"
+        },
+        {
+          "name": "Minced Beef",
+          "measure": "500g"
+        },
+        {
+          "name": "Tomato Puree",
+          "measure": "1 tbls"
+        },
+        {
+          "name": "Chopped Tomatoes",
+          "measure": "800g"
+        },
+        {
+          "name": "Honey",
+          "measure": "1 tblsp"
+        },
+        {
+          "name": "Lasagne Sheets",
+          "measure": "500g"
+        },
+        {
+          "name": "Creme Fraiche",
+          "measure": "400ml"
+        },
+        {
+          "name": "Mozzarella Balls",
+          "measure": "125g"
+        },
+        {
+          "name": "Parmesan Cheese",
+          "measure": "50g"
+        },
+        {
+          "name": "Basil Leaves",
+          "measure": "Topping"
+        }
+      ]
+    },
+    {
+      "id": "52777",
+      "title": "Mediterranean Pasta Salad",
+      "category": "Seafood",
+      "language": "en",
+      "minutes": null,
+      "servings": null,
+      "sourceUrl": "https://thelemonsqueezy.com/recipe/mediterranean-pasta-salad/",
+      "instructions": "Bring a large saucepan of salted water to the boil\r\nAdd the pasta, stir once and cook for about 10 minutes or as directed on the packet.\r\nMeanwhile, wash the tomatoes and cut into quarters. Slice the olives. Wash the basil.\r\nPut the tomatoes into a salad bowl and tear the basil leaves over them. Add a tablespoon of olive oil and mix.\r\nWhen the pasta is ready, drain into a colander and run cold water over it to cool it quickly.\r\nToss the pasta into the salad bowl with the tomatoes and basil.\r\nAdd the sliced olives, drained mozzarella balls, and chunks of tuna. Mix well and let the salad rest for at least half an hour to allow the flavours to mingle.\r\nSprinkle the pasta with a generous grind of black pepper and drizzle with the remaining olive oil just before serving.",
+      "ingredients": [
+        {
+          "name": "mozzarella balls",
+          "measure": "200 g"
+        },
+        {
+          "name": "baby plum tomatoes",
+          "measure": "250 g"
+        },
+        {
+          "name": "fresh basil",
+          "measure": "1  bunch"
+        },
+        {
+          "name": "farfalle",
+          "measure": "350 g"
+        },
+        {
+          "name": "extra virgin olive oil",
+          "measure": "3  tablespoons"
+        },
+        {
+          "name": "Green Olives",
+          "measure": "40 g"
+        },
+        {
+          "name": "tuna",
+          "measure": "200 g"
+        },
+        {
+          "name": "salt",
+          "measure": "to taste"
+        },
+        {
+          "name": "pepper",
+          "measure": "to taste"
+        }
+      ]
+    },
+    {
+      "id": "52810",
+      "title": "Osso Buco alla Milanese",
+      "category": "Miscellaneous",
+      "language": "en",
+      "minutes": null,
+      "servings": null,
+      "sourceUrl": "https://www.cookstr.com/Meat/Osso-Buco-alla-Milanese",
+      "instructions": "Heat the oven to 300 degrees.\r\nDredging the shanks: pour the flour into a shallow dish (a pie plate works nicely). Season the veal shanks on all sides with salt and pepper. One at a time, roll the shanks around in the flour coat, and shake and pat the shank to remove any excuses flour. Discard the remaining flour.\r\nBrowning the shanks: put the oil and 1 tablespoon of the butter in a wide Dutch oven or heavy braising pot (6 to 7 quart) and heat over medium-high heat. When the butter has melted and the oil is shimmering, lower the shanks into the pot, flat side down; if the shanks won’t fit without touching one another, do this in batches. Brown the shanks, turning once with tongs, until both flat sides are well caramelized, about 5 minutes per side. If the butter-oil mixture starts to burn, lower the heat just a bit. Transfer the shanks to a large platter or tray and set aside.\r\nThe aromatics: pour off and discard the fat from the pot. Wipe out any burnt bits with a damp paper towel, being careful not to remove any delicious little caramelized bits. Ad the remaining 2 tablespoons butter to the pot and melt it over medium heat. When the butter has stopped foaming, add the onion, carrot, celery, and fennel. Season with salt and pepper, stir, and cook the vegetables until they begin to soften but do not brown, about 6 minutes. Stir in the garlic, orange zest, marjoram, and bay leaf, and stew for another minute or two.\r\nThe braising liquid: add the wine, increase the heat to high, and bring to a boil. Boil, stirring occasionally, to reduce the wine by about half, 5 minutes. Add the stock and tomatoes, with their juice, and boil again to reduce the liquid to about 1 cup total, about 10 minutes.\r\nThe braise: Place the shanks in the pot so that they are sitting with the exposed bone facing up, and pour over any juices that accumulated as they sat. Cover with parchment paper, pressing down so the parchment nearly touches the veal and the edges hang over the sides of the pot by about an inch. Cover tightly with the lid, and slide into the lower part of the oven to braise at a gentle simmer. Check the pot after the first 15 minutes, and if the liquid is simmering too aggressively, lower the oven heat by 10 or 15 degrees. Continue braising, turning the shanks and spooning some pan juices over the top after the first 40 minutes, until the meat is completely tender and pulling away from the bone, about 2 hours.\r\nThe gremolata: While the shanks are braising, stir together the garlic, parsley, and lemon zest in a small bowl. Cover with plastic wrap and set aside in a cool place (or the refrigerator, if your kitchen is very warm.)\r\nThe finish: When the veal is fork-tender and falling away from the bone, remove the lid and sprinkle over half of the gremolata. Return the veal to the oven, uncovered, for another 15 minutes to caramelize it some.\r\nUsing a slotted spatula or spoon, carefully lift the shanks from the braising liquid, doing your best to keep them intact. The shanks will be very tender and threatening to fall into pieces, and the marrow will be wobbly inside the bones, so this can be a bit tricky. But if they do break apart, don’t worry, the flavor won’t suffer at all. Arrange the shanks on a serving platter or other large plate, without stacking, and cover with foil to keep warm.\r\nFinishing the sauce: Set the braising pot on top of the stove and evaluate the sauce: if there is a visible layer of fat floating on the surface, use a large spoon to skim it off and discard it. Taste the sauce for concentration of flavor. If it tastes a bit weak or flat, bring it to a boil over high heat, and boil to reduce the volume and intensify the flavor for 5 to 10 minutes. Taste again for salt and pepper. If the sauce wants more zip, stir in a teaspoon or two of the remaining gremolata.\r\nPortioning the veal shanks: if the shanks are reasonably sized, serve one per person. If the shanks are gargantuan or you’re dealing with modest appetites, pull apart the larger shanks, separating them at their natural seams, and serve smaller amounts. Be sure to give the marrow bones to whomever prizes them most.\r\nServing: Arrange the veal shanks on warm dinner plates accompanied by the risotto, if serving. Just before carrying the plates to the table, sprinkle on the remaining gremolata and then spoon over a generous amount of sauce – the contact with the hot liquid will aromatize the gremolata and perk up everyone’s appetite with the whiff of garlic and lemon.",
+      "ingredients": [
+        {
+          "name": "Veal",
+          "measure": "4 meaty shanks"
+        },
+        {
+          "name": "Flour",
+          "measure": "½ cup"
+        },
+        {
+          "name": "Olive Oil",
+          "measure": "2 tablespoons"
+        },
+        {
+          "name": "Butter",
+          "measure": "3 tablespoons"
+        },
+        {
+          "name": "Onion",
+          "measure": "1 medium chopped into ½-inch pieces"
+        },
+        {
+          "name": "Carrots",
+          "measure": "1 chopped into ½-inch pieces"
+        },
+        {
+          "name": "Celery",
+          "measure": "1 chopped into ½-inch pieces"
+        },
+        {
+          "name": "Fennel",
+          "measure": "1 bulb chopped into ½-inch pieces"
+        },
+        {
+          "name": "Garlic",
+          "measure": "3 cloves"
+        },
+        {
+          "name": "Orange Zest",
+          "measure": "2 strips"
+        },
+        {
+          "name": "Marjoram",
+          "measure": "1 ½ teaspoons"
+        },
+        {
+          "name": "Bay Leaf",
+          "measure": "1"
+        },
+        {
+          "name": "Dry White Wine",
+          "measure": "1 cup"
+        },
+        {
+          "name": "Chicken Stock",
+          "measure": "½ cup"
+        },
+        {
+          "name": "Tomatoes",
+          "measure": "1 cup chopped with juice"
+        },
+        {
+          "name": "Parsley",
+          "measure": "2 tablespoons chopped"
+        },
+        {
+          "name": "Garlic",
+          "measure": "1 teaspoon minced"
+        },
+        {
+          "name": "Lemon Zest",
+          "measure": "1 teaspoon grated"
+        }
+      ]
+    },
+    {
+      "id": "52837",
+      "title": "Pilchard puttanesca",
+      "category": "Pasta",
+      "language": "en",
+      "minutes": null,
+      "servings": null,
+      "sourceUrl": "https://www.bbcgoodfood.com/recipes/pilchard-puttanesca",
+      "instructions": "Cook the pasta following pack instructions. Heat the oil in a non-stick frying pan and cook the onion, garlic and chilli for 3-4 mins to soften. Stir in the tomato purée and cook for 1 min, then add the pilchards with their sauce. Cook, breaking up the fish with a wooden spoon, then add the olives and continue to cook for a few more mins.\r\n\r\nDrain the pasta and add to the pan with 2-3 tbsp of the cooking water. Toss everything together well, then divide between plates and serve, scattered with Parmesan.",
+      "ingredients": [
+        {
+          "name": "Spaghetti",
+          "measure": "300g"
+        },
+        {
+          "name": "Olive Oil",
+          "measure": "1 tbls"
+        },
+        {
+          "name": "Onion",
+          "measure": "1 finely chopped"
+        },
+        {
+          "name": "Garlic",
+          "measure": "2 cloves minced"
+        },
+        {
+          "name": "Red Chilli",
+          "measure": "1"
+        },
+        {
+          "name": "Tomato Puree",
+          "measure": "1 tbls"
+        },
+        {
+          "name": "Pilchards",
+          "measure": "425g"
+        },
+        {
+          "name": "Black Olives",
+          "measure": "70g"
+        },
+        {
+          "name": "Parmesan",
+          "measure": "Shaved"
+        }
+      ]
+    },
+    {
+      "id": "53014",
+      "title": "Pizza Express Margherita",
+      "category": "Miscellaneous",
+      "language": "en",
+      "minutes": null,
+      "servings": null,
+      "sourceUrl": "https://www.dailymail.co.uk/femail/food/article-8240361/Pizza-Express-release-secret-recipe-Margherita-Pizza-make-home.html",
+      "instructions": "1 Preheat the oven to 230°C.\r\n\r\n2 Add the sugar and crumble the fresh yeast into warm water.\r\n\r\n3 Allow the mixture to stand for 10 – 15 minutes in a warm place (we find a windowsill on a sunny day works best) until froth develops on the surface.\r\n\r\n4 Sift the flour and salt into a large mixing bowl, make a well in the middle and pour in the yeast mixture and olive oil.\r\n\r\n5 Lightly flour your hands, and slowly mix the ingredients together until they bind.\r\n\r\n6 Generously dust your surface with flour.\r\n\r\n7 Throw down the dough and begin kneading for 10 minutes until smooth, silky and soft.\r\n\r\n8 Place in a lightly oiled, non-stick baking tray (we use a round one, but any shape will do!)\r\n\r\n9 Spread the passata on top making sure you go to the edge.\r\n\r\n10 Evenly place the mozzarella (or other cheese) on top, season with the oregano and black pepper, then drizzle with a little olive oil.\r\n\r\n11 Cook in the oven for 10 – 12 minutes until the cheese slightly colours.\r\n\r\n12 When ready, place the basil leaf on top and tuck in!",
+      "ingredients": [
+        {
+          "name": "Water",
+          "measure": "150ml"
+        },
+        {
+          "name": "Sugar",
+          "measure": "1 tsp"
+        },
+        {
+          "name": "Yeast",
+          "measure": "15g"
+        },
+        {
+          "name": "Plain Flour",
+          "measure": "225g"
+        },
+        {
+          "name": "Salt",
+          "measure": "1 1/2 tsp"
+        },
+        {
+          "name": "Olive Oil",
+          "measure": "Drizzle"
+        },
+        {
+          "name": "Passata",
+          "measure": "80g"
+        },
+        {
+          "name": "Mozzarella",
+          "measure": "70g"
+        },
+        {
+          "name": "Oregano",
+          "measure": "Peeled and Sliced"
+        },
+        {
+          "name": "Basil",
+          "measure": "Leaves"
+        },
+        {
+          "name": "Black Pepper",
+          "measure": "Pinch"
+        }
+      ]
+    },
+    {
+      "id": "52780",
+      "title": "Potato Gratin with Chicken",
+      "category": "Chicken",
+      "language": "en",
+      "minutes": null,
+      "servings": null,
+      "sourceUrl": "https://www.instagram.com/p/BHxR7hYBJ6P",
+      "instructions": "15 minute potato gratin with chicken and bacon greens: a gratin always seems more effort and more indulgent than ordinary boiled or roasts, but it doesn't have to take 45mins, it's nice for a change and you can control the calorie content by going with full fat to low fat creme fraiche. (It's always tastes better full fat though obviously!) to serve 4: use 800g of potatoes, finely slice and boil in a pan for about 5-8 mins till firmish, not soft. Finely slice 3 onions and place in an oven dish with 2 tblsp of olive oil and 100ml of chicken stock. Cook till the onions are soft then drain the potatoes and pour onto the onions. Season and spoon over cream or creme fraiche till all is covered but not swimming. Grate Parmesan over the top then finish under the grill till nicely golden. serve with chicken and bacon, peas and spinach.",
+      "ingredients": [
+        {
+          "name": "Potatoes",
+          "measure": "800g"
+        },
+        {
+          "name": "Onions",
+          "measure": "3"
+        },
+        {
+          "name": "Olive Oil",
+          "measure": "2 tblsp"
+        },
+        {
+          "name": "Chicken Stock",
+          "measure": "100ml"
+        },
+        {
+          "name": "Creme Fraiche",
+          "measure": "1 pot"
+        },
+        {
+          "name": "Parmesan",
+          "measure": "Topping"
+        },
+        {
+          "name": "Chicken Breasts",
+          "measure": "4"
+        },
+        {
+          "name": "Bacon",
+          "measure": "4"
+        },
+        {
+          "name": "Spinach",
+          "measure": "Topping"
+        },
+        {
+          "name": "Peas",
+          "measure": "Topping"
+        }
+      ]
+    },
+    {
+      "id": "52811",
+      "title": "Ribollita",
+      "category": "Vegetarian",
+      "language": "en",
+      "minutes": null,
+      "servings": null,
+      "sourceUrl": "https://cooking.nytimes.com/recipes/1016052-ribollita",
+      "instructions": "Put 2 tablespoons of the oil in a large pot over medium heat. When it’s hot, add onion, carrot, celery and garlic; sprinkle with salt and pepper and cook, stirring occasionally, until vegetables are soft, 5 to 10 minutes.\r\nHeat the oven to 500 degrees. Drain the beans; if they’re canned, rinse them as well. Add them to the pot along with tomatoes and their juices and stock, rosemary and thyme. Bring to a boil, then reduce heat so the soup bubbles steadily; cover and cook, stirring once or twice to break up the tomatoes, until the flavors meld, 15 to 20 minutes.\r\nFish out and discard rosemary and thyme stems, if you like, and stir in kale. Taste and adjust seasoning. Lay bread slices on top of the stew so they cover the top and overlap as little as possible. Scatter red onion slices over the top, drizzle with the remaining 3 tablespoons oil and sprinkle with Parmesan.\r\nPut the pot in the oven and bake until the bread, onions and cheese are browned and crisp, 10 to 15 minutes. (If your pot fits under the broiler, you can also brown the top there.) Divide the soup and bread among 4 bowls and serve.",
+      "ingredients": [
+        {
+          "name": "Olive Oil",
+          "measure": "5 tablespoons"
+        },
+        {
+          "name": "Onion",
+          "measure": "1 chopped"
+        },
+        {
+          "name": "Carrots",
+          "measure": "1 chopped"
+        },
+        {
+          "name": "Celery",
+          "measure": "1 stalk chopped"
+        },
+        {
+          "name": "Garlic",
+          "measure": "1 tablespoon minced"
+        },
+        {
+          "name": "Cannellini Beans",
+          "measure": "2 cups"
+        },
+        {
+          "name": "Canned tomatoes",
+          "measure": "1"
+        },
+        {
+          "name": "Water",
+          "measure": "4 cups"
+        },
+        {
+          "name": "Rosemary",
+          "measure": "1 fresh sprig"
+        },
+        {
+          "name": "Thyme",
+          "measure": "1 fresh sprig"
+        },
+        {
+          "name": "Kale",
+          "measure": "1 pound chopped"
+        },
+        {
+          "name": "Wholegrain Bread",
+          "measure": "4 thick slices"
+        },
+        {
+          "name": "Red Onions",
+          "measure": "1 thinly sliced"
+        },
+        {
+          "name": "Parmesan",
+          "measure": "½ cup freshly grated"
+        }
+      ]
+    }
+  ]
+}
