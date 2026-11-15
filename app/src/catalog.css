@@ -1,0 +1,117 @@
+.catalog-detail-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: 12px;
+}
+.favorite-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 8px 12px;
+  border-radius: 12px;
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  font-weight: 700;
+}
+.favorite-button span {
+  font-size: 22px;
+}
+.favorite-button[aria-pressed="true"] {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+}
+.catalog-filters {
+  margin-top: 16px;
+}
+.catalog-filters button {
+  border: 1px solid var(--color-border);
+}
+.catalog-results {
+  font-size: 12px;
+  color: var(--color-secondary);
+  margin: 0 0 12px;
+}
+.catalog-saved {
+  color: var(--color-brand);
+  font-size: 12px;
+  font-weight: 700;
+}
+.catalog-empty {
+  background: var(--color-brandSoft);
+  border-radius: 16px;
+  padding: 20px;
+  display: grid;
+  gap: 12px;
+}
+.catalog-empty h3 {
+  font-size: 18px;
+}
+.catalog-empty .text-button {
+  text-align: left;
+  padding: 0;
+}
+.ingredient-review {
+  margin-top: 24px;
+  display: grid;
+  gap: 10px;
+}
+.ingredient-selection-hint {
+  font-size: 12px;
+  font-weight: 700;
+  margin-top: 8px;
+}
+.ingredient-checklist {
+  padding: 0;
+  margin: 0 0 8px;
+  list-style: none;
+}
+.ingredient-checklist li {
+  border-bottom: 1px solid var(--color-border);
+}
+.ingredient-checklist label {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  min-height: 64px;
+  padding: 14px 0;
+  cursor: pointer;
+}
+.ingredient-checklist input {
+  width: 20px;
+  height: 20px;
+  accent-color: var(--color-brand);
+  flex-shrink: 0;
+  margin: 3px 0 0;
+}
+.ingredient-checklist label > span {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  display: grid;
+  gap: 4px;
+  line-height: 1.5;
+}
+.ingredient-checklist strong {
+  color: var(--color-brand);
+}
+.ingredient-stock {
+  font-size: 12px;
+  line-height: 1.5;
+}
+.ingredient-stock.recognized {
+  color: var(--color-leaf);
+}
+.ingredient-stock.unrecognized {
+  color: var(--color-secondary);
+}
+.catalog-feedback {
+  font-size: 12px;
+  line-height: 1.6;
+  color: var(--color-brand);
+}
+.catalog-feedback:empty {
+  display: none;
+}

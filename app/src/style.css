@@ -776,3 +776,47 @@ dialog > ol {
   text-decoration: underline;
   min-height: 44px;
 }
+
+.pantry-switch {
+  display: flex;
+  gap: 4px;
+  padding: 4px;
+  background: var(--color-brandSoft);
+  border-radius: 16px;
+}
+.pantry-switch button {
+  flex: 1;
+  min-height: 44px;
+  border-radius: 12px;
+  background: transparent;
+  font-weight: 700;
+}
+.pantry-switch [aria-pressed="true"] {
+  background: var(--color-brand);
+  color: white;
+}
+.pantry-switch span {
+  margin-left: 6px;
+}
+.shopping-shortcut {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  border-radius: 20px;
+  background: #faf2d3;
+  text-align: left;
+}
+.shopping-shortcut > span:nth-child(2) {
+  flex: 1;
+}
+.shopping-shortcut strong,
+.shopping-shortcut small {
+  display: block;
+}
+.shopping-shortcut small {
+  margin-top: 4px;
+}
+.shopping-shortcut > span:last-child {
+  font-size: 28px;
+}

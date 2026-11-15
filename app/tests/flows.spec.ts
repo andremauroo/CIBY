@@ -196,12 +196,12 @@ test("catalogo importato ricercabile e nessun tempo inventato", async ({
 }) => {
   await page.goto("/");
   await page.getByRole("button", { name: "Esplora il ricettario" }).click();
-  await expect(page.getByRole("dialog")).toContainText("TheMealDB");
-  await page.getByLabel("Cerca per titolo o ingrediente").fill("Lasagne");
+  await expect(page.getByRole("dialog")).toContainText("GialloZafferano");
+  await page
+    .getByLabel("Cerca per titolo o ingrediente")
+    .fill("Lasagne alla bolognese");
   await page.getByRole("button", { name: /Lasagne/ }).click();
-  await expect(page.getByRole("dialog")).toContainText(
-    "Tempo e porzioni non disponibili",
-  );
+  await expect(page.getByRole("dialog")).toContainText("Dosi della fonte");
   await expect(page.getByRole("dialog")).toContainText("Ingredienti");
 });
 
@@ -263,9 +263,7 @@ test("Pasti consente di sostituire il piano con una ricetta importata e conserva
     .getByRole("button", { name: "Scegli per il prossimo pasto" })
     .click();
   await expect(page.locator(".meal-card")).toContainText(selected);
-  await expect(page.locator(".meal-card")).toContainText(
-    "Tempo non disponibile",
-  );
+  await expect(page.locator(".meal-card")).toContainText("Dosi fonte");
   await expect(
     page.getByRole("button", { name: "Ho cucinato questo pasto" }),
   ).toHaveCount(0);

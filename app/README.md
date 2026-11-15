@@ -1,4 +1,4 @@
-# CIBY — App, prima iterazione HCI
+# CIBY — App, prototipo HCI
 
 Web app mobile React + TypeScript, costruita dalle quattro schermate [Figma CIBY](https://www.figma.com/design/EuBvAH0SMAk3UEjVfBMxMv). L'obiettivo è provare le interazioni, mantenendo aperte le decisioni di prodotto.
 
@@ -39,12 +39,12 @@ Questi comandi avviano la stessa web app usata su macOS; non richiedono backend,
 ## Cosa si può provare
 
 - **Oggi:** alimento prioritario, idea per il pasto, preparazione e cambio di programma.
-- **Dispensa:** ricerca, filtri, inserimento, modifica, rimozione e priorità decisa dalla persona.
+- **Dispensa:** ricerca, filtri, inserimento, modifica, rimozione e priorità decisa dalla persona. La vista Spesa raccoglie acquisti manuali o ingredienti scelti dal ricettario.
 - **Fridgy:** dialogo a regole dichiarato, risposte rapide, tempo e porzioni, esclusione di ingredienti, richieste fuori ambito. Tre ricette dimostrative; nessun LLM o API esterna. Le correzioni in chat non modificano la dispensa.
 - **Pasti:** conseguenze del rinvio, cambio di porzioni, conferma e annullamento dell'ultimo spostamento della sessione.
 - **Consumo:** solo “Ho cucinato questo pasto” e la conferma successiva sottraggono gli ingredienti. Il consumo non si ripete due volte.
 
-Alimenti e pasto sono salvati in localStorage. Il dialogo e l'annullamento del rinvio restano nella sessione. Nessun account o backend. Browser e dispositivi diversi hanno dati separati; la cancellazione dei dati del sito li rimuove. Il pulsante M apre spiegazioni e ripristino dell'esempio con conferma.
+Alimenti, pasto, ricette preferite e lista della spesa sono salvati in localStorage. Il dialogo e l'annullamento del rinvio restano nella sessione. Nessun account o backend. Browser e dispositivi diversi hanno dati separati; la cancellazione dei dati del sito li rimuove. Il pulsante M apre spiegazioni e ripristino dell'esempio con conferma.
 
 Il ricettario è piccolo: non interpreta qualsiasi richiesta e non verifica sicurezza alimentare, allergeni o diete. I tempi sono stime; per il riso va verificata la confezione. Nomi e unità degli ingredienti devono essere riconoscibili (zucchine, uova, riso in grammi, pomodori). Gli altri alimenti si possono gestire nella dispensa ma non generano nuove ricette.
 
@@ -109,15 +109,15 @@ In Dispensa il comando Aggiungi alimento è ora subito visibile, con un pannello
 
 I messaggi hanno autori visibili: Tu, a destra su sfondo melanzana, e Fridgy · Demo AI, a sinistra su sfondo chiaro. La logica conversazionale non è cambiata.
 
-Da Oggi o Pasti, il ricettario apre 12 ricette importate da TheMealDB. Si possono cercare per titolo o ingrediente e leggere ingredienti, quantità originali e istruzioni. I contenuti sono quelli originali, prevalentemente in inglese; tempi e porzioni non sono disponibili nei dati strutturati e non vengono inventati. Non sono collegate a Fridgy, ma possono essere scelte come prossimo pasto dalla schermata Pasti. I dati sono inclusi nella build e restano disponibili offline; nessuna richiesta API durante l'uso.
+Da Oggi o Pasti si apre un catalogo curato di 18 ricette italiane da GialloZafferano, Cucchiaio d’Argento e La Cucina Italiana. Titoli, ingredienti e sintesi sono in italiano. Ogni scheda conserva dosi della fonte, numero di persone, tempi indicativi con note su ammollo/riposo e il link alla preparazione completa. Le sintesi sono originali CIBY; non sono riprodotti testi integrali o fotografie dei siti. Le quantità non vengono adattate al piano e non generano consumi automatici.
 
-Per aggiornare l'importazione: `node scripts/import-recipes.mjs` dalla cartella app (richiede internet). Chiave di test pubblica 1, prevista per sviluppo/uso didattico: [TheMealDB](https://www.themealdb.com/api.php). Prima di pubblicazioni diverse dalla demo didattica vanno riverificate le condizioni. Importazione limitata alle prime 12 ricette dell'elenco Italian; non è l'intero catalogo e l'appartenenza alla categoria è definita dal fornitore.
+`node scripts/import-recipes.mjs` ora verifica il catalogo senza modificarlo e senza rete. L'importazione automatica della categoria Italian di TheMealDB è stata ritirata perché includeva adattamenti americani. Per aggiungere una ricetta occorre selezionare una fonte, controllare ingredienti/dosi e scrivere una sintesi originale. Le schede sono incluse nella build offline, mentre la fonte esterna richiede internet.
 
 ### Da sviluppare dopo i riscontri
 
 - Traduzione controllata degli ingredienti, sinonimi e conversione delle quantità. Separare l'anagrafica degli alimenti dalle scorte specifiche.
 - Tempi, porzioni e attrezzatura verificati per le ricette importate. Se manca un dato, conservarlo come sconosciuto.
-- Abbinamento catalogo-dispensa e scelta di ricette importate nel piano, mantenendo conferma e gestione dei residui.
+- Raffinare il confronto catalogo-dispensa con quantità compatibili e gestione dei residui: il riconoscimento dei nomi non garantisce che le scorte bastino.
 - Collegamento di Fridgy a un LLM tramite un adapter, con contesto di scorte e ricette. Un piccolo endpoint server per Gemini custodirebbe la chiave e gestirebbe quote/errori; non serve un database o un sistema di login. Non inserire chiavi in variabili VITE_ o nel codice frontend.
 - Alternativa locale: Ollama sul Mac, accessibile all'app tramite un piccolo proxy; nessuna chiave per modelli locali, ma velocità e modello dipendono dall'hardware. Il telefono non esegue il modello: il Mac deve restare acceso e raggiungibile.
 
@@ -127,7 +127,7 @@ La verifica sul Mac ha confermato il server in ascolto su tutte le interfacce al
 
 ## Pasti e grafica: seconda correzione
 
-Da Pasti è sempre disponibile “Esplora ricette e cambia pasto”, anche se il pasto corrente ha ingredienti mancanti. Le ricette TheMealDB possono ora sostituire il piano salvato, essere rilette e rinviate. Il piano persiste al ricaricamento. Per queste ricette porzioni/tempi non verificati sono dichiarati e il consumo automatico resta disattivato. Non vengono sottratte quantità ricavate da testo libero.
+Da Pasti è sempre disponibile “Esplora ricette e cambia pasto”, anche se il pasto corrente ha ingredienti mancanti. Le ricette del catalogo possono sostituire il piano salvato, essere rilette e rinviate. Il piano persiste al ricaricamento. Le dosi e i tempi si riferiscono alla fonte, non al piano personale; il consumo automatico resta disattivato. Non vengono sottratte quantità ricavate da testo libero.
 
 Il catalogo riconosce alcuni sinonimi comuni italiano/inglese (per esempio pasta, pomodori, uova) e ordina prima le ricette con ingredienti riconosciuti; questo è un aiuto alla consultazione, non una verifica della compatibilità o delle quantità. Non è ancora un motore completo di pianificazione. Fridgy conserva la logica precedente.
 
@@ -144,7 +144,6 @@ Sul Mac sono presenti Android Platform Tools. Se la Wi-Fi continua a bloccare Ch
 
 Questo comando non abilita Debug USB e non modifica impostazioni del telefono automaticamente. Non è stato verificato su un telefono fisico collegato. In alternativa, per ulteriori controlli Wi-Fi: verificare anche sul Mac Impostazioni di Sistema → Privacy e sicurezza → Rete locale, per l'app che avvia Node (Codex o Terminale). Il firewall e questa autorizzazione sono controlli diversi.
 
-
 ### Android via USB su Windows
 
 Installare Android SDK Platform Tools ed estrarre l'archivio, oppure usare quelli installati da Android Studio. Collegare un solo telefono con un cavo dati, abilitare Debug USB nelle Opzioni sviluppatore e autorizzare il computer sul telefono. Alcuni dispositivi richiedono anche il driver USB del produttore.
@@ -159,3 +158,38 @@ npm.cmd run phone:usb
 ```
 
 Se `adb.exe` è già nel PATH, non serve impostare `ADB_PATH`. Aprire `http://localhost:5173` in Chrome sul telefono dopo il messaggio di collegamento riuscito. Il computer e il server devono restare accesi; il collegamento USB non dipende dalla Wi-Fi. La procedura Windows e il collegamento fisico USB non sono stati verificati su hardware Windows/Android.
+
+## Iterazione: dal ricettario alla spesa
+
+Il ricettario permette di salvare ricette preferite, filtrare quelle con ingredienti riconosciuti in dispensa e confrontare gli ingredienti di ogni ricetta con le scorte. I nomi comuni riconosciuti sono mostrati anche in italiano. Il riconoscimento indica la presenza dell'alimento: le quantità e le sostituzioni devono sempre essere verificate dalla persona.
+
+Dal dettaglio si selezionano gli ingredienti da aggiungere alla spesa. La lista è raggiungibile da Oggi o da Dispensa → Spesa. Gli ingredienti uguali vengono raggruppati; le quantità originali delle diverse ricette sono conservate come riferimenti separati e non sommate. Si possono aggiungere anche voci libere con una nota, segnare gli acquisti e rimuovere voci.
+
+Spuntare un acquisto non cambia le scorte. Con “Porta in dispensa” si indicano quantità effettiva, unità e posizione, quindi si conferma con “Salva alimento”. La nuova scorta viene aggiunta e la voce esce dalla spesa nello stesso aggiornamento; chiudere il modulo lascia invariati entrambi. Le scorte già presenti non vengono sovrascritte.
+
+Preferiti e spesa persistono in questo browser e sono disponibili nella build offline. I salvataggi precedenti vengono letti conservando dispensa e pasto; le nuove liste partono vuote. “Ripristina esempio” cancella anche preferiti e spesa dopo la conferma. Fridgy conserva il suo dialogo dimostrativo.
+
+### Compiti per una prossima prova HCI
+
+1. Trovare una ricetta con un alimento in dispensa, salvarla tra i preferiti e ritrovarla.
+2. Controllare cosa manca, scegliere cosa comprare e aprire la lista della spesa.
+3. Segnare un acquisto e registrare la quantità effettiva in dispensa. Verificare se è chiaro quando le scorte cambiano.
+
+I passi successivi sono pianificare più pasti, completare il vocabolario degli ingredienti e valutare un assistente AI dopo aver raccolto i riscontri su questi flussi.
+
+## Ricettario italiano: selezione delle fonti
+
+Il nuovo catalogo sostituisce tutte le 12 precedenti schede, comprese Alfredo con panna, Chicken Alfredo Primavera e altri adattamenti non adatti alla selezione italiana. Include carbonara, aglio olio e peperoncino, pasta e lenticchie, pasta e patate, frittata di zucchine, panzanella, cacio e pepe, gricia, risotto alla milanese, parmigiana, minestrone, lasagne alla bolognese, polpette al sugo, pasta e ceci, Norma, ribollita, spaghetti al pomodoro e pasta e fagioli lombarda.
+
+I piatti non sono presentati come un'unica versione canonica: si indica la specifica fonte e, quando utile, la regione. Per esempio la pasta e lenticchie selezionata contiene pancetta; non è etichettata vegetariana. Il confronto con la dispensa distingue ingredienti e preparazioni diverse.
+
+Se un vecchio salvataggio conteneva un pasto TheMealDB ritirato, il pasto torna da scegliere; scorte, lista della spesa e storico vengono conservati. I preferiti ritirati vengono rimossi. Le note di spesa già aggiunte restano dati della persona. Gli ID delle nuove schede sono stabili e separati da quelli ritirati.
+
+## Bisogni C2 e percorsi di presentazione
+
+- **B01:** data facoltativa “da consumare entro”, etichette temporali e striscia “Da usare presto”. La priorità manuale precede l'ordinamento per data. Una data passata invita a verificare e non certifica la sicurezza dell'alimento.
+- **B02/B03:** confronto delle tre preparazioni dimostrative per porzioni, tempo, impegno e quantità mancanti, con accesso al rinvio. Una preparazione oltre il tempo indicato non è selezionabile. Scegliere o rinviare non consuma le scorte.
+- **B04:** la lista della spesa mostra le scorte già presenti con nome riconosciuto; l'avviso lascia alla persona la decisione di comprare.
+- **Ultimi 7 giorni:** solo le conferme di consumo alimentano lo storico. Gli alimenti prioritari contati sono quelli effettivamente sottratti, senza duplicare la stessa conferma.
+
+L'introduzione di tre schermate è rivedibile dalle opzioni M. Su desktop i percorsi di Marta, Gianfranco e Luca aprono le relative interazioni senza ripristinare i dati della persona. Il confronto usa tre ricette dimostrative con quantità calcolabili; il catalogo italiano ne contiene 18 con dosi della fonte.

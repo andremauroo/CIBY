@@ -1,4 +1,5 @@
 import { useEffect, useRef, type ReactNode } from "react";
+import { expiryLabel } from "./domain";
 export const asset = (name: string) =>
   `${import.meta.env.BASE_URL}assets/${name}`;
 export function Button({
@@ -80,4 +81,9 @@ export function FoodImage({
       <img src={asset(file)} alt="" />
     </span>
   );
+}
+export function ExpiryChip({ expires }: { expires?: string }) {
+  const label = expiryLabel(expires);
+  if (!label) return null;
+  return <span className={`expiry-chip ${label.tone}`}>{label.text}</span>;
 }

@@ -1,0 +1,157 @@
+.shopping-section {
+  display: grid;
+  gap: 20px;
+}
+.shopping-intro {
+  display: grid;
+  gap: 8px;
+}
+.shopping-intro h2 {
+  font-size: 24px;
+  line-height: 1.25;
+}
+.shopping-intro p {
+  color: var(--color-secondary);
+  font-size: 12px;
+}
+.shopping-count {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 12px 0;
+  border-bottom: 2px solid var(--color-accent);
+  color: var(--color-brand);
+}
+.shopping-count strong {
+  font-size: 24px;
+}
+.shopping-count span {
+  margin-left: auto;
+  color: var(--color-secondary);
+  font-size: 12px;
+}
+.shopping-add {
+  margin-top: 0;
+}
+.shopping-feedback {
+  font-size: 12px;
+  color: var(--color-brand);
+}
+.shopping-feedback:empty {
+  display: none;
+}
+.shopping-group {
+  display: grid;
+  gap: 12px;
+}
+.shopping-items {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 12px;
+}
+.shopping-item {
+  padding: 16px;
+  border-radius: 16px;
+  background: var(--color-card);
+  display: grid;
+  gap: 12px;
+  min-width: 0;
+}
+.shopping-item-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  align-items: center;
+}
+.shopping-check {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 48px;
+  cursor: pointer;
+  min-width: 0;
+}
+.shopping-check input {
+  width: 22px;
+  height: 22px;
+  accent-color: var(--color-brand);
+  flex-shrink: 0;
+}
+.shopping-check strong {
+  overflow-wrap: anywhere;
+  line-height: 1.4;
+  color: var(--color-brand);
+}
+.shopping-item.is-purchased {
+  background: #f0f4ed;
+}
+.shopping-note {
+  display: grid;
+  gap: 4px;
+  font-size: 12px;
+}
+.shopping-note span {
+  color: var(--color-secondary);
+}
+.shopping-note input {
+  width: 100%;
+  min-width: 0;
+  border: 1px solid var(--color-border);
+  background: white;
+  border-radius: 8px;
+  padding: 10px;
+  min-height: 44px;
+}
+.shopping-sources {
+  font-size: 12px;
+  overflow-wrap: anywhere;
+}
+.shopping-sources summary {
+  cursor: pointer;
+  color: var(--color-brand);
+  min-height: 44px;
+  display: list-item;
+  align-content: center;
+}
+.shopping-sources ul {
+  display: grid;
+  gap: 8px;
+}
+.shopping-sources li span {
+  display: block;
+  color: var(--color-secondary);
+}
+.shopping-sources p {
+  margin-top: 8px;
+  color: var(--color-secondary);
+}
+.shopping-remove {
+  justify-self: start;
+  font-size: 12px;
+  text-align: left;
+}
+.shopping-removal {
+  padding-top: 8px;
+  border-top: 1px solid var(--color-border);
+}
+.shopping-removal > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.shopping-removal button {
+  font-size: 12px;
+  text-align: left;
+}
+.shopping-empty {
+  display: grid;
+  gap: 12px;
+  justify-items: start;
+  padding: 20px 0;
+}
+.shopping-empty p {
+  color: var(--color-secondary);
+  font-size: 12px;
+}

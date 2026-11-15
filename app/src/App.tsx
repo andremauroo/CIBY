@@ -1,6 +1,10 @@
+import ShoppingList from "./ShoppingList";
+import { addShoppingIngredients, type ShoppingItem } from "./shopping";
 import { catalogMeals } from "./catalog";
 import RecipeCatalog from "./RecipeCatalog";
-import { asset, Button, Modal, FoodImage } from "./components";
+import CompareMeals from "./CompareMeals";
+import Onboarding from "./Onboarding";
+import { asset, Button, Modal, FoodImage, ExpiryChip } from "./components";
 import { useEffect, useRef, useState, type FormEvent } from "react";
 import {
   initialState,
@@ -13,6 +17,9 @@ import {
   consume,
   needs,
   artFor,
+  useSoon,
+  daysUntil,
+  expiryLabel,
   type State,
   type Food,
   type RecipeId,
@@ -29,9 +36,29 @@ type Message = { role: "bot" | "user"; text: string };
 export default function App() {
   const [catalogOpen, setCatalogOpen] = useState(false);
   const [catalogInitialId, setCatalogInitialId] = useState<string | null>(null);
-  function openCatalog(id: string | null = null) {
+  const [catalogQuery, setCatalogQuery] = useState("");
+  function openCatalog(id: string | null = null, query = "") {
     setCatalogInitialId(id);
+    setCatalogQuery(query);
     setCatalogOpen(true);
+  }
+  const [compareOpen, setCompareOpen] = useState(false);
+  // First-run introduction for demos. Automated browsers skip it so that
+  // end-to-end flows start from the home screen.
+  const [showIntro, setShowIntro] = useState(() => {
+    try {
+      return !navigator.webdriver && !localStorage.getItem("ciby-intro-seen");
+    } catch {
+      return false;
+    }
+  });
+  function closeIntro() {
+    setShowIntro(false);
+    try {
+      localStorage.setItem("ciby-intro-seen", "1");
+    } catch {
+      /* the intro simply shows again next time */
+    }
   }
   const [state, setState] = useState<State>(() => {
     try {
@@ -40,6 +67,8 @@ export default function App() {
       return structuredClone(initialState);
     }
   });
+  const [pantryView, setPantryView] = useState<"stock" | "shopping">("stock");
+  const [purchase, setPurchase] = useState<ShoppingItem | null>(null);
   const [storageError, setStorageError] = useState(false);
   const [tab, setTab] = useState<Tab>("Oggi");
   const [query, setQuery] = useState("");
@@ -100,13 +129,32 @@ export default function App() {
     return () => clearTimeout(timer);
   }, [notice]);
   const inStock = state.foods.filter((f) => f.quantity > 0);
-  const focus = inStock.find((f) => f.priority) || inStock[0];
+  const soon = useSoon(state.foods);
+  const focus = soon[0] || inStock[0];
+  const focusExpiry = focus ? expiryLabel(focus.expires) : null;
+  const today = new Date();
+  const weekAgo = new Date(today.getTime() - 6 * 86400000);
+  const cookedWeek = state.cooked.filter(
+    (c) =>
+      (daysUntil(c.date, weekAgo) ?? -1) >= 0 &&
+      (daysUntil(c.date, today) ?? 1) <= 0,
+  );
+  const rescued = new Set(cookedWeek.flatMap((c) => c.priorityUsed));
+  const dateLabel = today.toLocaleDateString("it-IT", {
+    weekday: "long",
+    day: "numeric",
+    month: "long",
+  });
   const plan = state.plan;
   const importedMeal = plan
-    ? catalogMeals.find((m) => `mealdb:${m.id}` === plan.recipe)
+    ? catalogMeals.find((m) => `catalog:${m.id}` === plan.recipe)
     : null;
   const planRecipe = importedMeal
-    ? { title: importedMeal.title, time: null, effort: "TheMealDB" }
+    ? {
+        title: importedMeal.title,
+        time: importedMeal.minutes,
+        effort: importedMeal.sourceName,
+      }
     : plan
       ? recipes[plan.recipe as RecipeId]
       : null;
@@ -115,6 +163,11 @@ export default function App() {
     setTab(next);
     setNotice("");
   };
+  function openShopping() {
+    setCatalogOpen(false);
+    setPantryView("shopping");
+    go("Dispensa");
+  }
   function startIdeas() {
     setChatServings(2);
     setChatTime(20);
@@ -204,14 +257,24 @@ export default function App() {
       priority: data.get("priority") === "on",
       art: artFor(name),
     };
+    const expires = String(data.get("expires") || "");
+    if (/^\d{4}-\d{2}-\d{2}$/.test(expires)) food.expires = expires;
     setState((s) => ({
       ...s,
       foods: edit
         ? s.foods.map((f) => (f.id === id ? food : f))
         : [...s.foods, food],
+      shopping: purchase
+        ? s.shopping.filter((item) => item.id !== purchase.id)
+        : s.shopping,
     }));
     setEdit(undefined);
-    setNotice("Alimento salvato nella dispensa.");
+    setPurchase(null);
+    setNotice(
+      purchase
+        ? "Acquisto aggiunto alla dispensa e rimosso dalla lista."
+        : "Alimento salvato nella dispensa.",
+    );
   }
   function mealCard() {
     return plan && planRecipe ? (
@@ -224,7 +287,7 @@ export default function App() {
           <small>
             {plan.when} ·{" "}
             {importedMeal
-              ? "Porzioni da verificare"
+              ? `Dosi fonte: ${importedMeal.servingsLabel} persone`
               : plan.servings === 1
                 ? "1 persona"
                 : "2 persone"}
@@ -277,7 +340,47 @@ export default function App() {
           Scegli cosa preparare con quello che hai, anche quando cambiano i
           programmi.
         </p>
-        <div className="demo-tag">Prototipo HCI · Prima iterazione</div>
+        <div className="demo-tag">Prototipo HCI · In evoluzione</div>
+        <section className="scenarios" aria-labelledby="scenarios-title">
+          <h2 id="scenarios-title">Percorsi da provare</h2>
+          {[
+            {
+              who: "Marta",
+              need: "B01 · Un alimento trascurato",
+              action: "Guarda cosa usare presto",
+              run: () => go("Oggi"),
+            },
+            {
+              who: "Gianfranco",
+              need: "B02 · Una cena praticabile",
+              action: "Confronta tempo e impegno",
+              run: () => setCompareOpen(true),
+            },
+            {
+              who: "Luca",
+              need: "B03 · Cambia il programma",
+              action: "Rinvia o adatta il pasto",
+              run: () => go("Pasti"),
+            },
+            {
+              who: "Luca",
+              need: "B04 · Prima della spesa",
+              action: "Controlla cosa hai già",
+              run: openShopping,
+            },
+          ].map((sc) => (
+            <button key={sc.need} className="scenario" onClick={sc.run}>
+              <span className="scenario-avatar">{sc.who[0]}</span>
+              <span>
+                <strong>{sc.action}</strong>
+                <small>
+                  {sc.who} · {sc.need}
+                </small>
+              </span>
+              <span aria-hidden="true">→</span>
+            </button>
+          ))}
+        </section>
         <p className="small">
           Le scorte restano su questo browser.
           <br />
@@ -320,6 +423,7 @@ export default function App() {
           {tab === "Oggi" && (
             <>
               <div className="intro">
+                <small className="today-date">{dateLabel}</small>
                 <h1 ref={heading} tabIndex={-1} className="home-title">
                   Cosa c’è di buono?
                 </h1>
@@ -329,9 +433,12 @@ export default function App() {
                 <section className="ingredient-hero">
                   <div className="hero-row">
                     <div>
-                      <small>
+                      <small className="hero-kicker">
                         Hai {focus.quantity} {focus.unit} di{" "}
                         {focus.name.toLowerCase()}
+                        {focusExpiry && focusExpiry.tone !== "ok"
+                          ? ` · ${focusExpiry.text.toLowerCase()}`
+                          : ""}
                       </small>
                       <h2>
                         Diamo un posto
@@ -350,7 +457,40 @@ export default function App() {
                   </div>
                   <Button onClick={startIdeas}>Trova un’idea</Button>
                 </section>
-              ) : (
+              ) : null}
+              {soon.length > 0 && (
+                <section className="soon" aria-labelledby="soon-title">
+                  <div className="section-heading">
+                    <h2 id="soon-title">Da usare presto</h2>
+                    <small>Tocca per cercare ricette</small>
+                  </div>
+                  <ul className="soon-strip">
+                    {soon.map((f) => (
+                      <li key={f.id}>
+                        <button
+                          className="soon-card"
+                          onClick={() => openCatalog(null, f.name)}
+                          aria-label={`Ricette con ${f.name}`}
+                        >
+                          <FoodImage file={artFor(f.name)} size={40} />
+                          <strong>{f.name}</strong>
+                          <small>
+                            {f.quantity} {f.unit}
+                          </small>
+                          {f.expires ? (
+                            <ExpiryChip expires={f.expires} />
+                          ) : (
+                            <span className="expiry-chip mine">
+                              Scelto da te
+                            </span>
+                          )}
+                        </button>
+                      </li>
+                    ))}
+                  </ul>
+                </section>
+              )}
+              {!focus && (
                 <section className="card">
                   <h2>Partiamo dalla dispensa.</h2>
                   <p>Aggiungi un alimento per trovare una prima idea.</p>
@@ -366,7 +506,7 @@ export default function App() {
               )}
               <div className="section-heading">
                 <h2>Il tuo prossimo pasto</h2>
-                {plan && (
+                {plan && !importedMeal && (
                   <small>
                     {plan.servings}{" "}
                     {plan.servings === 1 ? "persona" : "persone"}
@@ -386,14 +526,64 @@ export default function App() {
                   >
                     Vedi preparazione
                   </Button>
-                  <Button secondary onClick={() => go("Pasti")}>
-                    Cambia programma
-                  </Button>
+                  <div className="button-pair">
+                    <Button secondary onClick={() => go("Pasti")}>
+                      Cambia programma
+                    </Button>
+                    <Button secondary onClick={() => setCompareOpen(true)}>
+                      Confronta opzioni
+                    </Button>
+                  </div>
                 </>
               )}
               <Button secondary onClick={() => openCatalog()}>
                 Esplora il ricettario
               </Button>
+              <button className="shopping-shortcut" onClick={openShopping}>
+                <FoodImage file="generic-food.svg" />
+                <span>
+                  <strong>La tua lista della spesa</strong>
+                  <small>
+                    {state.shopping.filter((item) => !item.checked).length} da
+                    prendere ·{" "}
+                    {state.shopping.filter((item) => item.checked).length}{" "}
+                    acquistati
+                  </small>
+                </span>
+                <span aria-hidden="true">›</span>
+              </button>
+              <section className="impact-card" aria-labelledby="impact-title">
+                <div>
+                  <h2 id="impact-title">Ultimi 7 giorni</h2>
+                  <small>
+                    Registrati solo quando confermi un pasto cucinato
+                  </small>
+                </div>
+                <div className="impact-stats">
+                  <div>
+                    <strong>{cookedWeek.length}</strong>
+                    <small>
+                      {cookedWeek.length === 1
+                        ? "pasto cucinato"
+                        : "pasti cucinati"}
+                    </small>
+                  </div>
+                  <div>
+                    <strong>{rescued.size}</strong>
+                    <small>
+                      {rescued.size === 1
+                        ? "alimento da usare presto, usato"
+                        : "alimenti da usare presto, usati"}
+                    </small>
+                  </div>
+                </div>
+                {cookedWeek.length > 0 && (
+                  <p className="impact-last">
+                    Ultimo: {cookedWeek[cookedWeek.length - 1].title}
+                    {rescued.size ? ` · ${[...rescued].join(", ")}` : ""}
+                  </p>
+                )}
+              </section>
               <p className="footnote">
                 Dati di esempio modificabili · Fridgy usa un ricettario
                 dimostrativo.
@@ -408,93 +598,136 @@ export default function App() {
                 </h1>
                 <p>Scorte aggiornate da te, quando serve.</p>
               </div>
-              <label className="search">
-                <img src={asset("526d4.svg")} alt="" />
-                <input
-                  aria-label="Cerca un alimento"
-                  placeholder="Cerca un alimento"
-                  value={query}
-                  onChange={(e) => setQuery(e.target.value)}
-                />
-              </label>
-              <div className="filters" aria-label="Filtra per posizione">
-                {["Tutto", "Frigo", "Dispensa"].map((f) => (
-                  <button
-                    key={f}
-                    aria-pressed={filter === f}
-                    className={filter === f ? "selected" : ""}
-                    onClick={() => setFilter(f)}
-                  >
-                    {f}
-                  </button>
-                ))}
+              <div className="pantry-switch" aria-label="Scorte e acquisti">
+                <button
+                  aria-pressed={pantryView === "stock"}
+                  onClick={() => setPantryView("stock")}
+                >
+                  Scorte
+                </button>
+                <button
+                  aria-pressed={pantryView === "shopping"}
+                  onClick={() => setPantryView("shopping")}
+                >
+                  Spesa{" "}
+                  <span>
+                    {state.shopping.filter((item) => !item.checked).length}
+                  </span>
+                </button>
               </div>
-              <div className="priority-label">
-                <strong>Da usare per primi</strong>
-                <small>Scelti da te</small>
-              </div>
-              <section className="add-food-panel">
-                <h2>La dispensa la scegli tu.</h2>
-                <p>
-                  Scrivi qualsiasi alimento: non serve trovarlo in un elenco.
-                </p>{" "}
-                <Button
-                  onClick={() => {
+              {pantryView === "shopping" ? (
+                <ShoppingList
+                  foods={state.foods}
+                  items={state.shopping}
+                  onChange={(shopping) => setState((s) => ({ ...s, shopping }))}
+                  onExplore={() => openCatalog()}
+                  onStock={(item) => {
+                    setPurchase(item);
                     setRemoveConfirm(false);
                     setEdit(null);
                   }}
-                >
-                  Aggiungi alimento
-                </Button>
-              </section>
-              <div className="food-list">
-                {[...inStock]
-                  .sort((a, b) => Number(b.priority) - Number(a.priority))
-                  .filter(
-                    (f) =>
-                      (filter === "Tutto" || f.place === filter) &&
-                      f.name.toLowerCase().includes(query.toLowerCase()),
-                  )
-                  .map((f) => (
-                    <button
-                      className="food-row"
-                      key={f.id}
+                />
+              ) : (
+                <>
+                  <label className="search">
+                    <img src={asset("526d4.svg")} alt="" />
+                    <input
+                      aria-label="Cerca un alimento"
+                      placeholder="Cerca un alimento"
+                      value={query}
+                      onChange={(e) => setQuery(e.target.value)}
+                    />
+                  </label>
+                  <div className="filters" aria-label="Filtra per posizione">
+                    {["Tutto", "Frigo", "Dispensa"].map((f) => (
+                      <button
+                        key={f}
+                        aria-pressed={filter === f}
+                        className={filter === f ? "selected" : ""}
+                        onClick={() => setFilter(f)}
+                      >
+                        {f}
+                      </button>
+                    ))}
+                  </div>
+                  <div className="priority-label">
+                    <strong>Da usare per primi</strong>
+                    <small>Scelti da te</small>
+                  </div>
+                  <section className="add-food-panel">
+                    <h2>La dispensa la scegli tu.</h2>
+                    <p>
+                      Scrivi qualsiasi alimento: non serve trovarlo in un
+                      elenco.
+                    </p>{" "}
+                    <Button
                       onClick={() => {
                         setRemoveConfirm(false);
-                        setEdit(f);
+                        setEdit(null);
                       }}
-                      aria-label={`Modifica ${f.name}`}
                     >
-                      <FoodImage file={artFor(f.name)} />
-                      <span className="food-meta">
-                        <span className="food-top">
-                          <strong>{f.name}</strong>
-                          <small>
-                            {f.quantity} {f.unit}
-                          </small>
-                        </span>
-                        <small className={f.priority ? "green" : ""}>
-                          {f.priority
-                            ? "Da usare per primi"
-                            : `In ${f.place.toLowerCase()}`}
-                        </small>
-                      </span>
-                    </button>
-                  ))}
-                {!inStock.some(
-                  (f) =>
-                    (filter === "Tutto" || f.place === filter) &&
-                    f.name.toLowerCase().includes(query.toLowerCase()),
-                ) && (
-                  <div className="empty">
-                    <h3>Nessun alimento qui.</h3>
-                    <p>Cambia filtro o aggiungi ciò che hai.</p>
+                      Aggiungi alimento
+                    </Button>
+                  </section>
+                  <div className="food-list">
+                    {[...inStock]
+                      .sort(
+                        (a, b) =>
+                          Number(b.priority) - Number(a.priority) ||
+                          (daysUntil(a.expires) ?? 99) -
+                            (daysUntil(b.expires) ?? 99),
+                      )
+                      .filter(
+                        (f) =>
+                          (filter === "Tutto" || f.place === filter) &&
+                          f.name.toLowerCase().includes(query.toLowerCase()),
+                      )
+                      .map((f) => (
+                        <button
+                          className="food-row"
+                          key={f.id}
+                          onClick={() => {
+                            setRemoveConfirm(false);
+                            setEdit(f);
+                          }}
+                          aria-label={`Modifica ${f.name}`}
+                        >
+                          <FoodImage file={artFor(f.name)} />
+                          <span className="food-meta">
+                            <span className="food-top">
+                              <strong>{f.name}</strong>
+                              <small>
+                                {f.quantity} {f.unit}
+                              </small>
+                            </span>
+                            <span className="food-tags">
+                              <small className={f.priority ? "green" : ""}>
+                                {f.priority
+                                  ? "Da usare per primi"
+                                  : `In ${f.place.toLowerCase()}`}
+                              </small>
+                              <ExpiryChip expires={f.expires} />
+                            </span>
+                          </span>
+                        </button>
+                      ))}
+                    {!inStock.some(
+                      (f) =>
+                        (filter === "Tutto" || f.place === filter) &&
+                        f.name.toLowerCase().includes(query.toLowerCase()),
+                    ) && (
+                      <div className="empty">
+                        <h3>Nessun alimento qui.</h3>
+                        <p>Cambia filtro o aggiungi ciò che hai.</p>
+                      </div>
+                    )}
                   </div>
-                )}
-              </div>
-              <p className="footnote">
-                Tocca un alimento per cambiare quantità, posizione o priorità.
-              </p>
+                  <p className="footnote">
+                    Tocca un alimento per cambiare quantità, posizione o
+                    priorità.
+                  </p>
+                </>
+              )}
             </>
           )}
           {tab === "Fridgy" && (
@@ -591,6 +824,9 @@ export default function App() {
                 <Button onClick={() => openCatalog()}>
                   Esplora ricette e cambia pasto
                 </Button>
+                <Button secondary onClick={() => setCompareOpen(true)}>
+                  Confronta adattare e rinviare
+                </Button>
               </section>
               {mealCard()}
               {importedMeal && plan ? (
@@ -602,7 +838,7 @@ export default function App() {
                     Leggi ingredienti e preparazione
                   </Button>
                   <p className="catalog-notice">
-                    Questa ricetta non ha tempi e porzioni verificati. Puoi
+                    Le dosi della fonte non vengono adattate al tuo piano. Puoi
                     salvarla e rinviarla; il consumo automatico è disattivato
                     per non sottrarre quantità inventate.
                   </p>
@@ -643,7 +879,7 @@ export default function App() {
                     <img src={asset("8c6f1.svg")} alt="" />
                     Stasera mangio fuori
                   </div>
-                  <div className="destination">
+                  <div className="destination" id="postpone">
                     <label>
                       Nuova occasione
                       <select
@@ -764,13 +1000,30 @@ export default function App() {
       {catalogOpen && (
         <RecipeCatalog
           initialId={catalogInitialId}
+          initialQuery={catalogQuery}
           foods={state.foods}
+          favoriteIds={state.favoriteIds}
+          onToggleFavorite={(id) =>
+            setState((s) => ({
+              ...s,
+              favoriteIds: s.favoriteIds.includes(id)
+                ? s.favoriteIds.filter((value) => value !== id)
+                : [...s.favoriteIds, id],
+            }))
+          }
+          onAddIngredients={(ingredients, meal) => {
+            setState((s) => ({
+              ...s,
+              shopping: addShoppingIngredients(s.shopping, ingredients, meal),
+            }));
+          }}
+          onOpenShopping={openShopping}
           onClose={() => setCatalogOpen(false)}
           onSelect={(meal) => {
             setState((s) => ({
               ...s,
               plan: {
-                recipe: `mealdb:${meal.id}`,
+                recipe: `catalog:${meal.id}`,
                 when: "Stasera",
                 servings: 1,
                 consumed: false,
@@ -783,11 +1036,61 @@ export default function App() {
           }}
         />
       )}
+      {compareOpen && (
+        <CompareMeals
+          foods={state.foods}
+          plan={plan}
+          initialServings={plan && !importedMeal ? plan.servings : 2}
+          onClose={() => setCompareOpen(false)}
+          onPostpone={() => {
+            setCompareOpen(false);
+            go("Pasti");
+            setTimeout(
+              () =>
+                document
+                  .getElementById("postpone")
+                  ?.scrollIntoView({ block: "center" }),
+              50,
+            );
+          }}
+          onChoose={(id, servings) => {
+            setPreviousPlan(plan);
+            setState((s) => ({
+              ...s,
+              plan: {
+                recipe: id,
+                when: plan && !plan.consumed ? plan.when : "Stasera",
+                servings,
+                consumed: false,
+              },
+            }));
+            setCompareOpen(false);
+            go("Oggi");
+            setNotice(`${recipes[id].title} salvata. Scorte invariate.`);
+          }}
+        />
+      )}
+      {showIntro && <Onboarding onDone={closeIntro} />}
       {edit !== undefined && (
         <Modal
-          title={edit ? "Modifica alimento" : "Aggiungi alimento"}
-          onClose={() => setEdit(undefined)}
+          title={
+            purchase
+              ? "Registra l’acquisto"
+              : edit
+                ? "Modifica alimento"
+                : "Aggiungi alimento"
+          }
+          onClose={() => {
+            setEdit(undefined);
+            setPurchase(null);
+          }}
         >
+          {purchase && (
+            <p>
+              Indica la quantità comprata e dove conservarla. Verrà aggiunta
+              come nuova scorta; le scorte già presenti restano disponibili.
+            </p>
+          )}
           <form className="food-form" onSubmit={saveFood}>
             <label>
               Nome
@@ -795,9 +1098,9 @@ export default function App() {
                 name="name"
                 list="food-suggestions"
                 placeholder="Per esempio ceci, latte, pane…"
-                defaultValue={edit?.name}
+                defaultValue={edit?.name || purchase?.name}
                 required
-                maxLength={50}
+                maxLength={80}
                 autoFocus
               />
             </label>
@@ -832,7 +1135,7 @@ export default function App() {
                   min="0.1"
                   max="100000"
                   step="0.1"
-                  defaultValue={edit?.quantity || 1}
+                  defaultValue={purchase ? "" : edit?.quantity || 1}
                   required
                 />
               </label>
@@ -854,6 +1157,14 @@ export default function App() {
                 <option>Frigo</option>
                 <option>Dispensa</option>
               </select>
+            </label>
+            <label>
+              Da consumare entro (facoltativo)
+              <input
+                name="expires"
+                type="date"
+                defaultValue={edit?.expires || ""}
+              />
             </label>
             <label className="checkbox">
               <input
@@ -932,6 +1243,7 @@ export default function App() {
                 },
               }));
               setDetail(null);
+              setPreviousPlan(null);
               go("Oggi");
               setNotice("Pasto salvato per stasera. Scorte invariate.");
             }}
@@ -967,6 +1279,7 @@ export default function App() {
           <Button
             onClick={() => {
               setState(consume);
+              setPreviousPlan(null);
               setConsumeConfirm(false);
               setNotice("Pasto cucinato e scorte aggiornate.");
             }}
@@ -984,13 +1297,23 @@ export default function App() {
           }}
         >
           <p>
-            CIBY salva alimenti e pasto solo in questo browser. Fridgy è una
-            demo a regole con tre preparazioni: non è un modello AI.
+            CIBY salva alimenti, pasto, preferiti e lista della spesa solo in
+            questo browser. Fridgy è una demo a regole con tre preparazioni: non
+            è un modello AI.
           </p>
           <p>
             Per una nuova sessione di prova puoi ripristinare le scorte di
-            esempio.
+            esempio. Il ripristino elimina anche preferiti e lista della spesa.
           </p>
+          <Button
+            secondary
+            onClick={() => {
+              setShowSettings(false);
+              setShowIntro(true);
+            }}
+          >
+            Rivedi l’introduzione
+          </Button>
           {resetConfirm ? (
             <Button
               onClick={() => {
