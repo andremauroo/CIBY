@@ -2,6 +2,8 @@
 
 [Apri il progetto Figma](https://www.figma.com/design/EuBvAH0SMAk3UEjVfBMxMv)
 
+Per il compito C3 sono disponibili [due prototipi low-fidelity touch e voce su smartphone](../consegne/C3/prototipi/README.md), in bianco e nero, in un [file Figma dedicato](https://www.figma.com/design/YyTBZZlfN2fy9cTKnqm4ud). La proposta grafica descritta sotto conserva il proprio ruolo di riferimento distinto.
+
 ## Proposta grafica
 
 Interfaccia mobile basata sulla soluzione concettuale C2: partire dagli alimenti disponibili, assegnarli a un prossimo pasto praticabile e rivedere la scelta quando cambiano i programmi.
@@ -18,6 +20,7 @@ I token esportati sono disponibili in [design-tokens.json](design-tokens.json). 
 
 ## Collegamenti al progetto
 
+- [Idee da valutare](idee-da-valutare.md): possibili estensioni e loro ruolo rispetto ai task C3.
 - [Applicazione](../app/README.md)
 - [Consegne e ricerca](../consegne/README.md)
 - [Indice del progetto](../README.md)
