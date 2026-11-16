@@ -1,46 +1,53 @@
 {
-  "name": "CIBY app concept v1",
+  "name": "CIBY visual identity v1",
   "font": {
-    "family": "Manrope",
+    "family": "Source Sans 3",
     "display": {
       "size": 32,
-      "weight": 800,
-      "lineHeight": 38
+      "weight": 700,
+      "lineHeight": 38,
+      "family": "Bricolage Grotesque"
     },
     "title": {
       "size": 24,
       "weight": 700,
-      "lineHeight": 30
+      "lineHeight": 30,
+      "family": "Bricolage Grotesque"
     },
     "heading": {
       "size": 18,
       "weight": 700,
-      "lineHeight": 25
+      "lineHeight": 25,
+      "family": "Bricolage Grotesque"
     },
     "body": {
-      "size": 14,
-      "weight": 500,
-      "lineHeight": 21
+      "size": 16,
+      "weight": 400,
+      "lineHeight": 24,
+      "family": "Source Sans 3"
     },
     "small": {
       "size": 12,
-      "weight": 500,
-      "lineHeight": 17
+      "weight": 400,
+      "lineHeight": 17,
+      "family": "Source Sans 3"
     }
   },
   "color": {
-    "surface": "#FAFBF8",
+    "surface": "#FFFFFF",
     "card": "#FFFFFF",
-    "brand": "#39264F",
-    "brandSoft": "#ECE8FF",
-    "accent": "#F6D872",
-    "text": "#2B2434",
-    "secondary": "#6F6877",
-    "border": "#DDD9E2",
+    "brand": "#173A30",
+    "brandSoft": "#F3F7F4",
+    "accent": "#F1C75B",
+    "text": "#173A30",
+    "secondary": "#53685D",
+    "border": "#CED9D1",
     "onBrand": "#FFFFFF",
-    "leaf": "#547A43",
-    "user": "#F3E8EF",
-    "violet": "#7055A1"
+    "leaf": "#2D6551",
+    "user": "#E8F0EA",
+    "onAccent": "#173A30",
+    "control": "#53685D",
+    "emphasis": "#173A30"
   },
   "spacing": [
     4,
@@ -59,5 +66,16 @@
   "viewport": {
     "width": 390,
     "height": 920
+  },
+  "status": "approved",
+  "approvedOn": "2026-11-16",
+  "interaction": {
+    "minimumTarget": 44,
+    "automaticMotion": false
+  },
+  "figma": {
+    "fileKey": "uoudiPCsc9d5dsuUuzOxTJ",
+    "url": "https://www.figma.com/design/uoudiPCsc9d5dsuUuzOxTJ?node-id=2-29",
+    "scope": "identity-foundations"
   }
 }

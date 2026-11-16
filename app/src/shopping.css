@@ -85,7 +85,7 @@
   color: var(--color-brand);
 }
 .shopping-item.is-purchased {
-  background: #f0f4ed;
+  background: #f3f7f4;
 }
 .shopping-note {
   display: grid;

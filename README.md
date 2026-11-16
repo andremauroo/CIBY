@@ -1,4 +1,4 @@
-# CIBY
+# ![CIBY](design/assets/ciby-wordmark.svg)
 
 Progetto per il corso di Fondamenti di Human-Computer Interaction del Politecnico di Milano.
 
@@ -19,7 +19,7 @@ Andrea Mauro, Marco Macherelli, Gabriele Martignoni, Rime Chamkar, Emanuele Marc
 | Area | Contenuto |
 |---|---|
 | [App](app/README.md) | Spazio dedicato al codice della futura applicazione e allo stato dell'implementazione |
-| [Design](design/README.md) | Proposta grafica, prototipo Figma e token di interfaccia |
+| [Design](design/README.md) | Identità visiva condivisa, concept Figma e token di interfaccia |
 | [Consegne](consegne/README.md) | Presentazioni, ricerca e materiali del corso, organizzati per compito |
 
 ## Struttura

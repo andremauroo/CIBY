@@ -87,10 +87,12 @@ Test di dominio: compatibilità degli ingredienti, quantità, correzioni, consum
 
 ## Struttura e origine grafica
 
+L’identità corrente usa verde CIBY, bianco e tuorlo, con Bricolage Grotesque per i titoli e Source Sans 3 per i contenuti. I font sono locali e inclusi nella cache offline. Riferimenti e regole sono nella [guida all’identità](../design/identita-visiva.md).
+
 - `src/App.tsx`: navigazione e schermate della prima iterazione.
 - `src/components.tsx`: pulsanti, immagini e dialoghi accessibili riutilizzabili.
 - `src/domain.ts`: scorte, piano, ricette e vincoli; separato dalla grafica.
-- `src/style.css`, `src/tokens.css`: CSS responsivo e colori derivati da `../design/design-tokens.json`.
+- `src/style.css`, `src/tokens.css`: CSS responsivo; `../design/identity.css` condivide colori e caratteri con il sito. I valori sono documentati in `../design/design-tokens.json`.
 - `public/assets`: SVG esportati dal Figma, conservati localmente senza URL temporanei; mappatura in `../design/figma-export.json`.
 - `scripts/build-sw.mjs`: cache offline essenziale generata dalla build, senza servizi esterni.
 

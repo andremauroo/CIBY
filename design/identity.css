@@ -1,0 +1,40 @@
+/* CIBY identity v1. Shared by the project site and the application. */
+@font-face {
+  font-family: "Bricolage Grotesque";
+  src: url("../app/public/fonts/bricolage-grotesque-variable.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 200 800;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Source Sans 3";
+  src: url("../app/public/fonts/source-sans-3-variable.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 200 900;
+  font-display: swap;
+}
+:root {
+  color-scheme: light;
+  --font-display: "Bricolage Grotesque", sans-serif;
+  --font-body: "Source Sans 3", system-ui, sans-serif;
+  --color-brand: #173a30;
+  --color-onBrand: #ffffff;
+  --color-surface: #ffffff;
+  --color-card: #ffffff;
+  --color-brandSoft: #f3f7f4;
+  --color-accent: #f1c75b;
+  --color-onAccent: #173a30;
+  --color-accentHover: #e7b94a;
+  --color-text: #173a30;
+  --color-secondary: #53685d;
+  --color-border: #ced9d1;
+  --color-control: #53685d;
+  --color-emphasis: #173a30;
+  --color-user: #e8f0ea;
+  --color-leaf: #2d6551;
+  --color-leafSoft: #e8f0ea;
+  --color-amber: #8a5300;
+  --color-amberSoft: #fdf0d2;
+  --color-late: #a23b2a;
+  --color-lateSoft: #fbe3de;
+}

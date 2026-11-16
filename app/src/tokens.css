@@ -1,22 +1,6 @@
+@import "../../design/identity.css";
 :root {
-  --color-surface: #f7f5f1;
-  --color-card: #ffffff;
-  --color-brand: #39264f;
-  --color-brandSoft: #ece8ff;
-  --color-accent: #f6d872;
-  --color-text: #2b2434;
-  --color-secondary: #6f6877;
-  --color-border: #e4e0e8;
-  --color-onBrand: #ffffff;
-  --color-leaf: #4c7340;
-  --color-leafSoft: #e5f0dc;
-  --color-amber: #8a5300;
-  --color-amberSoft: #fdf0d2;
-  --color-late: #a23b2a;
-  --color-lateSoft: #fbe3de;
-  --color-user: #f3e8ef;
-  --color-violet: #7055a1;
-  --shadow-card: 0 1px 2px #39264f0d, 0 6px 20px #39264f0f;
-  --shadow-lift: 0 2px 4px #39264f14, 0 14px 32px #39264f1f;
+  --shadow-card: 0 1px 3px #173a300a;
+  --shadow-lift: 0 2px 4px #173a300a, 0 12px 28px #173a3014;
   --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
 }

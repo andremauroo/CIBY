@@ -40,5 +40,6 @@
       "imgIconChat": "76b0b.svg"
     }
   },
-  "notes": "SVG originali esportati tramite get_design_context. Le schermate sono implementate come componenti React responsivi; nessuna schermata raster nell'app."
+  "notes": "SVG originali esportati tramite get_design_context. Le schermate sono implementate come componenti React responsivi; nessuna schermata raster nell'app. Aggiornamento del 16 novembre: i contorni e le icone adottano il verde CIBY; la geometria degli SVG resta quella originale.",
+  "identityUpdate": "2026-11-16"
 }
