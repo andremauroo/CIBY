@@ -310,14 +310,14 @@ main {
 .filters button,
 .quick-replies button {
   border-radius: 12px;
-  background: white;
+  background: var(--color-card);
   padding: 12px;
   min-height: 44px;
   font-size: 12px;
 }
 .filters .selected {
   background: var(--color-brand);
-  color: white;
+  color: var(--color-onBrand);
 }
 .priority-label {
   display: flex;
@@ -331,7 +331,7 @@ main {
 }
 .food-list {
   border-radius: 20px;
-  background: white;
+  background: var(--color-card);
   overflow: hidden;
 }
 .food-row {
@@ -470,7 +470,7 @@ ol {
   gap: 8px;
 }
 .recipe-option {
-  background: white;
+  background: var(--color-card);
   border-radius: 12px;
   padding: 12px;
   text-align: left;
@@ -486,7 +486,7 @@ ol {
   display: flex;
   align-items: center;
   gap: 8px;
-  background: white;
+  background: var(--color-card);
   border-radius: 20px;
   padding: 4px 8px 4px 12px;
   min-height: 52px;
@@ -520,7 +520,7 @@ ol {
   max-width: calc(100vw - 32px);
   border-radius: 12px;
   background: var(--color-brand);
-  color: white;
+  color: var(--color-onBrand);
   padding: 12px 16px;
   opacity: 0;
   box-shadow: 0 6px 25px #173a3020;
@@ -585,7 +585,7 @@ dialog > ol {
   padding: 12px;
   border: 1px solid var(--color-border);
   border-radius: 12px;
-  background: white;
+  background: var(--color-card);
   min-width: 0;
   min-height: 48px;
 }
@@ -625,7 +625,7 @@ dialog > ol {
   top: 12px;
   left: 12px;
   padding: 12px;
-  background: white;
+  background: var(--color-card);
   z-index: 40;
 }
 .intro h1:focus {
@@ -633,7 +633,7 @@ dialog > ol {
 }
 @media (min-width: 760px) {
   html {
-    background: #f3f7f4;
+    background: var(--color-brandSoft);
   }
   .desktop-layout {
     max-width: 1060px;
@@ -738,7 +738,7 @@ dialog > ol {
   border-radius: 20px;
   display: grid;
   gap: 12px;
-  background: white;
+  background: var(--color-card);
 }
 .add-food-panel p,
 .catalog-notice {
@@ -761,7 +761,7 @@ dialog > ol {
   border-radius: 12px;
   min-width: 0;
   width: 100%;
-  background: white;
+  background: var(--color-card);
 }
 .catalog-list {
   display: grid;
@@ -800,7 +800,7 @@ dialog > ol {
 }
 .pantry-switch [aria-pressed="true"] {
   background: var(--color-brand);
-  color: white;
+  color: var(--color-onBrand);
 }
 .pantry-switch span {
   margin-left: 6px;
@@ -811,7 +811,7 @@ dialog > ol {
   gap: 12px;
   padding: 16px;
   border-radius: 20px;
-  background: #f3f7f4;
+  background: var(--color-brandSoft);
   text-align: left;
 }
 .shopping-shortcut > span:nth-child(2) {

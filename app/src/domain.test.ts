@@ -6,6 +6,14 @@ import {
   suggestions,
   consume,
   needs,
+  recipes,
+  ingredients,
+  weekBalance,
+  freeFoods,
+  upcomingMeals,
+  cookWeekMeal,
+  isoDay,
+  type RecipeId,
   useSoon,
   daysUntil,
   compareOptions,
@@ -179,4 +187,82 @@ it("B02 confronta mancanti senza cambiare l'inventario", () => {
     need: 3,
   });
   expect(foods).toEqual(before);
+});
+
+describe("Ricettario ampliato e pasti della settimana", () => {
+  const today = new Date();
+  const meal = (
+    recipe: RecipeId,
+    offset: number,
+    slot: "Pranzo" | "Cena" = "Cena",
+  ) => ({
+    id: `${recipe}-${offset}`,
+    date: isoDay(offset),
+    slot,
+    recipe,
+    servings: 2,
+  });
+  it("ogni preparazione usa solo ingredienti riconosciuti", () => {
+    for (const id of Object.keys(recipes))
+      for (const key of Object.keys(needs(id, 2)))
+        expect(ingredients[key], `${id}: ${key}`).toBeDefined();
+    expect(needs("caprese", 1)).toEqual({ pomodori: 2, mozzarella: 1 });
+    expect(suggestions(initialState.foods, 1, 5)).toEqual(["caprese"]);
+  });
+  it("somma i pasti previsti e distingue mancanti e scorte libere", () => {
+    const state = {
+      ...initialState,
+      week: [meal("pastaPomodoro", 1), meal("bowlPollo", 2)],
+    };
+    const balance = Object.fromEntries(
+      weekBalance(state, today).map((b) => [b.key, b]),
+    );
+    expect(balance.pomodori).toMatchObject({ need: 4, have: 4, free: 0 });
+    expect(balance.pollo).toMatchObject({ need: 300, missing: 300 });
+    expect(balance.riso).toMatchObject({ need: 160, free: 90 });
+    expect(balance.mozzarella).toMatchObject({ need: 0, free: 1, soon: true });
+    expect(
+      freeFoods(state, today).find((f) => f.id === "pomodori")?.quantity,
+    ).toBe(0);
+    expect(state.foods).toEqual(initialState.foods);
+  });
+  it("esclude i giorni passati e ordina le occasioni", () => {
+    const week = [
+      meal("caprese", 2),
+      meal("riso", -1),
+      meal("couscous", 2, "Pranzo"),
+    ];
+    expect(upcomingMeals(week, today).map((m) => m.recipe)).toEqual([
+      "couscous",
+      "caprese",
+    ]);
+  });
+  it("cucinare un pasto della settimana aggiorna scorte e registro una volta", () => {
+    const state = { ...initialState, week: [meal("pastaPomodoro", 1)] };
+    const cooked = cookWeekMeal(state, "pastaPomodoro-1");
+    expect(cooked.week).toEqual([]);
+    expect(cooked.foods.find((f) => f.id === "pasta")?.quantity).toBe(340);
+    expect(cooked.cooked[0].title).toBe("Pasta al pomodoro fresco");
+    expect(cookWeekMeal(cooked, "pastaPomodoro-1")).toEqual(cooked);
+    const blocked = { ...initialState, week: [meal("bowlPollo", 1)] };
+    expect(cookWeekMeal(blocked, "bowlPollo-1")).toEqual(blocked);
+  });
+  it("conserva settimana ed esiti validi e scarta quelli corrotti", () => {
+    const saved = {
+      ...initialState,
+      week: [
+        meal("caprese", 1),
+        { ...meal("caprese", 2), recipe: "inventata" },
+        null,
+      ],
+      waste: [
+        { date: isoDay(), name: "Yogurt", outcome: "buttato" },
+        { date: isoDay(), name: "Pane", outcome: "regalato" },
+      ],
+    };
+    const restored = parseState(JSON.stringify(saved));
+    expect(restored.week).toEqual([meal("caprese", 1)]);
+    expect(restored.waste).toEqual([saved.waste[0]]);
+    expect(restored.foods).toEqual(initialState.foods);
+  });
 });

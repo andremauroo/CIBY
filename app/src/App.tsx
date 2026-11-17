@@ -1,9 +1,22 @@
+import { useTheme, type Theme } from "./theme";
 import ShoppingList from "./ShoppingList";
 import { addShoppingIngredients, type ShoppingItem } from "./shopping";
 import { catalogMeals } from "./catalog";
 import RecipeCatalog from "./RecipeCatalog";
 import CompareMeals from "./CompareMeals";
 import Onboarding from "./Onboarding";
+import WeekPlan from "./WeekPlan";
+import FridgySetup from "./FridgySetup";
+import {
+  askFridgy,
+  FridgyError,
+  loadFridgySettings,
+  providers,
+  saveFridgySettings,
+  type ChatTurn,
+  type FridgyAction,
+  type FridgySettings,
+} from "./fridgy";
 import { asset, Button, Modal, FoodImage, ExpiryChip } from "./components";
 import { useEffect, useRef, useState, type FormEvent } from "react";
 import {
@@ -18,12 +31,20 @@ import {
   needs,
   artFor,
   useSoon,
+  compareOptions,
+  cookWeekMeal,
+  dayLabel,
+  freeFoods,
+  isoDay,
+  upcomingMeals,
+  weekId,
   daysUntil,
   expiryLabel,
   type State,
   type Food,
   type RecipeId,
   type Plan,
+  type MealSlot,
 } from "./domain";
 const icons = {
   Oggi: "c2520.svg",
@@ -32,8 +53,20 @@ const icons = {
   Fridgy: "76b0b.svg",
 };
 type Tab = keyof typeof icons;
-type Message = { role: "bot" | "user"; text: string };
+type Message = {
+  role: "bot" | "user";
+  text: string;
+  /** Written by the language model (otherwise by the rule-based demo). */
+  ai?: boolean;
+  /** Proposals the person may confirm. Nothing is applied automatically. */
+  actions?: FridgyAction[];
+};
 export default function App() {
+  const [theme, setTheme] = useTheme();
+  const [aiFailure, setAiFailure] = useState<{
+    text: string;
+    base: Message[];
+  } | null>(null);
   const [catalogOpen, setCatalogOpen] = useState(false);
   const [catalogInitialId, setCatalogInitialId] = useState<string | null>(null);
   const [catalogQuery, setCatalogQuery] = useState("");
@@ -43,6 +76,17 @@ export default function App() {
     setCatalogOpen(true);
   }
   const [compareOpen, setCompareOpen] = useState(false);
+  const [fridgy, setFridgy] = useState<FridgySettings | null>(
+    loadFridgySettings,
+  );
+  const [fridgySetup, setFridgySetup] = useState(false);
+  const [thinking, setThinking] = useState(false);
+  const [doneActions, setDoneActions] = useState<string[]>([]);
+  const [mealsView, setMealsView] = useState<"next" | "week">("next");
+  const [weekPick, setWeekPick] = useState<{
+    date: string;
+    slot: MealSlot;
+  } | null>(null);
   // First-run introduction for demos. Automated browsers skip it so that
   // end-to-end flows start from the home screen.
   const [showIntro, setShowIntro] = useState(() => {
@@ -140,6 +184,32 @@ export default function App() {
       (daysUntil(c.date, today) ?? 1) <= 0,
   );
   const rescued = new Set(cookedWeek.flatMap((c) => c.priorityUsed));
+  const wasteWeek = state.waste.filter(
+    (w) =>
+      (daysUntil(w.date, weekAgo) ?? -1) >= 0 &&
+      (daysUntil(w.date, today) ?? 1) <= 0,
+  );
+  const thrown = wasteWeek.filter((w) => w.outcome === "buttato");
+  const nextMeals = upcomingMeals(state.week);
+  function openWeek() {
+    setMealsView("week");
+    go("Pasti");
+  }
+  function removeFood(food: Food, outcome: "finito" | "buttato") {
+    setState((s) => ({
+      ...s,
+      foods: s.foods.filter((f) => f.id !== food.id),
+      waste: [...s.waste, { date: isoDay(), name: food.name, outcome }].slice(
+        -100,
+      ),
+    }));
+    setEdit(undefined);
+    setNotice(
+      outcome === "buttato"
+        ? `${food.name} rimosso e segnato come buttato.`
+        : `${food.name} rimosso: finito.`,
+    );
+  }
   const dateLabel = today.toLocaleDateString("it-IT", {
     weekday: "long",
     day: "numeric",
@@ -169,6 +239,13 @@ export default function App() {
     go("Dispensa");
   }
   function startIdeas() {
+    if (fridgy) {
+      setShowIdeas(false);
+      setDoneActions([]);
+      go("Fridgy");
+      void send("Cosa posso preparare con quello che ho?", []);
+      return;
+    }
     setChatServings(2);
     setChatTime(20);
     setExcluded([]);
@@ -181,8 +258,8 @@ export default function App() {
     setShowIdeas(true);
     go("Fridgy");
   }
-  function send(value: string) {
-    if (!value.trim()) return;
+  /** The original rule-based demo: used without a key and as a fallback. */
+  function ruleReply(value: string) {
     const lower = value.toLowerCase();
     let people = chatServings,
       time = chatTime,
@@ -230,13 +307,101 @@ export default function App() {
     } else
       response =
         "Posso aiutarti con ingredienti, pasti e cambi di programma. Vuoi un’idea con quello che hai? Prova «per due, 20 minuti» oppure «senza uova».";
-    setMessages((m) => [
-      ...m,
-      { role: "user", text: value.trim() },
-      { role: "bot", text: response },
-    ]);
-    setShowIdeas(offer);
+    return { response, offer };
+  }
+  async function send(value: string, base: Message[] = messages) {
+    const text = value.trim();
+    if (!text || thinking) return;
     setDraft("");
+    setAiFailure(null);
+    if (!fridgy) {
+      const { response, offer } = ruleReply(text);
+      setMessages([
+        ...base,
+        { role: "user", text },
+        { role: "bot", text: response },
+      ]);
+      setShowIdeas(offer);
+      return;
+    }
+    const history: Message[] = [...base, { role: "user", text }];
+    setMessages(history);
+    setShowIdeas(false);
+    setThinking(true);
+    try {
+      const turns: ChatTurn[] = history.map((m) => ({
+        role: m.role === "user" ? "user" : "assistant",
+        content: m.text,
+      }));
+      // Providers expect the conversation to open with the person.
+      while (turns[0]?.role === "assistant") turns.shift();
+      const reply = await askFridgy(fridgy, state, turns);
+      setMessages([
+        ...history,
+        { role: "bot", ai: true, text: reply.text, actions: reply.actions },
+      ]);
+    } catch (error) {
+      setAiFailure({ text, base });
+      // Recover with the demo, and say so: the person is never left waiting.
+      const { response, offer } = ruleReply(text);
+      setMessages([
+        ...history,
+        {
+          role: "bot",
+          text: `${
+            error instanceof FridgyError
+              ? error.message
+              : "Il modello AI non è disponibile in questo momento."
+          } Intanto rispondo in modalità demo.\n\n${response}`,
+        },
+      ]);
+      setShowIdeas(offer);
+    } finally {
+      setThinking(false);
+    }
+  }
+  const actionKey = (index: number, n: number) => `${index}-${n}`;
+  function actionLabel(action: FridgyAction) {
+    if (action.type === "ricetta")
+      return `Apri ${recipes[action.id].title} · ${action.servings === 1 ? "1 persona" : "2 persone"}`;
+    if (action.type === "spesa") return `Aggiungi ${action.name} alla spesa`;
+    return `Programma ${recipes[action.id].title} · ${dayLabel(action.date).toLowerCase()}, ${action.slot.toLowerCase()}`;
+  }
+  function runAction(action: FridgyAction, key: string) {
+    if (action.type === "ricetta") {
+      setChatServings(action.servings);
+      setDetail(action.id);
+      return;
+    }
+    if (action.type === "spesa") {
+      setState((s) => ({
+        ...s,
+        shopping: addShoppingIngredients(
+          s.shopping,
+          [{ name: action.name, measure: "" }],
+          { id: "fridgy", title: "Suggerito da Fridgy" },
+        ),
+      }));
+      setNotice(`${action.name} aggiunto alla lista della spesa.`);
+    } else {
+      setState((s) => ({
+        ...s,
+        week: [
+          ...s.week.filter(
+            (m) => !(m.date === action.date && m.slot === action.slot),
+          ),
+          {
+            id: weekId(),
+            date: action.date,
+            slot: action.slot,
+            recipe: action.id,
+            servings: action.servings,
+          },
+        ],
+      }));
+      setNotice(`${recipes[action.id].title} in programma. Scorte invariate.`);
+    }
+    setDoneActions((done) => [...done, key]);
   }
   function saveFood(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -364,6 +529,12 @@ export default function App() {
             },
             {
               who: "Luca",
+              need: "B03/B04 · Più occasioni",
+              action: "Pianifica i pasti della settimana",
+              run: openWeek,
+            },
+            {
+              who: "Luca",
               need: "B04 · Prima della spesa",
               action: "Controlla cosa hai già",
               run: openShopping,
@@ -399,7 +570,14 @@ export default function App() {
               </span>
               <div>
                 <strong>Fridgy</strong>
-                <small>Assistente di CIBY · Demo guidata</small>
+                <small>
+                  Assistente di CIBY ·{" "}
+                  {fridgy
+                    ? aiFailure
+                      ? "AI non disponibile"
+                      : "AI attiva"
+                    : "Demo guidata"}
+                </small>
               </div>
             </div>
           ) : (
@@ -539,6 +717,18 @@ export default function App() {
               <Button secondary onClick={() => openCatalog()}>
                 Esplora il ricettario
               </Button>
+              <button className="shopping-shortcut" onClick={openWeek}>
+                <FoodImage file="59bc0.svg" />
+                <span>
+                  <strong>I pasti della settimana</strong>
+                  <small>
+                    {nextMeals.length
+                      ? `${nextMeals.length === 1 ? "1 pasto" : `${nextMeals.length} pasti`} in programma · prossimo: ${dayLabel(nextMeals[0].date).toLowerCase()}, ${nextMeals[0].slot.toLowerCase()}`
+                      : "Dai un’occasione concreta alle scorte"}
+                  </small>
+                </span>
+                <span aria-hidden="true">›</span>
+              </button>
               <button className="shopping-shortcut" onClick={openShopping}>
                 <FoodImage file="generic-food.svg" />
                 <span>
@@ -577,6 +767,15 @@ export default function App() {
                     </small>
                   </div>
                 </div>
+                {wasteWeek.length > 0 && (
+                  <p className="impact-waste">
+                    Alimenti rimossi: {wasteWeek.length - thrown.length} finiti
+                    · {thrown.length} buttati
+                    {thrown.length
+                      ? ` (${thrown.map((w) => w.name.toLowerCase()).join(", ")})`
+                      : ""}
+                  </p>
+                )}
                 {cookedWeek.length > 0 && (
                   <p className="impact-last">
                     Ultimo: {cookedWeek[cookedWeek.length - 1].title}
@@ -735,10 +934,30 @@ export default function App() {
               <h1 className="sr-only" ref={heading} tabIndex={-1}>
                 Parla con Fridgy
               </h1>
-              <p className="footnote">
-                Demo conversazionale, senza AI generativa. Le proposte si basano
-                sulle scorte indicate.
-              </p>
+              <div className={`fridgy-mode ${fridgy ? "on" : ""}`}>
+                <p>
+                  {fridgy
+                    ? aiFailure
+                      ? "Ultima risposta in modalità demo: il servizio AI non era disponibile. Puoi riprovare o verificare un altro modello."
+                      : `AI attiva · ${providers[fridgy.provider].label}, ${fridgy.model}. Fridgy vede dispensa, pasti e spesa; le modifiche le confermi tu.`
+                    : "Demo conversazionale, senza AI generativa. Le proposte si basano sulle scorte indicate."}
+                </p>
+                <button
+                  className="text-button"
+                  onClick={() => setFridgySetup(true)}
+                >
+                  {fridgy ? "Impostazioni AI" : "Attiva l’AI gratuita"}
+                </button>
+              </div>
+              {aiFailure && (
+                <Button
+                  secondary
+                  disabled={thinking}
+                  onClick={() => send(aiFailure.text, aiFailure.base)}
+                >
+                  Riprova con AI
+                </Button>
+              )}
               <div
                 className="messages"
                 role="log"
@@ -749,20 +968,58 @@ export default function App() {
                 {messages.map((m, i) => (
                   <div key={i} className={`message ${m.role}`}>
                     <span className="message-author">
-                      {m.role === "user" ? "Tu" : "Fridgy · Demo AI"}
+                      {m.role === "user"
+                        ? "Tu"
+                        : m.ai
+                          ? "Fridgy · AI"
+                          : "Fridgy · Demo AI"}
                     </span>
                     <p>{m.text}</p>
+                    {m.actions && m.actions.length > 0 && (
+                      <div className="message-actions">
+                        {m.actions.map((action, n) => {
+                          const done = doneActions.includes(actionKey(i, n));
+                          return (
+                            <button
+                              key={n}
+                              disabled={done}
+                              onClick={() => runAction(action, actionKey(i, n))}
+                            >
+                              {done ? "Fatto · " : ""}
+                              {actionLabel(action)}
+                            </button>
+                          );
+                        })}
+                      </div>
+                    )}
                   </div>
                 ))}
+                {thinking && (
+                  <div className="message bot typing">
+                    <span className="message-author">Fridgy · AI</span>
+                    <p>
+                      <span className="sr-only">Fridgy sta scrivendo</span>
+                      <i />
+                      <i />
+                      <i />
+                    </p>
+                  </div>
+                )}
               </div>
               <div className="quick-replies" aria-label="Risposte rapide">
-                {["Per due, 20 minuti", "Solo per me", "Senza uova"].map(
-                  (t) => (
-                    <button key={t} onClick={() => send(t)}>
-                      {t}
-                    </button>
-                  ),
-                )}
+                {(fridgy
+                  ? [
+                      "Cosa cucino stasera?",
+                      "Stasera mangio fuori",
+                      "Cosa rischio di sprecare?",
+                      "Organizza i prossimi giorni",
+                    ]
+                  : ["Per due, 20 minuti", "Solo per me", "Senza uova"]
+                ).map((t) => (
+                  <button key={t} onClick={() => send(t)}>
+                    {t}
+                  </button>
+                ))}
               </div>
               {showIdeas && (
                 <section className="ideas" aria-label="Proposte di Fridgy">
@@ -774,13 +1031,14 @@ export default function App() {
                     >
                       <strong>{recipes[id].title}</strong>
                       <small>
-                        {recipes[id].time} min{id !== "frittata" ? "*" : ""} ·{" "}
+                        {recipes[id].time} min
+                        {"riso" in needs(id, 1) ? "*" : ""} ·{" "}
                         {recipes[id].effort} · {chatServings}{" "}
                         {chatServings === 1 ? "persona" : "persone"}
                       </small>
                     </button>
                   ))}
-                  {ideas.some((id) => id !== "frittata") && (
+                  {ideas.some((id) => "riso" in needs(id, 1)) && (
                     <small>
                       * Verifica il tempo sulla confezione del riso.
                     </small>
@@ -801,7 +1059,10 @@ export default function App() {
                   maxLength={500}
                   onChange={(e) => setDraft(e.target.value)}
                 />
-                <button aria-label="Invia messaggio" disabled={!draft.trim()}>
+                <button
+                  aria-label="Invia messaggio"
+                  disabled={!draft.trim() || thinking}
+                >
                   <img src={asset("abf5f.svg")} alt="" />
                 </button>
               </form>
@@ -815,166 +1076,232 @@ export default function App() {
                 </h1>
                 <p>Sposta un pasto, senza rifare tutto.</p>
               </div>
-              <section className="card">
-                <h2>Che cosa prepariamo?</h2>
-                <p>
-                  Esplora le ricette a partire da quello che hai. Puoi cambiare
-                  il pasto salvato in qualsiasi momento.
-                </p>
-                <Button onClick={() => openCatalog()}>
-                  Esplora ricette e cambia pasto
-                </Button>
-                <Button secondary onClick={() => setCompareOpen(true)}>
-                  Confronta adattare e rinviare
-                </Button>
-              </section>
-              {mealCard()}
-              {importedMeal && plan ? (
-                <>
-                  <Button
-                    secondary
-                    onClick={() => openCatalog(importedMeal.id)}
-                  >
-                    Leggi ingredienti e preparazione
-                  </Button>
-                  <p className="catalog-notice">
-                    Le dosi della fonte non vengono adattate al tuo piano. Puoi
-                    salvarla e rinviarla; il consumo automatico è disattivato
-                    per non sottrarre quantità inventate.
-                  </p>
-                  <label>
-                    Quando prepararla
-                    <select
-                      value={when}
-                      onChange={(e) => setWhen(e.target.value)}
-                    >
-                      <option>Domani a pranzo</option>
-                      <option>Domani a cena</option>
-                    </select>
-                  </label>
-                  <Button
-                    onClick={() => {
-                      setPreviousPlan(plan);
-                      setState((s) => ({ ...s, plan: { ...plan, when } }));
-                      setMoveDone(true);
-                    }}
-                  >
-                    Sposta questo pasto
-                  </Button>
-                  {previousPlan && (
-                    <Button
-                      secondary
-                      onClick={() => {
-                        setState((s) => ({ ...s, plan: previousPlan }));
-                        setPreviousPlan(null);
-                      }}
-                    >
-                      Annulla ultimo spostamento
-                    </Button>
-                  )}
-                </>
-              ) : plan && !plan.consumed ? (
-                <>
-                  <div className="event">
-                    <img src={asset("8c6f1.svg")} alt="" />
-                    Stasera mangio fuori
-                  </div>
-                  <div className="destination" id="postpone">
-                    <label>
-                      Nuova occasione
-                      <select
-                        value={when}
-                        onChange={(e) => setWhen(e.target.value)}
-                      >
-                        <option>Domani a pranzo</option>
-                        <option>Domani a cena</option>
-                      </select>
-                    </label>
-                    <label>
-                      Porzioni
-                      <select
-                        value={servings}
-                        onChange={(e) => setServings(Number(e.target.value))}
-                      >
-                        <option value={1}>Solo per me · 1 porzione</option>
-                        <option value={2}>Per due · 2 porzioni</option>
-                      </select>
-                    </label>
-                  </div>
-                  <section className="card impact">
-                    <h2>Prima di spostare</h2>
-                    <p>
-                      Il pasto passa a{" "}
-                      {servings === 1 ? "una porzione" : "due porzioni"}. Le
-                      quantità non usate restano da assegnare:
-                    </p>
-                    <ul>
-                      {Object.entries(needs(plan.recipe, servings)).map(
-                        ([id, n]) => {
-                          const food = state.foods.find((f) => matching(f, id));
-                          return (
-                            <li key={id}>
-                              {food?.name || id}: {n} {food?.unit || "pezzi"}{" "}
-                              previsti, {Math.max(0, (food?.quantity || 0) - n)}{" "}
-                              restano.
-                            </li>
-                          );
-                        },
-                      )}
-                    </ul>
-                    <p>Nessun ingrediente viene segnato come consumato.</p>
-                    <small
-                      className={
-                        available(state.foods, plan.recipe, servings)
-                          ? "green"
-                          : "warning"
-                      }
-                    >
-                      {available(state.foods, plan.recipe, servings)
-                        ? "Nessun nuovo acquisto necessario (olio e sale da verificare)."
-                        : "Quantità insufficienti: aggiorna le scorte o scegli un’altra preparazione."}
-                    </small>
-                  </section>
-                  <Button
-                    disabled={!available(state.foods, plan.recipe, servings)}
-                    onClick={() => {
-                      setPreviousPlan(plan);
-                      setState((s) => ({
-                        ...s,
-                        plan: { ...plan, when, servings },
-                      }));
-                      setMoveDone(true);
-                    }}
-                  >
-                    Conferma lo spostamento
-                  </Button>
-                  {previousPlan && (
-                    <Button
-                      secondary
-                      onClick={() => {
-                        setState((s) => ({ ...s, plan: previousPlan }));
-                        setPreviousPlan(null);
-                        setNotice("Spostamento annullato.");
-                      }}
-                    >
-                      Annulla ultimo spostamento
-                    </Button>
-                  )}
-                  <Button
-                    secondary
-                    onClick={() => setConsumeConfirm(true)}
-                    disabled={
-                      !available(state.foods, plan.recipe, plan.servings)
-                    }
-                  >
-                    Ho cucinato questo pasto
-                  </Button>
-                  <p className="footnote">
-                    Le scorte cambiano solo quando confermi ciò che hai usato.
-                  </p>
-                </>
+              <div
+                className="pantry-switch"
+                aria-label="Prossimo pasto e settimana"
+              >
+                <button
+                  aria-pressed={mealsView === "next"}
+                  onClick={() => setMealsView("next")}
+                >
+                  Prossimo pasto
+                </button>
+                <button
+                  aria-pressed={mealsView === "week"}
+                  onClick={() => setMealsView("week")}
+                >
+                  Settimana <span>{nextMeals.length}</span>
+                </button>
+              </div>
+              {mealsView === "week" ? (
+                <WeekPlan
+                  state={state}
+                  onAdd={(date, slot) => setWeekPick({ date, slot })}
+                  onMove={(id, date, slot) => {
+                    setState((s) => ({
+                      ...s,
+                      week: s.week.map((m) =>
+                        m.id === id ? { ...m, date, slot } : m,
+                      ),
+                    }));
+                    setNotice(
+                      `Pasto spostato a ${dayLabel(date).toLowerCase()}, ${slot.toLowerCase()}. Scorte invariate.`,
+                    );
+                  }}
+                  onRemove={(id) => {
+                    setState((s) => ({
+                      ...s,
+                      week: s.week.filter((m) => m.id !== id),
+                    }));
+                    setNotice("Pasto tolto dal piano. Scorte invariate.");
+                  }}
+                  onCook={(id) => {
+                    setState((s) => cookWeekMeal(s, id));
+                    setNotice("Pasto cucinato e scorte aggiornate.");
+                  }}
+                  onBuy={(items) => {
+                    setState((s) => ({
+                      ...s,
+                      shopping: addShoppingIngredients(s.shopping, items, {
+                        id: "week-plan",
+                        title: "Pasti della settimana",
+                      }),
+                    }));
+                    setNotice("Mancanti aggiunti alla lista della spesa.");
+                  }}
+                />
               ) : (
-                <Button onClick={startIdeas}>Scegli un nuovo pasto</Button>
+                <>
+                  <section className="card">
+                    <h2>Che cosa prepariamo?</h2>
+                    <p>
+                      Esplora le ricette a partire da quello che hai. Puoi
+                      cambiare il pasto salvato in qualsiasi momento.
+                    </p>
+                    <Button onClick={() => openCatalog()}>
+                      Esplora ricette e cambia pasto
+                    </Button>
+                    <Button secondary onClick={() => setCompareOpen(true)}>
+                      Confronta adattare e rinviare
+                    </Button>
+                  </section>
+                  {mealCard()}
+                  {importedMeal && plan ? (
+                    <>
+                      <Button
+                        secondary
+                        onClick={() => openCatalog(importedMeal.id)}
+                      >
+                        Leggi ingredienti e preparazione
+                      </Button>
+                      <p className="catalog-notice">
+                        Le dosi della fonte non vengono adattate al tuo piano.
+                        Puoi salvarla e rinviarla; il consumo automatico è
+                        disattivato per non sottrarre quantità inventate.
+                      </p>
+                      <label>
+                        Quando prepararla
+                        <select
+                          value={when}
+                          onChange={(e) => setWhen(e.target.value)}
+                        >
+                          <option>Domani a pranzo</option>
+                          <option>Domani a cena</option>
+                        </select>
+                      </label>
+                      <Button
+                        onClick={() => {
+                          setPreviousPlan(plan);
+                          setState((s) => ({ ...s, plan: { ...plan, when } }));
+                          setMoveDone(true);
+                        }}
+                      >
+                        Sposta questo pasto
+                      </Button>
+                      {previousPlan && (
+                        <Button
+                          secondary
+                          onClick={() => {
+                            setState((s) => ({ ...s, plan: previousPlan }));
+                            setPreviousPlan(null);
+                          }}
+                        >
+                          Annulla ultimo spostamento
+                        </Button>
+                      )}
+                    </>
+                  ) : plan && !plan.consumed ? (
+                    <>
+                      <div className="event">
+                        <img src={asset("8c6f1.svg")} alt="" />
+                        Stasera mangio fuori
+                      </div>
+                      <div className="destination" id="postpone">
+                        <label>
+                          Nuova occasione
+                          <select
+                            value={when}
+                            onChange={(e) => setWhen(e.target.value)}
+                          >
+                            <option>Domani a pranzo</option>
+                            <option>Domani a cena</option>
+                          </select>
+                        </label>
+                        <label>
+                          Porzioni
+                          <select
+                            value={servings}
+                            onChange={(e) =>
+                              setServings(Number(e.target.value))
+                            }
+                          >
+                            <option value={1}>Solo per me · 1 porzione</option>
+                            <option value={2}>Per due · 2 porzioni</option>
+                          </select>
+                        </label>
+                      </div>
+                      <section className="card impact">
+                        <h2>Prima di spostare</h2>
+                        <p>
+                          Il pasto passa a{" "}
+                          {servings === 1 ? "una porzione" : "due porzioni"}. Le
+                          quantità non usate restano da assegnare:
+                        </p>
+                        <ul>
+                          {Object.entries(needs(plan.recipe, servings)).map(
+                            ([id, n]) => {
+                              const food = state.foods.find((f) =>
+                                matching(f, id),
+                              );
+                              return (
+                                <li key={id}>
+                                  {food?.name || id}: {n}{" "}
+                                  {food?.unit || "pezzi"} previsti,{" "}
+                                  {Math.max(0, (food?.quantity || 0) - n)}{" "}
+                                  restano.
+                                </li>
+                              );
+                            },
+                          )}
+                        </ul>
+                        <p>Nessun ingrediente viene segnato come consumato.</p>
+                        <small
+                          className={
+                            available(state.foods, plan.recipe, servings)
+                              ? "green"
+                              : "warning"
+                          }
+                        >
+                          {available(state.foods, plan.recipe, servings)
+                            ? "Nessun nuovo acquisto necessario (olio e sale da verificare)."
+                            : "Quantità insufficienti: aggiorna le scorte o scegli un’altra preparazione."}
+                        </small>
+                      </section>
+                      <Button
+                        disabled={
+                          !available(state.foods, plan.recipe, servings)
+                        }
+                        onClick={() => {
+                          setPreviousPlan(plan);
+                          setState((s) => ({
+                            ...s,
+                            plan: { ...plan, when, servings },
+                          }));
+                          setMoveDone(true);
+                        }}
+                      >
+                        Conferma lo spostamento
+                      </Button>
+                      {previousPlan && (
+                        <Button
+                          secondary
+                          onClick={() => {
+                            setState((s) => ({ ...s, plan: previousPlan }));
+                            setPreviousPlan(null);
+                            setNotice("Spostamento annullato.");
+                          }}
+                        >
+                          Annulla ultimo spostamento
+                        </Button>
+                      )}
+                      <Button
+                        secondary
+                        onClick={() => setConsumeConfirm(true)}
+                        disabled={
+                          !available(state.foods, plan.recipe, plan.servings)
+                        }
+                      >
+                        Ho cucinato questo pasto
+                      </Button>
+                      <p className="footnote">
+                        Le scorte cambiano solo quando confermi ciò che hai
+                        usato.
+                      </p>
+                    </>
+                  ) : (
+                    <Button onClick={startIdeas}>Scegli un nuovo pasto</Button>
+                  )}
+                </>
               )}
             </>
           )}
@@ -1067,6 +1394,62 @@ export default function App() {
             setCompareOpen(false);
             go("Oggi");
             setNotice(`${recipes[id].title} salvata. Scorte invariate.`);
+          }}
+        />
+      )}
+      {weekPick && (
+        <CompareMeals
+          title={`${dayLabel(weekPick.date)}, ${weekPick.slot.toLowerCase()}`}
+          intro="Le quantità tengono conto dei pasti già previsti. Puoi pianificare anche una preparazione a cui manca qualcosa: lo trovi fra gli acquisti."
+          chooseLabel="Metti in programma"
+          allowMissing
+          foods={freeFoods(state)}
+          plan={null}
+          initialServings={2}
+          onClose={() => setWeekPick(null)}
+          onChoose={(id, servings) => {
+            setState((s) => ({
+              ...s,
+              week: [
+                ...s.week.filter(
+                  (m) =>
+                    !(m.date === weekPick.date && m.slot === weekPick.slot),
+                ),
+                { id: weekId(), ...weekPick, recipe: id, servings },
+              ],
+            }));
+            setWeekPick(null);
+            setNotice(`${recipes[id].title} in programma. Scorte invariate.`);
+          }}
+        />
+      )}
+      {fridgySetup && (
+        <FridgySetup
+          current={fridgy}
+          onClose={() => setFridgySetup(false)}
+          onSave={(settings) => {
+            const saved = saveFridgySettings(settings);
+            setFridgy(settings);
+            setAiFailure(null);
+            setFridgySetup(false);
+            setShowIdeas(false);
+            setDoneActions([]);
+            setMessages([
+              {
+                role: "bot",
+                ai: Boolean(settings),
+                text: settings
+                  ? "Ciao! Ora vedo dispensa, pasti e lista della spesa. Dimmi cosa ti serve: un’idea per stasera, un cambio di programma, cosa usare per primo."
+                  : "Sono tornato alla modalità demo. Per quante persone cucini e quanto tempo vuoi dedicare?",
+              },
+            ]);
+            setNotice(
+              !settings
+                ? "Chiave rimossa da questo browser."
+                : saved
+                  ? "Fridgy con AI attivo su questo browser."
+                  : "AI attiva solo per questa sessione: il browser non consente il salvataggio.",
+            );
           }}
         />
       )}
@@ -1179,20 +1562,24 @@ export default function App() {
               <>
                 {removeConfirm ? (
                   <>
-                    <p>Rimuovere {edit.name} dalla dispensa?</p>
-                    <Button
-                      secondary
-                      onClick={() => {
-                        setState((s) => ({
-                          ...s,
-                          foods: s.foods.filter((f) => f.id !== edit.id),
-                        }));
-                        setEdit(undefined);
-                        setNotice("Alimento rimosso.");
-                      }}
-                    >
-                      Conferma rimozione
-                    </Button>
+                    <p>
+                      Rimuovere {edit.name} dalla dispensa? Indica com’è andata:
+                      serve solo al tuo riepilogo.
+                    </p>
+                    <div className="button-pair">
+                      <Button
+                        secondary
+                        onClick={() => removeFood(edit, "finito")}
+                      >
+                        L’ho finito
+                      </Button>
+                      <Button
+                        secondary
+                        onClick={() => removeFood(edit, "buttato")}
+                      >
+                        L’ho buttato
+                      </Button>
+                    </div>
                   </>
                 ) : (
                   <button
@@ -1214,6 +1601,26 @@ export default function App() {
             {recipes[detail].time} minuti stimati ·{" "}
             {tab === "Fridgy" ? chatServings : plan?.servings || 2} porzioni
           </p>
+          <h3 className="detail-heading">Ingredienti</h3>
+          <ul className="compare-ingredients">
+            {compareOptions(
+              state.foods,
+              tab === "Fridgy" ? chatServings : plan?.servings || 2,
+            )
+              .find((o) => o.id === detail)!
+              .items.map((i) => (
+                <li key={i.key} className={i.ok ? "ok" : "missing"}>
+                  <span aria-hidden="true">{i.ok ? "✓" : "!"}</span>
+                  {i.name}: {i.need} {i.unit}
+                  <small>
+                    {i.ok
+                      ? ` · ne hai ${i.have}`
+                      : ` · ne mancano ${i.need - i.have}`}
+                  </small>
+                </li>
+              ))}
+          </ul>
+          <h3 className="detail-heading">Preparazione</h3>
           <ol>
             {recipes[detail].steps.map((step) => (
               <li key={step}>{step}</li>
@@ -1298,9 +1705,37 @@ export default function App() {
         >
           <p>
             CIBY salva alimenti, pasto, preferiti e lista della spesa solo in
-            questo browser. Fridgy è una demo a regole con tre preparazioni: non
-            è un modello AI.
+            questo browser. Senza una chiave Fridgy è una demo a regole; puoi
+            collegare un modello AI gratuito dalla scheda Fridgy.
           </p>
+          <fieldset className="theme-picker">
+            <legend>Aspetto</legend>
+            <p>Colori più scuri per usare CIBY di notte.</p>
+            <div>
+              {(
+                [
+                  ["system", "Automatico"],
+                  ["light", "Chiaro"],
+                  ["dark", "Notte"],
+                ] as [Theme, string][]
+              ).map(([value, label]) => (
+                <label key={value}>
+                  <input
+                    type="radio"
+                    name="theme"
+                    value={value}
+                    checked={theme === value}
+                    onChange={() => setTheme(value)}
+                  />
+                  {label}
+                </label>
+              ))}
+            </div>
+            <small>
+              Automatico segue il tema del dispositivo. La scelta resta salvata
+              in questo browser.
+            </small>
+          </fieldset>
           <p>
             Per una nuova sessione di prova puoi ripristinare le scorte di
             esempio. Il ripristino elimina anche preferiti e lista della spesa.
@@ -1326,6 +1761,7 @@ export default function App() {
                 ]);
                 setShowIdeas(false);
                 setExcluded([]);
+                setDoneActions([]);
                 setPreviousPlan(null);
                 setShowSettings(false);
                 setResetConfirm(false);

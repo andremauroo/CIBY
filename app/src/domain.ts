@@ -17,7 +17,34 @@ export type CookedEntry = {
   /** Names of the foods marked "da usare per primi" that the meal used. */
   priorityUsed: string[];
 };
-export type RecipeId = "frittata" | "riso" | "pomodori";
+export type RecipeId =
+  | "frittata"
+  | "riso"
+  | "pomodori"
+  | "pastaPomodoro"
+  | "couscous"
+  | "bowlPollo"
+  | "pastaCeci"
+  | "insalataRiso"
+  | "frittataPatate"
+  | "uovaPane"
+  | "caprese"
+  | "zuppaLenticchie";
+export type MealSlot = "Pranzo" | "Cena";
+/** A meal assigned to a concrete day: ingredients stay in stock until cooked. */
+export type WeekMeal = {
+  id: string;
+  date: string;
+  slot: MealSlot;
+  recipe: RecipeId;
+  servings: number;
+};
+/** What happened to a food removed from the pantry. Declared by the person. */
+export type WasteEntry = {
+  date: string;
+  name: string;
+  outcome: "finito" | "buttato";
+};
 export type Plan = {
   recipe: RecipeId | `catalog:${string}` | `mealdb:${string}`;
   when: string;
@@ -31,6 +58,8 @@ export type State = {
   shopping: ShoppingItem[];
   favoriteIds: string[];
   cooked: CookedEntry[];
+  week: WeekMeal[];
+  waste: WasteEntry[];
 };
 /** Local calendar date, YYYY-MM-DD, offset by a number of days. */
 export function isoDay(offset = 0, from = new Date()) {
@@ -89,6 +118,8 @@ export const initialState: State = {
   shopping: [],
   favoriteIds: [],
   cooked: [],
+  week: [],
+  waste: [],
   foods: [
     {
       id: "zucchine",
@@ -129,17 +160,44 @@ export const initialState: State = {
       priority: false,
       art: "dd50e.svg",
     },
+    {
+      id: "mozzarella",
+      expires: isoDay(1),
+      name: "Mozzarella",
+      quantity: 1,
+      unit: "pezzi",
+      place: "Frigo",
+      priority: false,
+      art: "cheese.svg",
+    },
+    {
+      id: "pasta",
+      name: "Pasta",
+      quantity: 500,
+      unit: "g",
+      place: "Dispensa",
+      priority: false,
+      art: "pasta.svg",
+    },
   ],
   plan: { recipe: "frittata", when: "Stasera", servings: 2, consumed: false },
 };
 export const recipes: Record<
   RecipeId,
-  { title: string; time: number; effort: string; steps: string[] }
+  {
+    title: string;
+    time: number;
+    effort: string;
+    steps: string[];
+    /** No meat or fish among the listed ingredients. Not a dietary guarantee. */
+    veg: boolean;
+  }
 > = {
   frittata: {
     title: "Frittata di zucchine",
     time: 20,
     effort: "Una padella",
+    veg: true,
     steps: [
       "Taglia le zucchine sottili e cuocile in padella con poco olio.",
       "Sbatti le uova, uniscile alle zucchine e completa la cottura.",
@@ -150,6 +208,7 @@ export const recipes: Record<
     title: "Riso e zucchine",
     time: 20,
     effort: "Due pentole",
+    veg: true,
     steps: [
       "Verifica il tempo del riso sulla confezione: la stima totale può cambiare.",
       "Taglia le zucchine e cuocile in padella con poco olio.",
@@ -160,42 +219,187 @@ export const recipes: Record<
     title: "Riso e pomodori",
     time: 20,
     effort: "Due pentole",
+    veg: true,
     steps: [
       "Verifica il tempo di cottura del riso sulla confezione.",
       "Taglia i pomodori e condiscili secondo le tue preferenze.",
       "Cuoci il riso e uniscilo ai pomodori. Verifica di avere olio e sale.",
     ],
   },
+  pastaPomodoro: {
+    title: "Pasta al pomodoro fresco",
+    time: 15,
+    effort: "Una pentola e una padella",
+    veg: true,
+    steps: [
+      "Metti l’acqua a bollire e verifica il tempo della pasta sulla confezione.",
+      "Taglia i pomodori a pezzi e scaldali in padella con poco olio.",
+      "Scola la pasta e saltala nel sugo. Olio e sale sono da verificare.",
+    ],
+  },
+  couscous: {
+    title: "Cous cous e zucchine",
+    time: 15,
+    effort: "Una padella e una ciotola",
+    veg: true,
+    steps: [
+      "Taglia le zucchine a cubetti e cuocile in padella con poco olio.",
+      "Versa acqua calda sul cous cous seguendo la confezione e copri.",
+      "Sgrana il cous cous e unisci le zucchine. Si può portare anche fuori casa.",
+    ],
+  },
+  bowlPollo: {
+    title: "Bowl di riso e pollo",
+    time: 30,
+    effort: "Una pentola e una padella",
+    veg: false,
+    steps: [
+      "Cuoci il riso seguendo il tempo sulla confezione.",
+      "Taglia il pollo a pezzi e cuocilo bene in padella; taglia le carote a bastoncini.",
+      "Componi la bowl nelle porzioni previste. Olio e sale sono da verificare.",
+    ],
+  },
+  pastaCeci: {
+    title: "Pasta e ceci veloce",
+    time: 25,
+    effort: "Una pentola",
+    veg: true,
+    steps: [
+      "Scalda i ceci già cotti in pentola con poco olio.",
+      "Aggiungi acqua, porta a bollore e cuoci la pasta nello stesso tegame.",
+      "Lascia restringere fino alla consistenza che preferisci. Sale da verificare.",
+    ],
+  },
+  insalataRiso: {
+    title: "Insalata di riso e tonno",
+    time: 25,
+    effort: "Una pentola",
+    veg: false,
+    steps: [
+      "Cuoci il riso seguendo la confezione e raffreddalo sotto l’acqua.",
+      "Taglia i pomodori e sgocciola il tonno.",
+      "Unisci tutto. Olio e sale sono da verificare.",
+    ],
+  },
+  frittataPatate: {
+    title: "Frittata di patate",
+    time: 30,
+    effort: "Una padella",
+    veg: true,
+    steps: [
+      "Taglia le patate a fette sottili e cuocile in padella finché sono morbide.",
+      "Sbatti le uova e versale sulle patate.",
+      "Completa la cottura girando la frittata. Olio e sale sono da verificare.",
+    ],
+  },
+  uovaPane: {
+    title: "Uova strapazzate e pane",
+    time: 10,
+    effort: "Una padella",
+    veg: true,
+    steps: [
+      "Sbatti le uova con un pizzico di sale.",
+      "Cuocile a fuoco basso mescolando.",
+      "Servile sul pane, tostato se preferisci.",
+    ],
+  },
+  caprese: {
+    title: "Caprese",
+    time: 5,
+    effort: "Nessuna cottura",
+    veg: true,
+    steps: [
+      "Taglia a fette pomodori e mozzarella.",
+      "Alternali nel piatto.",
+      "Condisci secondo le tue preferenze. Olio e sale sono da verificare.",
+    ],
+  },
+  zuppaLenticchie: {
+    title: "Zuppa di lenticchie e carote",
+    time: 35,
+    effort: "Una pentola",
+    veg: true,
+    steps: [
+      "Taglia le carote a rondelle e falle andare in pentola con poco olio.",
+      "Aggiungi le lenticchie secche e copri d’acqua: verifica il tempo sulla confezione.",
+      "Cuoci finché sono morbide. Sale da verificare.",
+    ],
+  },
+};
+/** Recognised ingredients: display name, stock unit and accepted spellings. */
+export const ingredients: Record<
+  string,
+  { label: string; unit: Food["unit"]; names: string[] }
+> = {
+  zucchine: {
+    label: "Zucchine",
+    unit: "pezzi",
+    names: ["zucchina", "zucchine"],
+  },
+  uova: { label: "Uova", unit: "pezzi", names: ["uovo", "uova"] },
+  riso: { label: "Riso", unit: "g", names: ["riso"] },
+  pomodori: {
+    label: "Pomodori",
+    unit: "pezzi",
+    names: ["pomodoro", "pomodori"],
+  },
+  pasta: {
+    label: "Pasta",
+    unit: "g",
+    names: ["pasta", "spaghetti", "penne", "fusilli", "rigatoni"],
+  },
+  couscous: {
+    label: "Cous cous",
+    unit: "g",
+    names: ["cous cous", "couscous", "cuscus"],
+  },
+  pollo: { label: "Pollo", unit: "g", names: ["pollo", "petto di pollo"] },
+  carote: { label: "Carote", unit: "pezzi", names: ["carota", "carote"] },
+  ceci: { label: "Ceci", unit: "g", names: ["ceci", "ceci cotti"] },
+  tonno: { label: "Tonno", unit: "confezioni", names: ["tonno"] },
+  patate: { label: "Patate", unit: "pezzi", names: ["patata", "patate"] },
+  pane: { label: "Pane", unit: "pezzi", names: ["pane", "fette di pane"] },
+  mozzarella: {
+    label: "Mozzarella",
+    unit: "pezzi",
+    names: ["mozzarella", "mozzarelle"],
+  },
+  lenticchie: { label: "Lenticchie", unit: "g", names: ["lenticchie"] },
+};
+const eggs = (servings: number) => (servings === 1 ? 2 : 3);
+const perServing: Record<
+  RecipeId,
+  (servings: number) => Record<string, number>
+> = {
+  frittata: (n) => ({ zucchine: n, uova: eggs(n) }),
+  riso: (n) => ({ zucchine: n, riso: 80 * n }),
+  pomodori: (n) => ({ pomodori: 2 * n, riso: 80 * n }),
+  pastaPomodoro: (n) => ({ pasta: 80 * n, pomodori: 2 * n }),
+  couscous: (n) => ({ couscous: 70 * n, zucchine: n }),
+  bowlPollo: (n) => ({ riso: 80 * n, pollo: 150 * n, carote: n }),
+  pastaCeci: (n) => ({ pasta: 70 * n, ceci: 120 * n }),
+  insalataRiso: (n) => ({ riso: 80 * n, tonno: n, pomodori: n }),
+  frittataPatate: (n) => ({ patate: 2 * n, uova: eggs(n) }),
+  uovaPane: (n) => ({ uova: 2 * n, pane: 2 * n }),
+  caprese: (n) => ({ pomodori: 2 * n, mozzarella: n }),
+  zuppaLenticchie: (n) => ({ lenticchie: 80 * n, carote: n }),
 };
 export function needs(id: string, servings: number): Record<string, number> {
   if (!Object.hasOwn(recipes, id)) return {};
-  return id === "frittata"
-    ? { zucchine: servings, uova: servings === 1 ? 2 : 3 }
-    : id === "riso"
-      ? { zucchine: servings, riso: 80 * servings }
-      : { pomodori: 2 * servings, riso: 80 * servings };
+  return perServing[id as RecipeId](servings);
 }
+const canonicalNames = new Map(
+  Object.entries(ingredients).flatMap(([key, value]) =>
+    value.names.map((name) => [name, key] as const),
+  ),
+);
 export function canonical(name: string): string | null {
-  const n = name.trim().toLowerCase();
   return (
-    (
-      {
-        zucchina: "zucchine",
-        zucchine: "zucchine",
-        uovo: "uova",
-        uova: "uova",
-        riso: "riso",
-        pomodoro: "pomodori",
-        pomodori: "pomodori",
-      } as Record<string, string>
-    )[n] || null
+    canonicalNames.get(name.trim().toLowerCase().replace(/\s+/g, " ")) || null
   );
 }
 export function matching(food: Food, key: string) {
-  return (
-    canonical(food.name) === key &&
-    food.unit === (key === "riso" ? "g" : "pezzi")
-  );
+  return canonical(food.name) === key && food.unit === ingredients[key]?.unit;
 }
 export function available(
   foods: Food[],
@@ -231,8 +435,8 @@ export function compareOptions(foods: Food[], servings: number) {
     const items = Object.entries(needs(id, servings)).map(([key, need]) => {
       const matches = foods.filter((f) => matching(f, key));
       const have = matches.reduce((sum, f) => sum + f.quantity, 0);
-      const name = matches[0]?.name || key[0].toUpperCase() + key.slice(1);
-      const unit = key === "riso" ? "g" : "pezzi";
+      const name = matches[0]?.name || ingredients[key].label;
+      const unit = ingredients[key].unit;
       const priority = matches.some((f) => f.priority && f.quantity > 0);
       const expiring = matches.some((f) => {
         const d = daysUntil(f.expires);
@@ -260,6 +464,35 @@ export function compareOptions(foods: Food[], servings: number) {
     };
   });
 }
+/** Subtract a feasible recipe from the stock and describe what was cooked. */
+function cook(foods: Food[], recipe: RecipeId, servings: number) {
+  const used = { ...needs(recipe, servings) };
+  const after = foods.map((f) => {
+    const key = canonical(f.name);
+    const amount =
+      key && matching(f, key) ? Math.min(used[key] || 0, f.quantity) : 0;
+    if (key) used[key] = Math.max(0, (used[key] || 0) - amount);
+    return { ...f, quantity: f.quantity - amount };
+  });
+  const entry: CookedEntry = {
+    date: isoDay(),
+    title: recipes[recipe].title,
+    priorityUsed: [
+      ...new Set(
+        foods
+          .filter((f) => {
+            const d = daysUntil(f.expires);
+            return (
+              after.some((a) => a.id === f.id && a.quantity < f.quantity) &&
+              (f.priority || (d !== null && d <= 3))
+            );
+          })
+          .map((f) => f.name),
+      ),
+    ],
+  };
+  return { foods: after, entry };
+}
 export function consume(state: State): State {
   if (
     !state.plan ||
@@ -267,46 +500,113 @@ export function consume(state: State): State {
     !available(state.foods, state.plan.recipe, state.plan.servings)
   )
     return state;
-  const used = { ...needs(state.plan.recipe, state.plan.servings) };
-  const foods = state.foods.map((f) => {
-    const key = canonical(f.name);
-    const amount =
-      key && matching(f, key) ? Math.min(used[key] || 0, f.quantity) : 0;
-    if (key) used[key] = Math.max(0, (used[key] || 0) - amount);
-    return { ...f, quantity: f.quantity - amount };
-  });
-
+  const { foods, entry } = cook(
+    state.foods,
+    state.plan.recipe as RecipeId,
+    state.plan.servings,
+  );
   return {
     ...state,
     foods,
     plan: { ...state.plan, consumed: true },
-    cooked: [
-      ...state.cooked,
-      {
-        date: isoDay(),
-        title: recipes[state.plan.recipe as RecipeId].title,
-        priorityUsed: [
-          ...new Set(
-            state.foods
-              .filter((f) => {
-                const key = canonical(f.name);
-                const d = daysUntil(f.expires);
-                return (
-                  key &&
-                  key in needs(state.plan!.recipe, state.plan!.servings) &&
-                  matching(f, key) &&
-                  foods.some(
-                    (after) => after.id === f.id && after.quantity < f.quantity,
-                  ) &&
-                  (f.priority || (d !== null && d <= 3))
-                );
-              })
-              .map((f) => f.name),
-          ),
-        ],
-      },
-    ].slice(-50),
+    cooked: [...state.cooked, entry].slice(-50),
   };
+}
+/** Confirm a meal of the week as cooked: only then the stock changes. */
+export function cookWeekMeal(state: State, id: string): State {
+  const meal = state.week.find((m) => m.id === id);
+  if (!meal || !available(state.foods, meal.recipe, meal.servings))
+    return state;
+  const { foods, entry } = cook(state.foods, meal.recipe, meal.servings);
+  return {
+    ...state,
+    foods,
+    week: state.week.filter((m) => m.id !== id),
+    cooked: [...state.cooked, entry].slice(-50),
+  };
+}
+/** Stock left once the planned occasions are covered (never negative). */
+export function freeFoods(state: State, today = new Date()): Food[] {
+  const reserved = Object.fromEntries(
+    weekBalance(state, today).map((b) => [b.key, b.need]),
+  );
+  return state.foods.map((f) => {
+    const key = canonical(f.name);
+    if (!key || !matching(f, key)) return f;
+    const amount = Math.min(reserved[key] || 0, f.quantity);
+    reserved[key] = (reserved[key] || 0) - amount;
+    return { ...f, quantity: f.quantity - amount };
+  });
+}
+export function dayLabel(date: string, today = new Date()) {
+  const days = daysUntil(date, today);
+  if (days === 0) return "Oggi";
+  if (days === 1) return "Domani";
+  const [y, m, d] = date.split("-").map(Number);
+  const text = new Date(y, m - 1, d).toLocaleDateString("it-IT", {
+    weekday: "long",
+    day: "numeric",
+  });
+  return text[0].toUpperCase() + text.slice(1);
+}
+export const weekId = () =>
+  globalThis.crypto?.randomUUID?.() ??
+  `meal-${Date.now()}-${Math.random().toString(36).slice(2)}`;
+/** Meals still ahead, in order. Past days are kept out of the totals. */
+export function upcomingMeals(week: WeekMeal[], today = new Date()) {
+  return week
+    .filter((m) => (daysUntil(m.date, today) ?? -1) >= 0)
+    .sort(
+      (a, b) =>
+        a.date.localeCompare(b.date) ||
+        Number(a.slot === "Cena") - Number(b.slot === "Cena"),
+    );
+}
+/**
+ * B03/B04: what the planned occasions need, against the stock.
+ * `free` is the quantity with no planned use; `missing` is what to buy.
+ */
+export function weekBalance(state: State, today = new Date()) {
+  const planned: { title: string; needs: Record<string, number> }[] =
+    upcomingMeals(state.week, today).map((m) => ({
+      title: recipes[m.recipe].title,
+      needs: needs(m.recipe, m.servings),
+    }));
+  if (
+    state.plan &&
+    !state.plan.consumed &&
+    Object.hasOwn(recipes, state.plan.recipe)
+  )
+    planned.unshift({
+      title: recipes[state.plan.recipe as RecipeId].title,
+      needs: needs(state.plan.recipe, state.plan.servings),
+    });
+  const keys = new Set([
+    ...planned.flatMap((p) => Object.keys(p.needs)),
+    ...state.foods.flatMap((f) => {
+      const key = f.quantity > 0 ? canonical(f.name) : null;
+      return key && matching(f, key) ? [key] : [];
+    }),
+  ]);
+  return [...keys].map((key) => {
+    const matches = state.foods.filter((f) => matching(f, key));
+    const have = matches.reduce((sum, f) => sum + f.quantity, 0);
+    const need = planned.reduce((sum, p) => sum + (p.needs[key] || 0), 0);
+    return {
+      key,
+      label: matches[0]?.name || ingredients[key].label,
+      unit: ingredients[key].unit,
+      have,
+      need,
+      missing: Math.max(0, need - have),
+      free: Math.max(0, have - need),
+      meals: planned.filter((p) => p.needs[key]).map((p) => p.title),
+      soon: matches.some((f) => {
+        const d = daysUntil(f.expires, today);
+        return f.quantity > 0 && (f.priority || (d !== null && d <= 3));
+      }),
+    };
+  });
 }
 export function parseState(raw: string | null): State {
   try {
@@ -391,6 +691,26 @@ export function parseState(raw: string | null): State {
               c.priorityUsed.every((n) => typeof n === "string"),
           )
         : [],
+      week: Array.isArray(s.week)
+        ? s.week.filter(
+            (m: WeekMeal) =>
+              m &&
+              typeof m.id === "string" &&
+              daysUntil(m.date) !== null &&
+              ["Pranzo", "Cena"].includes(m.slot) &&
+              Object.hasOwn(recipes, m.recipe) &&
+              [1, 2].includes(m.servings),
+          )
+        : [],
+      waste: Array.isArray(s.waste)
+        ? s.waste.filter(
+            (w: WasteEntry) =>
+              w &&
+              typeof w.date === "string" &&
+              typeof w.name === "string" &&
+              ["finito", "buttato"].includes(w.outcome),
+          )
+        : [],
     };
   } catch {
     return structuredClone(initialState);
@@ -411,6 +731,9 @@ export function artFor(name: string) {
     [/mel[ae]|pera|pere/, "apple.svg"],
     [/ceci|fagiol|legum/, "beans.svg"],
     [/patat/, "potato.svg"],
+    [/mozzarell|formagg|parmigian|pecorino|ricotta/, "cheese.svg"],
+    [/pollo|tacchino/, "chicken.svg"],
+    [/tonno|sgombro/, "can.svg"],
   ] as const)
     if (pattern.test(n)) return file;
   return "generic-food.svg";

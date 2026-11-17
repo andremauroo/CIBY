@@ -190,8 +190,66 @@ Se un vecchio salvataggio conteneva un pasto TheMealDB ritirato, il pasto torna 
 ## Bisogni C2 e percorsi di presentazione
 
 - **B01:** data facoltativa “da consumare entro”, etichette temporali e striscia “Da usare presto”. La priorità manuale precede l'ordinamento per data. Una data passata invita a verificare e non certifica la sicurezza dell'alimento.
-- **B02/B03:** confronto delle tre preparazioni dimostrative per porzioni, tempo, impegno e quantità mancanti, con accesso al rinvio. Una preparazione oltre il tempo indicato non è selezionabile. Scegliere o rinviare non consuma le scorte.
+- **B02/B03:** confronto delle preparazioni dimostrative per porzioni, tempo, impegno e quantità mancanti, con accesso al rinvio. Una preparazione oltre il tempo indicato non è selezionabile. Scegliere o rinviare non consuma le scorte.
 - **B04:** la lista della spesa mostra le scorte già presenti con nome riconosciuto; l'avviso lascia alla persona la decisione di comprare.
 - **Ultimi 7 giorni:** solo le conferme di consumo alimentano lo storico. Gli alimenti prioritari contati sono quelli effettivamente sottratti, senza duplicare la stessa conferma.
 
-L'introduzione di tre schermate è rivedibile dalle opzioni M. Su desktop i percorsi di Marta, Gianfranco e Luca aprono le relative interazioni senza ripristinare i dati della persona. Il confronto usa tre ricette dimostrative con quantità calcolabili; il catalogo italiano ne contiene 18 con dosi della fonte.
+L'introduzione di tre schermate è rivedibile dalle opzioni M. Su desktop i percorsi di Marta, Gianfranco e Luca aprono le relative interazioni senza ripristinare i dati della persona. Il confronto usa dodici ricette dimostrative con quantità calcolabili; il catalogo italiano ne contiene 18 con dosi della fonte.
+
+## Iterazione: settimana, ricettario locale ed esito degli alimenti
+
+- **Ricettario dimostrativo ampliato:** dodici preparazioni in italiano con tempo, impegno e dosi per una o due persone (fra cui pasta al pomodoro, cous cous e zucchine, bowl di riso e pollo, caprese, zuppa di lenticchie). Gli ingredienti riconosciuti sono in `ingredients` di `src/domain.ts`: nome, unità attesa e grafie accettate. Il dettaglio di una preparazione mostra anche ingredienti presenti e mancanti.
+- **Confronto:** filtro “Solo senza carne e pesce”, basato sugli ingredienti elencati e non una garanzia dietetica; le preparazioni a cui manca qualcosa sono raccolte in un elenco richiudibile.
+- **Pasti → Settimana (B03/B04):** sette giorni con pranzo e cena. Si sceglie una preparazione per un’occasione, la si sposta o la si toglie senza toccare le scorte. “Cosa serve per i pasti previsti” somma i fabbisogni, incluso il prossimo pasto, e porta i mancanti nella lista della spesa; “Ancora senza un pasto” mostra le scorte non assegnate. Le scorte cambiano solo con “Ho cucinato” e la conferma.
+- **Esito degli alimenti rimossi:** alla rimozione si indica “L’ho finito” o “L’ho buttato”. Il riepilogo degli ultimi 7 giorni riporta i due conteggi. È un dato dichiarato dalla persona.
+
+La scelta per la settimana considera le quantità al netto dei pasti già previsti. Sono conteggiati solo gli alimenti che il ricettario dimostrativo riconosce con l’unità attesa (per esempio pasta e riso in grammi). Fridgy non è stato modificato, salvo la nota sul tempo del riso mostrata ora solo per le preparazioni che lo contengono.
+
+## Fridgy con un modello AI gratuito
+
+Fridgy può rispondere con un vero modello linguistico, senza backend e senza costi. Senza chiave resta la demo a regole, che fa anche da riserva se il servizio non risponde.
+
+### Come lo attiva ogni componente del gruppo
+
+1. Creare una chiave gratuita personale presso uno dei servizi supportati: [Google AI Studio](https://aistudio.google.com/apikey) (Gemini), [Groq](https://console.groq.com/keys) oppure [OpenRouter](https://openrouter.ai/settings/keys) (solo modelli `:free`). Non serve una carta di credito.
+2. Nell'app: scheda **Fridgy → Attiva l’AI gratuita**, scegliere il servizio, incollare la chiave, **Verifica la chiave**, poi **Attiva Fridgy con AI**. L'elenco dei modelli viene letto dal servizio con quella chiave: l'app propone quello consigliato e si può cambiare.
+3. Ripetere su ogni dispositivo o browser usato: la chiave è salvata solo lì (`localStorage`, voce `ciby-fridgy`). “Rimuovi la chiave e torna alla demo” la cancella.
+
+Nessuna chiave è nel repository né nella build, quindi nessuno usa la chiave di un altro e pubblicare il sito non espone nulla. Non inserire chiavi nel codice o in variabili `VITE_*`: finirebbero nei file pubblicati.
+
+### Che cosa riceve il modello
+
+A ogni messaggio il browser invia direttamente al servizio scelto: la conversazione recente e un riepilogo aggiornato di dispensa (quantità, posizione, priorità, giorni alla data indicata), prossimo pasto, pasti della settimana, mancanti, scorte senza un pasto, lista della spesa, preferiti, ultimi pasti cucinati e alimenti buttati, più il ricettario dimostrativo con la fattibilità di ogni preparazione. Il riepilogo è costruito in `userContext` (`src/fridgy.ts`), dove si trova anche il prompt.
+
+Il modello non modifica nulla. Può allegare proposte (`[[ricetta:…]]`, `[[settimana:…]]`, `[[spesa:…]]`) che l'app mostra come pulsanti: aprire una preparazione, metterla in programma, aggiungere un alimento alla spesa. Ogni proposta si applica solo con un tocco; quelle non valide vengono scartate.
+
+### Limiti da conoscere
+
+- I limiti gratuiti (richieste al minuto e al giorno) dipendono dal servizio e cambiano nel tempo: controllarli nella propria console. Al superamento Fridgy lo comunica e risponde in modalità demo.
+- Nel piano gratuito alcuni servizi possono usare le richieste per migliorare i propri prodotti: per la demo usare dati di esempio.
+- Le risposte di un modello possono contenere errori. Il prompt chiede di partire solo dai dati della persona e di non valutare sicurezza degli alimenti, allergie o diete, ma non è una garanzia.
+- I flussi automatici usano un servizio simulato (`tests/fridgy-ai.spec.ts`): la prova con una chiave reale va fatta a mano.
+
+### Alternativa valutata: una chiave unica dietro un proxy
+
+Un piccolo servizio (per esempio una funzione serverless gratuita) potrebbe custodire una sola chiave e far funzionare Fridgy senza configurazione per chiunque apra il sito. Richiede però un deploy da mantenere, concentra i limiti gratuiti su un'unica chiave e chi la possiede risponde dell'uso di tutti. Per un prototipo di corso la chiave personale nel browser è più semplice e non espone nessuno; il proxy resta un'opzione se servirà una demo pubblica senza configurazione.
+
+## Fridgy: verifica della connessione e recupero errori
+
+La lettura dell'elenco modelli non certifica che un modello possa generare risposte o che abbia quota disponibile. La configurazione aggiorna automaticamente l’elenco quando si riaprono impostazioni già salvate. “Aggiorna modelli” carica le alternative senza generare risposte. “Prova modello” invia una richiesta minima (“Rispondi soltanto OK.”) al modello scelto prima di abilitare l’attivazione. Cambiando modello occorre ripetere “Prova modello”. Le prove di configurazione non inviano la dispensa.
+
+Per risposte HTTP 502/503/504 si esegue un solo tentativo aggiuntivo sullo stesso servizio e modello, rispettando Retry-After se breve; non si cambia modello o servizio automaticamente. Un 503 persistente è indicato come indisponibilità temporanea. Gli errori di chiave, quota, modello assente e connessione sono distinti. Dopo un errore la risposta di ripiego è etichettata come demo e il comando “Riprova con AI” consente di ripetere la domanda senza duplicarla. L'elenco modelli privilegia versioni stabili rispetto alle preview e modelli Flash-Lite rispetto ai più pesanti: non garantisce quota gratuita per il progetto. Verificare le quote nel servizio scelto.
+
+Fonte tecnica: [Google, errori API](https://ai.google.dev/gemini-api/docs/api-errors?hl=en). Un sovraccarico del fornitore può persistere anche con una chiave valida. La verifica automatica locale usa risposte simulate, senza una chiave reale o richieste al conto della persona.
+
+## Aspetto e modalità notte
+
+Da M → Aspetto si sceglie Automatico, Chiaro oppure Notte. Automatico segue il sistema anche quando il tema del dispositivo cambia a pagina aperta. La preferenza è indipendente dalle scorte e viene salvata nel browser; si applica anche a dialoghi, ricettario, settimana e chat. Non serve un servizio esterno. La preferenza è applicata prima del rendering per evitare un lampo chiaro all'apertura.
+
+### Cambio modello e palette notte
+
+Il modello resta selezionabile anche durante una prova: la risposta tardiva della prova precedente non può validare o sovrascrivere la nuova scelta. Se l'elenco non si carica, “Inserisci un ID modello manualmente” consente di provare un altro ID senza eliminare la chiave. Non vengono scelte alternative automaticamente e la disponibilità/quotazione del modello dipende dal servizio.
+
+Il tema notte usa nero bluastro (#090d14), pannelli antracite (#131b28), selezioni blu notte (#1c293d), accenti azzurri e testo bianco/grigio. Non usa superfici verdi; le illustrazioni alimentari conservano i colori originali.
+
+Nelle impostazioni Fridgy, “Copia chiave” copia anche la chiave già salvata. Rimane mascherata finché non si usa “Mostra chiave”. Se il browser non permette la copia automatica (per esempio su HTTP locale), viene selezionata per la copia manuale. La copia non rimuove né risalva la chiave e non la inserisce nei messaggi di stato.

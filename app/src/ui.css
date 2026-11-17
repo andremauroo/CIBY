@@ -625,3 +625,376 @@ dialog[open] {
 .composer input {
   font-size: 16px;
 }
+
+/* ---------- Compare: preference and collapsed options ---------- */
+.compare-veg {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  min-height: 44px;
+  font-weight: 700;
+  font-size: 13px;
+  cursor: pointer;
+}
+.compare-veg input {
+  width: 20px;
+  height: 20px;
+  accent-color: var(--color-brand);
+  flex-shrink: 0;
+}
+.compare-veg small {
+  display: block;
+  font-weight: 400;
+}
+.compare-count {
+  margin-top: 12px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--color-leaf);
+}
+.compare-more {
+  margin-bottom: 16px;
+}
+.compare-more summary {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  cursor: pointer;
+  color: var(--color-secondary);
+}
+.compare-more .compare-list {
+  margin-top: 4px;
+}
+.detail-heading {
+  margin-top: 16px;
+  font-size: 15px;
+}
+.detail-heading + ul,
+.detail-heading + ol {
+  margin-top: 8px;
+}
+
+/* ---------- Week plan ---------- */
+.week {
+  display: grid;
+  gap: 16px;
+}
+.week-days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+}
+.week-days button {
+  display: grid;
+  justify-items: center;
+  gap: 2px;
+  padding: 8px 0 6px;
+  min-height: 68px;
+  border-radius: 16px;
+  background: var(--color-brandSoft);
+  color: var(--color-text);
+  transition:
+    background 0.2s,
+    color 0.2s;
+}
+.week-days small {
+  font-size: 11px;
+  text-transform: capitalize;
+}
+.week-days strong {
+  font-family: var(--font-display);
+  font-size: 18px;
+  line-height: 22px;
+}
+.week-days [aria-pressed="true"] {
+  background: var(--color-brand);
+  color: var(--color-onBrand);
+}
+.week-days [aria-pressed="true"] small {
+  color: inherit;
+}
+.week-dots {
+  display: flex;
+  gap: 3px;
+  height: 6px;
+}
+.week-dots i {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-accent);
+}
+.week-day {
+  display: grid;
+  gap: 10px;
+}
+.week-slot {
+  display: grid;
+  gap: 6px;
+}
+.week-slot-name {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  color: var(--color-secondary);
+}
+.week-add {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 56px;
+  padding: 12px 16px;
+  border-radius: 16px;
+  border: 1.5px dashed var(--color-border);
+  background: transparent;
+  color: var(--color-secondary);
+  font-weight: 700;
+  text-align: left;
+}
+.week-add span {
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--color-brandSoft);
+  color: var(--color-brand);
+  font-size: 18px;
+}
+.week-add:hover {
+  border-color: var(--color-brand);
+  color: var(--color-brand);
+}
+.week-meal {
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-left: 5px solid var(--color-accent);
+  border-radius: 16px;
+  padding: 14px;
+  display: grid;
+  gap: 10px;
+  box-shadow: var(--shadow-card);
+}
+.week-meal-head strong {
+  display: block;
+  font-size: 15px;
+}
+.week-status {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.5;
+  border-radius: 10px;
+  padding: 6px 10px;
+  width: fit-content;
+}
+.week-status.covered {
+  color: var(--color-leaf);
+  background: var(--color-leafSoft);
+}
+.week-status.lacking {
+  color: var(--color-amber);
+  background: var(--color-amberSoft);
+}
+.week-actions {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+}
+.week-actions button {
+  min-height: 44px;
+  border-radius: 12px;
+  background: var(--color-brandSoft);
+  font-weight: 700;
+  font-size: 13px;
+}
+.week-move,
+.week-confirm {
+  display: grid;
+  gap: 8px;
+  font-size: 12px;
+  color: var(--color-secondary);
+}
+.week-move select {
+  min-height: 48px;
+  padding: 12px;
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  background: var(--color-card);
+  color: var(--color-text);
+  font-weight: 700;
+  width: 100%;
+}
+.week-needs h3,
+.week-free h3,
+.week-day h3 {
+  font-size: 16px;
+}
+.week-balance {
+  list-style: none;
+  padding: 0;
+  margin: 4px 0 8px;
+  display: grid;
+  gap: 10px;
+}
+.week-balance li {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  line-height: 1.4;
+}
+.week-balance li > span {
+  display: grid;
+  place-items: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  font-size: 11px;
+  font-weight: 800;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+.week-balance .ok > span {
+  background: var(--color-leafSoft);
+  color: var(--color-leaf);
+}
+.week-balance .missing > span {
+  background: var(--color-lateSoft);
+  color: var(--color-late);
+}
+.week-balance small {
+  display: block;
+}
+.week-free {
+  display: grid;
+  gap: 8px;
+}
+.week-free ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 6px;
+}
+.week-free li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  border-radius: 14px;
+  background: var(--color-brandSoft);
+}
+.week-free li > span:nth-child(2) {
+  flex: 1;
+}
+.week-free strong,
+.week-free small {
+  display: block;
+}
+.impact-waste {
+  font-size: 12px;
+  position: relative;
+  z-index: 1;
+}
+.impact-waste {
+  color: #e8f0ea;
+}
+
+/* ---------- Fridgy with AI ---------- */
+.fridgy-mode {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  justify-content: space-between;
+  padding: 10px 12px 10px 14px;
+  border-radius: 14px;
+  background: var(--color-brandSoft);
+}
+.fridgy-mode p {
+  font-size: 12px;
+  line-height: 1.45;
+  color: var(--color-secondary);
+  overflow-wrap: anywhere;
+}
+.fridgy-mode.on {
+  background: var(--color-leafSoft);
+}
+.fridgy-mode.on p {
+  color: var(--color-leaf);
+}
+.fridgy-mode .text-button {
+  flex-shrink: 0;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 0 4px;
+}
+.message-actions {
+  display: grid;
+  gap: 6px;
+  margin-top: 4px;
+}
+.message-actions button {
+  min-height: 44px;
+  padding: 10px 14px;
+  border-radius: 12px;
+  background: var(--color-accent);
+  color: var(--color-onAccent);
+  font-weight: 700;
+  font-size: 13px;
+  text-align: left;
+}
+.message-actions button:disabled {
+  background: var(--color-leafSoft);
+  color: var(--color-leaf);
+  opacity: 1;
+}
+.message.typing p {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  height: 21px;
+}
+.message.typing i {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--color-secondary);
+  animation: typing 1.1s ease-in-out infinite;
+}
+.message.typing i:nth-child(3) {
+  animation-delay: 0.15s;
+}
+.message.typing i:nth-child(4) {
+  animation-delay: 0.3s;
+}
+@keyframes typing {
+  0%,
+  60%,
+  100% {
+    opacity: 0.3;
+    transform: none;
+  }
+  30% {
+    opacity: 1;
+    transform: translateY(-3px);
+  }
+}
+.fridgy-setup-status {
+  font-size: 12px;
+  line-height: 1.5;
+  font-weight: 700;
+  color: var(--color-brand);
+}
+.fridgy-setup-status:empty {
+  display: none;
+}
+dialog .footnote a {
+  color: var(--color-brand);
+  font-weight: 700;
+}
+@media (prefers-reduced-motion: reduce) {
+  .message.typing i {
+    animation: none;
+  }
+}
