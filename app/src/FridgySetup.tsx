@@ -15,15 +15,17 @@ import {
  */
 export default function FridgySetup({
   current,
+  fromFile = false,
   onSave,
   onClose,
 }: {
   current: FridgySettings | null;
+  fromFile?: boolean;
   onSave: (settings: FridgySettings | null) => void;
   onClose: () => void;
 }) {
   const [provider, setProvider] = useState<ProviderId>(
-    current?.provider || "gemini",
+    current?.provider || "groq",
   );
   const [key, setKey] = useState(current?.key || "");
   const keyInput = useRef<HTMLInputElement>(null);
@@ -164,6 +166,13 @@ export default function FridgySetup({
         solo in questo browser e non viene condivisa con il gruppo né salvata
         nel progetto.
       </p>
+      {fromFile && (
+        <p className="fridgy-file-note">
+          Chiave caricata da <code>secrets/fridgy.local.env</code>. Il modello
+          che scegli qui resta salvato finché non cambi la chiave nel file. Se
+          la rimuovi, torna al prossimo avvio: per disattivarla svuota il file.
+        </p>
+      )}
       <form
         className="food-form"
         onSubmit={(e) => {

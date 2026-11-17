@@ -48,6 +48,7 @@ test("Gemini non viene attivato se la generazione fallisce e si recupera con un 
   await page.goto("/");
   await page.getByRole("button", { name: "Fridgy", exact: true }).click();
   await page.getByRole("button", { name: "Attiva l’AI gratuita" }).click();
+  await page.getByLabel("Servizio").selectOption("gemini");
   await page.getByLabel("La tua chiave API").fill("test-placeholder");
   await page.getByRole("button", { name: "Verifica la chiave" }).click();
   await page

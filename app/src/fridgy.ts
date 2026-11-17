@@ -105,6 +105,82 @@ export function saveFridgySettings(settings: FridgySettings | null) {
   }
 }
 
+/**
+ * Development only: settings from ../secrets/fridgy.local.env, served by the
+ * Vite plugin in scripts/fridgy-local-key.mjs. The model chosen in the app is
+ * kept while provider and key stay the same; otherwise FRIDGY_MODEL, otherwise
+ * the recommended model for that key. Returns null when there is no file.
+ */
+export async function loadLocalFridgy(
+  saved: FridgySettings | null,
+): Promise<FridgySettings | null> {
+  let file: { provider?: unknown; key?: unknown; model?: unknown } | null =
+    null;
+  try {
+    const response = await fetch("/__ciby/fridgy-local", {
+      cache: "no-store",
+    });
+    if (response.ok) file = await response.json();
+  } catch {
+    return null;
+  }
+  if (
+    !file ||
+    typeof file.key !== "string" ||
+    !file.key.trim() ||
+    typeof file.provider !== "string" ||
+    !Object.hasOwn(providers, file.provider)
+  )
+    return null;
+  const provider = file.provider as ProviderId;
+  const key = file.key.trim();
+  if (saved && saved.provider === provider && saved.key === key) return saved;
+  let model = typeof file.model === "string" ? file.model.trim() : "";
+  if (!model) model = (await listModels({ provider, key }).catch(() => []))[0];
+  return model ? { provider, key, model } : null;
+}
+
+const chatKey = "ciby-fridgy-chat";
+/** The conversation survives a reload in this browser; actions keep their state. */
+export function loadChat<T>(): { messages: T[]; done: string[] } | null {
+  try {
+    const value = JSON.parse(localStorage.getItem(chatKey) || "null");
+    return value &&
+      Array.isArray(value.messages) &&
+      value.messages.length &&
+      value.messages.every(
+        (m: { role?: unknown; text?: unknown }) =>
+          (m?.role === "bot" || m?.role === "user") &&
+          typeof m.text === "string",
+      ) &&
+      Array.isArray(value.done)
+      ? {
+          messages: value.messages.slice(-40),
+          done: value.done.filter((d: unknown) => typeof d === "string"),
+        }
+      : null;
+  } catch {
+    return null;
+  }
+}
+export function saveChat(messages: unknown[], done: string[]) {
+  try {
+    const kept = messages.slice(-40);
+    const offset = messages.length - kept.length;
+    // Action keys are "<message index>-<action index>": shift them with the window.
+    const shifted = done.flatMap((key) => {
+      const [index, n] = key.split("-").map(Number);
+      return index - offset >= 0 ? [`${index - offset}-${n}`] : [];
+    });
+    localStorage.setItem(
+      chatKey,
+      JSON.stringify({ messages: kept, done: shifted }),
+    );
+  } catch {
+    /* the chat simply starts again next time */
+  }
+}
+
 export class FridgyError extends Error {
   constructor(
     public kind:

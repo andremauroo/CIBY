@@ -155,3 +155,77 @@
   color: var(--color-secondary);
   font-size: 12px;
 }
+
+/* Bring several purchases into the pantry at once */
+.stock-all {
+  display: grid;
+  gap: 12px;
+  margin-top: 16px;
+}
+.stock-all ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 10px;
+}
+.stock-row {
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  padding: 12px;
+  display: grid;
+  gap: 10px;
+  background: var(--color-card);
+}
+.stock-row.excluded {
+  background: transparent;
+  border-style: dashed;
+}
+.stock-row.excluded strong {
+  color: var(--color-secondary);
+}
+.stock-row-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 44px;
+  cursor: pointer;
+}
+.stock-row-head input {
+  width: 20px;
+  height: 20px;
+  accent-color: var(--color-brand);
+  flex-shrink: 0;
+}
+.stock-row-head > span:last-child {
+  min-width: 0;
+  display: grid;
+  gap: 2px;
+  overflow-wrap: anywhere;
+}
+.stock-row-fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 8px;
+}
+.stock-row-fields label {
+  display: grid;
+  gap: 4px;
+  font-size: 12px;
+  color: var(--color-secondary);
+  min-width: 0;
+}
+.stock-row-fields input,
+.stock-row-fields select {
+  width: 100%;
+  min-width: 0;
+  min-height: 44px;
+  padding: 8px 10px;
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  background: var(--color-card);
+  color: var(--color-text);
+}
+.stock-row-fields .stock-row-date {
+  grid-column: 1 / -1;
+}

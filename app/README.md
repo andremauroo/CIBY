@@ -211,11 +211,61 @@ Fridgy può rispondere con un vero modello linguistico, senza backend e senza co
 
 ### Come lo attiva ogni componente del gruppo
 
-1. Creare una chiave gratuita personale presso uno dei servizi supportati: [Google AI Studio](https://aistudio.google.com/apikey) (Gemini), [Groq](https://console.groq.com/keys) oppure [OpenRouter](https://openrouter.ai/settings/keys) (solo modelli `:free`). Non serve una carta di credito.
-2. Nell'app: scheda **Fridgy → Attiva l’AI gratuita**, scegliere il servizio, incollare la chiave, **Verifica la chiave**, poi **Attiva Fridgy con AI**. L'elenco dei modelli viene letto dal servizio con quella chiave: l'app propone quello consigliato e si può cambiare.
-3. Ripetere su ogni dispositivo o browser usato: la chiave è salvata solo lì (`localStorage`, voce `ciby-fridgy`). “Rimuovi la chiave e torna alla demo” la cancella.
+Ognuno usa **la propria chiave**: nessuno usa quella di un altro e la chiave non entra mai nel repository o nella build. Il servizio consigliato è **Groq**: registrazione gratuita senza carta di credito, risposte molto rapide e modelli aperti che seguono bene le istruzioni in italiano. Gemini e OpenRouter restano disponibili come alternative.
 
-Nessuna chiave è nel repository né nella build, quindi nessuno usa la chiave di un altro e pubblicare il sito non espone nulla. Non inserire chiavi nel codice o in variabili `VITE_*`: finirebbero nei file pubblicati.
+**1. Crea la chiave Groq (una volta sola)**
+
+1. Vai su [console.groq.com/keys](https://console.groq.com/keys) e accedi (Google, GitHub o email).
+2. **Create API Key**, dai un nome (per esempio `ciby`) e copia la chiave: inizia con `gsk_` e Groq la mostra una sola volta.
+
+**2. Salvala nel file personale (una volta per computer)**
+
+Dalla cartella principale della repository:
+
+```sh
+cp secrets/fridgy.env.example secrets/fridgy.local.env
+```
+
+Su Windows (PowerShell):
+
+```powershell
+Copy-Item secrets\fridgy.env.example secrets\fridgy.local.env
+```
+
+Apri `secrets/fridgy.local.env` e incolla la chiave dopo `FRIDGY_API_KEY=`:
+
+```sh
+FRIDGY_PROVIDER=groq
+FRIDGY_API_KEY=gsk_la-tua-chiave
+FRIDGY_MODEL=
+```
+
+`FRIDGY_MODEL` può restare vuoto: l'app sceglie il modello consigliato fra quelli disponibili per la chiave. Per Gemini usare `FRIDGY_PROVIDER=gemini` con una chiave di [Google AI Studio](https://aistudio.google.com/apikey); per OpenRouter `FRIDGY_PROVIDER=openrouter`.
+
+Il file `secrets/fridgy.local.env` è escluso da Git (`.gitignore`): **non va mai committato, condiviso o incollato in chat**. Prima di un commit, `git status` non deve mostrarlo.
+
+**3. Avvia l'app**
+
+```sh
+cd app
+npm run dev
+```
+
+Aprendo l'indirizzo Local, Fridgy è già attivo: la scheda mostra “AI attiva · … · chiave dal file locale”. Non serve reinserire la chiave a ogni sessione. Il file viene riletto a ogni apertura della pagina, quindi cambiare chiave non richiede di riavviare il server. Il modello scelto in **Impostazioni AI** resta salvato finché la chiave nel file non cambia.
+
+**Come funziona e cosa resta protetto**
+
+- Il server di sviluppo legge il file tramite un piccolo plugin (`scripts/fridgy-local-key.mjs`) e lo consegna solo alle richieste che arrivano dallo stesso computer.
+- Il plugin esiste solo con `npm run dev`: `npm run build`, `npm run preview` e il sito pubblicato non contengono né la chiave né il punto di accesso al file.
+- Un telefono collegato alla stessa Wi-Fi (indirizzo Network) non riceve la chiave: lì si incolla a mano in **Fridgy → Attiva l’AI gratuita**, e resta salvata in quel browser. Con il collegamento USB (`npm run phone:usb`) il telefono passa da `localhost` e la riceve come il computer.
+- I test automatici non leggono mai il file e usano risposte simulate.
+- Non mettere la chiave in variabili `VITE_*`, nel codice o in `.env` dentro `app/`: finirebbe nei file pubblicati.
+
+**Senza file**
+
+Si può sempre usare **Fridgy → Attiva l’AI gratuita**: scegliere il servizio, incollare la chiave, **Verifica la chiave**, **Prova modello**, poi **Attiva Fridgy con AI**. In questo caso la chiave resta solo in quel browser (`localStorage`, voce `ciby-fridgy`). Indirizzi diversi (`localhost`, `127.0.0.1`, indirizzo Network) sono browser distinti per il salvataggio: è uno dei motivi per cui la chiave sembrava sparire tra una sessione e l'altra.
+
+“Rimuovi la chiave e torna alla demo” cancella la copia nel browser; se il file locale è presente, al successivo avvio Fridgy si riattiva. Per disattivarlo del tutto, svuotare `FRIDGY_API_KEY` nel file.
 
 ### Che cosa riceve il modello
 
@@ -253,3 +303,10 @@ Il modello resta selezionabile anche durante una prova: la risposta tardiva dell
 Il tema notte usa nero bluastro (#090d14), pannelli antracite (#131b28), selezioni blu notte (#1c293d), accenti azzurri e testo bianco/grigio. Non usa superfici verdi; le illustrazioni alimentari conservano i colori originali.
 
 Nelle impostazioni Fridgy, “Copia chiave” copia anche la chiave già salvata. Rimane mascherata finché non si usa “Mostra chiave”. Se il browser non permette la copia automatica (per esempio su HTTP locale), viene selezionata per la copia manuale. La copia non rimuove né risalva la chiave e non la inserisce nei messaggi di stato.
+
+## Iterazione: dispensa dalla spesa, conversazione e scenari di prova
+
+- **Porta tutto in dispensa:** nella lista della spesa, “Porta in dispensa gli acquistati” (o “Porta tutta la lista in dispensa” se nulla è spuntato) apre un riepilogo. Per ogni voce si conferma la quantità comprata davvero, mentre unità e posizione sono proposte (per esempio riso in grammi in dispensa, pollo in grammi in frigo) e la data è facoltativa. Le quantità delle ricette compaiono solo come riferimento. Con un'unica conferma gli alimenti entrano in dispensa ed escono dalla lista; le scorte già presenti non vengono modificate. Chiudere la finestra non cambia nulla.
+- **−1 in dispensa:** accanto agli alimenti contati a pezzi o confezioni, “−1” segna subito un'unità usata senza aprire il modulo. A zero l'alimento esce dalle scorte e viene contato come finito nel riepilogo degli ultimi 7 giorni.
+- **Conversazione salvata:** gli ultimi 40 messaggi con Fridgy, e lo stato dei pulsanti già usati, restano dopo un ricaricamento della pagina. “Ripristina esempio” e il cambio di impostazioni AI ripartono da capo.
+- **Scenari per le prove (M → Scenari per le prove):** tre situazioni costruite sulle personas C2, sempre uguali a ogni avvio: Marta (B01, mozzarella in scadenza da collocare), Gianfranco (B02, cena in 15 minuti dopo le lezioni), Luca (B03/B04, manca il pollo per la bowl di stasera). Caricare uno scenario chiede conferma, sostituisce i dati del browser e mostra il compito in Oggi finché non viene nascosto.

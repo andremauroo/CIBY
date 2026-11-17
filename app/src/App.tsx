@@ -6,11 +6,16 @@ import RecipeCatalog from "./RecipeCatalog";
 import CompareMeals from "./CompareMeals";
 import Onboarding from "./Onboarding";
 import WeekPlan from "./WeekPlan";
+import StockAll from "./StockAll";
+import { scenarios } from "./scenarios";
 import FridgySetup from "./FridgySetup";
 import {
   askFridgy,
   FridgyError,
   loadFridgySettings,
+  loadLocalFridgy,
+  loadChat,
+  saveChat,
   providers,
   saveFridgySettings,
   type ChatTurn,
@@ -34,6 +39,7 @@ import {
   compareOptions,
   cookWeekMeal,
   dayLabel,
+  stockPurchases,
   freeFoods,
   isoDay,
   upcomingMeals,
@@ -61,6 +67,8 @@ type Message = {
   /** Proposals the person may confirm. Nothing is applied automatically. */
   actions?: FridgyAction[];
 };
+const aiGreeting =
+  "Ciao! Vedo dispensa, pasti e lista della spesa. Dimmi cosa ti serve: un’idea per stasera, un cambio di programma, cosa usare per primo.";
 export default function App() {
   const [theme, setTheme] = useTheme();
   const [aiFailure, setAiFailure] = useState<{
@@ -79,9 +87,13 @@ export default function App() {
   const [fridgy, setFridgy] = useState<FridgySettings | null>(
     loadFridgySettings,
   );
+  const [fridgyFromFile, setFridgyFromFile] = useState(false);
   const [fridgySetup, setFridgySetup] = useState(false);
   const [thinking, setThinking] = useState(false);
-  const [doneActions, setDoneActions] = useState<string[]>([]);
+  const savedChat = useRef(loadChat<Message>()).current;
+  const [doneActions, setDoneActions] = useState<string[]>(
+    savedChat?.done || [],
+  );
   const [mealsView, setMealsView] = useState<"next" | "week">("next");
   const [weekPick, setWeekPick] = useState<{
     date: string;
@@ -113,6 +125,12 @@ export default function App() {
   });
   const [pantryView, setPantryView] = useState<"stock" | "shopping">("stock");
   const [purchase, setPurchase] = useState<ShoppingItem | null>(null);
+  const [stockAll, setStockAll] = useState(false);
+  const [scenarioConfirm, setScenarioConfirm] = useState<string | null>(null);
+  const [activeTask, setActiveTask] = useState<{
+    who: string;
+    task: string;
+  } | null>(null);
   const [storageError, setStorageError] = useState(false);
   const [tab, setTab] = useState<Tab>("Oggi");
   const [query, setQuery] = useState("");
@@ -128,12 +146,36 @@ export default function App() {
   const [previousPlan, setPreviousPlan] = useState<Plan | null>(null);
   const [moveDone, setMoveDone] = useState(false);
   const [consumeConfirm, setConsumeConfirm] = useState(false);
-  const [messages, setMessages] = useState<Message[]>([
-    {
-      role: "bot",
-      text: "Ciao! Partiamo da quello che hai. Per quante persone cucini e quanto tempo vuoi dedicare?",
-    },
-  ]);
+  const [messages, setMessages] = useState<Message[]>(
+    () =>
+      savedChat?.messages || [
+        {
+          role: "bot",
+          text: "Ciao! Partiamo da quello che hai. Per quante persone cucini e quanto tempo vuoi dedicare?",
+        },
+      ],
+  );
+  useEffect(() => saveChat(messages, doneActions), [messages, doneActions]);
+  // Development: the personal key file replaces pasting the key every session.
+  // Automated tests never read it.
+  useEffect(() => {
+    if (!import.meta.env.DEV || navigator.webdriver) return;
+    let active = true;
+    void loadLocalFridgy(loadFridgySettings()).then((settings) => {
+      if (!active || !settings) return;
+      saveFridgySettings(settings);
+      setFridgy(settings);
+      setFridgyFromFile(true);
+      setMessages((current) =>
+        current.length === 1 && !current[0].ai
+          ? [{ role: "bot", ai: true, text: aiGreeting }]
+          : current,
+      );
+    });
+    return () => {
+      active = false;
+    };
+  }, []);
   const [draft, setDraft] = useState("");
   const [chatServings, setChatServings] = useState(2);
   const [chatTime, setChatTime] = useState(20);
@@ -194,6 +236,28 @@ export default function App() {
   function openWeek() {
     setMealsView("week");
     go("Pasti");
+  }
+  /** Quick update without opening the form; reaching zero counts as finished. */
+  function takeOne(food: Food) {
+    const left = Math.max(0, Math.round((food.quantity - 1) * 10) / 10);
+    setState((s) => ({
+      ...s,
+      foods: s.foods.map((f) =>
+        f.id === food.id ? { ...f, quantity: left } : f,
+      ),
+      waste:
+        left === 0
+          ? [
+              ...s.waste,
+              { date: isoDay(), name: food.name, outcome: "finito" as const },
+            ].slice(-100)
+          : s.waste,
+    }));
+    setNotice(
+      left === 0
+        ? `${food.name} finito: tolto dalle scorte.`
+        : `${food.name}: ne restano ${left} ${food.unit}.`,
+    );
   }
   function removeFood(food: Food, outcome: "finito" | "buttato") {
     setState((s) => ({
@@ -600,6 +664,23 @@ export default function App() {
         <main id="main" className={tab === "Fridgy" ? "chat-main" : ""}>
           {tab === "Oggi" && (
             <>
+              {activeTask && (
+                <section className="task-card" aria-labelledby="task-title">
+                  <div>
+                    <small id="task-title">
+                      Compito della prova · {activeTask.who}
+                    </small>
+                    <p>{activeTask.task}</p>
+                  </div>
+                  <button
+                    className="icon-button"
+                    aria-label="Nascondi il compito"
+                    onClick={() => setActiveTask(null)}
+                  >
+                    ×
+                  </button>
+                </section>
+              )}
               <div className="intro">
                 <small className="today-date">{dateLabel}</small>
                 <h1 ref={heading} tabIndex={-1} className="home-title">
@@ -820,6 +901,7 @@ export default function App() {
                   items={state.shopping}
                   onChange={(shopping) => setState((s) => ({ ...s, shopping }))}
                   onExplore={() => openCatalog()}
+                  onStockAll={() => setStockAll(true)}
                   onStock={(item) => {
                     setPurchase(item);
                     setRemoveConfirm(false);
@@ -882,33 +964,44 @@ export default function App() {
                           f.name.toLowerCase().includes(query.toLowerCase()),
                       )
                       .map((f) => (
-                        <button
-                          className="food-row"
-                          key={f.id}
-                          onClick={() => {
-                            setRemoveConfirm(false);
-                            setEdit(f);
-                          }}
-                          aria-label={`Modifica ${f.name}`}
-                        >
-                          <FoodImage file={artFor(f.name)} />
-                          <span className="food-meta">
-                            <span className="food-top">
-                              <strong>{f.name}</strong>
-                              <small>
-                                {f.quantity} {f.unit}
-                              </small>
+                        <div className="food-item" key={f.id}>
+                          <button
+                            className="food-row"
+                            onClick={() => {
+                              setRemoveConfirm(false);
+                              setEdit(f);
+                            }}
+                            aria-label={`Modifica ${f.name}`}
+                          >
+                            <FoodImage file={artFor(f.name)} />
+                            <span className="food-meta">
+                              <span className="food-top">
+                                <strong>{f.name}</strong>
+                                <small>
+                                  {f.quantity} {f.unit}
+                                </small>
+                              </span>
+                              <span className="food-tags">
+                                <small className={f.priority ? "green" : ""}>
+                                  {f.priority
+                                    ? "Da usare per primi"
+                                    : `In ${f.place.toLowerCase()}`}
+                                </small>
+                                <ExpiryChip expires={f.expires} />
+                              </span>
                             </span>
-                            <span className="food-tags">
-                              <small className={f.priority ? "green" : ""}>
-                                {f.priority
-                                  ? "Da usare per primi"
-                                  : `In ${f.place.toLowerCase()}`}
-                              </small>
-                              <ExpiryChip expires={f.expires} />
-                            </span>
-                          </span>
-                        </button>
+                          </button>
+                          {["pezzi", "confezioni"].includes(f.unit) &&
+                            f.quantity >= 1 && (
+                              <button
+                                className="food-use"
+                                aria-label={`Usa 1 ${f.unit === "pezzi" ? "pezzo" : "confezione"} di ${f.name}`}
+                                onClick={() => takeOne(f)}
+                              >
+                                −1
+                              </button>
+                            )}
+                        </div>
                       ))}
                     {!inStock.some(
                       (f) =>
@@ -923,7 +1016,7 @@ export default function App() {
                   </div>
                   <p className="footnote">
                     Tocca un alimento per cambiare quantità, posizione o
-                    priorità.
+                    priorità. Con −1 segni subito un pezzo usato.
                   </p>
                 </>
               )}
@@ -939,7 +1032,7 @@ export default function App() {
                   {fridgy
                     ? aiFailure
                       ? "Ultima risposta in modalità demo: il servizio AI non era disponibile. Puoi riprovare o verificare un altro modello."
-                      : `AI attiva · ${providers[fridgy.provider].label}, ${fridgy.model}. Fridgy vede dispensa, pasti e spesa; le modifiche le confermi tu.`
+                      : `AI attiva · ${providers[fridgy.provider].label}, ${fridgy.model}${fridgyFromFile ? " · chiave dal file locale" : ""}. Fridgy vede dispensa, pasti e spesa; le modifiche le confermi tu.`
                     : "Demo conversazionale, senza AI generativa. Le proposte si basano sulle scorte indicate."}
                 </p>
                 <button
@@ -1426,10 +1519,12 @@ export default function App() {
       {fridgySetup && (
         <FridgySetup
           current={fridgy}
+          fromFile={fridgyFromFile}
           onClose={() => setFridgySetup(false)}
           onSave={(settings) => {
             const saved = saveFridgySettings(settings);
             setFridgy(settings);
+            if (!settings) setFridgyFromFile(false);
             setAiFailure(null);
             setFridgySetup(false);
             setShowIdeas(false);
@@ -1439,7 +1534,7 @@ export default function App() {
                 role: "bot",
                 ai: Boolean(settings),
                 text: settings
-                  ? "Ciao! Ora vedo dispensa, pasti e lista della spesa. Dimmi cosa ti serve: un’idea per stasera, un cambio di programma, cosa usare per primo."
+                  ? aiGreeting
                   : "Sono tornato alla modalità demo. Per quante persone cucini e quanto tempo vuoi dedicare?",
               },
             ]);
@@ -1449,6 +1544,29 @@ export default function App() {
                 : saved
                   ? "Fridgy con AI attivo su questo browser."
                   : "AI attiva solo per questa sessione: il browser non consente il salvataggio.",
+            );
+          }}
+        />
+      )}
+      {stockAll && (
+        <StockAll
+          items={state.shopping}
+          onClose={() => setStockAll(false)}
+          onConfirm={(rows) => {
+            setState((s) =>
+              stockPurchases(
+                s,
+                rows,
+                () =>
+                  globalThis.crypto?.randomUUID?.() ??
+                  `food-${Date.now()}-${Math.random().toString(36).slice(2)}`,
+              ),
+            );
+            setStockAll(false);
+            setNotice(
+              rows.length === 1
+                ? "1 alimento portato in dispensa e tolto dalla lista."
+                : `${rows.length} alimenti portati in dispensa e tolti dalla lista.`,
             );
           }}
         />
@@ -1700,6 +1818,7 @@ export default function App() {
           title="Il tuo prototipo"
           onClose={() => {
             setShowSettings(false);
+            setScenarioConfirm(null);
             setResetConfirm(false);
           }}
         >
@@ -1740,6 +1859,64 @@ export default function App() {
             Per una nuova sessione di prova puoi ripristinare le scorte di
             esempio. Il ripristino elimina anche preferiti e lista della spesa.
           </p>
+          <section className="scenario-picker" aria-labelledby="scenario-title">
+            <h3 id="scenario-title">Scenari per le prove</h3>
+            <p className="footnote">
+              Partono sempre dagli stessi dati. Caricarne uno sostituisce
+              scorte, pasti, spesa e conversazione in questo browser.
+            </p>
+            {scenarios.map((sc) =>
+              scenarioConfirm === sc.id ? (
+                <div className="scenario-confirm" key={sc.id}>
+                  <p>Sostituire i dati attuali con lo scenario di {sc.who}?</p>
+                  <div className="button-pair">
+                    <Button
+                      onClick={() => {
+                        setState(sc.build());
+                        setMessages([
+                          {
+                            role: "bot",
+                            ai: Boolean(fridgy),
+                            text: fridgy
+                              ? aiGreeting
+                              : "Ciao! Partiamo da quello che hai. Per quante persone cucini e quanto tempo vuoi dedicare?",
+                          },
+                        ]);
+                        setDoneActions([]);
+                        setShowIdeas(false);
+                        setExcluded([]);
+                        setPreviousPlan(null);
+                        setScenarioConfirm(null);
+                        setShowSettings(false);
+                        go("Oggi");
+                        setActiveTask({ who: sc.who, task: sc.task });
+                        setNotice(`Scenario di ${sc.who} caricato.`);
+                      }}
+                    >
+                      Carica
+                    </Button>
+                    <Button secondary onClick={() => setScenarioConfirm(null)}>
+                      Annulla
+                    </Button>
+                  </div>
+                </div>
+              ) : (
+                <button
+                  key={sc.id}
+                  className="scenario-option"
+                  onClick={() => setScenarioConfirm(sc.id)}
+                >
+                  <span className="scenario-avatar">{sc.who[0]}</span>
+                  <span>
+                    <strong>
+                      {sc.who} · {sc.need}
+                    </strong>
+                    <small>{sc.task}</small>
+                  </span>
+                </button>
+              ),
+            )}
+          </section>
           <Button
             secondary
             onClick={() => {

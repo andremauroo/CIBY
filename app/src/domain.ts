@@ -738,3 +738,68 @@ export function artFor(name: string) {
     if (pattern.test(n)) return file;
   return "generic-food.svg";
 }
+
+const pantryStaples = new Set([
+  "riso",
+  "pasta",
+  "couscous",
+  "ceci",
+  "lenticchie",
+  "tonno",
+  "pane",
+  "patate",
+]);
+/**
+ * Suggested unit and place for a purchase. The quantity is never guessed:
+ * recipe measures are references, the person states what was actually bought.
+ */
+export function purchaseDefaults(name: string): {
+  unit: Food["unit"];
+  place: Food["place"];
+} {
+  const key = canonical(name);
+  return {
+    unit: key ? ingredients[key].unit : "pezzi",
+    place: key && pantryStaples.has(key) ? "Dispensa" : "Frigo",
+  };
+}
+/** Bring several purchases into the pantry and off the list in one update. */
+export function stockPurchases(
+  state: State,
+  rows: {
+    itemId: string;
+    name: string;
+    quantity: number;
+    unit: Food["unit"];
+    place: Food["place"];
+    expires?: string;
+  }[],
+  makeId: () => string,
+): State {
+  const valid = rows.filter(
+    (r) =>
+      r.name.trim() &&
+      Number.isFinite(r.quantity) &&
+      r.quantity > 0 &&
+      state.shopping.some((item) => item.id === r.itemId),
+  );
+  if (!valid.length) return state;
+  const added: Food[] = valid.map((r) => ({
+    id: makeId(),
+    name: r.name.trim(),
+    quantity: r.quantity,
+    unit: r.unit,
+    place: r.place,
+    priority: false,
+    art: artFor(r.name),
+    ...(r.expires && daysUntil(r.expires) !== null
+      ? { expires: r.expires }
+      : {}),
+  }));
+  const moved = new Set(valid.map((r) => r.itemId));
+  return {
+    ...state,
+    foods: [...state.foods, ...added],
+    shopping: state.shopping.filter((item) => !moved.has(item.id)),
+  };
+}

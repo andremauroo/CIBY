@@ -9,6 +9,7 @@ export default function ShoppingList({
   items,
   onChange,
   onStock,
+  onStockAll,
   onExplore,
   foods = [],
 }: {
@@ -16,6 +17,7 @@ export default function ShoppingList({
   items: ShoppingItem[];
   onChange: (items: ShoppingItem[]) => void;
   onStock: (item: ShoppingItem) => void;
+  onStockAll?: () => void;
   onExplore: () => void;
 }) {
   const [name, setName] = useState("");
@@ -202,6 +204,13 @@ export default function ShoppingList({
           <strong>{remaining.length}</strong> da comprare
           <span>{purchased.length} acquistati</span>
         </div>
+        {items.length > 0 && onStockAll && (
+          <Button onClick={onStockAll}>
+            {purchased.length
+              ? `Porta in dispensa gli acquistati (${purchased.length})`
+              : "Porta tutta la lista in dispensa"}
+          </Button>
+        )}
       </div>
       <form className="food-form shopping-add" onSubmit={addItem}>
         <label>

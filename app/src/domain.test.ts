@@ -1,4 +1,5 @@
 import { catalogMeals } from "./catalog";
+import { scenarios } from "./scenarios";
 import { describe, it, expect } from "vitest";
 import {
   initialState,
@@ -6,6 +7,8 @@ import {
   suggestions,
   consume,
   needs,
+  purchaseDefaults,
+  stockPurchases,
   recipes,
   ingredients,
   weekBalance,
@@ -264,5 +267,81 @@ describe("Ricettario ampliato e pasti della settimana", () => {
     expect(restored.week).toEqual([meal("caprese", 1)]);
     expect(restored.waste).toEqual([saved.waste[0]]);
     expect(restored.foods).toEqual(initialState.foods);
+  });
+});
+
+describe("Dalla spesa alla dispensa", () => {
+  it("propone unità e posizione, mai la quantità", () => {
+    expect(purchaseDefaults("Riso")).toEqual({ unit: "g", place: "Dispensa" });
+    expect(purchaseDefaults("pollo")).toEqual({ unit: "g", place: "Frigo" });
+    expect(purchaseDefaults("Yogurt")).toEqual({
+      unit: "pezzi",
+      place: "Frigo",
+    });
+  });
+  it("porta più acquisti in dispensa e li toglie dalla lista insieme", () => {
+    const item = (id: string, name: string) => ({
+      id,
+      name,
+      note: "",
+      checked: true,
+      sources: [],
+    });
+    const state = {
+      ...initialState,
+      shopping: [item("a", "Pollo"), item("b", "Carote"), item("c", "Pane")],
+    };
+    let n = 0;
+    const next = stockPurchases(
+      state,
+      [
+        {
+          itemId: "a",
+          name: "Pollo",
+          quantity: 300,
+          unit: "g",
+          place: "Frigo",
+          expires: isoDay(2),
+        },
+        {
+          itemId: "b",
+          name: "Carote",
+          quantity: 0,
+          unit: "pezzi",
+          place: "Frigo",
+        },
+        {
+          itemId: "z",
+          name: "Fantasma",
+          quantity: 1,
+          unit: "pezzi",
+          place: "Frigo",
+        },
+      ],
+      () => `new-${n++}`,
+    );
+    expect(next.shopping.map((i) => i.id)).toEqual(["b", "c"]);
+    expect(next.foods.slice(initialState.foods.length)).toEqual([
+      {
+        id: "new-0",
+        name: "Pollo",
+        quantity: 300,
+        unit: "g",
+        place: "Frigo",
+        priority: false,
+        art: "chicken.svg",
+        expires: isoDay(2),
+      },
+    ]);
+    expect(next.foods.slice(0, initialState.foods.length)).toEqual(
+      initialState.foods,
+    );
+    expect(stockPurchases(state, [], () => "x")).toBe(state);
+  });
+  it("gli scenari di prova sono salvataggi validi", () => {
+    for (const sc of scenarios) {
+      const data = sc.build();
+      expect(parseState(JSON.stringify(data)), sc.id).toEqual(data);
+    }
   });
 });

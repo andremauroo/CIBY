@@ -13,3 +13,6 @@ build/
 test-results/
 playwright-report/
 *.tsbuildinfo
+
+# Chiavi personali conservate solo sul computer
+/secrets/*.local.env
