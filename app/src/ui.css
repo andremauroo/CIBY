@@ -83,7 +83,7 @@ main {
   box-shadow: var(--shadow-card);
 }
 .ingredient-hero .food-art img {
-  filter: drop-shadow(0 10px 14px #173a3030);
+  filter: drop-shadow(0 10px 14px #14233f30);
 }
 @keyframes float {
   50% {
@@ -212,13 +212,13 @@ span.expiry-chip.expiry-chip {
   width: 140px;
   height: 140px;
   border-radius: 50%;
-  background: #173a3014;
+  background: #14233f14;
 }
 .impact-card h2 {
   color: inherit;
 }
 .impact-card small {
-  color: #e8f0ea;
+  color: #e4edfb;
   display: block;
 }
 .impact-stats {
@@ -242,14 +242,14 @@ span.expiry-chip.expiry-chip {
 }
 .impact-last {
   font-size: 12px;
-  color: #e8f0ea;
+  color: #e4edfb;
   position: relative;
   z-index: 1;
 }
 
 /* ---------- Pantry ---------- */
 .food-row {
-  border-bottom: 1px solid #ced9d1;
+  border-bottom: 1px solid #d2dceb;
   transition: background 0.15s;
 }
 .food-row:last-of-type {
@@ -479,7 +479,7 @@ dialog[open] {
   position: relative;
   max-height: 140px;
   max-width: 140px;
-  filter: drop-shadow(0 12px 16px #173a3030);
+  filter: drop-shadow(0 12px 16px #14233f30);
 }
 .onboarding-blob {
   position: absolute;
@@ -545,7 +545,7 @@ dialog[open] {
     border-radius: 40px;
     box-shadow:
       0 0 0 1px var(--color-border),
-      0 40px 80px #173a3026;
+      0 40px 80px #14233f26;
   }
   .bottom-nav {
     left: auto;
@@ -900,7 +900,7 @@ dialog[open] {
   z-index: 1;
 }
 .impact-waste {
-  color: #e8f0ea;
+  color: #e4edfb;
 }
 
 /* ---------- Fridgy with AI ---------- */
@@ -1131,4 +1131,84 @@ dialog .footnote a {
   outline: none;
   box-shadow: none;
   border: 0;
+}
+
+/* ---------- Add food: tappable name suggestions and inline errors ---------- */
+.name-suggestions {
+  display: grid;
+  gap: 6px;
+  margin-top: -6px;
+}
+.name-suggestions small {
+  color: var(--color-secondary);
+}
+.name-chips {
+  display: flex;
+  gap: 6px;
+  overflow-x: auto;
+  margin: 0 -4px;
+  padding: 2px 4px 6px;
+  scrollbar-width: none;
+}
+.name-chips::-webkit-scrollbar {
+  display: none;
+}
+.name-chips button {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 40px;
+  padding: 4px 12px 4px 6px;
+  border-radius: 999px;
+  border: 1px solid var(--color-border);
+  background: var(--color-card);
+  color: var(--color-text);
+  font-weight: 700;
+  font-size: 13px;
+}
+.name-chips button:active {
+  background: var(--color-brandSoft);
+}
+.field-error {
+  margin-top: -8px;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.4;
+  color: var(--color-late);
+}
+.food-form [aria-invalid="true"] {
+  border-color: var(--color-late);
+  box-shadow: 0 0 0 1px var(--color-late);
+}
+.stock-row-fields [aria-invalid="true"] {
+  border-color: var(--color-late);
+}
+
+/* ---------- Dish illustrations next to recipes and meals ---------- */
+.recipe-option.with-dish {
+  grid-template-columns: 1fr auto;
+  column-gap: 12px;
+}
+.recipe-option.with-dish > :not(.dish) {
+  grid-column: 1;
+}
+.recipe-option .dish {
+  grid-column: 2;
+  grid-row: 1 / span 6;
+  align-self: center;
+  width: 52px;
+  height: 52px;
+}
+.compare-head {
+  align-items: center;
+}
+.compare-head .compare-title {
+  flex: 1;
+  min-width: 0;
+}
+.week-meal-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }

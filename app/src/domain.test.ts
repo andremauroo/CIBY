@@ -7,6 +7,8 @@ import {
   suggestions,
   consume,
   needs,
+  parseQuantity,
+  dishArt,
   artFor,
   purchaseDefaults,
   stockPurchases,
@@ -369,5 +371,26 @@ describe("Icone degli alimenti", () => {
     ];
     for (const [name, file] of cases) expect(artFor(name), name).toBe(file);
     expect(artFor("Qualcosa di nuovo")).toBe("generic-food.svg");
+  });
+});
+
+describe("Quantità digitate dal telefono e icone dei piatti", () => {
+  it("accetta virgola e decimali, rifiuta zero e testo", () => {
+    expect(parseQuantity("0,25")).toBe(0.25);
+    expect(parseQuantity(" 1.5 ")).toBe(1.5);
+    expect(parseQuantity("250")).toBe(250);
+    expect(parseQuantity(",5")).toBe(0.5);
+    for (const bad of ["", "0", "-1", "abc", "1,2,3", "0,25x", "200000"])
+      expect(parseQuantity(bad), bad).toBeNull();
+  });
+  it("ogni preparazione ha un'illustrazione coerente", () => {
+    expect(dishArt("Caprese")).toBe("dish-salad.svg");
+    expect(dishArt("Insalata di riso e tonno")).toBe("dish-bowl.svg");
+    expect(dishArt("Spaghetti alla carbonara")).toBe("dish-pasta-white.svg");
+    expect(dishArt("Pasta e ceci")).toBe("dish-soup.svg");
+    expect(dishArt("Lasagne alla bolognese")).toBe("dish-baked.svg");
+    expect(dishArt("Risotto alla milanese")).toBe("dish-risotto.svg");
+    const titles = Object.values(recipes).map((r) => r.title);
+    expect(new Set(titles.map(dishArt)).size).toBeGreaterThanOrEqual(6);
   });
 });

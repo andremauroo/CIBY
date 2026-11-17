@@ -40,6 +40,9 @@ import {
   cookWeekMeal,
   dayLabel,
   stockPurchases,
+  dishArt,
+  parseQuantity,
+  purchaseDefaults,
   freeFoods,
   isoDay,
   upcomingMeals,
@@ -141,6 +144,15 @@ export default function App() {
   const [showSettings, setShowSettings] = useState(false);
   const [resetConfirm, setResetConfirm] = useState(false);
   const [removeConfirm, setRemoveConfirm] = useState(false);
+  const [formError, setFormError] = useState<{
+    field: "name" | "quantity";
+    text: string;
+  } | null>(null);
+  const nameField = useRef<HTMLInputElement>(null);
+  const quantityField = useRef<HTMLInputElement>(null);
+  const unitField = useRef<HTMLSelectElement>(null);
+  const placeField = useRef<HTMLSelectElement>(null);
+  useEffect(() => setFormError(null), [edit]);
   const [notice, setNotice] = useState("");
   const [servings, setServings] = useState(1);
   const [when, setWhen] = useState("Domani a pranzo");
@@ -472,8 +484,22 @@ export default function App() {
     e.preventDefault();
     const data = new FormData(e.currentTarget);
     const name = String(data.get("name")).trim();
-    const quantity = Number(data.get("quantity"));
-    if (!name || !Number.isFinite(quantity) || quantity <= 0) return;
+    const quantity = parseQuantity(String(data.get("quantity") || ""));
+    // Inline messages: a native bubble would end up under the phone keyboard.
+    if (!name) {
+      setFormError({ field: "name", text: "Scrivi il nome dell’alimento." });
+      nameField.current?.focus();
+      return;
+    }
+    if (quantity === null) {
+      setFormError({
+        field: "quantity",
+        text: "Indica una quantità maggiore di zero, per esempio 2 oppure 0,5.",
+      });
+      quantityField.current?.focus();
+      return;
+    }
+    setFormError(null);
     const id =
       edit?.id ||
       (globalThis.crypto?.randomUUID?.() ??
@@ -510,7 +536,7 @@ export default function App() {
     return plan && planRecipe ? (
       <div className="meal-card">
         <FoodImage
-          file={tab === "Pasti" ? "59bc0.svg" : "8d892.svg"}
+          file={dishArt(planRecipe.title)}
           size={tab === "Pasti" ? 64 : 72}
         />
         <div>
@@ -800,7 +826,13 @@ export default function App() {
                 Esplora il ricettario
               </Button>
               <button className="shopping-shortcut" onClick={openWeek}>
-                <FoodImage file="59bc0.svg" />
+                <FoodImage
+                  file={
+                    nextMeals.length
+                      ? dishArt(recipes[nextMeals[0].recipe].title)
+                      : "dish-bowl.svg"
+                  }
+                />
                 <span>
                   <strong>I pasti della settimana</strong>
                   <small>
@@ -1126,10 +1158,15 @@ export default function App() {
                 <section className="ideas" aria-label="Proposte di Fridgy">
                   {ideas.map((id, i) => (
                     <button
-                      className={`recipe-option ${i === 0 ? "highlight" : ""}`}
+                      className={`recipe-option with-dish ${i === 0 ? "highlight" : ""}`}
                       key={id}
                       onClick={() => setDetail(id)}
                     >
+                      <img
+                        className="dish"
+                        src={asset(dishArt(recipes[id].title))}
+                        alt=""
+                      />
                       <strong>{recipes[id].title}</strong>
                       <small>
                         {recipes[id].time} min
@@ -1600,57 +1637,107 @@ export default function App() {
               come nuova scorta; le scorte già presenti restano disponibili.
             </p>
           )}
-          <form className="food-form" onSubmit={saveFood}>
+          <form className="food-form" onSubmit={saveFood} noValidate>
             <label>
               Nome
               <input
+                ref={nameField}
                 name="name"
-                list="food-suggestions"
                 placeholder="Per esempio ceci, latte, pane…"
                 defaultValue={edit?.name || purchase?.name}
-                required
                 maxLength={80}
-                autoFocus
+                autoComplete="off"
+                autoCapitalize="sentences"
+                aria-invalid={formError?.field === "name"}
+                aria-describedby={
+                  formError?.field === "name" ? "food-form-error" : undefined
+                }
+                onInput={() => formError && setFormError(null)}
               />
             </label>
-            <datalist id="food-suggestions">
-              {[
-                "Zucchine",
-                "Uova",
-                "Riso",
-                "Pomodori",
-                "Latte",
-                "Pane",
-                "Ceci",
-                "Lenticchie",
-                "Pasta",
-                "Carote",
-                "Yogurt",
-                "Mele",
-              ].map((name) => (
-                <option key={name} value={name} />
-              ))}
-            </datalist>
-            <p className="footnote">
-              I suggerimenti sono facoltativi. Puoi inserire anche un nome
-              nuovo.
-            </p>
+            {formError?.field === "name" && (
+              <p className="field-error" id="food-form-error" role="alert">
+                {formError.text}
+              </p>
+            )}
+            {!edit && !purchase && (
+              <div className="name-suggestions">
+                <small id="name-suggestions-hint">
+                  Suggerimenti, facoltativi: tocca per compilare
+                </small>
+                <div
+                  className="name-chips"
+                  role="group"
+                  aria-labelledby="name-suggestions-hint"
+                >
+                  {[
+                    "Zucchine",
+                    "Uova",
+                    "Riso",
+                    "Pomodori",
+                    "Pasta",
+                    "Latte",
+                    "Pane",
+                    "Ceci",
+                    "Lenticchie",
+                    "Carote",
+                    "Mozzarella",
+                    "Pollo",
+                    "Yogurt",
+                    "Mele",
+                  ].map((name) => (
+                    <button
+                      type="button"
+                      key={name}
+                      onClick={() => {
+                        const defaults = purchaseDefaults(name);
+                        if (nameField.current) nameField.current.value = name;
+                        if (unitField.current)
+                          unitField.current.value = defaults.unit;
+                        if (placeField.current)
+                          placeField.current.value = defaults.place;
+                        setFormError(null);
+                        quantityField.current?.focus();
+                        quantityField.current?.select();
+                      }}
+                    >
+                      <FoodImage file={artFor(name)} size={22} />
+                      {name}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            )}
             <div className="form-row">
               <label>
                 Quantità
                 <input
+                  ref={quantityField}
                   name="quantity"
-                  type="number"
-                  min="0.1"
-                  max="100000"
-                  step="0.1"
-                  defaultValue={purchase ? "" : edit?.quantity || 1}
-                  required
+                  type="text"
+                  inputMode="decimal"
+                  autoComplete="off"
+                  defaultValue={
+                    purchase
+                      ? ""
+                      : String(edit?.quantity || 1).replace(".", ",")
+                  }
+                  aria-invalid={formError?.field === "quantity"}
+                  aria-describedby={
+                    formError?.field === "quantity"
+                      ? "food-form-error"
+                      : undefined
+                  }
+                  onInput={() => formError && setFormError(null)}
                 />
               </label>
               <label>
                 Unità
-                <select name="unit" defaultValue={edit?.unit || "pezzi"}>
+                <select
+                  ref={unitField}
+                  name="unit"
+                  defaultValue={edit?.unit || "pezzi"}
+                >
                   <option>pezzi</option>
                   <option>g</option>
                   <option>kg</option>
@@ -1660,9 +1747,18 @@ export default function App() {
                 </select>
               </label>
             </div>
+            {formError?.field === "quantity" && (
+              <p className="field-error" id="food-form-error" role="alert">
+                {formError.text}
+              </p>
+            )}
             <label>
               Dove si trova
-              <select name="place" defaultValue={edit?.place || "Frigo"}>
+              <select
+                ref={placeField}
+                name="place"
+                defaultValue={edit?.place || "Frigo"}
+              >
                 <option>Frigo</option>
                 <option>Dispensa</option>
               </select>

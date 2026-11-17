@@ -1,6 +1,27 @@
 @import "../../design/identity.css";
+/*
+ * App palette: blue tones. Overrides the shared identity (still green on the
+ * project site) for the light theme only; the night theme is in theme.css.
+ */
 :root {
-  --shadow-card: 0 1px 3px #173a300a;
-  --shadow-lift: 0 2px 4px #173a300a, 0 12px 28px #173a3014;
+  --color-brand: #17325f;
+  --color-onBrand: #ffffff;
+  --color-surface: #f6f8fc;
+  --color-card: #ffffff;
+  --color-brandSoft: #ebf1fb;
+  --color-accent: #a9c8ff;
+  --color-onAccent: #10264a;
+  --color-accentHover: #8fb6fb;
+  --color-text: #14233f;
+  --color-secondary: #4d5d78;
+  --color-border: #d2dceb;
+  --color-control: #4d5d78;
+  --color-emphasis: #14233f;
+  --color-user: #e4edfb;
+  /* "Leaf" is the positive state (covered, available): a teal blue. */
+  --color-leaf: #1b5e86;
+  --color-leafSoft: #e2eff8;
+  --shadow-card: 0 1px 3px #14233f0d;
+  --shadow-lift: 0 2px 4px #14233f0d, 0 12px 28px #14233f1a;
   --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
 }

@@ -865,3 +865,38 @@ export function stockPurchases(
     shopping: state.shopping.filter((item) => !moved.has(item.id)),
   };
 }
+
+/**
+ * Quantities typed on a phone: accepts a decimal comma ("0,25") as well as a
+ * point, any number of decimals, and rejects zero, negatives and text.
+ */
+export function parseQuantity(raw: string): number | null {
+  const text = raw.trim().replace(/\s+/g, "").replace(",", ".");
+  if (!/^\d+(\.\d+)?$|^\.\d+$/.test(text)) return null;
+  const value = Number(text);
+  return Number.isFinite(value) && value > 0 && value <= 100000
+    ? Math.round(value * 1000) / 1000
+    : null;
+}
+
+/** Illustration of a prepared dish, from the recipe title (local or catalog). */
+export function dishArt(title: string) {
+  const t = title
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[̀-ͯ]/g, "");
+  for (const [pattern, file] of [
+    [/frittat|omelette/, "dish-frittata.svg"],
+    [/uova|egg/, "dish-eggs-toast.svg"],
+    [/parmigiana|lasagn|al forno|gratin/, "dish-baked.svg"],
+    [/polpett|meatball/, "dish-meatballs.svg"],
+    [/zupp|minestr|ribollit|brodo|pasta e (ceci|fagioli|lenticchie|patate)|vellutat/, "dish-soup.svg"],
+    [/caprese|panzanella|insalata(?! di riso)/, "dish-salad.svg"],
+    [/bowl|insalata di riso|cous ?cous|poke/, "dish-bowl.svg"],
+    [/risott|riso/, "dish-risotto.svg"],
+    [/carbonara|cacio|gricia|aglio|burro|alfredo/, "dish-pasta-white.svg"],
+    [/pasta|spaghett|penne|rigaton|norma|linguin|fusill|bucatin|amatrician/, "dish-pasta-tomato.svg"],
+  ] as const)
+    if (pattern.test(t)) return file;
+  return "dish-frittata.svg";
+}

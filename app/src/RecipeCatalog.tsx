@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { Modal, Button } from "./components";
+import { Modal, Button, asset } from "./components";
+import { dishArt } from "./domain";
 import {
   catalogMeals,
   catalogSearch,
@@ -80,8 +81,7 @@ export default function RecipeCatalog({
           </div>
           <p className="catalog-notice">
             Sintesi CIBY in italiano · Dosi della fonte per {meal.servingsLabel}
-            {" persone"}. Le quantità
-            non vengono adattate automaticamente.{" "}
+            {" persone"}. Le quantità non vengono adattate automaticamente.{" "}
             {meal.minutes === null
               ? "Tempo non disponibile."
               : `Preparazione e cottura: circa ${meal.minutes} min.`}{" "}
@@ -214,10 +214,11 @@ export default function RecipeCatalog({
               const recognized = recognizedFoods(m, foods);
               return (
                 <button
-                  className="recipe-option"
+                  className="recipe-option with-dish"
                   onClick={() => openMeal(m.id)}
                   key={m.id}
                 >
+                  <img className="dish" src={asset(dishArt(m.title))} alt="" />
                   <strong>{m.title}</strong>
                   {favoriteIds.includes(m.id) && (
                     <span className="catalog-saved">

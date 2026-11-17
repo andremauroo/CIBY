@@ -455,7 +455,7 @@ ol {
   border-bottom-right-radius: 5px;
 }
 .message.user .message-author {
-  color: #e8f0ea;
+  color: #e4edfb;
 }
 .message.bot {
   justify-self: start;
@@ -526,7 +526,7 @@ ol {
   color: var(--color-onBrand);
   padding: 12px 16px;
   opacity: 0;
-  box-shadow: 0 6px 25px #173a3020;
+  box-shadow: 0 6px 25px #14233f20;
   transition: opacity 0.2s;
 }
 .toast.visible {
@@ -547,7 +547,7 @@ dialog {
   color: var(--color-text);
 }
 dialog::backdrop {
-  background: #173a3066;
+  background: #14233f66;
   backdrop-filter: blur(3px);
 }
 dialog > .button,
@@ -686,7 +686,7 @@ dialog > ol {
     border-radius: 28px;
     min-height: 920px;
     overflow: clip;
-    box-shadow: 0 20px 70px #173a3008;
+    box-shadow: 0 20px 70px #14233f08;
   }
   main {
     min-height: 816px;

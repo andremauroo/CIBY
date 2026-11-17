@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Button, FoodImage } from "./components";
 import {
   artFor,
+  dishArt,
   available,
   dayLabel,
   isoDay,
@@ -58,6 +59,7 @@ export default function WeekPlan({
     return (
       <div className="week-meal">
         <div className="week-meal-head">
+          <FoodImage file={dishArt(recipe.title)} size={48} />
           <div>
             <strong>{recipe.title}</strong>
             <small>

@@ -3,7 +3,7 @@
   "short_name": "CIBY",
   "lang": "it",
   "description": "Scegli cosa preparare con quello che hai.",
-  "theme_color": "#173A30",
+  "theme_color": "#17325F",
   "background_color": "#FFFFFF",
   "display": "standalone",
   "start_url": "./",

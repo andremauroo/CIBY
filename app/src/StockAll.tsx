@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Button, FoodImage, Modal } from "./components";
-import { artFor, purchaseDefaults, type Food } from "./domain";
+import { artFor, parseQuantity, purchaseDefaults, type Food } from "./domain";
 import type { ShoppingItem } from "./shopping";
 
 type Row = {
@@ -52,7 +52,7 @@ export default function StockAll({
     setRows((current) => ({ ...current, [id]: { ...current[id], ...patch } }));
   const included = items.filter((item) => rows[item.id].include);
   const missing = included.filter(
-    (item) => !(Number(rows[item.id].quantity) > 0),
+    (item) => parseQuantity(rows[item.id].quantity) === null,
   );
 
   return (
@@ -71,7 +71,7 @@ export default function StockAll({
             included.map((item) => ({
               itemId: item.id,
               name: item.name,
-              quantity: Number(rows[item.id].quantity),
+              quantity: parseQuantity(rows[item.id].quantity)!,
               unit: rows[item.id].unit,
               place: rows[item.id].place,
               expires: rows[item.id].expires || undefined,
@@ -114,12 +114,14 @@ export default function StockAll({
                     <label>
                       Quantità
                       <input
-                        type="number"
+                        type="text"
                         inputMode="decimal"
-                        min="0.1"
-                        step="0.1"
-                        required
+                        autoComplete="off"
                         aria-label={`Quantità di ${item.name}`}
+                        aria-invalid={
+                          row.quantity.trim() !== "" &&
+                          parseQuantity(row.quantity) === null
+                        }
                         value={row.quantity}
                         onChange={(e) =>
                           update(item.id, { quantity: e.target.value })
@@ -178,7 +180,7 @@ export default function StockAll({
           {!included.length
             ? "Seleziona almeno un alimento."
             : missing.length
-              ? `Manca la quantità per: ${missing.map((i) => i.name).join(", ")}.`
+              ? `Indica una quantità valida (per esempio 2 oppure 0,5) per: ${missing.map((i) => i.name).join(", ")}.`
               : `${included.length === 1 ? "1 alimento pronto" : `${included.length} alimenti pronti`} per la dispensa.`}
         </p>
         <Button type="submit" disabled={!included.length || missing.length > 0}>

@@ -31,8 +31,29 @@ export function parseFridgyEnv(text) {
   return { provider, key, model };
 }
 
-const loopback = (address = "") =>
-  /^(127\.|::1$|::ffff:127\.)/.test(address);
+const loopback = (address = "") => /^(127\.|::1$|::ffff:127\.)/.test(address);
+/**
+ * A tunnel or proxy (ngrok, cloudflared…) also connects from 127.0.0.1, so the
+ * socket address alone is not enough: the request must name a local host and
+ * carry no forwarding headers.
+ */
+export function isLocalRequest(req) {
+  const host = String(req.headers.host || "")
+    .replace(/:\d+$/, "")
+    .toLowerCase();
+  const forwarded = [
+    "x-forwarded-for",
+    "x-forwarded-host",
+    "x-real-ip",
+    "forwarded",
+    "cf-connecting-ip",
+  ].some((name) => req.headers[name] !== undefined);
+  return (
+    loopback(req.socket.remoteAddress) &&
+    ["localhost", "127.0.0.1", "[::1]"].includes(host) &&
+    !forwarded
+  );
+}
 
 export default function fridgyLocalKey() {
   return {
@@ -41,7 +62,7 @@ export default function fridgyLocalKey() {
     configureServer(server) {
       server.middlewares.use(fridgyLocalRoute, (req, res) => {
         res.setHeader("Cache-Control", "no-store");
-        if (!loopback(req.socket.remoteAddress)) {
+        if (!isLocalRequest(req)) {
           res.statusCode = 403;
           res.end();
           return;

@@ -1,6 +1,12 @@
 import { useState } from "react";
-import { Button, Modal } from "./components";
-import { compareOptions, type Food, type Plan, type RecipeId } from "./domain";
+import { Button, FoodImage, Modal } from "./components";
+import {
+  compareOptions,
+  dishArt,
+  type Food,
+  type Plan,
+  type RecipeId,
+} from "./domain";
 
 /**
  * B02/B03: confront feasible preparations with postponing the current meal.
@@ -51,7 +57,8 @@ export default function CompareMeals({
         className={`compare-card ${o.ok && !tooLong ? "feasible" : "blocked"}`}
       >
         <div className="compare-head">
-          <div>
+          <FoodImage file={dishArt(o.title)} size={44} />
+          <div className="compare-title">
             <strong>{o.title}</strong>
             <small>
               {o.time} min · {o.effort} · {o.steps.length} passaggi

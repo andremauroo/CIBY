@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { parseFridgyEnv } from "./fridgy-local-key.mjs";
+import { isLocalRequest, parseFridgyEnv } from "./fridgy-local-key.mjs";
 
 describe("File locale della chiave Fridgy", () => {
   it("legge servizio, chiave e modello facoltativo", () => {
@@ -23,5 +23,29 @@ describe("File locale della chiave Fridgy", () => {
     expect(
       parseFridgyEnv("FRIDGY_PROVIDER=altro\nFRIDGY_API_KEY=k"),
     ).toBeNull();
+  });
+});
+
+describe("Accesso al file della chiave", () => {
+  const req = (
+    remoteAddress: string,
+    headers: Record<string, string> = { host: "localhost:5173" },
+  ) => ({ headers, socket: { remoteAddress } });
+  it("risponde solo a richieste locali dirette", () => {
+    expect(isLocalRequest(req("127.0.0.1"))).toBe(true);
+    expect(isLocalRequest(req("::1", { host: "127.0.0.1:5173" }))).toBe(true);
+    expect(isLocalRequest(req("192.168.1.20"))).toBe(false);
+    // A tunnel connects from loopback but names another host or forwards.
+    expect(
+      isLocalRequest(req("127.0.0.1", { host: "abc.trycloudflare.com" })),
+    ).toBe(false);
+    expect(
+      isLocalRequest(
+        req("127.0.0.1", {
+          host: "localhost:5173",
+          "x-forwarded-for": "1.2.3.4",
+        }),
+      ),
+    ).toBe(false);
   });
 });
