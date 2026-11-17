@@ -1,5 +1,5 @@
 import type { ShoppingItem } from "./shopping";
-import { catalogMeals } from "./catalog";
+import { catalogMeals, ingredientLabel } from "./catalog";
 export type Food = {
   id: string;
   name: string;
@@ -32,11 +32,17 @@ export type RecipeId =
   | "zuppaLenticchie";
 export type MealSlot = "Pranzo" | "Cena";
 /** A meal assigned to a concrete day: ingredients stay in stock until cooked. */
+/** A recipe that can be planned: a computable preparation or an Italian catalog recipe. */
+export type RecipeRef = RecipeId | `catalog:${string}`;
+/**
+ * A meal assigned to a concrete occasion. The calendar is the only plan:
+ * "il prossimo pasto" is simply the first meal still ahead.
+ */
 export type WeekMeal = {
   id: string;
   date: string;
   slot: MealSlot;
-  recipe: RecipeId;
+  recipe: RecipeRef;
   servings: number;
 };
 /** What happened to a food removed from the pantry. Declared by the person. */
@@ -45,8 +51,9 @@ export type WasteEntry = {
   name: string;
   outcome: "finito" | "buttato";
 };
-export type Plan = {
-  recipe: RecipeId | `catalog:${string}` | `mealdb:${string}`;
+/** Saves before the calendar was unified. Read only by parseState. */
+type LegacyPlan = {
+  recipe: string;
   when: string;
   servings: number;
   consumed: boolean;
@@ -54,7 +61,6 @@ export type Plan = {
 export type State = {
   version: 1;
   foods: Food[];
-  plan: Plan | null;
   shopping: ShoppingItem[];
   favoriteIds: string[];
   cooked: CookedEntry[];
@@ -118,7 +124,15 @@ export const initialState: State = {
   shopping: [],
   favoriteIds: [],
   cooked: [],
-  week: [],
+  week: [
+    {
+      id: "seed-dinner",
+      date: isoDay(0),
+      slot: "Cena",
+      recipe: "frittata",
+      servings: 2,
+    },
+  ],
   waste: [],
   foods: [
     {
@@ -180,7 +194,6 @@ export const initialState: State = {
       art: "pasta.svg",
     },
   ],
-  plan: { recipe: "frittata", when: "Stasera", servings: 2, consumed: false },
 };
 export const recipes: Record<
   RecipeId,
@@ -398,8 +411,187 @@ export function canonical(name: string): string | null {
     canonicalNames.get(name.trim().toLowerCase().replace(/\s+/g, " ")) || null
   );
 }
+/** Units of the same kind convert into each other; pieces and packs never do. */
+const unitBase: Record<Food["unit"], [Food["unit"], number]> = {
+  g: ["g", 1],
+  kg: ["g", 1000],
+  ml: ["ml", 1],
+  l: ["ml", 1000],
+  pezzi: ["pezzi", 1],
+  confezioni: ["confezioni", 1],
+};
+const round3 = (value: number) => Math.round(value * 1000) / 1000;
+export function convert(
+  quantity: number,
+  from: Food["unit"],
+  to: Food["unit"],
+): number | null {
+  const [baseFrom, factorFrom] = unitBase[from];
+  const [baseTo, factorTo] = unitBase[to];
+  return baseFrom === baseTo
+    ? round3((quantity * factorFrom) / factorTo)
+    : null;
+}
+/** How much of an ingredient this food provides, in the ingredient's unit. */
+export function amountFor(food: Food, key: string): number | null {
+  if (canonical(food.name) !== key || !ingredients[key]) return null;
+  return convert(food.quantity, food.unit, ingredients[key].unit);
+}
 export function matching(food: Food, key: string) {
-  return canonical(food.name) === key && food.unit === ingredients[key]?.unit;
+  return amountFor(food, key) !== null;
+}
+export function stockOf(foods: Food[], key: string) {
+  return round3(
+    foods.reduce((sum, f) => sum + Math.max(0, amountFor(f, key) ?? 0), 0),
+  );
+}
+/** "1500 g" reads better as "1,5 kg"; Italian decimal comma. */
+export function formatAmount(quantity: number, unit: Food["unit"]) {
+  const [value, shown] =
+    unit === "g" && quantity >= 1000
+      ? [quantity / 1000, "kg"]
+      : unit === "ml" && quantity >= 1000
+        ? [quantity / 1000, "l"]
+        : [quantity, unit];
+  return `${round3(value).toLocaleString("it-IT", { maximumFractionDigits: 2 })} ${shown}`;
+}
+
+/* ---------- Recipes: computable and catalog ---------- */
+export const isLocalRecipe = (ref: string): ref is RecipeId =>
+  Object.hasOwn(recipes, ref);
+export function catalogMealFor(ref: string) {
+  return ref.startsWith("catalog:")
+    ? catalogMeals.find((m) => `catalog:${m.id}` === ref) || null
+    : null;
+}
+export const isRecipeRef = (ref: unknown): ref is RecipeRef =>
+  typeof ref === "string" && (isLocalRecipe(ref) || !!catalogMealFor(ref));
+export function mealInfo(ref: RecipeRef) {
+  if (isLocalRecipe(ref)) {
+    const r = recipes[ref];
+    return {
+      title: r.title,
+      time: r.time as number | null,
+      effort: r.effort,
+      local: true,
+      sourceServings: null as number | null,
+    };
+  }
+  const m = catalogMealFor(ref);
+  return {
+    title: m?.title || "Ricetta non disponibile",
+    time: m?.minutes ?? null,
+    effort: m?.sourceName || "Ricettario",
+    local: false,
+    sourceServings: m?.servings ?? null,
+  };
+}
+/** "320 g", "1,5 l", "6", "6 medie", "250 g pulita". Anything else needs confirmation. */
+export function parseMeasure(
+  measure: string,
+): { quantity: number; unit: Food["unit"] } | null {
+  const match = measure
+    .trim()
+    .toLowerCase()
+    .match(
+      /^(\d+(?:[.,]\d+)?)\s*(g|kg|ml|l)?(?:\s+(?:pulit[oa]|medi[ae]|grand[ie]|piccol[ie]))?$/,
+    );
+  if (!match) return null;
+  const quantity = Number(match[1].replace(",", "."));
+  return quantity > 0
+    ? { quantity, unit: (match[2] as Food["unit"]) || "pezzi" }
+    : null;
+}
+export type NeedLine = {
+  key: string | null;
+  name: string;
+  measure: string;
+  /** In the ingredient's unit, scaled to the planned servings. */
+  amount: number | null;
+  unit: Food["unit"] | null;
+  verified: boolean;
+  reason: string;
+};
+/**
+ * What a planned meal needs. Computable recipes are fully verified. For a
+ * catalog recipe a quantity is verified only when the ingredient is tracked,
+ * the measure is numeric and the source states its servings; otherwise it is
+ * listed as "da confermare" and never subtracted automatically.
+ */
+export function mealNeeds(ref: RecipeRef, servings: number): NeedLine[] {
+  if (isLocalRecipe(ref))
+    return Object.entries(needs(ref, servings)).map(([key, amount]) => ({
+      key,
+      name: ingredients[key].label,
+      measure: formatAmount(amount, ingredients[key].unit),
+      amount,
+      unit: ingredients[key].unit,
+      verified: true,
+      reason: "",
+    }));
+  const meal = catalogMealFor(ref);
+  if (!meal) return [];
+  return meal.ingredients.map((ingredient) => {
+    const label = ingredientLabel(ingredient.name);
+    const key = canonical(label) ?? canonical(ingredient.name);
+    const parsed = parseMeasure(ingredient.measure);
+    const base = key ? ingredients[key].unit : null;
+    const converted =
+      key && parsed && base
+        ? convert(parsed.quantity, parsed.unit, base)
+        : null;
+    const line = {
+      key,
+      name: key ? ingredients[key].label : label,
+      measure: ingredient.measure || "quantità non indicata",
+    };
+    if (!key)
+      return {
+        ...line,
+        amount: null,
+        unit: null,
+        verified: false,
+        reason: "non tracciato in dispensa",
+      };
+    if (!parsed)
+      return {
+        ...line,
+        amount: null,
+        unit: base,
+        verified: false,
+        reason: "quantità della fonte non numerica",
+      };
+    if (converted === null)
+      return {
+        ...line,
+        amount: null,
+        unit: base,
+        verified: false,
+        reason: "unità da confrontare",
+      };
+    if (!meal.servings)
+      return {
+        ...line,
+        amount: null,
+        unit: base,
+        verified: false,
+        reason: "porzioni della fonte non indicate",
+      };
+    const scaled = (converted * servings) / meal.servings;
+    const amount =
+      base === "pezzi" || base === "confezioni"
+        ? Math.ceil(scaled)
+        : Math.round(scaled);
+    return { ...line, amount, unit: base, verified: true, reason: "" };
+  });
+}
+/** Verified quantities only, summed by ingredient. */
+export function verifiedNeeds(ref: RecipeRef, servings: number) {
+  const total: Record<string, number> = {};
+  for (const line of mealNeeds(ref, servings))
+    if (line.verified && line.key && line.amount !== null)
+      total[line.key] = round3((total[line.key] || 0) + line.amount);
+  return total;
 }
 export function available(
   foods: Food[],
@@ -407,13 +599,9 @@ export function available(
   servings: number,
   exclude: string[] = [],
 ) {
-  if (!Object.hasOwn(recipes, id)) return false;
-  return Object.entries(needs(id, servings)).every(
-    ([key, qty]) =>
-      !exclude.includes(key) &&
-      foods
-        .filter((f) => matching(f, key))
-        .reduce((sum, f) => sum + f.quantity, 0) >= qty,
+  if (!isRecipeRef(id)) return false;
+  return Object.entries(verifiedNeeds(id, servings)).every(
+    ([key, qty]) => !exclude.includes(key) && stockOf(foods, key) >= qty,
   );
 }
 export function suggestions(
@@ -434,7 +622,7 @@ export function compareOptions(foods: Food[], servings: number) {
   return (Object.keys(recipes) as RecipeId[]).map((id) => {
     const items = Object.entries(needs(id, servings)).map(([key, need]) => {
       const matches = foods.filter((f) => matching(f, key));
-      const have = matches.reduce((sum, f) => sum + f.quantity, 0);
+      const have = stockOf(foods, key);
       const name = matches[0]?.name || ingredients[key].label;
       const unit = ingredients[key].unit;
       const priority = matches.some((f) => f.priority && f.quantity > 0);
@@ -465,18 +653,23 @@ export function compareOptions(foods: Food[], servings: number) {
   });
 }
 /** Subtract a feasible recipe from the stock and describe what was cooked. */
-function cook(foods: Food[], recipe: RecipeId, servings: number) {
-  const used = { ...needs(recipe, servings) };
+/** Subtract the verified quantities, converting into each food's own unit. */
+function cook(foods: Food[], recipe: RecipeRef, servings: number) {
+  const left = { ...verifiedNeeds(recipe, servings) };
   const after = foods.map((f) => {
     const key = canonical(f.name);
-    const amount =
-      key && matching(f, key) ? Math.min(used[key] || 0, f.quantity) : 0;
-    if (key) used[key] = Math.max(0, (used[key] || 0) - amount);
-    return { ...f, quantity: f.quantity - amount };
+    const own = key ? amountFor(f, key) : null;
+    if (!key || own === null || !left[key]) return f;
+    const take = Math.min(left[key], own);
+    left[key] = round3(left[key] - take);
+    const quantity = round3(
+      f.quantity - (convert(take, ingredients[key].unit, f.unit) ?? 0),
+    );
+    return { ...f, quantity: Math.max(0, quantity) };
   });
   const entry: CookedEntry = {
     date: isoDay(),
-    title: recipes[recipe].title,
+    title: mealInfo(recipe).title,
     priorityUsed: [
       ...new Set(
         foods
@@ -493,27 +686,8 @@ function cook(foods: Food[], recipe: RecipeId, servings: number) {
   };
   return { foods: after, entry };
 }
-export function consume(state: State): State {
-  if (
-    !state.plan ||
-    state.plan.consumed ||
-    !available(state.foods, state.plan.recipe, state.plan.servings)
-  )
-    return state;
-  const { foods, entry } = cook(
-    state.foods,
-    state.plan.recipe as RecipeId,
-    state.plan.servings,
-  );
-  return {
-    ...state,
-    foods,
-    plan: { ...state.plan, consumed: true },
-    cooked: [...state.cooked, entry].slice(-50),
-  };
-}
-/** Confirm a meal of the week as cooked: only then the stock changes. */
-export function cookWeekMeal(state: State, id: string): State {
+/** Confirm a planned meal as cooked: only then the stock changes, once. */
+export function cookMeal(state: State, id: string): State {
   const meal = state.week.find((m) => m.id === id);
   if (!meal || !available(state.foods, meal.recipe, meal.servings))
     return state;
@@ -525,17 +699,49 @@ export function cookWeekMeal(state: State, id: string): State {
     cooked: [...state.cooked, entry].slice(-50),
   };
 }
-/** Stock left once the planned occasions are covered (never negative). */
+/** @deprecated name kept for the existing flows: cook a meal of the calendar. */
+export const cookWeekMeal = cookMeal;
+/** Cook the next meal of the calendar. */
+export function consume(state: State): State {
+  const meal = nextMeal(state);
+  return meal ? cookMeal(state, meal.id) : state;
+}
+export function nextMeal(state: State, today = new Date()): WeekMeal | null {
+  return upcomingMeals(state.week, today)[0] || null;
+}
+/** "Stasera", "Domani a pranzo", "Giovedì 20 a cena". */
+export function occasionLabel(
+  meal: Pick<WeekMeal, "date" | "slot">,
+  today = new Date(),
+) {
+  const days = daysUntil(meal.date, today);
+  if (days === 0) return meal.slot === "Cena" ? "Stasera" : "Oggi a pranzo";
+  return `${dayLabel(meal.date, today)} a ${meal.slot.toLowerCase()}`;
+}
+/** Old "when" labels, for saves written before the calendar was unified. */
+function legacyOccasion(when: string, today = new Date()) {
+  const w = when.toLowerCase();
+  return {
+    date: isoDay(/domani/.test(w) ? 1 : 0, today),
+    slot: (/pranzo/.test(w) ? "Pranzo" : "Cena") as MealSlot,
+  };
+}
 export function freeFoods(state: State, today = new Date()): Food[] {
   const reserved = Object.fromEntries(
     weekBalance(state, today).map((b) => [b.key, b.need]),
   );
   return state.foods.map((f) => {
     const key = canonical(f.name);
-    if (!key || !matching(f, key)) return f;
-    const amount = Math.min(reserved[key] || 0, f.quantity);
-    reserved[key] = (reserved[key] || 0) - amount;
-    return { ...f, quantity: f.quantity - amount };
+    const own = key ? amountFor(f, key) : null;
+    if (!key || own === null || !reserved[key]) return f;
+    const take = Math.min(reserved[key], own);
+    reserved[key] = round3(reserved[key] - take);
+    return {
+      ...f,
+      quantity: round3(
+        f.quantity - (convert(take, ingredients[key].unit, f.unit) ?? 0),
+      ),
+    };
   });
 }
 export function dayLabel(date: string, today = new Date()) {
@@ -567,20 +773,10 @@ export function upcomingMeals(week: WeekMeal[], today = new Date()) {
  * `free` is the quantity with no planned use; `missing` is what to buy.
  */
 export function weekBalance(state: State, today = new Date()) {
-  const planned: { title: string; needs: Record<string, number> }[] =
-    upcomingMeals(state.week, today).map((m) => ({
-      title: recipes[m.recipe].title,
-      needs: needs(m.recipe, m.servings),
-    }));
-  if (
-    state.plan &&
-    !state.plan.consumed &&
-    Object.hasOwn(recipes, state.plan.recipe)
-  )
-    planned.unshift({
-      title: recipes[state.plan.recipe as RecipeId].title,
-      needs: needs(state.plan.recipe, state.plan.servings),
-    });
+  const planned = upcomingMeals(state.week, today).map((m) => ({
+    title: mealInfo(m.recipe).title,
+    needs: verifiedNeeds(m.recipe, m.servings),
+  }));
   const keys = new Set([
     ...planned.flatMap((p) => Object.keys(p.needs)),
     ...state.foods.flatMap((f) => {
@@ -590,16 +786,18 @@ export function weekBalance(state: State, today = new Date()) {
   ]);
   return [...keys].map((key) => {
     const matches = state.foods.filter((f) => matching(f, key));
-    const have = matches.reduce((sum, f) => sum + f.quantity, 0);
-    const need = planned.reduce((sum, p) => sum + (p.needs[key] || 0), 0);
+    const have = stockOf(state.foods, key);
+    const need = round3(
+      planned.reduce((sum, p) => sum + (p.needs[key] || 0), 0),
+    );
     return {
       key,
       label: matches[0]?.name || ingredients[key].label,
       unit: ingredients[key].unit,
       have,
       need,
-      missing: Math.max(0, need - have),
-      free: Math.max(0, have - need),
+      missing: round3(Math.max(0, need - have)),
+      free: round3(Math.max(0, have - need)),
       meals: planned.filter((p) => p.needs[key]).map((p) => p.title),
       soon: matches.some((f) => {
         const d = daysUntil(f.expires, today);
@@ -607,6 +805,14 @@ export function weekBalance(state: State, today = new Date()) {
       }),
     };
   });
+}
+/** Catalog quantities that the person still has to check, by planned meal. */
+export function weekToConfirm(state: State, today = new Date()) {
+  return upcomingMeals(state.week, today).flatMap((m) =>
+    mealNeeds(m.recipe, m.servings)
+      .filter((line) => !line.verified)
+      .map((line) => ({ meal: mealInfo(m.recipe).title, ...line })),
+  );
 }
 export function parseState(raw: string | null): State {
   try {
@@ -630,17 +836,16 @@ export function parseState(raw: string | null): State {
       )
     )
       throw Error();
-    if (
-      s.plan !== null &&
-      (!s.plan ||
-        (!Object.hasOwn(recipes, s.plan.recipe) &&
-          !catalogMeals.some((m) => `catalog:${m.id}` === s.plan.recipe) &&
-          !/^mealdb:/.test(s.plan.recipe)) ||
-        ![1, 2].includes(s.plan.servings) ||
-        typeof s.plan.when !== "string" ||
-        typeof s.plan.consumed !== "boolean")
-    )
-      throw Error();
+    // Saves from before the unified calendar: the separate "prossimo pasto"
+    // becomes a meal of the calendar, unless that occasion is already taken.
+    const legacy: LegacyPlan | null =
+      s.plan &&
+      isRecipeRef(s.plan.recipe) &&
+      [1, 2].includes(s.plan.servings) &&
+      typeof s.plan.when === "string" &&
+      s.plan.consumed === false
+        ? s.plan
+        : null;
     // New collections are optional in older saves. Invalid new entries must
     // never erase the existing pantry or meal.
     const shopping: ShoppingItem[] = Array.isArray(s.shopping)
@@ -665,7 +870,6 @@ export function parseState(raw: string | null): State {
     return {
       version: 1,
       foods: s.foods,
-      plan: s.plan?.recipe?.startsWith("mealdb:") ? null : s.plan,
       shopping: shopping.filter(
         (item, index) =>
           shopping.findIndex((other) => other.id === item.id) === index,
@@ -691,17 +895,34 @@ export function parseState(raw: string | null): State {
               c.priorityUsed.every((n) => typeof n === "string"),
           )
         : [],
-      week: Array.isArray(s.week)
-        ? s.week.filter(
-            (m: WeekMeal) =>
-              m &&
-              typeof m.id === "string" &&
-              daysUntil(m.date) !== null &&
-              ["Pranzo", "Cena"].includes(m.slot) &&
-              Object.hasOwn(recipes, m.recipe) &&
-              [1, 2].includes(m.servings),
-          )
-        : [],
+      week: ((): WeekMeal[] => {
+        const week: WeekMeal[] = Array.isArray(s.week)
+          ? s.week.filter(
+              (m: WeekMeal) =>
+                m &&
+                typeof m.id === "string" &&
+                daysUntil(m.date) !== null &&
+                ["Pranzo", "Cena"].includes(m.slot) &&
+                isRecipeRef(m.recipe) &&
+                [1, 2].includes(m.servings),
+            )
+          : [];
+        if (!legacy) return week;
+        const occasion = legacyOccasion(legacy.when);
+        return week.some(
+          (m) => m.date === occasion.date && m.slot === occasion.slot,
+        )
+          ? week
+          : [
+              {
+                id: "migrated-plan",
+                ...occasion,
+                recipe: legacy.recipe as RecipeRef,
+                servings: legacy.servings,
+              },
+              ...week,
+            ];
+      })(),
       waste: Array.isArray(s.waste)
         ? s.waste.filter(
             (w: WasteEntry) =>
@@ -881,21 +1102,24 @@ export function parseQuantity(raw: string): number | null {
 
 /** Illustration of a prepared dish, from the recipe title (local or catalog). */
 export function dishArt(title: string) {
-  const t = title
-    .toLowerCase()
-    .normalize("NFD")
-    .replace(/[̀-ͯ]/g, "");
+  const t = title.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "");
   for (const [pattern, file] of [
     [/frittat|omelette/, "dish-frittata.svg"],
     [/uova|egg/, "dish-eggs-toast.svg"],
     [/parmigiana|lasagn|al forno|gratin/, "dish-baked.svg"],
     [/polpett|meatball/, "dish-meatballs.svg"],
-    [/zupp|minestr|ribollit|brodo|pasta e (ceci|fagioli|lenticchie|patate)|vellutat/, "dish-soup.svg"],
+    [
+      /zupp|minestr|ribollit|brodo|pasta e (ceci|fagioli|lenticchie|patate)|vellutat/,
+      "dish-soup.svg",
+    ],
     [/caprese|panzanella|insalata(?! di riso)/, "dish-salad.svg"],
     [/bowl|insalata di riso|cous ?cous|poke/, "dish-bowl.svg"],
     [/risott|riso/, "dish-risotto.svg"],
     [/carbonara|cacio|gricia|aglio|burro|alfredo/, "dish-pasta-white.svg"],
-    [/pasta|spaghett|penne|rigaton|norma|linguin|fusill|bucatin|amatrician/, "dish-pasta-tomato.svg"],
+    [
+      /pasta|spaghett|penne|rigaton|norma|linguin|fusill|bucatin|amatrician/,
+      "dish-pasta-tomato.svg",
+    ],
   ] as const)
     if (pattern.test(t)) return file;
   return "dish-frittata.svg";

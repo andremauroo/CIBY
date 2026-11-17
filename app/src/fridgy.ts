@@ -3,11 +3,18 @@ import {
   dayLabel,
   daysUntil,
   isoDay,
-  recipes,
+  available,
+  formatAmount,
+  isLocalRecipe,
+  mealInfo,
+  mealNeeds,
+  nextMeal,
+  occasionLabel,
   upcomingMeals,
   weekBalance,
+  weekToConfirm,
   type MealSlot,
-  type RecipeId,
+  type RecipeRef,
   type State,
 } from "./domain";
 import { catalogMeals } from "./catalog";
@@ -342,11 +349,11 @@ export async function askFridgy(
 }
 
 export type FridgyAction =
-  | { type: "ricetta"; id: RecipeId; servings: number }
+  | { type: "ricetta"; id: RecipeRef; servings: number }
   | { type: "spesa"; name: string }
   | {
       type: "settimana";
-      id: RecipeId;
+      id: RecipeRef;
       date: string;
       slot: MealSlot;
       servings: number;
@@ -365,23 +372,24 @@ export function parseReply(raw: string, today = new Date()) {
       const [type, ...rest] = body.split(":").map((part) => part.trim());
       const servings = (value?: string) => (Number(value) === 1 ? 1 : 2);
       let action: FridgyAction | null = null;
-      if (type === "ricetta" && Object.hasOwn(recipes, rest[0]))
+      const ref = refFromTag(rest[0]);
+      if (type === "ricetta" && ref)
         action = {
           type,
-          id: rest[0] as RecipeId,
+          id: ref,
           servings: servings(rest[1]),
         };
       else if (type === "spesa" && rest.join(":").trim())
         action = { type, name: rest.join(":").trim().slice(0, 80) };
       else if (
         type === "settimana" &&
-        Object.hasOwn(recipes, rest[0]) &&
+        ref &&
         /^[0-6]$/.test(rest[1] || "") &&
         /^(pranzo|cena)$/i.test(rest[2] || "")
       )
         action = {
           type,
-          id: rest[0] as RecipeId,
+          id: ref,
           date: isoDay(Number(rest[1]), today),
           slot: /^pranzo$/i.test(rest[2]) ? "Pranzo" : "Cena",
           servings: servings(rest[3]),
@@ -398,6 +406,12 @@ export function parseReply(raw: string, today = new Date()) {
     .replace(/\n{3,}/g, "\n\n")
     .trim();
   return { text: text || "Ecco cosa ti propongo.", actions };
+}
+
+/** Tags carry plain ids: a computable recipe, or a catalog id like "it-carbonara". */
+function refFromTag(id = ""): RecipeRef | null {
+  if (isLocalRecipe(id)) return id;
+  return catalogMeals.some((m) => m.id === id) ? `catalog:${id}` : null;
 }
 
 /** Everything Fridgy knows about the person, rebuilt at every message. */
@@ -426,40 +440,48 @@ export function userContext(state: State, today = new Date()) {
         })
       : ["- vuota"]),
   );
-  const plan = state.plan;
-  const imported = plan
-    ? catalogMeals.find((m) => `catalog:${m.id}` === plan.recipe)
-    : null;
+  const next = nextMeal(state, today);
   lines.push(
-    "PROSSIMO PASTO: " +
-      (plan
-        ? `${imported?.title || recipes[plan.recipe as RecipeId]?.title || "da verificare"}, ${plan.when.toLowerCase()}, ${
-            imported ? "dosi della fonte" : `${plan.servings} porzioni`
-          }${plan.consumed ? " (già cucinato)" : ""}`
+    "PROSSIMO PASTO (il primo del calendario): " +
+      (next
+        ? `${mealInfo(next.recipe).title}, ${occasionLabel(next, today).toLowerCase()}, ${next.servings} porzioni`
         : "non scelto"),
   );
   const week = upcomingMeals(state.week, today);
   lines.push(
-    "PASTI IN PROGRAMMA NEI PROSSIMI 7 GIORNI:",
+    "CALENDARIO DEI PROSSIMI 7 GIORNI (unico piano; ogni pasto impegna gli ingredienti una sola volta):",
     ...(week.length
       ? week.map(
           (m) =>
-            `- ${dayLabel(m.date, today)} (giorno ${daysUntil(m.date, today)}), ${m.slot.toLowerCase()}: ${recipes[m.recipe].title}, ${m.servings} porzioni`,
+            `- ${dayLabel(m.date, today)} (giorno ${daysUntil(m.date, today)}), ${m.slot.toLowerCase()}: ${mealInfo(m.recipe).title}, ${m.servings} porzioni`,
         )
       : ["- nessuno"]),
   );
+  const toConfirm = weekToConfirm(state, today);
+  if (toConfirm.length)
+    lines.push(
+      "QUANTITÀ DA CONFERMARE NEI PASTI PREVISTI: " +
+        toConfirm
+          .slice(0, 12)
+          .map((l) => `${l.name} (${l.meal}: ${l.measure})`)
+          .join(", "),
+    );
   const balance = weekBalance(state, today);
   const missing = balance.filter((b) => b.missing > 0);
   const free = balance.filter((b) => b.free > 0);
   if (missing.length)
     lines.push(
       "MANCA PER I PASTI PREVISTI: " +
-        missing.map((b) => `${b.label} ${b.missing} ${b.unit}`).join(", "),
+        missing
+          .map((b) => `${b.label} ${formatAmount(b.missing, b.unit)}`)
+          .join(", "),
     );
   if (free.length)
     lines.push(
       "SCORTE SENZA UN PASTO ASSEGNATO: " +
-        free.map((b) => `${b.label} ${b.free} ${b.unit}`).join(", "),
+        free
+          .map((b) => `${b.label} ${formatAmount(b.free, b.unit)}`)
+          .join(", "),
     );
   const toBuy = state.shopping.filter((i) => !i.checked);
   lines.push(
@@ -500,6 +522,26 @@ export function userContext(state: State, today = new Date()) {
       }`;
     }),
   );
+  lines.push(
+    "RICETTARIO ITALIANO (fonti esterne; id fra parentesi; dosi della fonte riportate a 2 porzioni quando verificabili):",
+    ...catalogMeals.map((m) => {
+      const ref = `catalog:${m.id}` as RecipeRef;
+      const lines2 = mealNeeds(ref, 2);
+      const verified = lines2.filter((l) => l.verified);
+      const open = lines2.filter((l) => !l.verified);
+      return `- ${m.title} (${m.id}): ${m.minutes ? `circa ${m.minutes} min` : "tempo non indicato"}. Quantità verificate: ${
+        verified.length
+          ? verified
+              .map((l) => `${l.name} ${formatAmount(l.amount!, l.unit!)}`)
+              .join(", ")
+          : "nessuna"
+      }${open.length ? `; da confermare: ${open.map((l) => l.name).join(", ")}` : ""}. ${
+        available(state.foods, ref, 2)
+          ? "Le quantità verificate sono coperte dalle scorte."
+          : "Mancano alcune quantità verificate."
+      }`;
+    }),
+  );
   return lines.join("\n");
 }
 
@@ -519,10 +561,10 @@ COME RISPONDI
 
 PROPOSTE CHE LA PERSONA PUÒ CONFERMARE
 Tu non modifichi mai dispensa, pasti o spesa. Puoi però aggiungere in fondo alla risposta, ciascuna su una riga, fino a tre proposte che l'app trasforma in pulsanti:
-[[ricetta:ID:PORZIONI]] per aprire una preparazione del ricettario CIBY (PORZIONI 1 o 2)
+[[ricetta:ID:PORZIONI]] per aprire una ricetta (PORZIONI 1 o 2)
 [[settimana:ID:GIORNO:Pranzo|Cena:PORZIONI]] per metterla in programma (GIORNO da 0 = oggi a 6)
 [[spesa:Nome alimento]] per aggiungere un alimento alla lista della spesa
-Usa solo gli ID del ricettario. Non scrivere mai questi codici dentro le frasi e non nominarli: scrivi il testo come se i pulsanti comparissero da soli. Non dire di aver salvato o modificato qualcosa.
+ID può essere una preparazione del ricettario CIBY (per esempio frittata) oppure una ricetta del ricettario italiano (per esempio it-carbonara). Per le ricette italiane di' che alcune quantità vanno confermate dalla persona. Usa solo gli ID elencati. Non scrivere mai questi codici dentro le frasi e non nominarli: scrivi il testo come se i pulsanti comparissero da soli. Non dire di aver salvato o modificato qualcosa.
 
 DATI DELLA PERSONA (aggiornati a questo messaggio)
 ${userContext(state, today)}`;

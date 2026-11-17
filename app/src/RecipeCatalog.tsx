@@ -1,6 +1,15 @@
 import { useState } from "react";
 import { Modal, Button, asset } from "./components";
-import { dishArt } from "./domain";
+import {
+  dishArt,
+  isoDay,
+  mealInfo,
+  occasionLabel,
+  upcomingMeals,
+  type MealSlot,
+  type WeekMeal,
+} from "./domain";
+import { MealNeedsList } from "./MealParts";
 import {
   catalogMeals,
   catalogSearch,
@@ -20,9 +29,22 @@ export default function RecipeCatalog({
   onToggleFavorite,
   onAddIngredients,
   onOpenShopping,
+  week = [],
+  planTarget = null,
+  onPlan,
 }: {
   onClose: () => void;
-  onSelect: (meal: CatalogMeal) => void;
+  /** Use this recipe for the next meal of the calendar. */
+  onSelect: (meal: CatalogMeal, servings: number) => void;
+  week?: WeekMeal[];
+  /** Occasion picked in the week view, preselected for planning. */
+  planTarget?: { date: string; slot: MealSlot } | null;
+  onPlan?: (
+    meal: CatalogMeal,
+    date: string,
+    slot: MealSlot,
+    servings: number,
+  ) => void;
   foods: Food[];
   initialId?: string | null;
   initialQuery?: string;
@@ -39,6 +61,23 @@ export default function RecipeCatalog({
   const [selected, setSelected] = useState<string | null>(initialId);
   const [selection, setSelection] = useState<number[] | null>(null);
   const [feedback, setFeedback] = useState("");
+  const [servings, setServings] = useState(2);
+  const upcoming = upcomingMeals(week);
+  const occasions = Array.from({ length: 7 }, (_, i) => isoDay(i)).flatMap(
+    (date) =>
+      (["Pranzo", "Cena"] as MealSlot[]).map((slot) => ({
+        value: `${date}|${slot}`,
+        date,
+        slot,
+        taken: upcoming.find((m) => m.date === date && m.slot === slot),
+      })),
+  );
+  const [occasion, setOccasion] = useState(
+    planTarget
+      ? `${planTarget.date}|${planTarget.slot}`
+      : (occasions.find((o) => !o.taken) || occasions[0]).value,
+  );
+  const chosen = occasions.find((o) => o.value === occasion) || occasions[0];
   const meal = catalogMeals.find((m) => m.id === selected);
   const ingredients = meal ? ingredientMatches(meal, foods) : [];
   const checked =
@@ -87,9 +126,62 @@ export default function RecipeCatalog({
               : `Preparazione e cottura: circa ${meal.minutes} min.`}{" "}
             {meal.timingNote}
           </p>
-          <Button onClick={() => onSelect(meal)}>
-            Scegli per il prossimo pasto
-          </Button>
+          <section className="catalog-plan" aria-labelledby="plan-title">
+            <h3 id="plan-title">Mettila in programma</h3>
+            <p className="footnote">
+              Le dosi della fonte (
+              {meal.servingsLabel || "porzioni non indicate"}) sono riportate
+              alle tue porzioni quando la quantità è numerica e l’alimento è
+              tracciato. Le altre restano da confermare e non vengono mai
+              sottratte dalle scorte.
+            </p>
+            <div className="segmented" role="group" aria-label="Porzioni">
+              {[1, 2].map((n) => (
+                <button
+                  key={n}
+                  aria-pressed={servings === n}
+                  onClick={() => setServings(n)}
+                >
+                  {n === 1 ? "Solo per me" : "Per due"}
+                </button>
+              ))}
+            </div>
+            <MealNeedsList
+              recipe={`catalog:${meal.id}`}
+              servings={servings}
+              foods={foods}
+            />
+            {onPlan && (
+              <>
+                <label className="catalog-occasion">
+                  Occasione
+                  <select
+                    value={chosen.value}
+                    onChange={(e) => setOccasion(e.target.value)}
+                  >
+                    {occasions.map((o) => (
+                      <option key={o.value} value={o.value}>
+                        {occasionLabel(o)}
+                        {o.taken
+                          ? ` · sostituisce ${mealInfo(o.taken.recipe).title}`
+                          : ""}
+                      </option>
+                    ))}
+                  </select>
+                </label>
+                <Button
+                  onClick={() =>
+                    onPlan(meal, chosen.date, chosen.slot, servings)
+                  }
+                >
+                  Metti in programma
+                </Button>
+              </>
+            )}
+            <Button secondary onClick={() => onSelect(meal, servings)}>
+              Scegli per il prossimo pasto
+            </Button>
+          </section>
           <section
             className="ingredient-review"
             aria-labelledby="ingredients-title"

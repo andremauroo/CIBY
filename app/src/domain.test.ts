@@ -7,6 +7,13 @@ import {
   suggestions,
   consume,
   needs,
+  convert,
+  formatAmount,
+  stockOf,
+  available,
+  parseMeasure,
+  mealNeeds,
+  cookMeal,
   parseQuantity,
   dishArt,
   artFor,
@@ -35,7 +42,12 @@ describe("Contratti HCI: proposte e consumo separati", () => {
   it("spostare e ridurre porzioni non modifica le scorte", () => {
     const state = {
       ...initialState,
-      plan: { ...initialState.plan!, when: "Domani a pranzo", servings: 1 },
+      week: initialState.week.map((m) => ({
+        ...m,
+        date: isoDay(1),
+        slot: "Pranzo" as const,
+        servings: 1,
+      })),
     };
     expect(state.foods).toEqual(initialState.foods);
     expect(needs("frittata", 1)).toEqual({ zucchine: 1, uova: 2 });
@@ -67,6 +79,7 @@ describe("Contratti HCI: proposte e consumo separati", () => {
   });
   it("recupera salvataggi corrotti e conserva quelli validi", () => {
     expect(parseState("not json")).toEqual(initialState);
+    // A broken legacy plan is ignored; it never erases the rest.
     expect(
       parseState(JSON.stringify({ ...initialState, plan: { recipe: "fake" } })),
     ).toEqual(initialState);
@@ -74,17 +87,33 @@ describe("Contratti HCI: proposte e consumo separati", () => {
   });
 });
 
-it("conserva un piano del catalogo italiano senza consumi automatici e aggiorna le icone", () => {
+it("un pasto del catalogo sottrae solo le quantità verificate", () => {
+  const ref = "catalog:it-carbonara" as const;
+  const lines = mealNeeds(ref, 2);
+  // Spaghetti 320 g for 4 → 160 g for 2; pecorino and guanciale are not tracked.
+  expect(lines.find((l) => l.key === "pasta")).toMatchObject({
+    amount: 160,
+    unit: "g",
+    verified: true,
+  });
+  expect(lines.filter((l) => !l.verified).map((l) => l.reason)).toContain(
+    "non tracciato in dispensa",
+  );
   const state = {
     ...initialState,
-    plan: {
-      recipe: `catalog:${catalogMeals[0].id}` as const,
-      when: "Stasera",
-      servings: 1,
-      consumed: false,
-    },
+    week: [
+      {
+        id: "c",
+        date: isoDay(0),
+        slot: "Cena" as const,
+        recipe: ref,
+        servings: 2,
+      },
+    ],
   };
-  expect(consume(state)).toEqual(state);
+  const cooked = cookMeal(state, "c");
+  expect(cooked.foods.find((f) => f.id === "pasta")?.quantity).toBe(340);
+  expect(cooked.week).toEqual([]);
   expect(parseState(JSON.stringify(state))).toEqual(state);
 });
 
@@ -100,11 +129,25 @@ describe("Migrazione dei dati personali", () => {
           quantity: 9,
         },
       ],
-      plan: { ...initialState.plan!, when: "Domani a cena", servings: 1 },
+      plan: {
+        recipe: "frittata",
+        when: "Domani a cena",
+        servings: 1,
+        consumed: false,
+      },
     };
     const restored = parseState(JSON.stringify(oldSave));
     expect(restored.foods).toEqual(oldSave.foods);
-    expect(restored.plan).toEqual(oldSave.plan);
+    // The separate plan becomes a meal of the calendar.
+    expect(restored.week).toEqual([
+      {
+        id: "migrated-plan",
+        date: isoDay(1),
+        slot: "Cena",
+        recipe: "frittata",
+        servings: 1,
+      },
+    ]);
     expect(restored.shopping).toEqual([]);
     expect(restored.favoriteIds).toEqual([]);
   });
@@ -137,7 +180,7 @@ describe("Migrazione dei dati personali", () => {
     };
     const restored = parseState(JSON.stringify(saved));
     expect(restored.foods).toEqual(saved.foods);
-    expect(restored.plan).toEqual(saved.plan);
+    expect(restored.week).toEqual(saved.week);
     expect(restored.favoriteIds).toEqual([catalogMeals[0].id]);
     expect(restored.shopping).toEqual([item]);
     expect(parseState(JSON.stringify(restored))).toEqual(restored);
@@ -147,6 +190,7 @@ describe("Migrazione dei dati personali", () => {
 it("rimuove un vecchio piano ritirato senza perdere scorte, spesa e storico", () => {
   const saved = {
     ...initialState,
+    week: [],
     plan: {
       recipe: "mealdb:53064",
       when: "Stasera",
@@ -155,9 +199,73 @@ it("rimuove un vecchio piano ritirato senza perdere scorte, spesa e storico", ()
     },
   };
   const loaded = parseState(JSON.stringify(saved));
-  expect(loaded.plan).toBeNull();
+  expect(loaded.week).toEqual([]);
   expect(loaded.foods).toEqual(initialState.foods);
   expect(loaded.shopping).toEqual(initialState.shopping);
+});
+
+it("un piano già presente nel calendario non viene contato due volte", () => {
+  const saved = {
+    ...initialState,
+    plan: { recipe: "riso", when: "Stasera", servings: 2, consumed: false },
+  };
+  // Tonight is already taken by the frittata of the calendar.
+  expect(parseState(JSON.stringify(saved)).week).toEqual(initialState.week);
+  const balance = weekBalance(initialState);
+  expect(balance.find((b) => b.key === "zucchine")?.need).toBe(2);
+});
+
+describe("Conversioni delle quantità", () => {
+  it("converte kg e g, l e ml, mai pezzi e grammi", () => {
+    expect(convert(0.5, "kg", "g")).toBe(500);
+    expect(convert(250, "ml", "l")).toBe(0.25);
+    expect(convert(2, "pezzi", "g")).toBeNull();
+    expect(formatAmount(1500, "g")).toBe("1,5 kg");
+    expect(formatAmount(160, "g")).toBe("160 g");
+  });
+  it("0,5 kg di riso vale 500 g per ricette, bilancio e consumo", () => {
+    const foods = initialState.foods.map((f) =>
+      f.id === "riso" ? { ...f, quantity: 0.5, unit: "kg" as const } : f,
+    );
+    expect(stockOf(foods, "riso")).toBe(500);
+    expect(available(foods, "riso", 2)).toBe(true);
+    const state = {
+      ...initialState,
+      foods,
+      week: [
+        {
+          id: "r",
+          date: isoDay(0),
+          slot: "Cena" as const,
+          recipe: "riso" as const,
+          servings: 2,
+        },
+      ],
+    };
+    expect(weekBalance(state).find((b) => b.key === "riso")).toMatchObject({
+      have: 500,
+      need: 160,
+      free: 340,
+    });
+    const cooked = cookMeal(state, "r");
+    expect(cooked.foods.find((f) => f.id === "riso")).toMatchObject({
+      quantity: 0.34,
+      unit: "kg",
+    });
+  });
+  it("legge le misure numeriche della fonte e scarta le altre", () => {
+    expect(parseMeasure("320 g")).toEqual({ quantity: 320, unit: "g" });
+    expect(parseMeasure("1,5 l")).toEqual({ quantity: 1.5, unit: "l" });
+    expect(parseMeasure("6 medie")).toEqual({ quantity: 6, unit: "pezzi" });
+    expect(parseMeasure("250 g pulita")).toEqual({ quantity: 250, unit: "g" });
+    for (const m of [
+      "q.b.",
+      "3 spicchi",
+      "50 g + q.b. per servire",
+      "1 cucchiaio",
+    ])
+      expect(parseMeasure(m), m).toBeNull();
+  });
 });
 
 it("B01 conserva la priorità manuale e ignora date impossibili", () => {

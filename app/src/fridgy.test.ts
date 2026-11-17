@@ -38,7 +38,9 @@ describe("Contesto della persona per Fridgy", () => {
     );
     expect(context).toContain("Zucchine: 2 pezzi, in frigo");
     expect(context).toContain("da usare per primi");
-    expect(context).toContain("PROSSIMO PASTO: Frittata di zucchine, stasera");
+    expect(context).toContain(
+      "PROSSIMO PASTO (il primo del calendario): Bowl di riso e pollo, domani a cena",
+    );
     expect(context).toContain("Domani (giorno 1), cena: Bowl di riso e pollo");
     expect(context).toMatch(/MANCA PER I PASTI PREVISTI: .*Pollo 300 g/);
     expect(context).toContain("LISTA DELLA SPESA: Ceci");
@@ -73,6 +75,31 @@ describe("Risposte del modello", () => {
       { type: "spesa", name: "Basilico" },
     ]);
     expect(parseReply("[[ricetta:caprese:1]]").text).not.toBe("");
+  });
+});
+
+describe("Ricette del ricettario italiano in Fridgy", () => {
+  it("riconosce gli id del catalogo e li rende pianificabili", () => {
+    const reply = parseReply(
+      "Con la pasta puoi fare una carbonara.\n[[ricetta:it-carbonara:2]]\n[[settimana:it-carbonara:1:Cena:2]]\n[[ricetta:it-inventata:2]]",
+      today,
+    );
+    expect(reply.actions).toEqual([
+      { type: "ricetta", id: "catalog:it-carbonara", servings: 2 },
+      {
+        type: "settimana",
+        id: "catalog:it-carbonara",
+        date: "2026-11-18",
+        slot: "Cena",
+        servings: 2,
+      },
+    ]);
+  });
+  it("il contesto distingue quantità verificate e da confermare", () => {
+    const context = userContext(initialState, today);
+    expect(context).toMatch(
+      /Spaghetti alla carbonara \(it-carbonara\).*Quantità verificate: .*Pasta 160 g.*da confermare: .*Guanciale/,
+    );
   });
 });
 

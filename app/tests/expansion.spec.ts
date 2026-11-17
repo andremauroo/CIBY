@@ -54,7 +54,7 @@ test("le ricette preferite persistono e possono essere rimosse senza cambiare il
   const after = await readSaved(page);
   expect(after.favoriteIds).toEqual([]);
   expect(after.foods).toEqual(before.foods);
-  expect(after.plan).toEqual(before.plan);
+  expect(after.week).toEqual(before.week);
 });
 
 test("gli ingredienti selezionati passano alla spesa una sola volta e lasciano invariate le scorte", async ({
@@ -100,7 +100,7 @@ test("gli ingredienti selezionati passano alla spesa una sola volta e lasciano i
   expect(after.shopping[0].sources).toHaveLength(1);
   expect(after.shopping[0].sources[0].title).toBe("Lasagne alla bolognese");
   expect(after.foods).toEqual(before.foods);
-  expect(after.plan).toEqual(before.plan);
+  expect(after.week).toEqual(before.week);
   expect(
     await page
       .getByRole("dialog")

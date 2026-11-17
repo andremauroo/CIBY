@@ -115,3 +115,37 @@
 .catalog-feedback:empty {
   display: none;
 }
+.catalog-plan {
+  display: grid;
+  gap: 10px;
+  margin-top: 16px;
+  padding: 14px;
+  border-radius: 16px;
+  background: var(--color-brandSoft);
+}
+.catalog-plan h3 {
+  font-size: 16px;
+}
+.catalog-occasion {
+  display: grid;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 700;
+}
+.catalog-occasion select {
+  min-height: 48px;
+  padding: 10px 12px;
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  background: var(--color-card);
+  color: var(--color-text);
+}
+.catalog-occasion select,
+.catalog-plan .segmented {
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+}
+.catalog-plan {
+  min-width: 0;
+}

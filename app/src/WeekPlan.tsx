@@ -1,15 +1,19 @@
 import { useState } from "react";
 import { Button, FoodImage } from "./components";
+import { CookSummary } from "./MealParts";
 import {
   artFor,
   dishArt,
   available,
   dayLabel,
+  formatAmount,
   isoDay,
-  needs,
-  recipes,
+  mealInfo,
+  mealNeeds,
   upcomingMeals,
+  verifiedNeeds,
   weekBalance,
+  weekToConfirm,
   type MealSlot,
   type State,
   type WeekMeal,
@@ -28,7 +32,9 @@ export default function WeekPlan({
   onRemove,
   onCook,
   onBuy,
+  onOpen,
 }: {
+  onOpen: (meal: WeekMeal) => void;
   state: State;
   onAdd: (date: string, slot: MealSlot) => void;
   onMove: (id: string, date: string, slot: MealSlot) => void;
@@ -47,14 +53,18 @@ export default function WeekPlan({
   const free = balance
     .filter((b) => b.free > 0)
     .sort((a, b) => Number(b.soon) - Number(a.soon));
+  const confirmList = weekToConfirm(state).filter((l) => l.key);
   const taken = (date: string, slot: MealSlot) =>
     meals.some((m) => m.date === date && m.slot === slot);
 
   function mealRow(meal: WeekMeal) {
-    const recipe = recipes[meal.recipe];
-    const lacking = Object.keys(needs(meal.recipe, meal.servings)).filter(
-      (key) => missing.some((b) => b.key === key),
-    );
+    const recipe = mealInfo(meal.recipe);
+    const lacking = Object.keys(
+      verifiedNeeds(meal.recipe, meal.servings),
+    ).filter((key) => missing.some((b) => b.key === key));
+    const toConfirm = mealNeeds(meal.recipe, meal.servings).filter(
+      (l) => !l.verified,
+    ).length;
     const ready = available(state.foods, meal.recipe, meal.servings);
     return (
       <div className="week-meal">
@@ -63,7 +73,10 @@ export default function WeekPlan({
           <div>
             <strong>{recipe.title}</strong>
             <small>
-              {recipe.time} min · {recipe.effort} ·{" "}
+              {recipe.time === null
+                ? "Tempo non indicato"
+                : `${recipe.time} min`}{" "}
+              · {recipe.effort} ·{" "}
               {meal.servings === 1 ? "1 persona" : "2 persone"}
             </small>
           </div>
@@ -74,8 +87,17 @@ export default function WeekPlan({
                 .filter((b) => lacking.includes(b.key))
                 .map((b) => b.label.toLowerCase())
                 .join(", ")}`
-            : "Ingredienti coperti dalle scorte"}
+            : toConfirm
+              ? "Quantità verificate coperte dalle scorte"
+              : "Ingredienti coperti dalle scorte"}
         </p>
+        {toConfirm > 0 && (
+          <p className="week-status confirm">
+            {toConfirm === 1
+              ? "1 quantità della ricetta da confermare"
+              : `${toConfirm} quantità della ricetta da confermare`}
+          </p>
+        )}
         {moving === meal.id ? (
           <label className="week-move">
             Nuova occasione per {recipe.title}
@@ -109,10 +131,7 @@ export default function WeekPlan({
           </label>
         ) : cooking === meal.id ? (
           <div className="week-confirm">
-            <p>
-              Verranno sottratte dalle scorte le quantità previste per{" "}
-              {meal.servings === 1 ? "una porzione" : "due porzioni"}.
-            </p>
+            <CookSummary recipe={meal.recipe} servings={meal.servings} />
             <Button
               onClick={() => {
                 onCook(meal.id);
@@ -127,6 +146,7 @@ export default function WeekPlan({
           </div>
         ) : (
           <div className="week-actions">
+            <button onClick={() => onOpen(meal)}>Ricetta</button>
             <button onClick={() => setMoving(meal.id)}>Sposta</button>
             <button disabled={!ready} onClick={() => setCooking(meal.id)}>
               Ho cucinato
@@ -212,8 +232,11 @@ export default function WeekPlan({
                   <div>
                     <strong>{b.label}</strong>
                     <small>
-                      {b.need} {b.unit} previsti · ne hai {b.have}
-                      {b.missing ? ` · mancano ${b.missing}` : ""}
+                      {formatAmount(b.need, b.unit)} previsti · ne hai{" "}
+                      {formatAmount(b.have, b.unit)}
+                      {b.missing
+                        ? ` · mancano ${formatAmount(b.missing, b.unit)}`
+                        : ""}
                     </small>
                     <small>Per {b.meals.join(", ")}</small>
                   </div>
@@ -227,7 +250,7 @@ export default function WeekPlan({
                   onBuy(
                     missing.map((b) => ({
                       name: b.label,
-                      measure: `${b.missing} ${b.unit}`,
+                      measure: formatAmount(b.missing, b.unit),
                     })),
                   )
                 }
@@ -247,6 +270,27 @@ export default function WeekPlan({
             vedrai qui cosa è coperto dalle scorte e cosa manca.
           </p>
         )}
+        {confirmList.length > 0 && (
+          <details className="meal-confirm">
+            <summary>
+              {confirmList.length === 1
+                ? "1 quantità da confermare nelle ricette del ricettario"
+                : `${confirmList.length} quantità da confermare nelle ricette del ricettario`}
+            </summary>
+            <ul>
+              {confirmList.map((l, i) => (
+                <li key={i}>
+                  <strong>{l.name}</strong> · {l.measure}{" "}
+                  <small>· {l.meal}</small>
+                </li>
+              ))}
+            </ul>
+            <p className="footnote">
+              Non sono incluse nei conteggi qui sopra: la fonte non indica una
+              quantità confrontabile con la dispensa.
+            </p>
+          </details>
+        )}
       </section>
       {free.length > 0 && (
         <section className="week-free" aria-labelledby="week-free-title">
@@ -261,7 +305,8 @@ export default function WeekPlan({
                 <span>
                   <strong>{b.label}</strong>
                   <small>
-                    {b.free} {b.unit} {b.need ? "in più" : "da destinare"}
+                    {formatAmount(b.free, b.unit)}{" "}
+                    {b.need ? "in più" : "da destinare"}
                   </small>
                 </span>
                 {b.soon && (

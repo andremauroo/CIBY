@@ -10,6 +10,7 @@ export default function ShoppingList({
   onChange,
   onStock,
   onStockAll,
+  onRemove,
   onExplore,
   foods = [],
 }: {
@@ -18,6 +19,8 @@ export default function ShoppingList({
   onChange: (items: ShoppingItem[]) => void;
   onStock: (item: ShoppingItem) => void;
   onStockAll?: () => void;
+  /** Removal with undo, handled by the app. */
+  onRemove?: (item: ShoppingItem) => void;
   onExplore: () => void;
 }) {
   const [name, setName] = useState("");
@@ -164,7 +167,8 @@ export default function ShoppingList({
               <button
                 className="text-button"
                 onClick={() => {
-                  onChange(items.filter((entry) => entry.id !== item.id));
+                  if (onRemove) onRemove(item);
+                  else onChange(items.filter((entry) => entry.id !== item.id));
                   setRemoveId(null);
                   nameInput.current?.focus();
                   setAnnouncement(

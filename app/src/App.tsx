@@ -23,6 +23,7 @@ import {
   type FridgySettings,
 } from "./fridgy";
 import { asset, Button, Modal, FoodImage, ExpiryChip } from "./components";
+import { CookSummary, MealNeedsList } from "./MealParts";
 import { useEffect, useRef, useState, type FormEvent } from "react";
 import {
   initialState,
@@ -32,13 +33,18 @@ import {
   recipes,
   suggestions,
   available,
-  consume,
   needs,
   artFor,
   useSoon,
   compareOptions,
-  cookWeekMeal,
+  cookMeal,
+  catalogMealFor,
   dayLabel,
+  isLocalRecipe,
+  mealInfo,
+  mealNeeds,
+  nextMeal,
+  occasionLabel,
   stockPurchases,
   dishArt,
   parseQuantity,
@@ -52,8 +58,8 @@ import {
   type State,
   type Food,
   type RecipeId,
-  type Plan,
   type MealSlot,
+  type RecipeRef,
 } from "./domain";
 const icons = {
   Oggi: "c2520.svg",
@@ -81,6 +87,11 @@ export default function App() {
   const [catalogOpen, setCatalogOpen] = useState(false);
   const [catalogInitialId, setCatalogInitialId] = useState<string | null>(null);
   const [catalogQuery, setCatalogQuery] = useState("");
+  /** Occasion chosen in the week, when the person picks from the catalog. */
+  const [catalogTarget, setCatalogTarget] = useState<{
+    date: string;
+    slot: MealSlot;
+  } | null>(null);
   function openCatalog(id: string | null = null, query = "") {
     setCatalogInitialId(id);
     setCatalogQuery(query);
@@ -154,11 +165,13 @@ export default function App() {
   const placeField = useRef<HTMLSelectElement>(null);
   useEffect(() => setFormError(null), [edit]);
   const [notice, setNotice] = useState("");
-  const [servings, setServings] = useState(1);
-  const [when, setWhen] = useState("Domani a pranzo");
-  const [previousPlan, setPreviousPlan] = useState<Plan | null>(null);
-  const [moveDone, setMoveDone] = useState(false);
+  const [moveTo, setMoveTo] = useState("");
+  const [moveServings, setMoveServings] = useState<number | null>(null);
   const [consumeConfirm, setConsumeConfirm] = useState(false);
+  /** One step back for frequent operations, offered in the toast. */
+  const [undo, setUndo] = useState<{ state: State; label: string } | null>(
+    null,
+  );
   const [messages, setMessages] = useState<Message[]>(
     () =>
       savedChat?.messages || [
@@ -223,10 +236,32 @@ export default function App() {
       });
   }, [messages]);
   useEffect(() => {
-    if (!notice) return;
-    const timer = setTimeout(() => setNotice(""), 5000);
+    if (!notice) {
+      setUndo(null);
+      return;
+    }
+    const timer = setTimeout(() => setNotice(""), undo ? 8000 : 5000);
     return () => clearTimeout(timer);
-  }, [notice]);
+  }, [notice, undo]);
+  /**
+   * Apply a change that can be undone from the toast. Returns false when
+   * nothing changed (for example, a meal that cannot be cooked yet).
+   */
+  function change(update: (s: State) => State, message: string) {
+    const previous = state;
+    const next = update(previous);
+    if (next === previous) return false;
+    setState(next);
+    setUndo({ state: previous, label: message });
+    setNotice(message);
+    return true;
+  }
+  function undoLast() {
+    if (!undo) return;
+    setState(undo.state);
+    setUndo(null);
+    setNotice("Operazione annullata.");
+  }
   const inStock = state.foods.filter((f) => f.quantity > 0);
   const soon = useSoon(state.foods);
   const focus = soon[0] || inStock[0];
@@ -253,58 +288,128 @@ export default function App() {
   /** Quick update without opening the form; reaching zero counts as finished. */
   function takeOne(food: Food) {
     const left = Math.max(0, Math.round((food.quantity - 1) * 10) / 10);
-    setState((s) => ({
-      ...s,
-      foods: s.foods.map((f) =>
-        f.id === food.id ? { ...f, quantity: left } : f,
-      ),
-      waste:
-        left === 0
-          ? [
-              ...s.waste,
-              { date: isoDay(), name: food.name, outcome: "finito" as const },
-            ].slice(-100)
-          : s.waste,
-    }));
-    setNotice(
+    change(
+      (s) => ({
+        ...s,
+        foods: s.foods.map((f) =>
+          f.id === food.id ? { ...f, quantity: left } : f,
+        ),
+        waste:
+          left === 0
+            ? [
+                ...s.waste,
+                { date: isoDay(), name: food.name, outcome: "finito" as const },
+              ].slice(-100)
+            : s.waste,
+      }),
       left === 0
         ? `${food.name} finito: tolto dalle scorte.`
         : `${food.name}: ne restano ${left} ${food.unit}.`,
     );
   }
   function removeFood(food: Food, outcome: "finito" | "buttato") {
-    setState((s) => ({
-      ...s,
-      foods: s.foods.filter((f) => f.id !== food.id),
-      waste: [...s.waste, { date: isoDay(), name: food.name, outcome }].slice(
-        -100,
-      ),
-    }));
-    setEdit(undefined);
-    setNotice(
+    change(
+      (s) => ({
+        ...s,
+        foods: s.foods.filter((f) => f.id !== food.id),
+        waste: [...s.waste, { date: isoDay(), name: food.name, outcome }].slice(
+          -100,
+        ),
+      }),
       outcome === "buttato"
         ? `${food.name} rimosso e segnato come buttato.`
         : `${food.name} rimosso: finito.`,
     );
+    setEdit(undefined);
   }
   const dateLabel = today.toLocaleDateString("it-IT", {
     weekday: "long",
     day: "numeric",
     month: "long",
   });
-  const plan = state.plan;
-  const importedMeal = plan
-    ? catalogMeals.find((m) => `catalog:${m.id}` === plan.recipe)
-    : null;
-  const planRecipe = importedMeal
-    ? {
-        title: importedMeal.title,
-        time: importedMeal.minutes,
-        effort: importedMeal.sourceName,
-      }
-    : plan
-      ? recipes[plan.recipe as RecipeId]
-      : null;
+  const next = nextMeal(state);
+  const nextInfo = next ? mealInfo(next.recipe) : null;
+  const importedMeal = next ? catalogMealFor(next.recipe) : null;
+  const nextToConfirm = next
+    ? mealNeeds(next.recipe, next.servings).filter((l) => !l.verified && l.key)
+        .length
+    : 0;
+  /** Occasions of the next 7 days, optionally ignoring one meal (when moving it). */
+  function occasions(ignore?: string) {
+    return Array.from({ length: 7 }, (_, i) => isoDay(i)).flatMap((date) =>
+      (["Pranzo", "Cena"] as MealSlot[]).map((slot) => ({
+        date,
+        slot,
+        value: `${date}|${slot}`,
+        label: occasionLabel({ date, slot }),
+        taken:
+          upcomingMeals(state.week).find(
+            (m) => m.id !== ignore && m.date === date && m.slot === slot,
+          ) || null,
+      })),
+    );
+  }
+  /** Put a recipe on an occasion; whatever was there is replaced. */
+  function planMeal(
+    recipe: RecipeRef,
+    date: string,
+    slot: MealSlot,
+    servings: number,
+    message = `${mealInfo(recipe).title} in programma: ${occasionLabel({ date, slot }).toLowerCase()}. Scorte invariate.`,
+  ) {
+    return change(
+      (s) => ({
+        ...s,
+        week: [
+          ...s.week.filter((m) => !(m.date === date && m.slot === slot)),
+          { id: weekId(), date, slot, recipe, servings },
+        ],
+      }),
+      message,
+    );
+  }
+  /** Change the recipe of the next meal, keeping its occasion. */
+  function replaceNext(recipe: RecipeRef, servings: number) {
+    if (!next) return planMeal(recipe, isoDay(0), "Cena", servings);
+    return change(
+      (s) => ({
+        ...s,
+        week: s.week.map((m) =>
+          m.id === next.id ? { ...m, recipe, servings } : m,
+        ),
+      }),
+      `${mealInfo(recipe).title}: ${occasionLabel(next).toLowerCase()}. Scorte invariate.`,
+    );
+  }
+  function moveMeal(
+    id: string,
+    date: string,
+    slot: MealSlot,
+    servings?: number,
+  ) {
+    return change(
+      (s) => ({
+        ...s,
+        week: s.week
+          .filter((m) => m.id === id || !(m.date === date && m.slot === slot))
+          .map((m) =>
+            m.id === id
+              ? { ...m, date, slot, servings: servings ?? m.servings }
+              : m,
+          ),
+      }),
+      `Pasto spostato: ${occasionLabel({ date, slot }).toLowerCase()}. Gli ingredienti restano disponibili.`,
+    );
+  }
+  function openRecipe(recipe: RecipeRef, servings?: number) {
+    if (isLocalRecipe(recipe)) {
+      if (servings) setChatServings(servings);
+      setDetail(recipe);
+    } else {
+      const meal = catalogMealFor(recipe);
+      if (meal) openCatalog(meal.id);
+    }
+  }
   const ideas = suggestions(state.foods, chatServings, chatTime, excluded);
   const go = (next: Tab) => {
     setTab(next);
@@ -439,46 +544,32 @@ export default function App() {
   }
   const actionKey = (index: number, n: number) => `${index}-${n}`;
   function actionLabel(action: FridgyAction) {
-    if (action.type === "ricetta")
-      return `Apri ${recipes[action.id].title} · ${action.servings === 1 ? "1 persona" : "2 persone"}`;
     if (action.type === "spesa") return `Aggiungi ${action.name} alla spesa`;
-    return `Programma ${recipes[action.id].title} · ${dayLabel(action.date).toLowerCase()}, ${action.slot.toLowerCase()}`;
+    const title = mealInfo(action.id).title;
+    if (action.type === "ricetta")
+      return `Apri ${title} · ${action.servings === 1 ? "1 persona" : "2 persone"}`;
+    return `Programma ${title} · ${occasionLabel(action).toLowerCase()}`;
   }
   function runAction(action: FridgyAction, key: string) {
     if (action.type === "ricetta") {
-      setChatServings(action.servings);
-      setDetail(action.id);
+      openRecipe(action.id, action.servings);
       return;
     }
-    if (action.type === "spesa") {
-      setState((s) => ({
-        ...s,
-        shopping: addShoppingIngredients(
-          s.shopping,
-          [{ name: action.name, measure: "" }],
-          { id: "fridgy", title: "Suggerito da Fridgy" },
-        ),
-      }));
-      setNotice(`${action.name} aggiunto alla lista della spesa.`);
-    } else {
-      setState((s) => ({
-        ...s,
-        week: [
-          ...s.week.filter(
-            (m) => !(m.date === action.date && m.slot === action.slot),
-          ),
-          {
-            id: weekId(),
-            date: action.date,
-            slot: action.slot,
-            recipe: action.id,
-            servings: action.servings,
-          },
-        ],
-      }));
-      setNotice(`${recipes[action.id].title} in programma. Scorte invariate.`);
-    }
-    setDoneActions((done) => [...done, key]);
+    const done =
+      action.type === "spesa"
+        ? change(
+            (s) => ({
+              ...s,
+              shopping: addShoppingIngredients(
+                s.shopping,
+                [{ name: action.name, measure: "" }],
+                { id: "fridgy", title: "Suggerito da Fridgy" },
+              ),
+            }),
+            `${action.name} aggiunto alla lista della spesa.`,
+          )
+        : planMeal(action.id, action.date, action.slot, action.servings);
+    if (done) setDoneActions((list) => [...list, key]);
   }
   function saveFood(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -515,56 +606,58 @@ export default function App() {
     };
     const expires = String(data.get("expires") || "");
     if (/^\d{4}-\d{2}-\d{2}$/.test(expires)) food.expires = expires;
-    setState((s) => ({
-      ...s,
-      foods: edit
-        ? s.foods.map((f) => (f.id === id ? food : f))
-        : [...s.foods, food],
-      shopping: purchase
-        ? s.shopping.filter((item) => item.id !== purchase.id)
-        : s.shopping,
-    }));
-    setEdit(undefined);
-    setPurchase(null);
-    setNotice(
+    change(
+      (s) => ({
+        ...s,
+        foods: edit
+          ? s.foods.map((f) => (f.id === id ? food : f))
+          : [...s.foods, food],
+        shopping: purchase
+          ? s.shopping.filter((item) => item.id !== purchase.id)
+          : s.shopping,
+      }),
       purchase
         ? "Acquisto aggiunto alla dispensa e rimosso dalla lista."
-        : "Alimento salvato nella dispensa.",
+        : edit
+          ? `${name} aggiornato.`
+          : `${name} aggiunto alla dispensa.`,
     );
+    setEdit(undefined);
+    setPurchase(null);
   }
   function mealCard() {
-    return plan && planRecipe ? (
+    return next && nextInfo ? (
       <div className="meal-card">
         <FoodImage
-          file={dishArt(planRecipe.title)}
+          file={dishArt(nextInfo.title)}
           size={tab === "Pasti" ? 64 : 72}
         />
         <div>
           <small>
-            {plan.when} ·{" "}
-            {importedMeal
-              ? `Dosi fonte: ${importedMeal.servingsLabel} persone`
-              : plan.servings === 1
-                ? "1 persona"
-                : "2 persone"}
-            {plan.consumed ? " · Cucinato" : ""}
+            {occasionLabel(next)} ·{" "}
+            {next.servings === 1 ? "1 persona" : "2 persone"}
           </small>
-          <h3>{planRecipe.title}</h3>
+          <h3>{nextInfo.title}</h3>
           <small>
-            {planRecipe.time === null
+            {nextInfo.time === null
               ? "Tempo non disponibile"
-              : `${planRecipe.time} min`}{" "}
-            · {planRecipe.effort}
+              : `${nextInfo.time} min`}{" "}
+            · {nextInfo.effort}
           </small>
           <p className="green small">
-            {plan.consumed
-              ? "Scorte aggiornate dopo la tua conferma"
-              : importedMeal
-                ? "Ingredienti e quantità da verificare"
-                : available(state.foods, plan.recipe, plan.servings)
-                  ? "Ingredienti ancora disponibili"
-                  : "Ingredienti mancanti: scegli o adatta il pasto"}
+            {available(state.foods, next.recipe, next.servings)
+              ? nextToConfirm
+                ? "Quantità verificate disponibili"
+                : "Ingredienti ancora disponibili"
+              : "Ingredienti mancanti: scegli o adatta il pasto"}
           </p>
+          {nextToConfirm > 0 && (
+            <p className="warning small">
+              {nextToConfirm === 1
+                ? "1 quantità della fonte da confermare"
+                : `${nextToConfirm} quantità della fonte da confermare`}
+            </p>
+          )}
         </div>
       </div>
     ) : (
@@ -792,24 +885,12 @@ export default function App() {
               )}
               <div className="section-heading">
                 <h2>Il tuo prossimo pasto</h2>
-                {plan && !importedMeal && (
-                  <small>
-                    {plan.servings}{" "}
-                    {plan.servings === 1 ? "persona" : "persone"}
-                  </small>
-                )}
+                {next && <small>Dal calendario</small>}
               </div>
               {mealCard()}
-              {plan && !plan.consumed && (
+              {next && (
                 <>
-                  <Button
-                    secondary
-                    onClick={() =>
-                      importedMeal
-                        ? openCatalog(importedMeal.id)
-                        : setDetail(plan.recipe as RecipeId)
-                    }
-                  >
+                  <Button secondary onClick={() => openRecipe(next.recipe)}>
                     Vedi preparazione
                   </Button>
                   <div className="button-pair">
@@ -829,7 +910,7 @@ export default function App() {
                 <FoodImage
                   file={
                     nextMeals.length
-                      ? dishArt(recipes[nextMeals[0].recipe].title)
+                      ? dishArt(mealInfo(nextMeals[0].recipe).title)
                       : "dish-bowl.svg"
                   }
                 />
@@ -837,7 +918,7 @@ export default function App() {
                   <strong>I pasti della settimana</strong>
                   <small>
                     {nextMeals.length
-                      ? `${nextMeals.length === 1 ? "1 pasto" : `${nextMeals.length} pasti`} in programma · prossimo: ${dayLabel(nextMeals[0].date).toLowerCase()}, ${nextMeals[0].slot.toLowerCase()}`
+                      ? `${nextMeals.length === 1 ? "1 pasto" : `${nextMeals.length} pasti`} in programma · prossimo: ${occasionLabel(nextMeals[0]).toLowerCase()}`
                       : "Dai un’occasione concreta alle scorte"}
                   </small>
                 </span>
@@ -935,6 +1016,15 @@ export default function App() {
                   onChange={(shopping) => setState((s) => ({ ...s, shopping }))}
                   onExplore={() => openCatalog()}
                   onStockAll={() => setStockAll(true)}
+                  onRemove={(item) =>
+                    change(
+                      (s) => ({
+                        ...s,
+                        shopping: s.shopping.filter((i) => i.id !== item.id),
+                      }),
+                      `${item.name} rimosso dalla lista. Scorte invariate.`,
+                    )
+                  }
                   onStock={(item) => {
                     setPurchase(item);
                     setRemoveConfirm(false);
@@ -1235,38 +1325,35 @@ export default function App() {
                 <WeekPlan
                   state={state}
                   onAdd={(date, slot) => setWeekPick({ date, slot })}
-                  onMove={(id, date, slot) => {
-                    setState((s) => ({
-                      ...s,
-                      week: s.week.map((m) =>
-                        m.id === id ? { ...m, date, slot } : m,
-                      ),
-                    }));
-                    setNotice(
-                      `Pasto spostato a ${dayLabel(date).toLowerCase()}, ${slot.toLowerCase()}. Scorte invariate.`,
-                    );
-                  }}
-                  onRemove={(id) => {
-                    setState((s) => ({
-                      ...s,
-                      week: s.week.filter((m) => m.id !== id),
-                    }));
-                    setNotice("Pasto tolto dal piano. Scorte invariate.");
-                  }}
-                  onCook={(id) => {
-                    setState((s) => cookWeekMeal(s, id));
-                    setNotice("Pasto cucinato e scorte aggiornate.");
-                  }}
-                  onBuy={(items) => {
-                    setState((s) => ({
-                      ...s,
-                      shopping: addShoppingIngredients(s.shopping, items, {
-                        id: "week-plan",
-                        title: "Pasti della settimana",
+                  onMove={(id, date, slot) => moveMeal(id, date, slot)}
+                  onRemove={(id) =>
+                    change(
+                      (s) => ({
+                        ...s,
+                        week: s.week.filter((m) => m.id !== id),
                       }),
-                    }));
-                    setNotice("Mancanti aggiunti alla lista della spesa.");
-                  }}
+                      "Pasto tolto dal calendario. Scorte invariate.",
+                    )
+                  }
+                  onCook={(id) =>
+                    change(
+                      (s) => cookMeal(s, id),
+                      "Pasto cucinato e scorte aggiornate.",
+                    )
+                  }
+                  onOpen={(meal) => openRecipe(meal.recipe, meal.servings)}
+                  onBuy={(items) =>
+                    change(
+                      (s) => ({
+                        ...s,
+                        shopping: addShoppingIngredients(s.shopping, items, {
+                          id: "week-plan",
+                          title: "Pasti della settimana",
+                        }),
+                      }),
+                      "Mancanti aggiunti alla lista della spesa.",
+                    )
+                  }
                 />
               ) : (
                 <>
@@ -1284,158 +1371,135 @@ export default function App() {
                     </Button>
                   </section>
                   {mealCard()}
-                  {importedMeal && plan ? (
-                    <>
-                      <Button
-                        secondary
-                        onClick={() => openCatalog(importedMeal.id)}
-                      >
-                        Leggi ingredienti e preparazione
-                      </Button>
-                      <p className="catalog-notice">
-                        Le dosi della fonte non vengono adattate al tuo piano.
-                        Puoi salvarla e rinviarla; il consumo automatico è
-                        disattivato per non sottrarre quantità inventate.
-                      </p>
-                      <label>
-                        Quando prepararla
-                        <select
-                          value={when}
-                          onChange={(e) => setWhen(e.target.value)}
-                        >
-                          <option>Domani a pranzo</option>
-                          <option>Domani a cena</option>
-                        </select>
-                      </label>
-                      <Button
-                        onClick={() => {
-                          setPreviousPlan(plan);
-                          setState((s) => ({ ...s, plan: { ...plan, when } }));
-                          setMoveDone(true);
-                        }}
-                      >
-                        Sposta questo pasto
-                      </Button>
-                      {previousPlan && (
-                        <Button
-                          secondary
-                          onClick={() => {
-                            setState((s) => ({ ...s, plan: previousPlan }));
-                            setPreviousPlan(null);
-                          }}
-                        >
-                          Annulla ultimo spostamento
-                        </Button>
-                      )}
-                    </>
-                  ) : plan && !plan.consumed ? (
-                    <>
-                      <div className="event">
-                        <img src={asset("8c6f1.svg")} alt="" />
-                        Stasera mangio fuori
-                      </div>
-                      <div className="destination" id="postpone">
-                        <label>
-                          Nuova occasione
-                          <select
-                            value={when}
-                            onChange={(e) => setWhen(e.target.value)}
-                          >
-                            <option>Domani a pranzo</option>
-                            <option>Domani a cena</option>
-                          </select>
-                        </label>
-                        <label>
-                          Porzioni
-                          <select
-                            value={servings}
-                            onChange={(e) =>
-                              setServings(Number(e.target.value))
+                  {next && nextInfo ? (
+                    (() => {
+                      const options = occasions(next.id).filter(
+                        (o) => o.value !== `${next.date}|${next.slot}`,
+                      );
+                      const after = (o: { date: string; slot: MealSlot }) =>
+                        o.date > next.date ||
+                        (o.date === next.date &&
+                          o.slot === "Cena" &&
+                          next.slot === "Pranzo");
+                      const target =
+                        options.find((o) => o.value === moveTo) ||
+                        options.find((o) => after(o) && !o.taken) ||
+                        options.find((o) => !o.taken) ||
+                        options[0];
+                      const servings = moveServings ?? next.servings;
+                      const enough = available(
+                        state.foods,
+                        next.recipe,
+                        servings,
+                      );
+                      return (
+                        <>
+                          <Button
+                            secondary
+                            onClick={() =>
+                              openRecipe(next.recipe, next.servings)
                             }
                           >
-                            <option value={1}>Solo per me · 1 porzione</option>
-                            <option value={2}>Per due · 2 porzioni</option>
-                          </select>
-                        </label>
-                      </div>
-                      <section className="card impact">
-                        <h2>Prima di spostare</h2>
-                        <p>
-                          Il pasto passa a{" "}
-                          {servings === 1 ? "una porzione" : "due porzioni"}. Le
-                          quantità non usate restano da assegnare:
-                        </p>
-                        <ul>
-                          {Object.entries(needs(plan.recipe, servings)).map(
-                            ([id, n]) => {
-                              const food = state.foods.find((f) =>
-                                matching(f, id),
+                            {importedMeal
+                              ? "Leggi ingredienti e preparazione"
+                              : "Vedi preparazione"}
+                          </Button>
+                          <div className="event">
+                            <img src={asset("8c6f1.svg")} alt="" />
+                            {occasionLabel(next) === "Stasera"
+                              ? "Stasera mangio fuori"
+                              : "Cambia il programma"}
+                          </div>
+                          <div className="destination" id="postpone">
+                            <label>
+                              Nuova occasione
+                              <select
+                                value={target?.value || ""}
+                                onChange={(e) => setMoveTo(e.target.value)}
+                              >
+                                {options.map((o) => (
+                                  <option key={o.value} value={o.value}>
+                                    {o.label}
+                                    {o.taken
+                                      ? ` · sostituisce ${mealInfo(o.taken.recipe).title}`
+                                      : ""}
+                                  </option>
+                                ))}
+                              </select>
+                            </label>
+                            <label>
+                              Porzioni
+                              <select
+                                value={servings}
+                                onChange={(e) =>
+                                  setMoveServings(Number(e.target.value))
+                                }
+                              >
+                                <option value={1}>
+                                  Solo per me · 1 porzione
+                                </option>
+                                <option value={2}>Per due · 2 porzioni</option>
+                              </select>
+                            </label>
+                          </div>
+                          <section className="card impact">
+                            <h2>Prima di spostare</h2>
+                            <p>
+                              Il pasto resta nel calendario e impegna gli
+                              ingredienti una sola volta. Con{" "}
+                              {servings === 1 ? "una porzione" : "due porzioni"}{" "}
+                              servono:
+                            </p>
+                            <MealNeedsList
+                              recipe={next.recipe}
+                              servings={servings}
+                              foods={state.foods}
+                            />
+                            <p>
+                              Nessun ingrediente viene segnato come consumato.
+                            </p>
+                            <small className={enough ? "green" : "warning"}>
+                              {enough
+                                ? "Nessun nuovo acquisto necessario per le quantità verificate (olio e sale da verificare)."
+                                : "Quantità insufficienti: aggiorna le scorte o scegli un’altra preparazione."}
+                            </small>
+                          </section>
+                          <Button
+                            disabled={!target}
+                            onClick={() => {
+                              if (!target) return;
+                              moveMeal(
+                                next.id,
+                                target.date,
+                                target.slot,
+                                servings,
                               );
-                              return (
-                                <li key={id}>
-                                  {food?.name || id}: {n}{" "}
-                                  {food?.unit || "pezzi"} previsti,{" "}
-                                  {Math.max(0, (food?.quantity || 0) - n)}{" "}
-                                  restano.
-                                </li>
-                              );
-                            },
-                          )}
-                        </ul>
-                        <p>Nessun ingrediente viene segnato come consumato.</p>
-                        <small
-                          className={
-                            available(state.foods, plan.recipe, servings)
-                              ? "green"
-                              : "warning"
-                          }
-                        >
-                          {available(state.foods, plan.recipe, servings)
-                            ? "Nessun nuovo acquisto necessario (olio e sale da verificare)."
-                            : "Quantità insufficienti: aggiorna le scorte o scegli un’altra preparazione."}
-                        </small>
-                      </section>
-                      <Button
-                        disabled={
-                          !available(state.foods, plan.recipe, servings)
-                        }
-                        onClick={() => {
-                          setPreviousPlan(plan);
-                          setState((s) => ({
-                            ...s,
-                            plan: { ...plan, when, servings },
-                          }));
-                          setMoveDone(true);
-                        }}
-                      >
-                        Conferma lo spostamento
-                      </Button>
-                      {previousPlan && (
-                        <Button
-                          secondary
-                          onClick={() => {
-                            setState((s) => ({ ...s, plan: previousPlan }));
-                            setPreviousPlan(null);
-                            setNotice("Spostamento annullato.");
-                          }}
-                        >
-                          Annulla ultimo spostamento
-                        </Button>
-                      )}
-                      <Button
-                        secondary
-                        onClick={() => setConsumeConfirm(true)}
-                        disabled={
-                          !available(state.foods, plan.recipe, plan.servings)
-                        }
-                      >
-                        Ho cucinato questo pasto
-                      </Button>
-                      <p className="footnote">
-                        Le scorte cambiano solo quando confermi ciò che hai
-                        usato.
-                      </p>
-                    </>
+                              setMoveTo("");
+                              setMoveServings(null);
+                            }}
+                          >
+                            Conferma lo spostamento
+                          </Button>
+                          <Button
+                            secondary
+                            onClick={() => setConsumeConfirm(true)}
+                            disabled={
+                              !available(
+                                state.foods,
+                                next.recipe,
+                                next.servings,
+                              )
+                            }
+                          >
+                            Ho cucinato questo pasto
+                          </Button>
+                          <p className="footnote">
+                            Le scorte cambiano solo quando confermi ciò che hai
+                            usato.
+                          </p>
+                        </>
+                      );
+                    })()
                   ) : (
                     <Button onClick={startIdeas}>Scegli un nuovo pasto</Button>
                   )}
@@ -1459,8 +1523,16 @@ export default function App() {
           ))}
         </nav>
       </div>
-      <div role="status" className={`toast ${notice ? "visible" : ""}`}>
-        {notice}
+      <div
+        role="status"
+        className={`toast ${notice ? "visible" : ""} ${undo && notice === undo.label ? "with-undo" : ""}`}
+      >
+        <span>{notice}</span>
+        {undo && notice === undo.label && (
+          <button className="toast-undo" onClick={undoLast}>
+            Annulla
+          </button>
+        )}
       </div>
       {catalogOpen && (
         <RecipeCatalog
@@ -1476,36 +1548,41 @@ export default function App() {
                 : [...s.favoriteIds, id],
             }))
           }
-          onAddIngredients={(ingredients, meal) => {
-            setState((s) => ({
-              ...s,
-              shopping: addShoppingIngredients(s.shopping, ingredients, meal),
-            }));
+          onAddIngredients={(ingredients, meal) =>
+            change(
+              (s) => ({
+                ...s,
+                shopping: addShoppingIngredients(s.shopping, ingredients, meal),
+              }),
+              "Lista della spesa aggiornata. Scorte invariate.",
+            )
+          }
+          week={state.week}
+          planTarget={catalogTarget}
+          onPlan={(meal, date, slot, servings) => {
+            setCatalogOpen(false);
+            setCatalogTarget(null);
+            openWeek();
+            planMeal(`catalog:${meal.id}`, date, slot, servings);
           }}
           onOpenShopping={openShopping}
-          onClose={() => setCatalogOpen(false)}
-          onSelect={(meal) => {
-            setState((s) => ({
-              ...s,
-              plan: {
-                recipe: `catalog:${meal.id}`,
-                when: "Stasera",
-                servings: 1,
-                consumed: false,
-              },
-            }));
-            setPreviousPlan(null);
+          onClose={() => {
             setCatalogOpen(false);
+            setCatalogTarget(null);
+          }}
+          onSelect={(meal, servings) => {
+            setCatalogOpen(false);
+            setMealsView("next");
             go("Pasti");
-            setNotice("Nuovo pasto salvato. Scorte invariate.");
+            replaceNext(`catalog:${meal.id}`, servings);
           }}
         />
       )}
       {compareOpen && (
         <CompareMeals
           foods={state.foods}
-          plan={plan}
-          initialServings={plan && !importedMeal ? plan.servings : 2}
+          current={next?.recipe ?? null}
+          initialServings={next?.servings ?? 2}
           onClose={() => setCompareOpen(false)}
           onPostpone={() => {
             setCompareOpen(false);
@@ -1519,19 +1596,9 @@ export default function App() {
             );
           }}
           onChoose={(id, servings) => {
-            setPreviousPlan(plan);
-            setState((s) => ({
-              ...s,
-              plan: {
-                recipe: id,
-                when: plan && !plan.consumed ? plan.when : "Stasera",
-                servings,
-                consumed: false,
-              },
-            }));
             setCompareOpen(false);
             go("Oggi");
-            setNotice(`${recipes[id].title} salvata. Scorte invariate.`);
+            replaceNext(id, servings);
           }}
         />
       )}
@@ -1542,22 +1609,17 @@ export default function App() {
           chooseLabel="Metti in programma"
           allowMissing
           foods={freeFoods(state)}
-          plan={null}
+          current={null}
           initialServings={2}
+          onCatalog={() => {
+            setCatalogTarget(weekPick);
+            setWeekPick(null);
+            openCatalog();
+          }}
           onClose={() => setWeekPick(null)}
           onChoose={(id, servings) => {
-            setState((s) => ({
-              ...s,
-              week: [
-                ...s.week.filter(
-                  (m) =>
-                    !(m.date === weekPick.date && m.slot === weekPick.slot),
-                ),
-                { id: weekId(), ...weekPick, recipe: id, servings },
-              ],
-            }));
+            planMeal(id, weekPick.date, weekPick.slot, servings);
             setWeekPick(null);
-            setNotice(`${recipes[id].title} in programma. Scorte invariate.`);
           }}
         />
       )}
@@ -1598,21 +1660,20 @@ export default function App() {
           items={state.shopping}
           onClose={() => setStockAll(false)}
           onConfirm={(rows) => {
-            setState((s) =>
-              stockPurchases(
-                s,
-                rows,
-                () =>
-                  globalThis.crypto?.randomUUID?.() ??
-                  `food-${Date.now()}-${Math.random().toString(36).slice(2)}`,
-              ),
-            );
-            setStockAll(false);
-            setNotice(
+            change(
+              (s) =>
+                stockPurchases(
+                  s,
+                  rows,
+                  () =>
+                    globalThis.crypto?.randomUUID?.() ??
+                    `food-${Date.now()}-${Math.random().toString(36).slice(2)}`,
+                ),
               rows.length === 1
                 ? "1 alimento portato in dispensa e tolto dalla lista."
                 : `${rows.length} alimenti portati in dispensa e tolti dalla lista.`,
             );
+            setStockAll(false);
           }}
         />
       )}
@@ -1821,13 +1882,13 @@ export default function App() {
         <Modal title={recipes[detail].title} onClose={() => setDetail(null)}>
           <p>
             {recipes[detail].time} minuti stimati ·{" "}
-            {tab === "Fridgy" ? chatServings : plan?.servings || 2} porzioni
+            {tab === "Fridgy" ? chatServings : next?.servings || 2} porzioni
           </p>
           <h3 className="detail-heading">Ingredienti</h3>
           <ul className="compare-ingredients">
             {compareOptions(
               state.foods,
-              tab === "Fridgy" ? chatServings : plan?.servings || 2,
+              tab === "Fridgy" ? chatServings : next?.servings || 2,
             )
               .find((o) => o.id === detail)!
               .items.map((i) => (
@@ -1857,60 +1918,45 @@ export default function App() {
               !available(
                 state.foods,
                 detail,
-                tab === "Fridgy" ? chatServings : plan?.servings || 2,
+                tab === "Fridgy" ? chatServings : next?.servings || 2,
               )
             }
             onClick={() => {
-              setState((s) => ({
-                ...s,
-                plan: {
-                  recipe: detail,
-                  when: "Stasera",
-                  servings:
-                    tab === "Fridgy" ? chatServings : plan?.servings || 2,
-                  consumed: false,
-                },
-              }));
-              setDetail(null);
-              setPreviousPlan(null);
               go("Oggi");
-              setNotice("Pasto salvato per stasera. Scorte invariate.");
+              planMeal(
+                detail,
+                isoDay(0),
+                "Cena",
+                tab === "Fridgy" ? chatServings : next?.servings || 2,
+                `${recipes[detail].title} in programma per stasera. Scorte invariate.`,
+              );
+              setDetail(null);
             }}
           >
             Salva per stasera
           </Button>
         </Modal>
       )}
-      {moveDone && (
-        <Modal title="Pasto spostato" onClose={() => setMoveDone(false)}>
-          <p>
-            {state.plan?.when}, per{" "}
-            {importedMeal
-              ? "porzioni da verificare"
-              : state.plan?.servings === 1
-                ? "una persona"
-                : "due persone"}
-            . Gli ingredienti restano disponibili.
-          </p>
-          <Button onClick={() => setMoveDone(false)}>Ho capito</Button>
-        </Modal>
-      )}
+
       {consumeConfirm && (
         <Modal
           title="Confermi gli ingredienti usati?"
           onClose={() => setConsumeConfirm(false)}
         >
-          <p>
-            Verranno sottratte dalle scorte le quantità previste per{" "}
-            {plan?.servings} porzioni. Se hai usato quantità diverse, annulla e
-            correggi prima le scorte.
+          {next && (
+            <CookSummary recipe={next.recipe} servings={next.servings} />
+          )}
+          <p className="footnote">
+            Se hai usato quantità diverse, annulla e correggi prima le scorte.
           </p>
           <Button
             onClick={() => {
-              setState(consume);
-              setPreviousPlan(null);
+              if (next)
+                change(
+                  (s) => cookMeal(s, next.id),
+                  "Pasto cucinato e scorte aggiornate.",
+                );
               setConsumeConfirm(false);
-              setNotice("Pasto cucinato e scorte aggiornate.");
             }}
           >
             Conferma consumo
@@ -2028,7 +2074,6 @@ export default function App() {
                         setDoneActions([]);
                         setShowIdeas(false);
                         setExcluded([]);
-                        setPreviousPlan(null);
                         setScenarioConfirm(null);
                         setShowSettings(false);
                         go("Oggi");
@@ -2082,7 +2127,6 @@ export default function App() {
                 setShowIdeas(false);
                 setExcluded([]);
                 setDoneActions([]);
-                setPreviousPlan(null);
                 setShowSettings(false);
                 setResetConfirm(false);
                 go("Oggi");

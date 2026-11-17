@@ -4,7 +4,7 @@ import {
   compareOptions,
   dishArt,
   type Food,
-  type Plan,
+  type RecipeRef,
   type RecipeId,
 } from "./domain";
 
@@ -14,7 +14,7 @@ import {
  */
 export default function CompareMeals({
   foods,
-  plan,
+  current,
   initialServings,
   onChoose,
   onPostpone,
@@ -23,13 +23,17 @@ export default function CompareMeals({
   intro = "Adattare o rinviare? Vedi cosa serve per ogni preparazione prima di scegliere. Le scorte non cambiano finché non cucini.",
   chooseLabel = "Scegli questa",
   allowMissing = false,
+  onCatalog,
 }: {
+  /** Offer the Italian catalog as an alternative source of recipes. */
+  onCatalog?: () => void;
   allowMissing?: boolean;
   title?: string;
   intro?: string;
   chooseLabel?: string;
   foods: Food[];
-  plan: Plan | null;
+  /** Recipe of the next meal of the calendar, if any. */
+  current: RecipeRef | null;
   initialServings: number;
   onChoose: (id: RecipeId, servings: number) => void;
   onPostpone?: () => void;
@@ -48,7 +52,6 @@ export default function CompareMeals({
     );
   const feasible = options.filter((o) => o.ok);
   const blocked = options.filter((o) => !o.ok);
-  const current = plan && !plan.consumed ? plan.recipe : null;
   function card(o: (typeof options)[number]) {
     const tooLong = maxTime < 30 && o.time > maxTime;
     return (
@@ -177,6 +180,11 @@ export default function CompareMeals({
           </summary>
           <ul className="compare-list">{blocked.map(card)}</ul>
         </details>
+      )}
+      {onCatalog && (
+        <Button secondary onClick={onCatalog}>
+          Scegli dal ricettario italiano
+        </Button>
       )}
       <p className="footnote">
         Ricettario dimostrativo con quantità calcolabili. Olio e sale da

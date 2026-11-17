@@ -38,7 +38,8 @@ test("un pasto con ingredienti mancanti porta gli acquisti nella spesa", async (
 }) => {
   await page.goto("/");
   await page.getByRole("button", { name: /I pasti della settimana/ }).click();
-  await page.getByRole("button", { name: "Aggiungi cena di oggi" }).click();
+  await page.getByRole("button", { name: /^Domani,/ }).click();
+  await page.getByRole("button", { name: "Aggiungi cena di domani" }).click();
   await page.getByText(/preparazioni a cui manca qualcosa/).click();
   await page
     .locator(".compare-card", { hasText: "Bowl di riso e pollo" })

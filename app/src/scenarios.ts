@@ -23,7 +23,7 @@ const food = (
 });
 const base = (): State => ({
   ...structuredClone(initialState),
-  plan: null,
+  week: [],
   foods: [],
 });
 
@@ -85,13 +85,14 @@ export const scenarios = [
         }),
         food("s-uova", "Uova", 2, "pezzi", "Frigo", { expires: isoDay(7) }),
       ],
-      plan: {
-        recipe: "bowlPollo",
-        when: "Stasera",
-        servings: 1,
-        consumed: false,
-      },
       week: [
+        {
+          id: "s-tonight",
+          date: isoDay(0),
+          slot: "Cena",
+          recipe: "bowlPollo",
+          servings: 1,
+        },
         {
           id: "s-week-1",
           date: isoDay(2),

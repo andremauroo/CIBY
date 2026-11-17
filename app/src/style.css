@@ -832,5 +832,10 @@ dialog > ol {
 }
 
 /* Form boundaries identify editable controls; separators use a quieter token. */
-input:not([type="checkbox"]):not([type="radio"]), select { border-color: var(--color-control); }
-.message { line-height: 1.5; }
+input:not([type="checkbox"]):not([type="radio"]),
+select {
+  border-color: var(--color-control);
+}
+.message {
+  line-height: 1.5;
+}

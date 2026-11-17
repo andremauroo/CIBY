@@ -58,17 +58,23 @@ test("cambio di programma, annullamento e conferma di consumo", async ({
   await page.goto("/");
   await page.getByRole("button", { name: "Cambia programma" }).click();
   await page.getByRole("button", { name: "Conferma lo spostamento" }).click();
-  await expect(page.getByRole("dialog")).toContainText("Pasto spostato");
-  await page.getByRole("button", { name: "Ho capito" }).click();
+  await expect(
+    page.getByRole("status").filter({ hasText: "Pasto spostato" }),
+  ).toBeVisible();
+  await expect(page.locator(".meal-card")).toContainText("Domani a pranzo");
+  // Moving keeps a single meal in the calendar: the ingredients count once.
+  await page.getByRole("button", { name: /^Settimana/ }).click();
+  await expect(page.locator(".week-needs")).toContainText(
+    "2 pezzi previsti · ne hai 2 pezzi",
+  );
+  await page.getByRole("button", { name: "Prossimo pasto" }).click();
+  await page.getByRole("button", { name: "Annulla", exact: true }).click();
+  await expect(page.locator(".meal-card")).toContainText("Stasera");
   await page.getByRole("button", { name: "Dispensa", exact: true }).click();
   await expect(
     page.getByRole("button", { name: "Modifica Zucchine" }),
   ).toContainText("2 pezzi");
   await page.getByRole("button", { name: "Pasti", exact: true }).click();
-  await page
-    .getByRole("button", { name: "Annulla ultimo spostamento" })
-    .click();
-  await expect(page.locator(".meal-card")).toContainText("Stasera");
   await page.getByRole("button", { name: "Ho cucinato questo pasto" }).click();
   await page.getByRole("button", { name: "Conferma consumo" }).click();
   await page.getByRole("button", { name: "Dispensa", exact: true }).click();
@@ -235,12 +241,7 @@ test("Pasti consente di sostituire il piano con una ricetta importata e conserva
               art: "aa8ab.svg",
             },
           ],
-          plan: {
-            recipe: "frittata",
-            when: "Stasera",
-            servings: 2,
-            consumed: false,
-          },
+          week: [],
         }),
       ),
   );
@@ -263,15 +264,13 @@ test("Pasti consente di sostituire il piano con una ricetta importata e conserva
     .getByRole("button", { name: "Scegli per il prossimo pasto" })
     .click();
   await expect(page.locator(".meal-card")).toContainText(selected);
-  await expect(page.locator(".meal-card")).toContainText("Dosi fonte");
-  await expect(
-    page.getByRole("button", { name: "Ho cucinato questo pasto" }),
-  ).toHaveCount(0);
+  await expect(page.locator(".meal-card")).toContainText("Stasera");
+  await expect(page.locator(".meal-card")).toContainText("da confermare");
   await page.reload();
   await page.getByRole("button", { name: "Pasti", exact: true }).click();
   await expect(page.locator(".meal-card")).toContainText(selected);
   await expect(
-    page.getByRole("button", { name: "Sposta questo pasto" }),
+    page.getByRole("button", { name: "Conferma lo spostamento" }),
   ).toBeVisible();
   await page.getByRole("button", { name: "Dispensa", exact: true }).click();
   await expect(

@@ -69,7 +69,10 @@ test("Fridgy con AI riceve il contesto e propone azioni da confermare", async ({
     content: "Cosa rischio di sprecare?",
   });
   const before = await page.evaluate(() => localStorage.getItem("ciby-v1"));
-  expect(JSON.parse(before!).week).toEqual([]);
+  // Proposals change nothing until tapped: only the seeded dinner is planned.
+  expect(
+    JSON.parse(before!).week.map((m: { recipe: string }) => m.recipe),
+  ).toEqual(["frittata"]);
   await page
     .getByRole("button", { name: /Programma Pasta al pomodoro fresco/ })
     .click();
