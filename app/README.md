@@ -310,3 +310,7 @@ Nelle impostazioni Fridgy, “Copia chiave” copia anche la chiave già salvata
 - **−1 in dispensa:** accanto agli alimenti contati a pezzi o confezioni, “−1” segna subito un'unità usata senza aprire il modulo. A zero l'alimento esce dalle scorte e viene contato come finito nel riepilogo degli ultimi 7 giorni.
 - **Conversazione salvata:** gli ultimi 40 messaggi con Fridgy, e lo stato dei pulsanti già usati, restano dopo un ricaricamento della pagina. “Ripristina esempio” e il cambio di impostazioni AI ripartono da capo.
 - **Scenari per le prove (M → Scenari per le prove):** tre situazioni costruite sulle personas C2, sempre uguali a ogni avvio: Marta (B01, mozzarella in scadenza da collocare), Gianfranco (B02, cena in 15 minuti dopo le lezioni), Luca (B03/B04, manca il pollo per la bowl di stasera). Caricare uno scenario chiede conferma, sostituisce i dati del browser e mostra il compito in Oggi finché non viene nascosto.
+
+Fridgy → Nuova chat apre una conferma per svuotare messaggi, proposte e correzioni della conversazione, compreso il salvataggio locale. Chiave AI, dispensa, pasti e spesa non vengono cancellati. Il comando è disponibile quando l'assistente ha terminato la risposta.
+
+Le icone distinte aggiunte comprendono pera, fagioli, parmigiano, pecorino, ricotta, tacchino, sgombro, aglio, cipolla, melanzana, yogurt e spinaci. Sono SVG originali con palette coerente con gli asset esistenti.

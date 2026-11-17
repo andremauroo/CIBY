@@ -137,6 +137,7 @@ export default function App() {
   const [filter, setFilter] = useState("Tutto");
   const [edit, setEdit] = useState<Food | null | undefined>();
   const [detail, setDetail] = useState<RecipeId | null>(null);
+  const [resetChatOpen, setResetChatOpen] = useState(false);
   const [showSettings, setShowSettings] = useState(false);
   const [resetConfirm, setResetConfirm] = useState(false);
   const [removeConfirm, setRemoveConfirm] = useState(false);
@@ -1042,6 +1043,13 @@ export default function App() {
                   {fridgy ? "Impostazioni AI" : "Attiva l’AI gratuita"}
                 </button>
               </div>
+              <button
+                className="text-button"
+                disabled={thinking}
+                onClick={() => setResetChatOpen(true)}
+              >
+                Nuova chat
+              </button>
               {aiFailure && (
                 <Button
                   secondary
@@ -1810,6 +1818,45 @@ export default function App() {
             }}
           >
             Conferma consumo
+          </Button>
+        </Modal>
+      )}
+      {resetChatOpen && (
+        <Modal
+          title="Iniziare una nuova chat?"
+          onClose={() => setResetChatOpen(false)}
+        >
+          <p>
+            I messaggi e le proposte di questa conversazione saranno cancellati
+            anche da questo browser. Chiave AI, alimenti, pasti e spesa restano
+            salvati.
+          </p>
+          <Button
+            onClick={() => {
+              setMessages([
+                {
+                  role: "bot",
+                  ai: !!fridgy,
+                  text: fridgy
+                    ? aiGreeting
+                    : "Ciao! Ripartiamo: per quante persone cucini e quanto tempo hai?",
+                },
+              ]);
+              setDoneActions([]);
+              setDraft("");
+              setChatServings(2);
+              setChatTime(20);
+              setExcluded([]);
+              setShowIdeas(false);
+              setAiFailure(null);
+              setResetChatOpen(false);
+              setNotice("Nuova chat avviata.");
+            }}
+          >
+            Svuota e ricomincia
+          </Button>
+          <Button secondary onClick={() => setResetChatOpen(false)}>
+            Mantieni la chat
           </Button>
         </Modal>
       )}

@@ -719,6 +719,18 @@ export function parseState(raw: string | null): State {
 export function artFor(name: string) {
   const n = name.toLowerCase();
   for (const [pattern, file] of [
+    [/melanzan/, "eggplant.svg"],
+    [/\bper[ae]\b/, "pear.svg"],
+    [/fagiol/, "kidney-beans.svg"],
+    [/parmigian|parmesan/, "parmesan.svg"],
+    [/pecorino/, "pecorino.svg"],
+    [/ricotta/, "ricotta.svg"],
+    [/tacchino/, "turkey.svg"],
+    [/sgombro/, "mackerel.svg"],
+    [/aglio/, "garlic.svg"],
+    [/cipoll/, "onion.svg"],
+    [/yogurt|yoghurt/, "yogurt.svg"],
+    [/spinac/, "spinach.svg"],
     [/zucchin/, "280eb.svg"],
     [/uov/, "104a0.svg"],
     [/riso/, "6bf46.svg"],
@@ -728,12 +740,12 @@ export function artFor(name: string) {
     [/latte|bevanda.*avena/, "milk.svg"],
     [/pane|panin/, "bread.svg"],
     [/carot/, "carrot.svg"],
-    [/mel[ae]|pera|pere/, "apple.svg"],
-    [/ceci|fagiol|legum/, "beans.svg"],
+    [/mel[ae]/, "apple.svg"],
+    [/ceci|legum/, "beans.svg"],
     [/patat/, "potato.svg"],
-    [/mozzarell|formagg|parmigian|pecorino|ricotta/, "cheese.svg"],
-    [/pollo|tacchino/, "chicken.svg"],
-    [/tonno|sgombro/, "can.svg"],
+    [/mozzarell|formagg/, "cheese.svg"],
+    [/pollo/, "chicken.svg"],
+    [/tonno/, "can.svg"],
   ] as const)
     if (pattern.test(n)) return file;
   return "generic-food.svg";

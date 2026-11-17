@@ -1111,3 +1111,20 @@ dialog .footnote a {
   background: #ffffff80;
   color: inherit;
 }
+
+/* Text entry: focus belongs to the complete search/composer, not an inner box. */
+input:not([type="checkbox"]):not([type="radio"]):focus-visible,
+textarea:focus-visible {
+  outline: none;
+  border-color: var(--color-control);
+  box-shadow: 0 0 0 1px var(--color-control);
+}
+.search:focus-within,
+.composer:focus-within {
+  box-shadow: 0 0 0 2px var(--color-control);
+}
+.search input:focus-visible,
+.composer input:focus-visible {
+  outline: none;
+  box-shadow: none;
+}

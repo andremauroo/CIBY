@@ -149,3 +149,36 @@ test("503 persistente mostra la demo e riprovare recupera senza duplicare la dom
   await expect(page.getByRole("log")).toContainText("Ora rispondo con AI.");
   await expect(page.locator(".message.user")).toHaveCount(1);
 });
+
+test("nuova chat cancella lo storico anche al ricaricamento e conserva chiave e dati", async ({
+  page,
+}) => {
+  await page.route(`${base}/chat/completions`, (r) =>
+    r.fulfill({
+      json: { choices: [{ message: { content: "Risposta precedente." } }] },
+    }),
+  );
+  await connect(page);
+  await page.getByLabel("Messaggio per Fridgy").fill("Domanda precedente");
+  await page.getByRole("button", { name: "Invia messaggio" }).click();
+  await expect(page.getByRole("log")).toContainText("Risposta precedente.");
+  const before = await page.evaluate(() => ({
+    key: localStorage.getItem("ciby-fridgy"),
+    data: JSON.parse(localStorage.getItem("ciby-v1") || "null"),
+  }));
+  await page.getByRole("button", { name: "Nuova chat", exact: true }).click();
+  await page.getByRole("button", { name: "Mantieni la chat" }).click();
+  await expect(page.getByRole("log")).toContainText("Domanda precedente");
+  await page.getByRole("button", { name: "Nuova chat", exact: true }).click();
+  await page.getByRole("button", { name: "Svuota e ricomincia" }).click();
+  await expect(page.locator(".message.user")).toHaveCount(0);
+  await page.reload();
+  await page.getByRole("button", { name: "Fridgy", exact: true }).click();
+  await expect(page.getByRole("log")).not.toContainText("Domanda precedente");
+  expect(
+    await page.evaluate(() => ({
+      key: localStorage.getItem("ciby-fridgy"),
+      data: JSON.parse(localStorage.getItem("ciby-v1") || "null"),
+    })),
+  ).toEqual(before);
+});
