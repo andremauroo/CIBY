@@ -7,6 +7,7 @@ import {
   suggestions,
   consume,
   needs,
+  artFor,
   purchaseDefaults,
   stockPurchases,
   recipes,
@@ -343,5 +344,30 @@ describe("Dalla spesa alla dispensa", () => {
       const data = sc.build();
       expect(parseState(JSON.stringify(data)), sc.id).toEqual(data);
     }
+  });
+});
+
+describe("Icone degli alimenti", () => {
+  it("alimenti diversi hanno icone di categoria proprie", () => {
+    const cases: [string, string][] = [
+      ["Olio extravergine di oliva", "oil.svg"],
+      ["Manzo macinato", "minced-meat.svg"],
+      ["Miele", "honey.svg"],
+      ["Crème fraîche", "cream.svg"],
+      ["Basilico", "herbs.svg"],
+      ["Aceto di vino bianco", "wine.svg"],
+      ["Brodo di pollo", "broth.svg"],
+      ["Patate a pasta gialla", "potato.svg"],
+      ["Melanzane", "eggplant.svg"],
+      ["Uova", "104a0.svg"],
+      ["Pomodori rossi", "dd50e.svg"],
+      ["Pomodori pelati", "sauce.svg"],
+      ["Peperoncino secco", "chili.svg"],
+      ["Pepe nero", "spices.svg"],
+      ["Guanciale", "cured-meat.svg"],
+      ["Cous cous", "6bf46.svg"],
+    ];
+    for (const [name, file] of cases) expect(artFor(name), name).toBe(file);
+    expect(artFor("Qualcosa di nuovo")).toBe("generic-food.svg");
   });
 });

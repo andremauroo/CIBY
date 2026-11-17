@@ -1113,8 +1113,11 @@ dialog .footnote a {
 }
 
 /* Text entry: focus belongs to the complete search/composer, not an inner box. */
-input:not([type="checkbox"]):not([type="radio"]):focus-visible,
-textarea:focus-visible {
+/* :where() keeps this general rule weak, so the search and composer rules below win. */
+:where(
+  input:not([type="checkbox"]):not([type="radio"]),
+  textarea
+):focus-visible {
   outline: none;
   border-color: var(--color-control);
   box-shadow: 0 0 0 1px var(--color-control);
@@ -1123,8 +1126,9 @@ textarea:focus-visible {
 .composer:focus-within {
   box-shadow: 0 0 0 2px var(--color-control);
 }
-.search input:focus-visible,
-.composer input:focus-visible {
+.search input:focus,
+.composer input:focus {
   outline: none;
   box-shadow: none;
+  border: 0;
 }
