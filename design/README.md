@@ -1,34 +1,33 @@
 # CIBY — Identità visiva e interfaccia
 
-[Kit dell’identità in Figma](https://www.figma.com/design/uoudiPCsc9d5dsuUuzOxTJ?node-id=2-29) · [Guida all’identità visiva](identita-visiva.md)
+Qui raccogliamo marchio, caratteri, palette e riferimenti grafici del progetto.
 
-Per il compito C3 sono disponibili [due prototipi low-fidelity touch e voce su smartphone](../consegne/C3/prototipi/README.md), in bianco e nero, in un [file Figma dedicato](https://www.figma.com/design/YyTBZZlfN2fy9cTKnqm4ud). La proposta grafica descritta sotto conserva il proprio ruolo di riferimento distinto.
+## Stato dell'identità visiva
 
-## Proposta grafica
+Partiamo dall'identità v1 (16 novembre 2026), basata su verde profondo, bianco e tuorlo. Oggi i diversi supporti usano declinazioni distinte:
 
-Interfaccia mobile basata sulla soluzione concettuale C2: partire dagli alimenti disponibili, assegnarli a un prossimo pasto praticabile e rivedere la scelta quando cambiano i programmi.
+- [Sito web v2](https://andremauroo.github.io/CIBY/): panna, verde oliva e zafferano; layout responsive e demo interattiva.
+- [Applicazione](../app/README.md): palette blu nel tema chiaro e blu notte nel tema scuro.
+- [Presentazioni C1–C3](../consegne/README.md): identità v1; i wireframe C3 sono in bianco e nero.
 
-Dal 16 novembre 2026 l’identità condivisa usa verde CIBY, bianco e un accento tuorlo. Bricolage Grotesque identifica marchio e titoli; Source Sans 3 accompagna testi e quantità. Sito, frontend e presentazioni C1–C3 adottano questa base, con impaginazioni adatte ai rispettivi formati. Le illustrazioni degli alimenti conservano il proprio ruolo nell’interfaccia.
+La direzione per la prossima revisione è uniformare app e presentazioni alla linea grafica del sito. L'allineamento non è ancora stato applicato.
 
-Il kit Figma dell’identità, creato nel piano MAGGICAL, contiene palette, famiglie tipografiche, stili di testo e variabili collegate ai nomi usati nel CSS. È il riferimento per i nuovi elaborati a colori.
+## Risorse
 
-Il [concept Figma precedente](https://www.figma.com/design/EuBvAH0SMAk3UEjVfBMxMv) documenta la prima esplorazione e conserva la palette storica. Il file risulta in sola lettura per la connessione attuale: l’aggiornamento dell’identità non è stato applicato a quel file. Il frontend, il kit e la guida qui collegati sono i riferimenti correnti per colori e caratteri. I due prototipi C3 restano in bianco e nero.
+| Risorsa | Contenuto |
+| --- | --- |
+| [Guida all'identità](identita-visiva.md) | Palette in uso, tipografia, marchio e direzione futura |
+| [Design token](design-tokens.json) | Valori della base v1 e delle palette effettive |
+| [Stili condivisi](identity.css) | Font e variabili della base v1, importati da sito e app |
+| [Marchio chiaro](assets/ciby-wordmark.svg) · [marchio scuro](assets/ciby-wordmark-dark.svg) | Variazioni del marchio a sfondo trasparente |
+| [Mappatura SVG](figma-export.json) | Provenienza delle illustrazioni e icone esportate dal concept originale |
 
-Le quattro schermate sono Oggi, Dispensa, Fridgy e Cambio di programma. La Dispensa distingue le priorità dichiarate dall’utente dalle date di scadenza. Il cambio di programma mostra ciò che resta da assegnare prima della conferma.
+## Prototipi e Figma
 
-La pagina “CIBY · App mobile” contiene la presentazione e i componenti. La pagina “Prototipo navigabile” contiene le schermate collegate. Dal pulsante Play si può partire dal flusso “CIBY · Dal frigo al prossimo pasto”.
+- [Kit dell'identità v1](https://www.figma.com/design/uoudiPCsc9d5dsuUuzOxTJ?node-id=2-29): palette, variabili e stili originari.
+- [Concept mobile originale](https://www.figma.com/design/EuBvAH0SMAk3UEjVfBMxMv): prima esplorazione grafica; non rappresenta le schermate attuali dell'app.
+- [Prototipi C3](../consegne/C3/prototipi/README.md): wireframe touch e voce e percorsi dei tre task.
 
-La navigazione delle aree, “Trova un’idea”, “Cambia programma”, “Scelgo la frittata” e la conferma dello spostamento sono collegate. Ricerca, filtri, inserimento scorte e chat libera sono rappresentazioni grafiche. La [prima implementazione frontend](../app/README.md) rende ora funzionanti scorte locali e flussi di scelta/rinvio; Fridgy resta una demo conversazionale senza modello AI o database remoto. Tutti gli alimenti e le quantità sono dati dimostrativi.
+La [roadmap dell'applicazione](../app/roadmap.md) raccoglie invece le idee di evoluzione del prodotto.
 
-I valori correnti sono disponibili in [design-tokens.json](design-tokens.json). [identity.css](identity.css) raccoglie i colori e i font effettivamente condivisi fra sito e app. Il concept Figma storico contiene le proprie variabili e i componenti di pulsanti e navigazione.
-
-## Collegamenti al progetto
-
-- [Idee da valutare](idee-da-valutare.md): possibili estensioni e loro ruolo rispetto ai task C3.
-- [Applicazione](../app/README.md)
-- [Consegne e ricerca](../consegne/README.md)
-- [Indice del progetto](../README.md)
-
-## Esportazione per il frontend
-
-Le illustrazioni e le icone sono salvate in `app/public/assets`. La mappatura originale tra nodi Figma e SVG è documentata in [figma-export.json](figma-export.json); contorni e icone seguono ora il verde CIBY. I due font sono ospitati localmente, con le rispettive licenze in `app/public/fonts`, e inclusi nella versione offline dell’app.
+[Torna al progetto CIBY](../README.md)

@@ -40,7 +40,7 @@ Questi comandi avviano la stessa web app usata su macOS; non richiedono backend,
 
 - **Oggi:** alimento prioritario, idea per il pasto, preparazione e cambio di programma.
 - **Dispensa:** ricerca, filtri, inserimento, modifica, rimozione e priorità decisa dalla persona. La vista Spesa raccoglie acquisti manuali o ingredienti scelti dal ricettario.
-- **Fridgy:** dialogo a regole dichiarato, risposte rapide, tempo e porzioni, esclusione di ingredienti, richieste fuori ambito. Tre ricette dimostrative; nessun LLM o API esterna. Le correzioni in chat non modificano la dispensa.
+- **Fridgy:** dialogo a regole o con un modello AI configurato dall'utente, risposte rapide e proposte di preparazioni in base a ingredienti, tempo e porzioni. Le azioni proposte vengono applicate solo dopo una scelta della persona.
 - **Pasti:** conseguenze del rinvio, cambio di porzioni, conferma e annullamento dell'ultimo spostamento della sessione.
 - **Consumo:** solo “Ho cucinato questo pasto” e la conferma successiva sottraggono gli ingredienti. Il consumo non si ripete due volte.
 
@@ -87,23 +87,24 @@ Test di dominio: compatibilità degli ingredienti, quantità, correzioni, consum
 
 ## Struttura e origine grafica
 
-L’identità corrente usa verde CIBY, bianco e tuorlo, con Bricolage Grotesque per i titoli e Source Sans 3 per i contenuti. I font sono locali e inclusi nella cache offline. Riferimenti e regole sono nella [guida all’identità](../design/identita-visiva.md).
+L'app usa attualmente tonalità blu nel tema chiaro e blu notte nel tema scuro, con Bricolage Grotesque per i titoli e Source Sans 3 per i contenuti. I font sono locali e inclusi nella cache offline. La futura uniformazione alla linea grafica del sito v2 è descritta nella [guida all'identità](../design/identita-visiva.md).
 
 - `src/App.tsx`: navigazione e schermate della prima iterazione.
 - `src/components.tsx`: pulsanti, immagini e dialoghi accessibili riutilizzabili.
 - `src/domain.ts`: scorte, piano, ricette e vincoli; separato dalla grafica.
-- `src/style.css`, `src/tokens.css`: CSS responsivo; `../design/identity.css` condivide colori e caratteri con il sito. I valori sono documentati in `../design/design-tokens.json`.
+- `src/style.css`, `src/tokens.css`, `src/theme.css`: CSS responsivo e temi dell'app; `../design/identity.css` fornisce font e variabili della base v1. Le palette effettive sono documentate in [`design-tokens.json`](../design/design-tokens.json).
 - `public/assets`: SVG esportati dal Figma, conservati localmente senza URL temporanei; mappatura in `../design/figma-export.json`.
 - `scripts/build-sw.mjs`: cache offline essenziale generata dalla build, senza servizi esterni.
 
 Scelte rispetto al mockup: nessuna finta barra di stato del telefono, contenuti scorrevoli al posto di altezze rigide, controlli reali per scorte e porzioni, stato vuoto e recupero dagli errori. I riferimenti originali sono Oggi `2:70`, Dispensa `2:73`, Fridgy `2:76`, Cambio di programma `2:79`.
 
-## Prossima iterazione
+## Sviluppi successivi
 
 1. Fare provare tre compiti: scegliere una cena, correggere un ingrediente mancante, rinviare il pasto. Annotare esitazioni, errori e comprensione di cosa viene salvato.
 2. Decidere se partire da ingrediente, pasto o conversazione; verificare se la distinzione Dispensa/Pasti è chiara.
-3. Rendere più chiara l'assegnazione delle quantità residue e progettare ingredienti sconosciuti, pasti multipli e preferenze. Evitare di espandere tutte queste funzioni prima dei riscontri.
-4. Valutare solo dopo un vero modello AI. Un adapter può sostituire la demo di Fridgy; un eventuale piccolo proxy server custodirebbe la chiave. La prima versione non richiede un backend o costi API.
+3. Verificare la comprensione delle quantità residue, del calendario e delle proposte di Fridgy, inclusa la modalità AI opzionale.
+
+Le possibili estensioni del prodotto e la futura uniformazione grafica sono raccolte nella [roadmap dell'applicazione](roadmap.md).
 
 ## Iterazione: alimenti liberi, ricettario e messaggi
 

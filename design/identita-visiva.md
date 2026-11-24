@@ -1,43 +1,35 @@
 # Identità visiva CIBY
 
-Identità adottata il 16 novembre 2026: verde profondo, bianco e tuorlo. Le regole valgono per prodotto, sito e presentazioni, mantenendo la struttura adatta a ciascun supporto. Il [kit Figma](https://www.figma.com/design/uoudiPCsc9d5dsuUuzOxTJ?node-id=2-29) conserva la tavola editabile, le variabili e gli stili di testo.
+L'identità v1 risale al 16 novembre 2026. Il sito v2 pubblicato il 24 novembre introduce una nuova declinazione grafica. L'applicazione e le presentazioni non sono ancora state uniformate alla nuova palette.
 
-## Colori
+## Palette attualmente in uso
 
-| Ruolo | Colore | Uso |
-|---|---|---|
-| Verde CIBY | `#173A30` | Marchio, titoli, testo, selezioni |
-| Bianco | `#FFFFFF` | Superficie principale e testo sul verde |
-| Fondo discreto | `#F3F7F4` | Riepiloghi e separazione di aree |
-| Testo secondario | `#53685D` | Informazioni di supporto e fonti |
-| Linea | `#CED9D1` | Separatori decorativi |
-| Tuorlo | `#F1C75B` | Azione principale e marchio sulla copertina verde |
+| Ruolo | V1 · Presentazioni | Sito v2 | App · Chiaro | App · Notte |
+| --- | --- | --- | --- | --- |
+| Marchio e titoli | `#173A30` | `#2D5A27` / `#223E2B` | `#17325F` | `#B4CCF7` |
+| Sfondo | `#FFFFFF` | `#FAF8F5` | `#F6F8FC` | `#090D14` |
+| Superficie secondaria | `#F3F7F4` | `#9FAB90` (sfondo demo) | `#FFFFFF` | `#131B28` |
+| Accento | `#F1C75B` | `#F4B942` | `#A9C8FF` | `#95BAFF` |
+| Testo | `#173A30` | `#1F2421` | `#14233F` | `#E7EDF6` |
+| Testo secondario | `#53685D` | `#525B51` | `#4D5D78` | `#A7B3C6` |
 
-Il tuorlo richiede testo verde. Il testo bianco sul tuorlo non raggiunge un contrasto sufficiente. I campi usano contorni più scuri (`#53685D`) quando il bordo serve a riconoscerli. Errori e avvisi hanno colori semantici separati e un’indicazione testuale.
-
-Contrasti calcolati: verde/bianco 12,47:1, secondario/bianco 5,99:1, secondario/fondo 5,54:1 e verde/tuorlo 7,75:1. Le singole coppie superano 4,5:1 per testo normale; questo controllo non certifica da solo l’accessibilità dell’intera interfaccia.
+I valori di riferimento e le relative fonti sono in [design-tokens.json](design-tokens.json). La base v1 resta documentata nel [kit Figma](https://www.figma.com/design/uoudiPCsc9d5dsuUuzOxTJ?node-id=2-29) e in [identity.css](identity.css). Il [CSS del sito](../site/site.css), i [token dell'app](../app/src/tokens.css) e il [tema notte](../app/src/theme.css) definiscono le palette effettive delle interfacce.
 
 ## Caratteri e marchio
 
-- **Bricolage Grotesque 600–700** per CIBY e titoli.
-- **Source Sans 3 400–700** per testo, quantità, pulsanti e fonti, con 600 per l’enfasi ordinaria.
-- Corpo di riferimento nell’app: 16 px, interlinea 1,5. Le quantità possono usare cifre tabulari.
-- Il nome si scrive **CIBY**, mantenendo la proposta di valore: «Con CIBY scegli cosa preparare con quello che hai, anche quando cambiano i programmi.»
+- **Bricolage Grotesque** per il marchio e i titoli.
+- **Source Sans 3** per testi, quantità e controlli; il corpo di riferimento dell'app è 16 px.
+- **Georgia in corsivo** come accento tipografico nei titoli del sito v2.
+- Il nome si scrive **CIBY**. La proposta di valore resta «Con CIBY scegli cosa preparare con quello che hai, anche quando cambiano i programmi».
 
-Il [marchio vettoriale](assets/ciby-wordmark.svg) conserva il disegno del carattere anche dove non si possono incorporare font, come il README di GitHub. L’icona dell’app riprende la C dello stesso carattere, su verde con un punto tuorlo.
+Il marchio vettoriale conserva il disegno originale in due varianti trasparenti: [verde per fondi chiari](assets/ciby-wordmark.svg) e [salvia per fondi scuri](assets/ciby-wordmark-dark.svg). Il README principale sceglie la variante in base al tema. L'[icona dell'app](../app/public/icon.svg) conserva per ora la C su fondo verde con punto tuorlo della v1.
 
-I font web e le licenze OFL sono in `app/public/fonts`. I PDF incorporano i caratteri; per modificare il PowerPoint usando la stessa impaginazione occorrono le due famiglie installate.
+I [font e le licenze OFL](../app/public/fonts/) sono conservati localmente. La tipografia di base è condivisa tra app e sito.
 
-## Applicazione ai supporti
+## Applicazione e direzione futura
 
-**App e sito.** Superfici prevalentemente bianche, titoli verdi, un’azione principale in tuorlo per contesto. Focus visibile, controlli comodi da toccare e informazioni che non dipendono dal solo colore. Le schermate dell’app mantengono i flussi e i dati già previsti.
+La prossima revisione grafica prenderà il sito v2 come riferimento: fondo panna, verdi naturali, accento zafferano e la stessa gerarchia tipografica. L'app manterrà le esigenze di leggibilità, stati semantici, interazione touch e tema notte; le palette corrispondenti dovranno essere definite e verificate prima dell'aggiornamento. Gli stati non devono dipendere soltanto dal colore.
 
-**Presentazioni.** Copertina verde, CIBY in tuorlo, titoli e contenuti chiari. Pagine interne bianche, titoli allineati a sinistra, testo e fonti nelle griglie esistenti. Tabelle, grafici e diagrammi mantengono dati e significato. Le date delle consegne documentano le rispettive attività, anche dopo l’aggiornamento grafico.
+Le presentazioni già consegnate restano documentate nella versione originale. La nuova identità dovrà essere recepita negli elaborati successivi e, se opportuno, nelle eventuali revisioni delle presentazioni precedenti. I wireframe C3 restano in bianco e nero.
 
-**Documentazione di ricerca.** Fotografie, screenshot, elaborati originali dei colleghi e materiali delle interviste conservano l’aspetto delle fonti. Non vengono uniformati retroattivamente alla nuova grafica.
-
-**Wireframe C3.** Restano in bianco e nero, secondo il compito. La fedeltà richiesta prevale sui colori del marchio.
-
-## Riferimenti condivisi
-
-[design-tokens.json](design-tokens.json) descrive i valori; [identity.css](identity.css) li applica a sito e frontend. Il concept Figma precedente rimane una testimonianza della prima esplorazione grafica, come indicato nel [README del design](README.md).
+[Torna al design](README.md)

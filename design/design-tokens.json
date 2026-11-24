@@ -77,5 +77,86 @@
     "fileKey": "uoudiPCsc9d5dsuUuzOxTJ",
     "url": "https://www.figma.com/design/uoudiPCsc9d5dsuUuzOxTJ?node-id=2-29",
     "scope": "identity-foundations"
+  },
+  "scope": "Base v1 approvata il 16 novembre, riferimento delle presentazioni C1–C3 e della tipografia condivisa. Non descrive da sola le palette attuali.",
+  "lastUpdated": "2026-11-24",
+  "variants": {
+    "siteV2": {
+      "status": "pubblicata",
+      "source": "../site/site.css",
+      "color": {
+        "cream": "#FAF8F5",
+        "ink": "#1F2421",
+        "green": "#2D5A27",
+        "deep": "#223E2B",
+        "accent": "#F4B942",
+        "accent-hover": "#E8A82B",
+        "accent-dark": "#8D5508",
+        "accent-soft": "#FDECC7",
+        "line": "#D9D9CD",
+        "muted": "#525B51",
+        "countertop": "#9FAB90"
+      },
+      "displayAccentFont": "Georgia",
+      "motion": "Animazioni di ingresso e scorrimento della demo; rispetto del movimento ridotto"
+    },
+    "appLight": {
+      "status": "implementata",
+      "source": "../app/src/tokens.css",
+      "colorOverrides": {
+        "brand": "#17325F",
+        "onBrand": "#FFFFFF",
+        "surface": "#F6F8FC",
+        "card": "#FFFFFF",
+        "brandSoft": "#EBF1FB",
+        "accent": "#A9C8FF",
+        "onAccent": "#10264A",
+        "accentHover": "#8FB6FB",
+        "text": "#14233F",
+        "secondary": "#4D5D78",
+        "border": "#D2DCEB",
+        "control": "#4D5D78",
+        "emphasis": "#14233F",
+        "user": "#E4EDFB",
+        "leaf": "#1B5E86",
+        "leafSoft": "#E2EFF8"
+      }
+    },
+    "appDark": {
+      "status": "implementata",
+      "source": "../app/src/theme.css",
+      "colorOverrides": {
+        "surface": "#090D14",
+        "card": "#131B28",
+        "brandSoft": "#1C293D",
+        "brand": "#B4CCF7",
+        "onBrand": "#0E1726",
+        "accent": "#95BAFF",
+        "onAccent": "#101C30",
+        "accentHover": "#B0CCFF",
+        "text": "#E7EDF6",
+        "secondary": "#A7B3C6",
+        "control": "#A7B3C6",
+        "emphasis": "#E7EDF6",
+        "border": "#3B4B63",
+        "user": "#1D2D47",
+        "leaf": "#AEC9F4",
+        "leafSoft": "#22334D",
+        "amber": "#E7C77C",
+        "amberSoft": "#403520",
+        "late": "#F2B5A3",
+        "lateSoft": "#482F2A"
+      }
+    },
+    "presentations": {
+      "status": "identità v1",
+      "source": "identita-visiva.md",
+      "colorReference": "color"
+    }
+  },
+  "direction": {
+    "status": "da realizzare",
+    "target": "siteV2",
+    "note": "Uniformare app e presentazioni alla linea grafica del sito, definendo anche il tema notte. Nessuna modifica ai CSS dell'app o alle presentazioni in questa revisione."
   }
 }

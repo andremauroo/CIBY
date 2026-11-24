@@ -27,7 +27,7 @@ La presentazione collega i task ai bisogni, alle personas e agli scenari C2. Com
 
 Il **touch su smartphone è la modalità principale**, perché mantiene visibili alimenti, alternative e conseguenze del cambiamento. La **voce resta una traccia secondaria da sviluppare** per aggiornare la dispensa comunicando acquisti, quantità e scadenze riportate e per assistere durante la preparazione.
 
-Smartwatch, Alexa e Apple HomePod sono possibilità di estensione della traccia vocale. Collegamenti per acquistare ingredienti mancanti e scambio di statistiche con app di health tracking restano [idee da valutare](../../design/idee-da-valutare.md), senza ampliare i tre task della C3. La maggiore fluidità della voce è un beneficio atteso da verificare.
+Smartwatch, Alexa e Apple HomePod sono possibilità di estensione della traccia vocale. Collegamenti per acquistare ingredienti mancanti e scambio di statistiche con app di health tracking restano [idee da valutare](../../app/roadmap.md), senza ampliare i tre task della C3. La maggiore fluidità della voce è un beneficio atteso da verificare.
 
 ## Prototipi e limiti
 

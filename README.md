@@ -1,56 +1,57 @@
-# ![CIBY](design/assets/ciby-wordmark.svg)
+<h1>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="design/assets/ciby-wordmark-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="design/assets/ciby-wordmark.svg">
+    <img src="design/assets/ciby-wordmark.svg" alt="CIBY" width="240">
+  </picture>
+</h1>
 
-Progetto per il corso di Fondamenti di Human-Computer Interaction del Politecnico di Milano.
+**Con CIBY scegli cosa preparare con quello che hai, anche quando cambiano i programmi.**
 
-**Tema:** consapevolezza alimentare e riduzione dello spreco domestico.
+CIBY nasce per il corso di Fondamenti di Human-Computer Interaction del Politecnico di Milano. Il nostro obiettivo è aiutare i giovani adulti a gestire la spesa e i pasti, facilitando le scelte quotidiane a partire dagli alimenti disponibili e contribuendo a ridurre lo spreco domestico.
 
-Con CIBY scegli cosa preparare con quello che hai, anche quando cambiano i programmi.
+[Sito web e demo interattiva](https://andremauroo.github.io/CIBY/) · [Documentazione dell'app](app/README.md) · [Materiali del progetto](consegne/README.md)
 
-[Sito web del progetto](https://andremauroo.github.io/CIBY/) · [Consegna C3](consegne/C3/README.md)
+## L'applicazione
 
-## Gruppo
+Abbiamo sviluppato un prototipo web pensato per smartphone, con quattro funzionalità principali:
 
-**MAGGICAL**
+- **Dispensa:** gestire gli alimenti, le quantità e le priorità di utilizzo.
+- **Ricette e Fridgy:** trovare preparazioni compatibili con gli ingredienti disponibili, il tempo e le preferenze.
+- **Pasti:** organizzare il calendario settimanale e adattarlo quando cambiano i programmi.
+- **Lista della spesa:** individuare gli ingredienti mancanti e registrare gli acquisti in dispensa.
 
-Andrea Mauro, Marco Macherelli, Gabriele Martignoni, Rime Chamkar, Emanuele Marcantonio ed Edoardo Ughi.
+Il prototipo è sviluppato con React, TypeScript e Vite ed è attualmente avviabile in locale. Dispensa, pasti e lista della spesa sono salvati nel browser; Fridgy è utilizzabile in modalità dimostrativa o con un modello AI configurato dall'utente.
 
-## Esplora il progetto
+### Avvio in locale
 
-| Area | Contenuto |
-|---|---|
-| [App](app/README.md) | Spazio dedicato al codice della futura applicazione e allo stato dell'implementazione |
-| [Design](design/README.md) | Identità visiva condivisa, concept Figma e token di interfaccia |
-| [Consegne](consegne/README.md) | Presentazioni, ricerca e materiali del corso, organizzati per compito |
+Con Node.js 24 LTS (o 22.12+ della serie 22) e npm, dalla radice del repository:
 
-## Struttura
-
-```text
-CIBY/
-├── app/
-├── consegne/
-│   ├── C1/
-│   ├── C2/
-│   └── C3/
-├── design/
-└── README.md
+```sh
+cd app
+npm ci
+npm run dev
 ```
 
-## Consegne
+Aprire l'indirizzo mostrato da Vite nel terminale. Per configurazione, prove su smartphone e test, consultare la [documentazione dell'app](app/README.md).
 
-| Compito | Scadenza | Materiali |
-|---|---|---|
-| C1 — Individuazione dei bisogni | 12 ottobre 2026 | [Presentazione e documenti di ricerca](consegne/C1/README.md) |
-| C2 — Raffinamento e focus | 26 ottobre 2026 | [Presentazione PDF e materiali della C2](consegne/C2/README.md) |
-| C3 — Task, storyboard e primi prototipi | 16 novembre 2026 | [Presentazione, storyboard e due prototipi](consegne/C3/README.md) |
+## Percorso di progettazione
 
-La C1 raccoglie la presentazione generale, i cinque report delle interviste P01–P05, il sondaggio con i risultati aggregati e la traccia comune delle domande.
+| Fase | Contenuti | Materiali |
+| --- | --- | --- |
+| [C1 — Individuazione dei bisogni](consegne/C1/README.md) | Interviste, sondaggio e ricerca | [Presentazione PDF](consegne/C1/presentazione/CIBY-C1.pdf) · [Sondaggio](consegne/C1/altro/Sondaggio.pdf) |
+| [C2 — Raffinamento e focus](consegne/C2/README.md) | Bisogni, personas, scenari e scelta della soluzione | [Presentazione PDF](consegne/C2/presentazione/CIBY-C2.pdf) · [FigJam](https://www.figma.com/board/Aa9cVd9wI6ifqZyzO30I9m/Compito-2) |
+| [C3 — Task, storyboard e primi prototipi](consegne/C3/README.md) | Analisi dei task, flussi e confronto delle modalità di interazione | [Presentazione PDF](consegne/C3/presentazione/CIBY-C3.pdf) · [Storyboard](consegne/C3/storyboard/CIBY-C3-storyboard-A4.pdf) · [Prototipi touch e voce](consegne/C3/prototipi/README.md) |
 
-La C2 raccoglie la presentazione PDF definitiva e il diario originale P02. Analisi, bisogni, personas, scenari e scelta della soluzione sono documentati nella presentazione.
+## Struttura del repository
 
-La C3 raccoglie la [presentazione PDF](consegne/C3/presentazione/CIBY-C3.pdf), con HTA, TDH e flussi di interazione, lo [storyboard a otto vignette su A4](consegne/C3/storyboard/CIBY-C3-storyboard-A4.pdf) e i [due prototipi Figma touch e voce su smartphone](consegne/C3/prototipi/README.md). Il touch è la modalità principale; la voce resta una traccia secondaria per dispensa e preparazione, anche attraverso possibili sviluppi su smartwatch e dispositivi domestici. Le altre idee restano [possibilità da valutare](design/idee-da-valutare.md).
+| Area | Contenuto |
+| --- | --- |
+| [`app/`](app/) | Codice dell'applicazione, risorse, test e [roadmap](app/roadmap.md) |
+| [`consegne/`](consegne/README.md) | Ricerca, presentazioni e prototipi |
+| [`design/`](design/README.md) | [Identità visiva](design/identita-visiva.md), [token grafici](design/design-tokens.json) e riferimenti Figma |
+| [`site/`](site/) | [CSS](site/site.css), [JavaScript](site/demo.js) e [immagini](site/assets/); la pagina [HTML](index.html) resta nella radice per GitHub Pages |
 
-Il sito web è una pagina statica del progetto, pubblicata con GitHub Pages dalla radice del ramo `main`. I collegamenti ai documenti usano gli stessi file della repo.
+## Il gruppo
 
-## Stato dell'app
-
-È disponibile una prima proposta grafica in [Figma](https://www.figma.com/design/EuBvAH0SMAk3UEjVfBMxMv), con una pagina dedicata al prototipo navigabile. È disponibile una [prima web app mobile](app/README.md) con scorte locali, dialogo dimostrativo, scelta e rinvio dei pasti. L'integrazione con un modello AI resta da valutare dopo le prove HCI.
+**MAGGICAL** — Andrea Mauro, Marco Macherelli, Gabriele Martignoni, Rime Chamkar, Emanuele Marcantonio ed Edoardo Ughi.
